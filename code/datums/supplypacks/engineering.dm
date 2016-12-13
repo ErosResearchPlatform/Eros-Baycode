@@ -140,6 +140,32 @@
 	containername = "\improper Particle Accelerator crate"
 	access = access_ce
 
+
+/decl/hierarchy/supply_pack/engineering/ame_controller
+	name = "Antimatter Engine Controller crate"
+	contains = list(/obj/machinery/power/am_control_unit)
+	cost = 20
+	containertype = /obj/structure/closet/crate/secure
+	containername = "\improper Antimatter Engine Controller crate"
+	access = access_engine
+
+/decl/hierarchy/supply_pack/engineering/ame_parts
+	name = "Antimatter Engine parts crate"
+	contains = list(/obj/item/device/am_shielding_container = 12 )
+	cost = 50
+	containertype = /obj/structure/closet/crate/secure
+	containername = "\improper Antimatter Engine parts crate"
+	access = access_engine
+
+/decl/hierarchy/supply_pack/engineering/ame_fuel
+	name = "Antimatter Containment Jar crate"
+	contains = list(/obj/item/weapon/am_containment = 3 )
+	cost = 20
+	containertype = /obj/structure/closet/crate/secure
+	containername = "\improper Antimatter Containment Jar crate"
+	access = access_engine
+
+
 /decl/hierarchy/supply_pack/engineering/pacman_parts
 	name = "P.A.C.M.A.N. portable generator parts"
 	contains = list(/obj/item/weapon/stock_parts/micro_laser,
@@ -203,9 +229,9 @@
 	access = access_ce
 
 /decl/hierarchy/supply_pack/engineering/smbig
-	name = "Supermatter Core"
+	name = "Supermatter Core (Unsubsidized)"
 	contains = list(/obj/machinery/power/supermatter)
-	cost = 150
+	cost = 150000000
 	containertype = /obj/structure/closet/crate/secure/phoron
 	containername = "\improper Supermatter crate (CAUTION)"
 	access = access_ce
@@ -255,3 +281,14 @@
 					/obj/item/weapon/storage/toolbox/electrical)
 	cost = 75
 	containername = "\improper emergency bluespace relay assembly kit"
+
+/decl/hierarchy/supply_pack/engineering/firefighter
+	name = "Firefighting equipment"
+	contains = list(/obj/item/clothing/suit/fire/firefighter,
+			/obj/item/clothing/mask/gas,
+			/obj/item/weapon/tank/oxygen/red,
+			/obj/item/weapon/extinguisher,
+			/obj/item/clothing/head/hardhat/red)
+	cost = 20
+	containertype = /obj/structure/closet/firecloset
+	containername = "\improper fire-safety closet"

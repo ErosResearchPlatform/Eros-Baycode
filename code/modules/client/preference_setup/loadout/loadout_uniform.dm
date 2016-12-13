@@ -17,6 +17,11 @@
 	display_name = "jumpskirt, black"
 	path = /obj/item/clothing/under/blackjumpskirt
 
+/datum/gear/uniform/shortjumpskirt
+    display_name = "jumpskirt color selection"
+    path = /obj/item/clothing/under/shortjumpskirt
+    flags = GEAR_HAS_COLOR_SELECTION
+
 /datum/gear/uniform/jumpsuit
 	display_name = "generic jumpsuits"
 	path = /obj/item/clothing/under/color/grey
@@ -55,6 +60,7 @@
 	suits["tan suit"] = /obj/item/clothing/under/suit_jacket/tan
 	suits["white suit"] = /obj/item/clothing/under/scratch
 	suits["white-blue suit"] = /obj/item/clothing/under/lawyer/bluesuit
+	suits["formal outfit"] = /obj/item/clothing/under/rank/internalaffairs/plain
 	gear_tweaks += new/datum/gear_tweak/path(suits)
 
 /datum/gear/uniform/scrubs

@@ -1,9 +1,9 @@
 /obj/machinery/power/am_control_unit
 	name = "antimatter control unit"
 	desc = "This device injects antimatter into connected shielding units, the more antimatter injected the more power produced.  Wrench the device to set it up."
-	icon = 'icons/obj/machines/antimatter.dmi'
+	icon = 'icons/obj/machines/new_ame.dmi'
 	icon_state = "control"
-	anchored = 1
+	anchored = 0
 	density = 1
 	use_power = 1
 	idle_power_usage = 100
@@ -19,7 +19,7 @@
 	var/active = 0//On or not
 	var/fuel_injection = 2//How much fuel to inject
 	var/shield_icon_delay = 0//delays resetting for a short time
-	var/reported_core_efficiency = 0
+	var/reported_num_cores = 0
 
 	var/power_cycle = 0
 	var/power_cycle_delay = 4//How many ticks till produce_power is called
@@ -34,21 +34,32 @@
 	linked_shielding = list()
 	linked_cores = list()
 
+/obj/machinery/power/am_control_unit/start_linked
+	anchored = 1
 
-/obj/machinery/power/am_control_unit/Destroy()//Perhaps damage and run stability checks rather than just qdel on the others
+/obj/machinery/power/am_control_unit/start_linked/New()
+	..()
+	connect_to_network()
+
+
+/obj/machinery/power/am_control_unit/Destroy()//Perhaps damage and run stability checks rather than just del on the others
 	for(var/obj/machinery/am_shielding/AMS in linked_shielding)
 		qdel(AMS)
 	..()
 
 
 /obj/machinery/power/am_control_unit/process()
+
+	if(fueljar)
+		playsound(src.loc, 'sound/ambience/antimatterambi.ogg', 25, 0)
+	else
+		playsound(src.loc, null, 50, 0)
+
 	if(exploding)
 		explosion(get_turf(src),8,12,18,12)
 		if(src) qdel(src)
 
-	if(update_shield_icons && !shield_icon_delay)
-		check_shield_icons()
-		update_shield_icons = 0
+	check_shield_icons()
 
 	if(stat & (NOPOWER|BROKEN) || !active)//can update the icons even without power
 		return
@@ -69,23 +80,33 @@
 
 
 /obj/machinery/power/am_control_unit/proc/produce_power()
-	playsound(src.loc, 'sound/effects/bang.ogg', 25, 1)
-	var/core_power = reported_core_efficiency//Effectively how much fuel we can safely deal with
-	if(core_power <= 0) return 0//Something is wrong
+	playsound(src.loc, 'sound/effects/antimatter.ogg', 50, 1)
+	if(reported_num_cores <= 0) return 0//Something is wrong
 	var/core_damage = 0
 	var/fuel = fueljar.usefuel(fuel_injection)
+	var/reactor_cores = reported_num_cores
 
-	stored_power = (fuel/core_power)*fuel*200000
+	// For these values, we use the formula below
+	// A=5000000  (	    (cores-h)     )
+	// B=12       (A * ----------- + k) * efficiency
+	// h=12       (    B+|cores-h|    )
+	// k=2500000
+	// where efficiency = (fuel/reactor_cores) / 2
+	//Old calc: stored_power = (fuel/reactor_cores)*fuel*20000
+	//                                    --Alice
+
+	stored_power = round((5000000 * ((reactor_cores-12)/(12+abs(reactor_cores-12))) + 2500000) *  ((fuel/reactor_cores)/2))
+
 	//Now check if the cores could deal with it safely, this is done after so you can overload for more power if needed, still a bad idea
-	if(fuel > (2*core_power))//More fuel has been put in than the current cores can deal with
+	if(fuel > (2*reactor_cores))//More fuel has been put in than the current cores can deal with
 		if(prob(50))core_damage = 1//Small chance of damage
-		if((fuel-core_power) > 5)	core_damage = 5//Now its really starting to overload the cores
-		if((fuel-core_power) > 10)	core_damage = 20//Welp now you did it, they wont stand much of this
+		if((fuel-reactor_cores) > 5)	core_damage = 5//Now its really starting to overload the cores
+		if((fuel-reactor_cores) > 10)	core_damage = 20//Welp now you did it, they wont stand much of this
 		if(core_damage == 0) return
 		for(var/obj/machinery/am_shielding/AMS in linked_cores)
 			AMS.stability -= core_damage
 			AMS.check_stability(1)
-		playsound(src.loc, 'sound/effects/bang.ogg', 50, 1)
+		playsound(src.loc, 'sound/effects/antimatter.ogg', 100, 1)
 	return
 
 
@@ -120,8 +141,8 @@
 
 
 /obj/machinery/power/am_control_unit/power_change()
-	. = ..()
-	if((stat & NOPOWER) && active)
+	..()
+	if(stat & NOPOWER && active)
 		toggle_power()
 	return
 
@@ -150,16 +171,18 @@
 			src.anchored = 0
 			disconnect_from_network()
 		else
-			to_chat(user, "<span class='warning'>Once bolted and linked to a shielding unit it the [src.name] is unable to be moved!</span>")
+			user << "<span class='warning'>Once bolted and linked to a shielding unit it the [src.name] is unable to be moved!</span>"
 		return
 
 	if(istype(W, /obj/item/weapon/am_containment))
 		if(fueljar)
-			to_chat(user, "<span class='warning'>There is already a [fueljar] inside!</span>")
+			user << "<span class='warning'>There is already a [fueljar] inside!</span>"
 			return
 		fueljar = W
-		user.remove_from_mob(W)
 		W.loc = src
+		if(user.client)
+			user.client.screen -= W
+		user.u_equip(W)
 		user.update_icons()
 		user.visible_message("[user.name] loads an [W.name] into the [src.name].", \
 				"You load an [W.name].", \
@@ -216,7 +239,6 @@
 
 /obj/machinery/power/am_control_unit/proc/check_shield_icons()//Forces icon_update for all shields
 	if(shield_icon_delay) return
-	shield_icon_delay = 1
 	if(update_shield_icons == 2)//2 means to clear everything and rebuild
 		for(var/obj/machinery/am_shielding/AMS in linked_shielding)
 			if(AMS.processing)	AMS.shutdown_core()
@@ -228,8 +250,6 @@
 	else
 		for(var/obj/machinery/am_shielding/AMS in linked_shielding)
 			AMS.update_icon()
-	spawn(20)
-		shield_icon_delay = 0
 	return
 
 
@@ -252,6 +272,8 @@
 			user << browse(null, "window=AMcontrol")
 			return
 	user.set_machine(src)
+	var/kiloWatts = stored_power / 1000
+	var/megaWatts = stored_power / 1000000
 
 	var/dat = ""
 	dat += "AntiMatter Control Panel<BR>"
@@ -261,12 +283,15 @@
 	dat += "Status: [(active?"Injecting":"Standby")] <BR>"
 	dat += "<A href='?src=\ref[src];togglestatus=1'>Toggle Status</A><BR>"
 
-	dat += "Instability: [stability]%<BR>"
+	dat += "Stability: [stability]%<BR>"
 	dat += "Reactor parts: [linked_shielding.len]<BR>"//TODO: perhaps add some sort of stability check
 	dat += "Cores: [linked_cores.len]<BR><BR>"
-	dat += "-Current Efficiency: [reported_core_efficiency]<BR>"
+	dat += "-Current Effective Cores: [reported_num_cores]<BR>"
 	dat += "-Average Stability: [stored_core_stability] <A href='?src=\ref[src];refreshstability=1'>(update)</A><BR>"
-	dat += "Last Produced: [stored_power]<BR>"
+	if(stored_power > 1000000)
+		dat += "Last Produced: [megaWatts] mW<BR>"
+	else
+		dat += "Last Produced: [kiloWatts] kW<BR>"
 
 	dat += "Fuel: "
 	if(!fueljar)
