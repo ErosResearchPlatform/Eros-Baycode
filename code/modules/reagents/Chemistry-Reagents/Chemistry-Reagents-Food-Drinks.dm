@@ -48,6 +48,7 @@
 /datum/reagent/nutriment/proc/adjust_nutrition(var/mob/living/carbon/M, var/alien, var/removed)
 	switch(alien)
 		if(IS_RESOMI) removed *= 0.8 // Resomi get a bit more nutrition from meat, a bit less from other stuff to compensate
+		if(IS_AKULA) removed *= 0.8
 		if(IS_UNATHI) removed *= 0.1 // Unathi get most of their nutrition from meat.
 	M.nutrition += nutriment_factor * removed // For hunger and fatness
 
@@ -75,6 +76,9 @@
 	switch(alien)
 		if(IS_RESOMI) removed *= 1.25
 		if(IS_UNATHI) removed *= 2.25
+		if(IS_AKULA) removed *= 2.25
+		if(IS_VEIREI) removed *= 1.75
+		if(IS_LAMIA) removed *= 2
 	M.nutrition += nutriment_factor * removed // For hunger and fatness
 
 /datum/reagent/nutriment/protein/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
@@ -344,9 +348,9 @@
 	var/no_pain = 0
 	var/obj/item/eye_protection = null
 	var/obj/item/face_protection = null
-	
+
 	var/effective_strength = 5
-	
+
 	if(alien == IS_SKRELL)	//Larger eyes means bigger targets.
 		effective_strength = 8
 
@@ -555,6 +559,10 @@
 /datum/reagent/toxin/poisonberryjuice/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_UNATHI)
 		return //unathi are immune!
+	return ..()
+
+	if(alien == IS_VEIREI)
+		return
 	return ..()
 
 /datum/reagent/drink/juice/potato

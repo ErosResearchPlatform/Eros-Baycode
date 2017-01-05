@@ -25,6 +25,10 @@
 #define IS_XENOS   6
 #define IS_RESOMI  7
 #define IS_SLIME   8
+#define IS_VEIREI  9
+#define IS_LAMIA   10
+#define IS_AKULA   11
+
 
 #define CE_STABLE "stable" // Inaprovaline
 #define CE_ANTIBIOTIC "antibiotic" // Spaceacilin
