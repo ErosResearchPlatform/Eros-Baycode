@@ -208,29 +208,10 @@
 
 /datum/datacore/proc/manifest_inject(var/mob/living/carbon/human/H)
 	if(H.mind && !player_is_antag(H.mind, only_offstation_roles = 1) && job_master.ShouldCreateRecords(H.mind.assigned_role))
-		var/assignment = GetAssignment(H)
 
 		var/id = generate_record_id()
 		//General Record
 		var/datum/data/record/G = CreateGeneralRecord(H, id)
-		G.fields["name"]		= H.real_name
-		G.fields["real_rank"]	= H.mind.assigned_role
-		G.fields["rank"]		= assignment
-		G.fields["age"]			= H.age
-		G.fields["fingerprint"]	= md5(H.dna.uni_identity)
-		G.fields["p_stat"]		= "Active"
-		G.fields["m_stat"]		= "Stable"
-		G.fields["sex"]			= gender2text(H.gender)
-		G.fields["species"]		= H.get_species()
-		G.fields["home_system"]	= H.home_system
-		G.fields["citizenship"]	= H.citizenship
-		G.fields["faction"]		= H.personal_faction
-		G.fields["religion"]	= H.religion
-		G.fields["mil_branch"]  = H.char_branch && H.char_branch.name
-		G.fields["mil_rank"]    = H.char_rank && H.char_rank.name
-		if(H.gen_record && !jobban_isbanned(H, "Records"))
-			G.fields["notes"] = H.gen_record
-
 
 		//Medical Record
 		var/datum/data/record/M = CreateMedicalRecord(H.real_name, id)
@@ -246,24 +227,13 @@
 
 		//Locked Record
 		var/datum/data/record/L = new()
+		L.fields = G.fields.Copy()
 		L.fields["id"]			= md5("[H.real_name][H.mind.assigned_role]")
-		L.fields["name"]		= H.real_name
-		L.fields["rank"] 		= H.mind.assigned_role
-		L.fields["age"]			= H.age
-		L.fields["fingerprint"]	= md5(H.dna.uni_identity)
-		L.fields["sex"]			= gender2text(H.gender)
 		L.fields["b_type"]		= H.b_type
 		L.fields["b_dna"]		= H.dna.unique_enzymes
 		L.fields["enzymes"]		= H.dna.SE // Used in respawning
 		L.fields["identity"]	= H.dna.UI // "
-		L.fields["species"]		= H.get_species()
-		L.fields["home_system"]	= H.home_system
-		L.fields["citizenship"]	= H.citizenship
-		L.fields["faction"]		= H.personal_faction
-		L.fields["religion"]	= H.religion
-		L.fields["image"]		= getFlatIcon(H)	//This is god-awful
-		L.fields["mil_branch"]   = H.char_branch && H.char_branch.name
-		L.fields["mil_rank"]    = H.char_rank && H.char_rank.name
+		L.fields["image"]		= L.fields["photo_front"]	//This is god-awful
 		if(H.exploit_record && !jobban_isbanned(H, "Records"))
 			L.fields["exploit_record"] = H.exploit_record
 		else
@@ -446,32 +416,35 @@
 		side = getFlatIcon(H, WEST, always_use_defdir = 1)
 	else
 		var/mob/living/carbon/human/dummy = new()
-		front = new(get_id_photo(dummy), dir = SOUTH)
-		side = new(get_id_photo(dummy), dir = WEST)
+		front = getFlatIcon(dummy, SOUTH, always_use_defdir = 1)
+		side = getFlatIcon(dummy, WEST, always_use_defdir = 1)
 		qdel(dummy)
 
 	if(!id) id = text("[]", add_zero(num2hex(rand(1, 1.6777215E7)), 6))
 	var/datum/data/record/G = new /datum/data/record()
 	G.name = "Employee Record #[id]"
-	G.fields["name"] = "New Record"
 	G.fields["id"] = id
-	G.fields["rank"] = "Unassigned"
-	G.fields["real_rank"] = "Unassigned"
-	G.fields["sex"] = "Unknown"
-	G.fields["age"] = "Unknown"
-	G.fields["fingerprint"] = "Unknown"
+	G.fields["name"] = H ? H.real_name : "New Record"
+	G.fields["rank"] = H ? GetAssignment(H) : "Unassigned"
+	G.fields["real_rank"] = H ? H.mind.assigned_role : "Unassigned"
+	G.fields["sex"] =  H ? gender2text(H.gender) : "Unknown"
+	G.fields["age"] = H ? H.age :"Unknown"
+	G.fields["fingerprint"] = H ? md5(H.dna.uni_identity) : "Unknown"
 	G.fields["p_stat"] = "Active"
 	G.fields["m_stat"] = "Stable"
-	G.fields["species"] = "Human"
-	G.fields["home_system"]	= "Unknown"
-	G.fields["citizenship"]	= "Unknown"
-	G.fields["faction"]		= "Unknown"
-	G.fields["religion"]	= "Unknown"
+	G.fields["species"] = H ? H.get_species() : "Human"
+	G.fields["home_system"]	= H ? H.home_system : "Unknown"
+	G.fields["citizenship"]	= H ? H.citizenship : "Unknown"
+	G.fields["faction"]		= H ? H.personal_faction : "Unknown"
+	G.fields["religion"]	= H ? H.religion : "Unknown"
 	G.fields["photo_front"]	= front
 	G.fields["photo_side"]	= side
 	G.fields["notes"] = "No notes found."
-	G.fields["mil_branch"] = null
-	G.fields["mil_rank"] = null
+	if(H && H.gen_record && !jobban_isbanned(H, "Records"))
+		G.fields["notes"] = H.gen_record
+	G.fields["mil_branch"] = H ? H.char_branch && H.char_branch.name : null
+	G.fields["mil_rank"] = H ? H.char_rank && H.char_rank.name : null
+	G.fields["connections"] =  list()
 	general += G
 
 	return G

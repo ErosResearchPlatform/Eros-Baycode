@@ -86,8 +86,8 @@
 		death()
 		return
 
-	if (halloss)
-		halloss = 0
+	if(getHalLoss())
+		setHalLoss(0)
 
 	if(prob(30))
 		adjustOxyLoss(-1)
@@ -102,18 +102,18 @@
 	else
 		if (src.paralysis || src.stunned || src.weakened || (status_flags && FAKEDEATH)) //Stunned etc.
 			if (src.stunned > 0)
-				src.stat = 0
+				src.set_stat(CONSCIOUS)
 			if (src.weakened > 0)
 				src.lying = 0
-				src.stat = 0
+				src.set_stat(CONSCIOUS)
 			if (src.paralysis > 0)
 				src.blinded = 0
 				src.lying = 0
-				src.stat = 0
+				src.set_stat(CONSCIOUS)
 
 		else
 			src.lying = 0
-			src.stat = 0
+			src.set_stat(CONSCIOUS)
 
 	if (src.stuttering) src.stuttering = 0
 
@@ -125,7 +125,7 @@
 	if (src.ear_damage < 25)
 		src.ear_damage = 0
 
-	src.density = !( src.lying )
+	src.set_density(!src.lying)
 
 	if (src.sdisabilities & BLIND)
 		src.blinded = 1

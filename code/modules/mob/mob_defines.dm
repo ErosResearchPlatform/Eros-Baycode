@@ -63,8 +63,6 @@
 	var/real_name = null
 
 	var/bhunger = 0			//Carbon
-	var/ajourn = 0
-	var/seer = 0 //for cult//Carbon, probably Human
 
 	var/druggy = 0			//Carbon
 	var/confused = 0		//Carbon
@@ -87,7 +85,7 @@
 
 	var/name_archive //For admin things like possession
 
-	var/timeofdeath = 0.0
+	var/timeofdeath = 0
 
 	var/bodytemperature = 310.055	//98.7 F
 	var/default_pixel_x = 0

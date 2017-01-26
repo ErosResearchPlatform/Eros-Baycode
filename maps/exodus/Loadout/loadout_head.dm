@@ -132,21 +132,6 @@
 	display_name = "Zhan headscarf"
 	path = /obj/item/clothing/head/tajaran/scarf
 
-/datum/gear/head/hijab
-	display_name = "hijab"
-	path = /obj/item/clothing/head/hijab
-	flags = GEAR_HAS_COLOR_SELECTION
-
-/datum/gear/head/kippa
-	display_name = "kippa"
-	path = /obj/item/clothing/head/kippa
-	flags = GEAR_HAS_COLOR_SELECTION
-
-/datum/gear/head/turban
-	display_name = "turban"
-	path = /obj/item/clothing/head/turban
-	flags = GEAR_HAS_COLOR_SELECTION
-
 /datum/gear/head/welding
 
 	display_name = "welding mask selection"
