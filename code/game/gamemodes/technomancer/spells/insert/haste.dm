@@ -20,7 +20,7 @@
 	spawn(1)
 		if(istype(host, /mob/living/carbon/human))
 			var/mob/living/carbon/human/H = host
-			H.force_max_speed = 1
+			H.add_chemical_effect(CE_SPEEDBOOST, 1)
 			to_chat(H,"<span class='notice'>You suddenly find it much easier to move.</span>")
 			H.adjust_instability(10)
 			spawn(5 SECONDS)
@@ -30,6 +30,5 @@
 /obj/item/weapon/inserted_spell/haste/on_expire()
 	if(istype(host, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = host
-		H.force_max_speed = 0
 		to_chat(H,"<span class='warning'>You feel slow again.</span>")
 		..()

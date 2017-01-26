@@ -9,7 +9,7 @@
 	if(embedded_flag || (stomach_contents && stomach_contents.len))
 		handle_embedded_and_stomach_objects() //Moving with objects stuck in you can cause bad times.
 
-	if((CE_SPEEDBOOST in chem_effects) || force_max_speed)
+	if(CE_SPEEDBOOST in chem_effects)
 		return -1
 
 	var/health_deficiency = (maxHealth - health)
@@ -37,18 +37,14 @@
 				tally += I.slowdown_general
 				tally += I.slowdown_per_slot[slot]
 
-		if(species.can_run_shoeless && !shoes)
-			tally += SHOES_SLOWDOWN
-
-		var/list/stance_limbs = get_stance_limbs()
-		for(var/obj/item/organ/external/E in stance_limbs)
-			// The () conditionals after += cover variable-amount limbs; if they only have 1 "standing" limb instead of the normal 4, they get 4 times as much damage
+		for(var/organ_name in list(BP_L_LEG, BP_R_LEG, BP_L_FOOT, BP_R_FOOT))
+			var/obj/item/organ/external/E = get_organ(organ_name)
 			if(!E || E.is_stump())
-				tally += (16 / stance_limbs.len) // 16 / 1 = 16; 16 / 4 = 4
+				tally += 4
 			else if(E.splinted)
-				tally += (2 / stance_limbs.len) // 2 / 1 = 2; 2 / 4 = 0.5
+				tally += 0.5
 			else if(E.status & ORGAN_BROKEN)
-				tally += (6 / stance_limbs.len) // 6 / 1 = 6; 6 / 4 = 1.5
+				tally += 1.5
 
 	if(shock_stage >= 10) tally += 3
 

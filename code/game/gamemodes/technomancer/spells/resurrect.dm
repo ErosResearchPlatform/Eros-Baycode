@@ -25,7 +25,7 @@
 			to_chat(user,"<span class='warning'>\The [L] isn't dead!</span>")
 			return 0
 		if(pay_energy(5000))
-			if(L.tod > world.time + 10 MINUTES)
+			if(L.timeofdeath > world.time + 10 MINUTES)
 				to_chat(user,"<span class='danger'>\The [L]'s been dead for too long, even this function cannot replace cloning at \
 				this point.</span>")
 				return 0

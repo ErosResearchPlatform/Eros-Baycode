@@ -27,9 +27,6 @@
 	attack_verb = list("HONKED")
 	var/spam_flag = 0
 
-/obj/item/weapon/soap/proc/wet()
-	reagents.add_reagent("cleaner", 5)
-
 /obj/item/weapon/soap/Crossed(AM as mob|obj)
 	if (istype(AM, /mob/living))
 		if (istype(src, /obj/item/weapon/soap/syndie) || istype(src, /obj/item/weapon/soap/deluxe))

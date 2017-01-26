@@ -312,7 +312,6 @@
 /obj/item/weapon/storage/fancy/cigarettes/soma
 	name = "pack of strange cigarettes"
 	desc = "The package is as generic as it get. There is no name, no labeling, just cheap grey cardboard. You're a little uncertain about it, but find it strangely alluring."
-	brand = "strange cigarettes"
 	icon_state = "SMpacket"
 	item_state = "Dpacket"
 

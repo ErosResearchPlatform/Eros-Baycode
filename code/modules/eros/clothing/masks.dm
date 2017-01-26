@@ -23,14 +23,6 @@
 			icon_state = initial(icon_state)
 			usr << "You tie the bandana so that it can be worn on the face."
 
-/obj/item/clothing/mask/bandana/verb/toggle()
-	set category = "Object"
-	set name = "Tie bandana"
-	set src in usr
-
-	adjust_bandana(usr)
-	update_icon()
-
 /obj/item/clothing/mask/bandana/black
 	name = "black bandana"
 	desc = "A fine black bandana with nanotech lining."
