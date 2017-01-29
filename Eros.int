@@ -3,7 +3,7 @@
 DIR: icons icons\mob 
 AUTO_FILE_DIR: OFF
 MAP_ICON_TYPE: 0
-WINDOW: icons\mob\feet.dmi
-FILE: icons\mob\feet.dmi
+WINDOW: icons\mob\mask.dmi
+FILE: icons\mob\mask.dmi
 */
 // END_INTERNALS
