@@ -16,3 +16,4 @@ reboot_called
 atupdate
 __pycache__
 .atom-build.json
+config/example/admins.txt
