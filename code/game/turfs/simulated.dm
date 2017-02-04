@@ -19,8 +19,9 @@
 /turf/simulated/post_change()
 	..()
 	var/turf/T = GetAbove(src)
-	if(istype(T,/turf/space))
-		T.ChangeTurf(/turf/simulated/open)
+	if(istype(T,/turf/space) || (density && istype(T,/turf/simulated/open)))
+		var/new_turf_type = density ? (istype(T.loc, /area/space) ? /turf/simulated/floor/airless : /turf/simulated/floor/plating) : /turf/simulated/open
+		T.ChangeTurf(new_turf_type)
 
 // This is not great.
 /turf/simulated/proc/wet_floor(var/wet_val = 1)
@@ -67,9 +68,6 @@
 /turf/simulated/Destroy()
 	task_unwet_floor(unwet_task, FALSE)
 	return ..()
-
-/turf/simulated/proc/initialize()
-	return
 
 /turf/simulated/proc/AddTracks(var/typepath,var/bloodDNA,var/comingdir,var/goingdir,var/bloodcolor="#A10808")
 	var/obj/effect/decal/cleanable/blood/tracks/tracks = locate(typepath) in src
@@ -128,13 +126,21 @@
 		if(src.wet)
 
 			if(M.buckled || (src.wet == 1 && M.m_intent == "walk"))
+				M.slipping = 0 //They're stable again
 				return
 
-			var/slip_dist = 1
-			var/slip_stun = 6
-			var/floor_type = "wet"
+			var/slip_dist
+			var/slip_stun
+			var/floor_type
 
 			switch(src.wet)
+				if(1)
+					if(M.slipping == 2) //It's wet, but have they run over two wet tiles in a row?
+						slip_dist = 1
+						slip_stun = 3
+						floor_type = "wet"
+					else
+						M.slipping++
 				if(2) // Lube
 					floor_type = "slippery"
 					slip_dist = 4
@@ -143,14 +149,17 @@
 					floor_type = "icy"
 					slip_stun = 4
 
-			if(M.slip("the [floor_type] floor",slip_stun))
-				for(var/i = 0;i<slip_dist;i++)
-					step(M, M.dir)
-					sleep(1)
-			else
-				M.inertia_dir = 0
+			if(slip_dist)
+				if(M.slip("the [floor_type] floor",slip_stun))
+					for(var/i = 0;i<slip_dist;i++)
+						step(M, M.dir)
+						sleep(1)
+					M.slipping = 1
+				else
+					M.inertia_dir = 0
 		else
 			M.inertia_dir = 0
+			M.slipping = 0 //It's not wet, they're stabilized
 
 	..()
 

@@ -19,7 +19,7 @@
 	desc = "When you want to turn up the heat."
 	icon_state = "swat"
 	force = 3
-	armor = list(melee = 80, bullet = 60, laser = 50,energy = 25, bomb = 50, bio = 10, rad = 0)
+	armor = list(melee = 80, bullet = 60, laser = 60,energy = 25, bomb = 50, bio = 10, rad = 0)
 	item_flags = NOSLIP
 	siemens_coefficient = 0.6
 	can_hold_knife = 1
@@ -27,9 +27,9 @@
 /obj/item/clothing/shoes/combat //Basically SWAT shoes combined with galoshes.
 	name = "combat boots"
 	desc = "When you REALLY want to turn up the heat."
-	icon_state = "duty"
+	icon_state = "jungle"
 	force = 5
-	armor = list(melee = 80, bullet = 60, laser = 50,energy = 25, bomb = 50, bio = 10, rad = 0)
+	armor = list(melee = 80, bullet = 60, laser = 60,energy = 25, bomb = 50, bio = 10, rad = 0)
 	item_flags = NOSLIP
 	siemens_coefficient = 0.6
 	can_hold_knife = 1
@@ -151,6 +151,15 @@
 	item_state = "slippers_worn"
 	force = 0
 	w_class = ITEM_SIZE_SMALL
+
+/obj/item/clothing/shoes/footwraps
+	name = "cloth footwraps"
+	desc = "A roll of treated canvas used for wrapping claws or paws"
+	icon_state = "clothwrap"
+	item_state = "clothwrap"
+	force = 0
+	w_class = ITEM_SIZE_SMALL
+	species_restricted = null
 
 /obj/item/clothing/shoes/laceup
 	name = "laceup shoes"

@@ -596,3 +596,60 @@
 	if(dose > 10)
 		M.make_dizzy(5)
 		M.make_jittery(5)
+
+
+// EROS START
+
+var/stage1 		= 0.1
+var/stage2 		= 3
+var/stage3 		= 6
+var/stage1od 	= 10
+var/stage2od	= 12.5
+var/stage3od	= 15
+
+/datum/reagent/soma
+	name = "Soma"
+	id = "soma"
+	description = "Stimulates the more base parts of the brain."
+	taste_description = "mild sweetness"
+	reagent_state = LIQUID
+	color = "#FF80FF"
+	metabolism = 0.05
+	overdose = REAGENTS_OVERDOSE
+	data = 0
+
+/datum/reagent/soma/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+
+	if(alien == IS_DIONA)
+		return
+
+	if(dose >= stage3od)
+		if(M.brainloss <= 25)
+			M.brainloss += 2
+		M.sleeping = max(M.sleeping, 20)
+		M.drowsyness = max(M.drowsyness, 60)
+	if(dose >= stage2od)
+		M.Weaken(2)
+		M.drowsyness = max(M.drowsyness, 20)
+	if(dose >= stage1od)
+		M.eye_blurry = max(M.eye_blurry, 10)
+		if(prob(5))
+			M.emote("yawn")
+	if(dose >= stage3 && world.time > data + ANTIDEPRESSANT_MESSAGE_DELAY * 0.1)
+		data = world.time
+		to_chat(M, "<span class='love'>The colors start to swirl, and it's hard to think of anything but your base instincts...</span>")
+		M.druggy += max(M.druggy, 100)
+		return
+	if(dose >= stage2 && world.time > data + ANTIDEPRESSANT_MESSAGE_DELAY * 0.5)
+		data = world.time
+		to_chat(M, pick("<span class='love'>You find concentrating more difficult...</span>", "<span class='love'>Everything starts to seem like it's a nice idea...</span>"))
+		return
+	if(dose >= stage1 && world.time > data + ANTIDEPRESSANT_MESSAGE_DELAY * 0.75)
+		data = world.time
+		to_chat(M, "<span class='love'>You feel your inhibitions loosening...</span>")
+
+
+
+
+/datum/reagent/soma/overdose(var/mob/living/carbon/M, var/alien)
+	return

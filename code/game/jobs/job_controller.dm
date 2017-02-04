@@ -45,7 +45,10 @@ var/global/datum/controller/occupations/job_master
 				civilian_positions |= job.title
 			if(job.department_flag & MSC)
 				nonhuman_positions |= job.title
-
+			if(job.department_flag & SRV)
+				service_positions |= job.title
+			if(job.department_flag & SUP)
+				supply_positions |= job.title
 
 		return 1
 
@@ -393,9 +396,11 @@ var/global/datum/controller/occupations/job_master
 							spawn_in_storage += thing
 			//Equip job items.
 			job.setup_account(H)
-			job.equip(H, H.mind ? H.mind.role_alt_title : "")
+			job.equip(H, H.mind ? H.mind.role_alt_title : "", H.char_branch)
 			job.apply_fingerprints(H)
 
+			if(H.char_rank && H.char_rank.accessory)
+				H.equip_to_slot_or_del(new H.char_rank.accessory, slot_tie)
 			//If some custom items could not be equipped before, try again now.
 			for(var/thing in custom_equip_leftovers)
 				var/datum/gear/G = gear_datums[thing]
@@ -505,7 +510,7 @@ var/global/datum/controller/occupations/job_master
 		//Gives glasses to the vision impaired
 		if(H.disabilities & NEARSIGHTED)
 			var/equipped = H.equip_to_slot_or_del(new /obj/item/clothing/glasses/regular(H), slot_glasses)
-			if(equipped != 1)
+			if(equipped)
 				var/obj/item/clothing/glasses/G = H.glasses
 				G.prescription = 7
 
@@ -599,11 +604,11 @@ var/global/datum/controller/occupations/job_master
 		if(!(C.prefs.spawnpoint in using_map.allowed_spawns))
 			if(H)
 				to_chat(H, "<span class='warning'>Your chosen spawnpoint ([C.prefs.spawnpoint]) is unavailable for the current map. Spawning you at one of the enabled spawn points instead.</span>")
-				
+
 			spawnpos = null
 		else
 			spawnpos = spawntypes[C.prefs.spawnpoint]
-		
+
 	if(spawnpos && !spawnpos.check_job_spawning(rank))
 		if(H)
 			to_chat(H, "<span class='warning'>Your chosen spawnpoint ([spawnpos.display_name]) is unavailable for your chosen job ([rank]). Spawning you at another spawn point instead.</span>")

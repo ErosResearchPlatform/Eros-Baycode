@@ -6,6 +6,7 @@
 	pda_slot = slot_l_store
 	backpack = /obj/item/weapon/storage/backpack/medic
 	satchel_one = /obj/item/weapon/storage/backpack/satchel_med
+	messenger_bag = /obj/item/weapon/storage/backpack/messenger/med
 
 /decl/hierarchy/outfit/job/medical/cmo
 	name = OUTFIT_JOB_NAME("Chief Medical Officer")
@@ -72,6 +73,7 @@
 /decl/hierarchy/outfit/job/medical/geneticist
 	name = OUTFIT_JOB_NAME("Geneticist")
 	uniform = /obj/item/clothing/under/rank/geneticist
+	l_ear  =/obj/item/device/radio/headset/headset_medsci
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat/genetics
 	backpack = /obj/item/weapon/storage/backpack/genetics
 	r_pocket = /obj/item/device/flashlight/pen

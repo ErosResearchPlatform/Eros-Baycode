@@ -6,8 +6,7 @@
 	qdel(hud_used)
 	clear_fullscreen()
 	if(client)
-		for(var/obj/screen/movable/spell_master/spell_master in spell_masters)
-			qdel(spell_master)
+		qdel(ability_master)
 		remove_screen_obj_references()
 		for(var/atom/movable/AM in client.screen)
 			var/obj/screen/screenobj = AM
@@ -38,7 +37,6 @@
 	item_use_icon = null
 	gun_move_icon = null
 	gun_setting_icon = null
-	spell_masters = null
 	zone_sel = null
 
 /mob/New()
@@ -87,10 +85,15 @@
 		var/mob/M = m
 		if(self_message && M == src)
 			M.show_message(self_message, VISIBLE_MESSAGE, blind_message, AUDIBLE_MESSAGE)
+			continue
+			
 		if(M.see_invisible >= invisibility)
 			M.show_message(message, VISIBLE_MESSAGE, blind_message, AUDIBLE_MESSAGE)
-		else if(blind_message)
+			continue
+			
+		if(blind_message)
 			M.show_message(blind_message, AUDIBLE_MESSAGE)
+			continue
 
 // Returns an amount of power drawn from the object (-1 if it's not viable).
 // If drain_check is set it will not actually drain power, just return a value.
@@ -449,17 +452,6 @@
 				names.Add(name)
 				namecounts[name] = 1
 			creatures[name] = O
-
-		if(istype(O, /obj/machinery/bot))
-			var/name = "BOT: [O.name]"
-			if (names.Find(name))
-				namecounts[name]++
-				name = "[name] ([namecounts[name]])"
-			else
-				names.Add(name)
-				namecounts[name] = 1
-			creatures[name] = O
-
 
 	for(var/mob/M in sortAtom(mob_list))
 		var/name = M.name
