@@ -12,14 +12,14 @@
 	economic_modifier = 10
 	access = list(access_medical, access_medical_equip, access_morgue, access_genetics, access_heads,
 			access_chemistry, access_virology, access_cmo, access_surgery, access_RC_announce,
-			access_keycard_auth, access_sec_doors, access_psychiatrist, access_eva, access_maint_tunnels, access_external_airlocks)
+			access_keycard_auth, access_sec_doors, access_psychiatrist, access_eva, access_external_airlocks, access_maint_tunnels)
 	minimal_access = list(access_medical, access_medical_equip, access_morgue, access_genetics, access_heads,
 			access_chemistry, access_virology, access_cmo, access_surgery, access_RC_announce,
-			access_keycard_auth, access_sec_doors, access_psychiatrist, access_eva, access_maint_tunnels, access_external_airlocks)
+			access_keycard_auth, access_sec_doors, access_psychiatrist, access_eva, access_external_airlocks, access_maint_tunnels)
 
 	minimal_player_age = 14
 	ideal_character_age = 50
-	species_restricted = list("Tajara", "Vox", "Resomi", "Diona")
+	species_restricted = list("Tajara", "Vox", "Diona")
 	outfit_type = /decl/hierarchy/outfit/job/medical/cmo
 
 /datum/job/doctor

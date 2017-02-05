@@ -43,7 +43,6 @@
 		/area/skipjack_station = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/solar = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/space = NO_SCRUBBER|NO_VENT|NO_APC,
-		/area/security/nuke_storage = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/storage/emergency = NO_SCRUBBER|NO_VENT,
 		/area/storage/emergency2 = NO_SCRUBBER|NO_VENT,
 		/area/storage/emergency_secondary_1 = NO_SCRUBBER|NO_VENT,
@@ -51,7 +50,8 @@
 		/area/supply = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/syndicate_station = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/storage/warehouse = NO_SCRUBBER|NO_VENT|NO_APC,
-		/area/crew_quarters/cafe = NO_SCRUBBER|NO_VENT|NO_APC
+		/area/crew_quarters/cafe = NO_SCRUBBER|NO_VENT|NO_APC,
+		/area/security/nuke_storage = NO_SCRUBBER|NO_VENT|NO_APC
 	)
 
 

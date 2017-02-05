@@ -21,7 +21,8 @@
 		/obj/item/weapon/camera_assembly,
 		/obj/item/weapon/tank,
 		/obj/item/weapon/circuitboard,
-		/obj/item/weapon/smes_coil
+		/obj/item/weapon/smes_coil,
+		/obj/item/weapon/am_containment
 		)
 
 	var/obj/item/wrapped = null // Item currently being held.

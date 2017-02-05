@@ -4496,7 +4496,7 @@
 "bIx" = (/obj/machinery/atmospherics/pipe/simple/hidden,/turf/simulated/floor/tiled/white,/area/rnd/docking)
 "bIy" = (/obj/machinery/alarm{dir = 8; icon_state = "alarm0"; pixel_x = 24},/obj/machinery/camera/network/research{c_tag = "Research Shuttle Dock"; dir = 8},/obj/effect/floor_decal/corner/blue{dir = 4},/turf/simulated/floor/tiled/white,/area/rnd/docking)
 "bIz" = (/turf/simulated/wall/r_wall,/area/rnd/docking)
-"bIA" = (/obj/machinery/door/airlock/external{frequency = 1380; icon_state = "door_locked"; id_tag = "research_dock_outer"; locked = 1; name = "Shuttle Airlock"; req_access = list(13)},/turf/simulated/floor/plating,/area/rnd/docking)
+"bIA" = (/obj/machinery/door/airlock/external{frequency = 1380; icon_state = "door_locked"; id_tag = "research_dock_outer"; locked = 1; name = "Shuttle Airlock"; req_access = list(13)},/obj/machinery/shield_diffuser,/turf/simulated/floor/plating,/area/rnd/docking)
 "bIB" = (/obj/machinery/access_button{command = "cycle_exterior"; frequency = 1380; master_tag = "research_dock_airlock"; name = "exterior access button"; pixel_x = -40; pixel_y = 8; req_one_access = list(13,65)},/obj/structure/lattice,/turf/space,/area/space)
 "bIC" = (/obj/structure/sign/warning/docking_area,/turf/simulated/wall/r_wall,/area/space)
 "bID" = (/obj/machinery/conveyor{dir = 4; id = "QMLoad"},/obj/machinery/door/firedoor/border_only,/obj/machinery/door/airlock/external{frequency = 1380; icon_state = "door_locked"; id_tag = "cargo_bay_door"; locked = 1; name = "Cargo Docking Hatch"; req_access = list(13)},/obj/machinery/shield_diffuser,/turf/simulated/floor/plating,/area/quartermaster/storage)
