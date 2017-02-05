@@ -11,7 +11,7 @@
 
 	//Species-specific stuff.
 	species_restricted = list("Human", "Machine")
-	sprite_sheets = list(\
+	sprite_sheets = list(
 		"Human" = 'icons/mob/head.dmi',
 		"Unathi" = 'icons/mob/species/unathi/helmet.dmi',
 		"Tajara" = 'icons/mob/species/tajaran/helmet.dmi',
@@ -69,6 +69,8 @@
 	var/obj/item/clothing/shoes/magboots/boots = null // Deployable boots, if any.
 	var/obj/item/clothing/head/helmet/helmet = null   // Deployable helmet, if any.
 	var/obj/item/weapon/tank/tank = null              // Deployable tank, if any.
+
+	action_button_name = "Toggle Helmet"
 
 /obj/item/clothing/suit/space/void/examine(user)
 	. = ..(user)
@@ -155,7 +157,7 @@
 	var/mob/living/carbon/human/H = usr
 
 	if(!istype(H)) return
-	if(H.stat) return
+	if(H.incapacitated()) return
 	if(H.wear_suit != src) return
 
 	if(H.head == helmet)
@@ -188,7 +190,7 @@
 	var/mob/living/carbon/human/H = usr
 
 	if(!istype(H)) return
-	if(H.stat) return
+	if(H.incapacitated()) return
 	if(H.wear_suit != src) return
 
 	H << "<span class='info'>You press the emergency release, ejecting \the [tank] from your suit.</span>"
@@ -257,5 +259,7 @@
 			tank = W
 		return
 
-
 	..()
+
+/obj/item/clothing/suit/space/void/attack_self() //sole purpose of existence is to toggle the helmet
+	toggle_helmet()

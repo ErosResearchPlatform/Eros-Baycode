@@ -35,7 +35,7 @@
 
 // Aurora forensics port.
 /obj/item/clothing/clean_blood()
-	..()
+	. = ..()
 	gunshot_residue = null
 
 /obj/item/clothing/New()
@@ -186,6 +186,7 @@ BLIND     // can't see anything
 	var/vision_flags = 0
 	var/darkness_view = 0//Base human is 2
 	var/see_invisible = -1
+	var/light_protection = 0
 	sprite_sheets = list(
 		"Human" = 'icons/mob/eyes.dmi',
 		"Machine" = 'icons/mob/eyes.dmi',
