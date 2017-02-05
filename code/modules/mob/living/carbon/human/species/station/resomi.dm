@@ -5,13 +5,13 @@
 	outside of the Goldilocks zone. Extremely fragile, they developed hunting skills \
 	that emphasized taking out their prey without themselves getting hit. They are an \
 	advanced culture on good terms with Skrellian and Human interests.\
-	Resomi are not permitted to be CMO, HoS, or Captain."
+	Resomi are not permitted to be HoS or Captain."
 
 	num_alternate_languages = 2
 	secondary_langs = list(LANGUAGE_RESOMI)
 	name_language = LANGUAGE_RESOMI
-	min_age = 18
-	max_age = 65
+	min_age = 12
+	max_age = 60
 	health_hud_intensity = 3
 	can_run_shoeless = 1
 
