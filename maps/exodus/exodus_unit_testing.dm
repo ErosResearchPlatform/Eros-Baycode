@@ -59,7 +59,8 @@
 			/area/mine/explored,
 			/area/mine/unexplored,
 			/area/centcom/control,
-			/area/maintenance/incinerator)
+			/area/maintenance/incinerator,
+			/area/security/nuke_storage)
 
 	area_coherency_test_subarea_count = list(
 			/area/engineering/atmos = 4,
