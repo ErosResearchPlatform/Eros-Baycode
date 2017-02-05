@@ -10,8 +10,8 @@
 	num_alternate_languages = 2
 	secondary_langs = list(LANGUAGE_RESOMI)
 	name_language = LANGUAGE_RESOMI
-	min_age = 12
-	max_age = 60
+	min_age = 18
+	max_age = 65
 	health_hud_intensity = 3
 	can_run_shoeless = 1
 
