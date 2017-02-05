@@ -43,6 +43,7 @@
 		/area/skipjack_station = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/solar = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/space = NO_SCRUBBER|NO_VENT|NO_APC,
+		/area/security/nuke_storage = NO_SCRUBBER_NO_VENT_NO_APC,
 		/area/storage/emergency = NO_SCRUBBER|NO_VENT,
 		/area/storage/emergency2 = NO_SCRUBBER|NO_VENT,
 		/area/storage/emergency_secondary_1 = NO_SCRUBBER|NO_VENT,
@@ -59,8 +60,7 @@
 			/area/mine/explored,
 			/area/mine/unexplored,
 			/area/centcom/control,
-			/area/maintenance/incinerator,
-			/area/security/nuke_storage)
+			/area/maintenance/incinerator)
 
 	area_coherency_test_subarea_count = list(
 			/area/engineering/atmos = 4,
