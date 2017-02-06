@@ -1,9 +1,11 @@
 // BEGIN_INTERNALS
 /*
-DIR: code code\game\antagonist code\game\antagonist\outsider code\game\objects\items code\game\turfs code\modules code\modules\clothing\suits code\modules\mob code\modules\mob\living code\modules\mob\living\carbon code\modules\mob\living\carbon\human code\modules\mob\living\simple_animal\constructs code\modules\projectiles code\modules\projectiles\projectile icons\mob 
+LAST_COMPILE_TIME: 1486378856
+DIR: code code\datums code\datums\outfits\jobs code\game\jobs code\game\jobs\job maps maps\torch maps\torch\job 
 AUTO_FILE_DIR: OFF
 MAP_ICON_TYPE: 0
-WINDOW: code\modules\projectiles\projectile.dm;code\modules\projectiles\projectile\change.dm;code\modules\mob\living\carbon\human\human_movement.dm;code\modules\ghosttrap\trap.dm;code\modules\clothing\suits\armor.dm;code\game\turfs\simulated.dm;code\modules\mob\living\living_defense.dm;code\modules\mob\living\living_defines.dm
-FILE: code\modules\mob\living\living_defines.dm
+LAST_COMPILE_VERSION: 510.1347
+WINDOW: code\modules\hydroponics\seed_controller.dm;code\modules\hydroponics\trays\tray.dm;code\modules\projectiles\guns\energy\special.dm;code\modules\item_worth\worths_list.dm;code\modules\mob\living\simple_animal\hostile\voxslug.dm;icons\obj\pda.dmi;code\game\jobs\job\medical.dm;code\datums\outfits\outfit.dm;code\datums\outfits\jobs\medical.dm;code\datums\outfits\jobs\civilian.dm
+FILE: code\datums\outfits\jobs\civilian.dm
 */
 // END_INTERNALS

@@ -30,7 +30,7 @@
 	flags = GEAR_HAS_COLOR_SELECTION
 
 /datum/gear/suit/leather
-	display_name = "jacket selection"
+	display_name = "leather jackets"
 	path = /obj/item/clothing/suit/storage/leather_jacket
 
 /datum/gear/suit/leather/New()

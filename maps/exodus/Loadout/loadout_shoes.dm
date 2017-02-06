@@ -30,20 +30,6 @@
 	display_name = "boot selection"
 	path = /obj/item/clothing/shoes/jackboots
 
-/datum/gear/shoes/boots/New()
-	..()
-	var/boots = list()
-	boots["jackboots"] = /obj/item/clothing/shoes/jackboots
-	boots["jackboots, white"] = /obj/item/clothing/shoes/jackboots/white
-	boots["workboots"] = /obj/item/clothing/shoes/workboots
-	boots["workboots, alt"] = /obj/item/clothing/shoes/workbootsalt
-	boots["cowboy boots"] = /obj/item/clothing/shoes/cowboy
-	boots["winterboots"] = /obj/item/clothing/shoes/winterboots
-	boots["fancy boots"] = /obj/item/clothing/shoes/fancyboots
-	boots["jungle boots"] = /obj/item/clothing/shoes/jungleboots
-	boots["duty boots"] = /obj/item/clothing/shoes/dutyboots
-	gear_tweaks += new/datum/gear_tweak/path(boots)
-
 //EROS START
 
 /datum/gear/shoes/flats
