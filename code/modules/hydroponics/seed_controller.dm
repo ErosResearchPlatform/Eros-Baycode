@@ -94,9 +94,9 @@ var/global/datum/controller/plants/plant_controller // Set in New().
 
 		while(gene_mask in used_masks)
 			gene_mask = "[uppertext(num2hex(rand(0,255)))]"
-			
+
 		var/decl/plantgene/G
-			
+
 		for(var/D in gene_datums)
 			var/decl/plantgene/P = gene_datums[D]
 			if(gene_tag == P.gene_tag)
