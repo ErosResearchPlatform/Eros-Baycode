@@ -50,7 +50,7 @@
 /obj/item/clothing/head/hairribbon/color
 	name = "bow"
 	desc = "It's a bow, for your head."
-	icon_state = "bow_color"
+	icon_state = "bow"
 	flags = GEAR_HAS_COLOR_SELECTION
 
 /obj/item/clothing/head/froghat

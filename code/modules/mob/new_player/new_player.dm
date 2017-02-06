@@ -11,7 +11,7 @@
 	invisibility = 101
 
 	density = 0
-	stat = 2
+	stat = DEAD
 	canmove = 0
 
 	anchored = 1	//  don't get pushed around
@@ -291,6 +291,14 @@
 		return 1
 	return 0
 
+/mob/new_player/proc/get_branch_pref()
+	if(client)
+		return client.prefs.char_branch
+
+/mob/new_player/proc/get_rank_pref()
+	if(client)
+		return client.prefs.char_rank
+
 /mob/new_player/proc/AttemptLateSpawn(rank,var/spawning_at)
 	if(src != usr)
 		return 0
@@ -350,6 +358,8 @@
 		empty_playable_ai_cores -= C
 
 		character.forceMove(C.loc)
+		var/mob/living/silicon/ai/A = character
+		A.on_mob_init()
 
 		AnnounceCyborg(character, rank, "has been downloaded to the empty core in \the [character.loc.loc]")
 		ticker.mode.handle_latejoin(character)
@@ -368,6 +378,7 @@
 		character.buckled.set_dir(character.dir)
 
 	ticker.mode.handle_latejoin(character)
+	universe.OnPlayerLatejoin(character)
 	if(job_master.ShouldCreateRecords(rank))
 		if(character.mind.assigned_role != "Cyborg")
 			data_core.manifest_inject(character)
@@ -378,7 +389,7 @@
 			AnnounceArrival(character, rank, spawnpoint.msg)
 		else
 			AnnounceCyborg(character, rank, spawnpoint.msg)
-
+		matchmaker.do_matchmaking()
 	qdel(src)
 
 /mob/new_player/proc/AnnounceCyborg(var/mob/living/character, var/rank, var/join_message)
@@ -460,10 +471,16 @@
 
 	sound_to(src, sound(null, repeat = 0, wait = 0, volume = 85, channel = 1))// MAD JAMS cant last forever yo
 
-
 	if(mind)
 		mind.active = 0					//we wish to transfer the key manually
 		mind.original = new_character
+		if(client.prefs.relations.len)
+			for(var/T in client.prefs.relations)
+				var/TT = matchmaker.relation_types[T]
+				var/datum/relation/R = new TT
+				R.holder = mind
+				R.info = client.prefs.relations_info[T]
+			mind.gen_relations_info = client.prefs.relations_info["general"]
 		mind.transfer_to(new_character)					//won't transfer key since the mind is not active
 
 	new_character.name = real_name

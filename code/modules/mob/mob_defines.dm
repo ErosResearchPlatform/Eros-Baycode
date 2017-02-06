@@ -35,8 +35,6 @@
 	var/obj/screen/gun/move/gun_move_icon = null
 	var/obj/screen/gun/run/gun_run_icon = null
 	var/obj/screen/gun/mode/gun_setting_icon = null
-	var/obj/screen/wizard/energy/wiz_energy_display = null
-	var/obj/screen/wizard/instability/wiz_instability_display = null
 
 	var/obj/screen/movable/ability_master/ability_master = null
 
@@ -63,8 +61,6 @@
 	var/real_name = null
 
 	var/bhunger = 0			//Carbon
-	var/ajourn = 0
-	var/seer = 0 //for cult//Carbon, probably Human
 
 	var/druggy = 0			//Carbon
 	var/confused = 0		//Carbon
@@ -87,7 +83,7 @@
 
 	var/name_archive //For admin things like possession
 
-	var/timeofdeath = 0.0
+	var/timeofdeath = 0
 
 	var/bodytemperature = 310.055	//98.7 F
 	var/default_pixel_x = 0

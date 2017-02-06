@@ -457,7 +457,6 @@ var/global/list/damage_icon_parts = list()
 	update_inv_r_hand(0)
 	update_inv_l_hand(0)
 	update_inv_handcuffed(0)
-	update_inv_legcuffed(0)
 	update_inv_pockets(0)
 	update_fire(0)
 	update_surgery(0)
@@ -630,14 +629,6 @@ var/global/list/damage_icon_parts = list()
 		overlays_standing[HANDCUFF_LAYER]	= null
 	if(update_icons)   update_icons()
 
-/mob/living/carbon/human/update_inv_legcuffed(var/update_icons=1)
-	if(legcuffed)
-		overlays_standing[LEGCUFF_LAYER]	= legcuffed.get_mob_overlay(src,slot_legcuffed_str)
-	else
-		overlays_standing[LEGCUFF_LAYER]	= null
-	if(update_icons)   update_icons()
-
-
 /mob/living/carbon/human/update_inv_r_hand(var/update_icons=1)
 	if(r_hand)
 		var/image/standing = r_hand.get_mob_overlay(src,slot_r_hand_str)
@@ -793,7 +784,7 @@ var/global/list/damage_icon_parts = list()
 	var/image/total = new
 	for(var/obj/item/organ/external/E in organs)
 		if(E.open)
-			var/image/I = image("icon"='icons/mob/surgery.dmi', "icon_state"="[E.name][round(E.open)]", "layer"=-SURGERY_LEVEL)
+			var/image/I = image("icon"='icons/mob/surgery.dmi', "icon_state"="[E.icon_name][round(E.open)]", "layer"=-SURGERY_LEVEL)
 			total.overlays += I
 	total.appearance_flags = RESET_COLOR
 	overlays_standing[SURGERY_LEVEL] = total

@@ -15,4 +15,7 @@ stopserver
 reboot_called
 atupdate
 __pycache__
-.atom-build.json
+
+# ignore config, but not subdirs
+config/*
+!config/*/

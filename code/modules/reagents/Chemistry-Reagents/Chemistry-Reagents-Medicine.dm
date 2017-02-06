@@ -624,8 +624,8 @@ var/stage3od	= 15
 		return
 
 	if(dose >= stage3od)
-		if(M.brainloss <= 25)
-			M.brainloss += 2
+		if(M.getBrainLoss() <= 25)
+			M.adjustBrainLoss(2)
 		M.sleeping = max(M.sleeping, 20)
 		M.drowsyness = max(M.drowsyness, 60)
 	if(dose >= stage2od)
