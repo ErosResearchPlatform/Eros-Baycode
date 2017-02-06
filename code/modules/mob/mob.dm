@@ -6,7 +6,6 @@
 	qdel(hud_used)
 	clear_fullscreen()
 	if(client)
-		qdel(ability_master)
 		remove_screen_obj_references()
 		for(var/atom/movable/AM in client.screen)
 			var/obj/screen/screenobj = AM
@@ -37,6 +36,7 @@
 	item_use_icon = null
 	gun_move_icon = null
 	gun_setting_icon = null
+	ability_master = null
 	zone_sel = null
 
 /mob/New()

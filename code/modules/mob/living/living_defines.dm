@@ -50,5 +50,3 @@
 	var/slurring = null		//Carbon
 
 	var/job = null//Living
-
-	var/evasion = 0 // Makes attacks harder to land.  Each number equals 15% more likely to miss.  Negative numbers increase hit chance.

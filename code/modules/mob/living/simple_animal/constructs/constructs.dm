@@ -126,7 +126,7 @@
 /mob/living/simple_animal/construct/armoured/bullet_act(var/obj/item/projectile/P)
 	if(istype(P, /obj/item/projectile/energy) || istype(P, /obj/item/projectile/beam))
 		var/reflectchance = 80 - round(P.damage/3)
-		if(prob(reflectchance) && !P.reflected)
+		if(prob(reflectchance))
 			adjustBruteLoss(P.damage * 0.5)
 			visible_message("<span class='danger'>The [P.name] gets reflected by [src]'s shell!</span>", \
 							"<span class='userdanger'>The [P.name] gets reflected by [src]'s shell!</span>")
@@ -139,7 +139,6 @@
 
 				// redirect the projectile
 				P.redirect(new_x, new_y, curloc, src)
-				P.reflected = 1
 
 			return -1 // complete projectile permutation
 
