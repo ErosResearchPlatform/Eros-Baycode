@@ -213,11 +213,11 @@ datum/ghosttrap/pai/transfer_personality(var/mob/candidate, var/mob/living/silic
 	return 0
 
 /datum/ghosttrap/cult
-	object = "cultist"
+	object = "cultist manifest"
 	ban_checks = list("cultist")
 	pref_check = MODE_CULTIST
-	ghost_trap_message = "They are occupying a cultist's body now."
-	ghost_trap_role = "Cultist"
+	ghost_trap_message = "They are occupying a manifest's body now."
+	ghost_trap_role = "Cultist Manifest"
 
 /datum/ghosttrap/cult/welcome_candidate(var/mob/target)
 	var/obj/item/device/soulstone/S = target.loc
