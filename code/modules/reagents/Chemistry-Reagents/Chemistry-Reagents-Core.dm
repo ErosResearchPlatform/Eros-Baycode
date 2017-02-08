@@ -1,5 +1,5 @@
 /datum/reagent/blood
-	data = new/list("donor" = null, "viruses" = null, "species" = "Human", "blood_DNA" = null, "blood_type" = null, "blood_colour" = "#A10808", "resistances" = null, "trace_chem" = null, "antibodies" = list())
+	data = new/list("donor" = null, "species" = "Human", "blood_DNA" = null, "blood_type" = null, "blood_colour" = "#A10808", "trace_chem" = null, "virus2" = list(), "antibodies" = list())
 	name = "Blood"
 	id = "blood"
 	reagent_state = LIQUID
@@ -24,6 +24,7 @@
 	data["antibodies"] = C.antibodies
 	data["blood_DNA"] = C.dna.unique_enzymes
 	data["blood_type"] = C.dna.b_type
+	data["species"] = C.species.name
 	var/list/temp_chem = list()
 	for(var/datum/reagent/R in C.reagents.reagent_list)
 		temp_chem += R.id
@@ -35,7 +36,11 @@
 /datum/reagent/blood/mix_data(var/newdata, var/newamount)
 	if(!islist(newdata))
 		return
+	if(!data["virus2"])
+		data["virus2"] = list()
 	data["virus2"] |= newdata["virus2"]
+	if(!data["antibodies"])
+		data["antibodies"] = list()
 	data["antibodies"] |= newdata["antibodies"]
 
 /datum/reagent/blood/get_data() // Just in case you have a reagent that handles data differently.
@@ -168,13 +173,16 @@
 /datum/reagent/water/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
 	if(!istype(M, /mob/living/carbon/slime) && alien != IS_SLIME)
 		return
-	M.adjustToxLoss(5 * removed) // Babies have 150 health, adults have 200; So, 30 units and 40
-	if(dose == removed)
-		M.visible_message("<span class='warning'>\The [M]'s flesh sizzles where the water touches it!</span>")
 	var/mob/living/carbon/slime/S = M
-	if(istype(S) && !S.client && S.Target) // Like cats
-		S.Target = null
-		++S.Discipline
+	S.adjustToxLoss(10 * removed) // Babies have 150 health, adults have 200; So, 15 units and 20
+	if(!S.client)
+		if(S.Target) // Like cats
+			S.Target = null
+		if(S.Victim)
+			S.Feedstop()
+	if(dose == removed)
+		S.visible_message("<span class='warning'>[S]'s flesh sizzles where the water touches it!</span>", "<span class='danger'>Your flesh burns in the water!</span>")
+		S.disoriented = max(S.disoriented, 2)
 
 /datum/reagent/fuel
 	name = "Welding fuel"

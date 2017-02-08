@@ -23,7 +23,9 @@
 		cast_charge(A)
 
 /spell/aoe_turf/charge/proc/mob_charge(var/mob/living/M)
-	if(M.mind && M.mind.learned_spells)
+	if(!M.mind)
+		return
+	if(M.mind.learned_spells.len != 0)
 		for(var/spell/S in M.mind.learned_spells)
 			if(!istype(S, /spell/aoe_turf/charge))
 				S.charge_counter = S.charge_max

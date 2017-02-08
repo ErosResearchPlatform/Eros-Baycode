@@ -109,5 +109,13 @@
 	has_color = TRUE
 /datum/category_item/underwear/undershirt/longjon
 	name = "Long John Shirt"
-	icon_state = "longjont"
+	icon_state = "ljont"
 	has_color = TRUE
+
+/datum/category_item/underwear/undershirt/longstripe_black
+	name = "Longsleeve Striped Shirt, Black"
+	icon_state = "longstripe"
+
+/datum/category_item/underwear/undershirt/longstripe_blue
+	name = "Longsleeve Striped Shirt, Blue"
+	icon_state = "longstripe_blue"

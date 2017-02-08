@@ -10,7 +10,7 @@ var/datum/species/shapeshifter/promethean/prometheans
 	death_message =    "rapidly loses cohesion, splattering across the ground..."
 	knockout_message = "collapses inwards, forming a disordered puddle of goo."
 	remains_type = /obj/effect/decal/cleanable/ash
-	
+
 	num_alternate_languages = 3
 
 	blood_color = "#05FF9B"
@@ -22,8 +22,8 @@ var/datum/species/shapeshifter/promethean/prometheans
 	swap_flags =       MONKEY|SLIME|SIMPLE_ANIMAL
 	push_flags =       MONKEY|SLIME|SIMPLE_ANIMAL
 	flags =            NO_SCAN | NO_SLIP | NO_MINOR_CUT
-	appearance_flags = HAS_SKIN_COLOR | HAS_EYE_COLOR | HAS_HAIR_COLOR | RADIATION_GLOWS | HAS_UNDERWEAR 
-	spawn_flags =      SPECIES_CAN_JOIN
+	appearance_flags = HAS_SKIN_COLOR | HAS_EYE_COLOR | HAS_HAIR_COLOR | RADIATION_GLOWS | HAS_UNDERWEAR
+	spawn_flags =      SPECIES_CAN_JOIN | SPECIES_NO_FBP_CONSTRUCTION | SPECIES_NO_FBP_CHARGEN
 
 	breath_type = null
 	poison_type = null
@@ -110,7 +110,7 @@ var/datum/species/shapeshifter/promethean/prometheans
 	// Replace completely missing limbs.
 	for(var/limb_type in has_limbs)
 		var/obj/item/organ/external/E = H.organs_by_name[limb_type]
-		if(E && (E.is_stump() || (E.status & (ORGAN_DESTROYED|ORGAN_DEAD|ORGAN_MUTATED))))
+		if(E && !E.is_usable())
 			E.removed()
 			qdel(E)
 			E = null

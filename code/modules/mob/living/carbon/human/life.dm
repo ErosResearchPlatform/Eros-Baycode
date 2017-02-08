@@ -157,7 +157,7 @@
 		eye_blind =  0
 		blinded =    0
 		eye_blurry = 0
-	else if(!vision || (vision && vision.is_broken()))   // Vision organs cut out or broken? Permablind.
+	else if(!vision || (vision && !vision.is_usable()))   // Vision organs cut out or broken? Permablind.
 		eye_blind =  1
 		blinded =    1
 		eye_blurry = 1
@@ -650,7 +650,7 @@
 	if(status_flags & GODMODE)	return 0
 
 	//SSD check, if a logged player is awake put them back to sleep!
-	if(species.get_ssd(src) && !client && !teleop)
+	if(ssd_check() && species.get_ssd(src))
 		Sleeping(2)
 	if(stat == DEAD)	//DEAD. BROWN BREAD. SWIMMING WITH THE SPESS CARP
 		blinded = 1
@@ -685,15 +685,15 @@
 			for(var/atom/a in hallucinations)
 				qdel(a)
 
-		if(halloss >= species.total_health)
-			to_chat(src, "<span class='warning'>[species.halloss_message_self]</span>")
-			src.visible_message("<B>[src]</B> [species.halloss_message].")
+		if(getHalLoss() >= species.total_health)
+			if(!stat)
+				to_chat(src, "<span class='warning'>[species.halloss_message_self]</span>")
+				src.visible_message("<B>[src]</B> [species.halloss_message].")
 			Paralyse(10)
-			setHalLoss(species.total_health-1)
 
 		if(paralysis || sleeping)
 			blinded = 1
-			stat = UNCONSCIOUS
+			set_stat(UNCONSCIOUS)
 			adjustHalLoss(-3)
 
 			if(sleeping)
@@ -707,7 +707,7 @@
 						emote("snore")
 		//CONSCIOUS
 		else
-			stat = CONSCIOUS
+			set_stat(CONSCIOUS)
 
 		// Check everything else.
 
@@ -814,14 +814,13 @@
 						var/no_damage = 1
 						var/trauma_val = 0 // Used in calculating softcrit/hardcrit indicators.
 						if(!can_feel_pain())
-							trauma_val = max(traumatic_shock,halloss)/species.total_health
-						var/limb_trauma_val = trauma_val*0.5
+							trauma_val = max(traumatic_shock,getHalLoss())/species.total_health
 						// Collect and apply the images all at once to avoid appearance churn.
 						var/list/health_images = list()
 						for(var/obj/item/organ/external/E in organs)
 							if(no_damage && (E.brute_dam || E.burn_dam))
 								no_damage = 0
-							health_images += E.get_damage_hud_image(limb_trauma_val)
+							health_images += E.get_damage_hud_image()
 
 						// Apply a fire overlay if we're burning.
 						if(on_fire)
@@ -967,10 +966,13 @@
 	if(stat) return 0
 
 	if(shock_stage == 10)
-		custom_pain("[pick("It hurts so much", "You really need some painkillers", "Dear god, the pain")]!", 40)
+		// Please be very careful when calling custom_pain() from within code that relies on pain/trauma values. There's the
+		// possibility of a feedback loop from custom_pain() being called with a positive power, incrementing pain on a limb,
+		// which triggers this proc, which calls custom_pain(), etc. Make sure you call it with 0 power in these cases!
+		custom_pain("[pick("It hurts so much", "You really need some painkillers", "Dear god, the pain")]!", 0)
 
 	if(shock_stage >= 30)
-		if(shock_stage == 30) emote("me",1,"is having trouble keeping their eyes open.")
+		if(shock_stage == 30) visible_message("<b>[src]</b> is having trouble keeping \his eyes open.")
 		eye_blurry = max(2, eye_blurry)
 		stuttering = max(stuttering, 5)
 
@@ -978,7 +980,7 @@
 		var/message = "<span class='danger'>[pick("The pain is excruciating", "Please, just end the pain", "Your whole body is going numb")]!</span>"
 		to_chat(src, message)
 	if (shock_stage >= 60)
-		if(shock_stage == 60) emote("me",1,"'s body becomes limp.")
+		if(shock_stage == 60) visible_message("<b>[src]</b>'s body becomes limp.")
 		if (prob(2))
 			var/message = "<span class='danger'>[pick("The pain is excruciating", "Please, just end the pain", "Your whole body is going numb")]!</span>"
 			to_chat(src, message)
@@ -997,7 +999,7 @@
 			Paralyse(5)
 
 	if(shock_stage == 150)
-		emote("me",1,"can no longer stand, collapsing!")
+		visible_message("<b>[src]</b> can no longer stand, collapsing!")
 		Weaken(20)
 
 	if(shock_stage >= 150)
@@ -1161,6 +1163,11 @@
 	restore_blood()
 	full_prosthetic = null
 	..()
+
+/mob/living/carbon/human/reset_view(atom/A)
+	..()
+	if(machine_visual && machine_visual != A)
+		machine_visual.remove_visual(src)
 
 /mob/living/carbon/human/handle_vision()
 	if(client)

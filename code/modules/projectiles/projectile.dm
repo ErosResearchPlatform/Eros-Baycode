@@ -1,14 +1,3 @@
-/*
-#define BRUTE "brute"
-#define BURN "burn"
-#define TOX "tox"
-#define OXY "oxy"
-#define CLONE "clone"
-
-#define ADD "add"
-#define SET "set"
-*/
-
 /obj/item/projectile
 	name = "projectile"
 	icon = 'icons/obj/projectiles.dmi'
@@ -37,7 +26,7 @@
 	var/dispersion = 0.0
 
 	var/damage = 10
-	var/damage_type = BRUTE //BRUTE, BURN, TOX, OXY, CLONE, HALLOSS are the only things that should be in here
+	var/damage_type = BRUTE //BRUTE, BURN, TOX, OXY, CLONE, PAIN are the only things that should be in here
 	var/nodamage = 0 //Determines if the projectile will skip any damage inflictions
 	var/taser_effect = 0 //If set then the projectile will apply it's agony damage using stun_effect_act() to mobs it hits, and other damage will be ignored
 	var/check_armour = "bullet" //Defines what armor to use when it hits things.  Must be set to bullet, laser, energy,or bomb	//Cael - bio and rad are also valid
@@ -57,7 +46,6 @@
 
 	var/hitscan = 0		// whether the projectile should be hitscan
 	var/step_delay = 1	// the delay between iterations if not a hitscan projectile
-	var/reflected = 0   // whether the projectile was reflected
 
 	// effect types to be used
 	var/muzzle_type
@@ -85,7 +73,7 @@
 
 	var/mob/living/L = target
 
-	L.apply_effects(stun, weaken, paralyze, 0, stutter, eyeblur, drowsy, agony, blocked) // add in AGONY!
+	L.apply_effects(stun, weaken, paralyze, 0, stutter, eyeblur, drowsy, agony, blocked)
 	//radiation protection is handled separately from other armour types.
 	L.apply_effect(irradiate, IRRADIATE, L.getarmor(null, "rad"))
 
@@ -182,7 +170,7 @@
 		return
 
 	//roll to-hit
-	miss_modifier = max(15*(distance-2) - round(15*accuracy) + miss_modifier + round(15*target_mob.evasion), 0)
+	miss_modifier = max(15*(distance-2) - round(15*accuracy) + miss_modifier, 0)
 	var/hit_zone = get_zone_with_miss_chance(def_zone, target_mob, miss_modifier, ranged_attack=(distance > 1 || original != target_mob)) //if the projectile hits a target we weren't originally aiming at then retain the chance to miss
 
 	var/result = PROJECTILE_FORCE_MISS
@@ -276,7 +264,7 @@
 	//stop flying
 	on_impact(A)
 
-	density = 0
+	set_density(0)
 	invisibility = 101
 
 	qdel(src)
@@ -385,7 +373,7 @@
 				P.activate()
 
 /obj/item/projectile/proc/impact_effect(var/matrix/M)
-	if(ispath(tracer_type))
+	if(ispath(impact_type))
 		var/obj/effect/projectile/P = new impact_type(location.loc)
 
 		if(istype(P))

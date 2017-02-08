@@ -30,6 +30,8 @@ var/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 	var/list/contact_levels = list() // Z-levels that can be contacted from the station, for eg announcements
 	var/list/player_levels = list()  // Z-levels a character can typically reach
 	var/list/sealed_levels = list()  // Z-levels that don't allow random transit at edge
+	var/list/empty_levels = null     // Empty Z-levels that may be used for various things (currently used by bluespace jump)
+
 	var/list/map_levels              // Z-levels available to various consoles, such as the crew monitor. Defaults to station_levels if unset.
 	var/list/base_turf_by_z = list() // Custom base turf by Z-level. Defaults to world.turf for unlisted Z-levels
 
@@ -42,6 +44,14 @@ var/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 	                               //That doesn't mean we have to include them with the rest of the jobs though, especially for map specific ones.
 	                               //Also including them lets us override already created jobs, letting us keep the datums to a minimum mostly.
 	                               //This is probably a lot longer explanation than it needs to be.
+
+	var/station_name  = "BAD Station"
+	var/station_short = "Baddy"
+	var/dock_name     = "THE PirateBay"
+	var/boss_name     = "Captain Roger"
+	var/boss_short    = "Cap'"
+	var/company_name  = "BadMan"
+	var/company_short = "BM"
 
 	var/shuttle_docked_message
 	var/shuttle_leaving_dock
@@ -63,6 +73,8 @@ var/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 	var/allowed_spawns = list("Arrivals Shuttle","Gateway", "Cryogenic Storage", "Cyborg Storage")
 	var/flags = 0
 	var/evac_controller_type = /datum/evacuation_controller
+	var/use_overmap = 0		//If overmap should be used (including overmap space travel override)
+	var/overmap_size = 20		//Dimensions of overmap zlevel if overmap is used.
 	var/overmap_z = 0		//If 0 will generate overmap zlevel on init. Otherwise will populate the zlevel provided.
 
 	var/lobby_icon = 'maps/exodus/exodus_lobby.dmi' // The icon which contains the lobby image(s)
@@ -116,3 +128,8 @@ var/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 		return current_z_level
 	return text2num(pickweight(candidates))
 
+/datum/map/proc/get_empty_zlevel()
+	if(empty_levels == null)
+		world.maxz++
+		empty_levels = list(world.maxz)
+	return pick(empty_levels)

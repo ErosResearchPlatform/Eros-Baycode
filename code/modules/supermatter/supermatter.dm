@@ -1,4 +1,3 @@
-
 #define NITROGEN_RETARDATION_FACTOR 0.15	//Higher == N2 slows reaction more
 #define THERMAL_RELEASE_MODIFIER 10000		//Higher == more heat released during reaction
 #define PHORON_RELEASE_MODIFIER 1500		//Higher == less phoron released by reaction
@@ -26,9 +25,6 @@
 // Base variants are applied to everyone on the same Z level
 // Range variants are applied on per-range basis: numbers here are on point blank, it scales with the map size (assumes square shaped Z levels)
 #define DETONATION_RADS 20
-#define DETONATION_HALLUCINATION_BASE 300
-#define DETONATION_HALLUCINATION_RANGE 300
-
 #define DETONATION_MOB_CONCUSSION 4			// Value that will be used for Weaken() for mobs.
 
 // Base amount of ticks for which a specific type of machine will be offline for. +- 20% added by RNG.
@@ -39,7 +35,6 @@
 #define DETONATION_SHUTDOWN_SMES 60			// SMES
 #define DETONATION_SHUTDOWN_RNG_FACTOR 20	// RNG factor. Above shutdown times can be +- X%, where this setting is the percent. Do not set to 100 or more.
 #define DETONATION_SOLAR_BREAK_CHANCE 60	// prob() of breaking solar arrays (this is per-panel, and only affects the Z level SM is on)
-
 
 #define WARNING_DELAY 20			//seconds between warnings.
 
@@ -77,7 +72,7 @@
 	var/grav_pulling = 0
 	// Time in ticks between delamination ('exploding') and exploding (as in the actual boom)
 	var/pull_time = 300
-	var/explosion_power = 6
+	var/explosion_power = 9
 
 	var/emergency_issued = 0
 
@@ -114,20 +109,10 @@
 	var/turf/TS = get_turf(src)		// The turf supermatter is on. SM being in a locker, mecha, or other container shouldn't block it's effects that way.
 	radiation_repository.z_radiate(TS, DETONATION_RADS)
 
-	// Effect 1: Radiation, weakening and hallucinations to all mobs on Z level
+	// Effect 1: Radiation, weakening to all mobs on Z level
 	for(var/mob/living/mob in living_mob_list_)
 		var/turf/TM = get_turf(mob)
 		if(TS && TM && (TS.z == TM.z))
-			var/range_multiplier = between(0, get_dist(mob, src) / world.maxx, 1)
-			var/hallucinations = DETONATION_HALLUCINATION_BASE + (range_multiplier * DETONATION_HALLUCINATION_RANGE)
-			if(istype(mob, /mob/living/carbon/human))
-
-				var/mob/living/carbon/human/H = mob
-
-
-
-
-				H.hallucination += hallucinations
 			mob.Weaken(DETONATION_MOB_CONCUSSION)
 			to_chat(mob, "<span class='danger'>An invisible force slams you against the ground!</span>")
 
@@ -167,6 +152,7 @@
 	spawn(0)
 		explosion(TS, explosion_power/2, explosion_power, explosion_power * 2, explosion_power * 4, 1)
 		qdel(src)
+
 //Changes color and luminosity of the light to these values if they were not already set
 /obj/machinery/power/supermatter/proc/shift_light(var/lum, var/clr)
 	if(lum != light_range || clr != light_color)
@@ -205,7 +191,6 @@
 		else if(safe_warned && public_alert)
 			global_announcer.autosay(alert_msg, "Supermatter Monitor")
 			public_alert = 0
-
 
 
 /obj/machinery/power/supermatter/process()
@@ -273,9 +258,6 @@
 
 		temp_factor = ( (equilibrium_power/DECAY_FACTOR)**3 )/800
 		power = max( (removed.temperature * temp_factor) * oxygen + power, 0)
-
-		//We've generated power, now let's transfer it to the collectors for storing/usage
-		transfer_energy()
 
 		var/device_energy = power * REACTION_POWER_MODIFIER
 
@@ -350,8 +332,10 @@
 
 	data["integrity_percentage"] = round(get_integrity())
 	var/datum/gas_mixture/env = null
-	if(!istype(src.loc, /turf/space))
-		env = src.loc.return_air()
+	var/turf/T = get_turf(src)
+
+	if(istype(T))
+		env = T.return_air()
 
 	if(!env)
 		data["ambient_temp"] = 0
@@ -369,13 +353,6 @@
 		ui.open()
 		ui.set_auto_update(1)
 
-/obj/machinery/power/supermatter/proc/transfer_energy()
-	for(var/obj/machinery/power/rad_collector/R in rad_collectors)
-		var/distance = get_dist(R, src)
-		if(distance <= 15)
-			//for collectors using standard phoron tanks at 1013 kPa, the actual power generated will be this power*POWER_FACTOR*20*29 = power*POWER_FACTOR*580
-			R.receive_pulse(power * POWER_FACTOR * (min(3/distance, 1))**2)
-	return
 
 /obj/machinery/power/supermatter/attackby(obj/item/weapon/W as obj, mob/living/user as mob)
 	user.visible_message("<span class=\"warning\">\The [user] touches \a [W] to \the [src] as a silence fills the room...</span>",\
@@ -463,8 +440,6 @@
 #undef DAMAGE_RATE_LIMIT
 #undef DETONATION_RADS_RANGE
 #undef DETONATION_RADS_BASE
-#undef DETONATION_HALLUCINATION_BASE
-#undef DETONATION_HALLUCINATION_RANGE
 #undef DETONATION_MOB_CONCUSSION
 #undef DETONATION_APC_OVERLOAD_PROB
 #undef DETONATION_SHUTDOWN_APC

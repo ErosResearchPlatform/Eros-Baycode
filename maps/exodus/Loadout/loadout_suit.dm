@@ -7,22 +7,6 @@
 	sort_category = "Suits and Overwear"
 	cost = 1
 
-
-/datum/gear/suit/leather
-	display_name = "leather jackets"
-	path = /obj/item/clothing/suit/storage/leather_jacket
-
-/datum/gear/suit/leather/New()
-	..()
-	var/jackets = list()
-	jackets["bomber jacket"] = /obj/item/clothing/suit/storage/toggle/bomber
-	jackets["corporate black jacket"] = /obj/item/clothing/suit/storage/leather_jacket/nanotrasen
-	jackets["corporate brown jacket"] = /obj/item/clothing/suit/storage/toggle/brown_jacket/nanotrasen
-	jackets["black jacket"] = /obj/item/clothing/suit/storage/leather_jacket
-	jackets["brown jacket"] = /obj/item/clothing/suit/storage/toggle/brown_jacket
-	jackets["long coat"] = /obj/item/clothing/suit/leathercoat
-	gear_tweaks += new/datum/gear_tweak/path(jackets)
-
 /datum/gear/suit/hazard
 	display_name = "hazard vests"
 	path = /obj/item/clothing/suit/storage/hazardvest

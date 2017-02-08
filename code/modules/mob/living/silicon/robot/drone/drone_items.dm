@@ -120,7 +120,7 @@
 		)
 
 /obj/item/weapon/gripper/examine(mob/user)
-	..()
+	. = ..()
 	if(wrapped)
 		to_chat(user, "It is holding \a [wrapped].")
 
