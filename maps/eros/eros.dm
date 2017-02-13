@@ -3,6 +3,7 @@
 	#include "eros_areas.dm"
 
 	#include "eros-1.dmm"
+	#include "eros-2.dmm"
 
 	#include "../../code/modules/lobby_music/absconditus.dm"
 	#include "../../code/modules/lobby_music/clouds_of_fire.dm"
