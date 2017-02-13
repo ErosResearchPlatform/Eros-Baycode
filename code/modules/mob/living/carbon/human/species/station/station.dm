@@ -360,16 +360,17 @@
 	return "Lamia"
 
 /datum/species/drider
-	name = "Drider"
-	name_plural = "Driders"
+	name = "Veirei"
+	name_plural = "Veiren"
 	icobase = 'icons/mob/human_races/r_drider.dmi'
 	deform = 'icons/mob/human_races/r_def_drider.dmi'
-	unarmed_types = list(/datum/unarmed_attack/punch, /datum/unarmed_attack/bite)
-	blurb = "< Drider lore here > \
-	Driders are not permitted to be Captain, HoP, or CE."
+	unarmed_types = list(/datum/unarmed_attack/punch, /datum/unarmed_attack/bite, /datum/unarmed_attack/stomp)
+	blurb = "< Veiren lore here > \
+	Veiren are not permitted to be Captain, HoP, or CE."
 	num_alternate_languages = 2
 	secondary_langs = list(LANGUAGE_DRIDER)
 	name_language = LANGUAGE_DRIDER
+	reagent_tag = IS_VEIREN
 	min_age = 18
 	max_age = 110
 	slowdown = - 0.5
@@ -381,6 +382,14 @@
 
 	spawn_flags = SPECIES_CAN_JOIN | SPECIES_NO_FBP_CONSTRUCTION | SPECIES_NO_FBP_CHARGEN
 	appearance_flags = HAS_HAIR_COLOR | HAS_SKIN_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_EYE_COLOR
+
+	cold_level_1 = 290 //Default 260 - Lower is better
+	cold_level_2 = 230 //Default 200
+	cold_level_3 = 140 //Default 120
+
+	heat_level_1 = 460 //Default 360 - Higher is better
+	heat_level_2 = 500 //Default 400
+	heat_level_3 = 1200 //Default 1000
 
 	has_limbs = list(
 		BP_CHEST =  list("path" = /obj/item/organ/external/chest),

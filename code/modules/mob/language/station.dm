@@ -149,18 +149,18 @@
 	key = "/"
 
 /datum/language/drider
-	name = LANGUAGE_DRIDER
-	desc = "A chittering language used by Driders."
-	speech_verb = "chitters"
-	ask_verb = "chitters"
-	exclaim_verb = "chitters"
-	colour = "drider"
-	syllables = list(
-		"dos","vi","zhah","thus","uss","orn","tlu","zild","ssin","nal","urn","iyl","lus","bal","urn",
-		"ere","ghel","haun","sshan","blyn","tyr","menz","ului","drin","shar","wae","macha","rigg","el","lar","cere","ach",
-		"liz","duis","val","ale","ken","rafe","aban","ress","lin","quel","fae","ali","intri"
-	)
-	key = "`"
+    name = LANGUAGE_DRIDER
+    desc = "A chittering, chitin clicking language used by Veirei."
+    speech_verb = "chitters"
+    ask_verb = "clickers"
+    exclaim_verb = "clacks"
+    colour = "drider"
+    syllables = list(
+        "Kak","chach","tchek","klek","chi","tak","ka","ckrick","chet","chiit","krek","tacc","ak","att","ik","te","tik",
+       "echt","dak","trik","ckyck","yk","ki","tchich","chr","chuckt","chetch","eyc","chy","tichch",
+        "tcha","chet","ket","cti","cect","iict","che","titch","tchyk","ctich","ruk","chaa","yck","check","cic"
+    )
+    key = "`"
 
 //Syllable Lists
 /*
