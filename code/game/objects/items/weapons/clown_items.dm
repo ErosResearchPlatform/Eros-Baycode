@@ -1,7 +1,6 @@
 /* Clown Items
  * Contains:
  * 		Banana Peels
- *		Soap
  *		Bike Horns
  */
 
@@ -13,15 +12,20 @@
 		var/mob/living/M = AM
 		M.slip("the [src.name]",4)
 /*
- * Soap
+ * Bike Horns
  */
-/obj/item/weapon/soap/New()
-	..()
-	create_reagents(10)
-	wet()
-
-/obj/item/weapon/soap/proc/wet()
-	reagents.add_reagent("cleaner", 5)
+/obj/item/weapon/bikehorn
+	name = "bike horn"
+	desc = "A horn off of a bicycle."
+	icon = 'icons/obj/items.dmi'
+	icon_state = "bike_horn"
+	item_state = "bike_horn"
+	throwforce = 3
+	w_class = ITEM_SIZE_SMALL
+	throw_speed = 3
+	throw_range = 15
+	attack_verb = list("HONKED")
+	var/spam_flag = 0
 
 /obj/item/weapon/soap/Crossed(AM as mob|obj)
 	if (istype(AM, /mob/living))

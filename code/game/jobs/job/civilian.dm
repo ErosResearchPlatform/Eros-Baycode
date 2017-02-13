@@ -1,8 +1,8 @@
 //Food
 /datum/job/bartender
 	title = "Bartender"
-	department = "Civilian"
-	department_flag = CIV
+	department = "Service"
+	department_flag = SRV
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
@@ -15,8 +15,8 @@
 
 /datum/job/chef
 	title = "Chef"
-	department = "Civilian"
-	department_flag = CIV
+	department = "Service"
+	department_flag = SRV
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 2
@@ -29,8 +29,8 @@
 
 /datum/job/hydro
 	title = "Gardener"
-	department = "Civilian"
-	department_flag = CIV
+	department = "Service"
+	department_flag = SRV
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 1
@@ -44,8 +44,8 @@
 //Cargo
 /datum/job/qm
 	title = "Quartermaster"
-	department = "Cargo"
-	department_flag = CRG
+	department = "Supply"
+	department_flag = SUP
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
@@ -61,8 +61,8 @@
 
 /datum/job/cargo_tech
 	title = "Cargo Technician"
-	department = "Cargo"
-	department_flag = CRG
+	department = "Supply"
+	department_flag = SUP
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 2
@@ -75,8 +75,8 @@
 
 /datum/job/mining
 	title = "Shaft Miner"
-	department = "Cargo"
-	department_flag = CRG
+	department = "Supply"
+	department_flag = SUP
 	faction = "Station"
 	total_positions = 3
 	spawn_positions = 3
@@ -85,13 +85,13 @@
 	economic_modifier = 5
 	access = list(access_maint_tunnels, access_mailsorting, access_cargo, access_cargo_bot, access_qm, access_mining, access_mining_station)
 	minimal_access = list(access_mining, access_mining_station, access_mailsorting)
-	alt_titles = list("Drill Technician","Prospector","Miner","Material Excivation Engineer")
+	alt_titles = list("Drill Technician","Prospector","Miner","Material Excavation Engineer")
 	outfit_type = /decl/hierarchy/outfit/job/cargo/mining
 
 /datum/job/janitor
 	title = "Janitor"
-	department = "Civilian"
-	department_flag = CIV
+	department = "Service"
+	department_flag = SRV
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
@@ -119,8 +119,8 @@
 
 /datum/job/lawyer
 	title = "Internal Affairs Agent"
-	department = "Civilian"
-	department_flag = CIV
+	department = "Support"
+	department_flag = SPT
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 2

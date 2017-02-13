@@ -147,6 +147,7 @@
 	path = /obj/item/clothing/head/turban
 	flags = GEAR_HAS_COLOR_SELECTION
 
+
 /datum/gear/head/welding
 
 	display_name = "welding mask selection"

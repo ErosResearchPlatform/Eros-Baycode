@@ -3,7 +3,9 @@
 #define EVAC_OPT_CANCEL_ABANDON_SHIP "cancel_abandon_ship"
 #define EVAC_OPT_CANCEL_BLUESPACE_JUMP "cancel_bluespace_jump"
 
-/datum/evacuation_controller/pods
+// Apparently, emergency_evacuation --> "abandon ship" and !emergency_evacuation --> "bluespace jump"
+// That stuff should be moved to the evacuation option datums but someone can do that later
+/datum/evacuation_controller/starship
 	name = "escape pod controller"
 
 	transfer_prep_additional_delay = 10 MINUTES
@@ -15,7 +17,7 @@
 		EVAC_OPT_CANCEL_BLUESPACE_JUMP = new /datum/evacuation_option/cancel_bluespace_jump()
 	)
 
-/datum/evacuation_controller/pods/finish_preparing_evac()
+/datum/evacuation_controller/starship/finish_preparing_evac()
 	. = ..()
 	// Arm the escape pods.
 	if (emergency_evacuation)
@@ -23,22 +25,29 @@
 			if (pod.arming_controller)
 				pod.arming_controller.arm()
 
-/datum/evacuation_controller/pods/launch_evacuation()
+/datum/evacuation_controller/starship/launch_evacuation()
 
 	state = EVAC_IN_TRANSIT
 
-	// Launch the pods!
-	for (var/datum/shuttle/ferry/escape_pod/pod in escape_pods)
-		if (!pod.arming_controller || pod.arming_controller.armed)
-			pod.move_time = (evac_transit_delay/10)
-			pod.launch(src)
-
 	if (emergency_evacuation)
-		priority_announcement.Announce(replacetext(replacetext(using_map.emergency_shuttle_leaving_dock, "%dock_name%", "[dock_name]"),  "%ETA%", "[round(get_eta()/60,1)] minute\s"))
-	else
-		priority_announcement.Announce(replacetext(replacetext(using_map.shuttle_leaving_dock, "%dock_name%", "[dock_name]"),  "%ETA%", "[round(get_eta()/60,1)] minute\s"))
+		// Abondon Ship
+		for (var/datum/shuttle/ferry/escape_pod/pod in escape_pods) // Launch the pods!
+			if (!pod.arming_controller || pod.arming_controller.armed)
+				pod.move_time = (evac_transit_delay/10)
+				pod.launch(src)
 
-/datum/evacuation_controller/pods/available_evac_options()
+		priority_announcement.Announce(replacetext(replacetext(using_map.emergency_shuttle_leaving_dock, "%dock_name%", "[using_map.dock_name]"),  "%ETA%", "[round(get_eta()/60,1)] minute\s"))
+	else
+		// Bluespace Jump
+		priority_announcement.Announce(replacetext(replacetext(using_map.shuttle_leaving_dock, "%dock_name%", "[using_map.dock_name]"),  "%ETA%", "[round(get_eta()/60,1)] minute\s"))
+		SetUniversalState(/datum/universal_state/bluespace_jump, arguments=list(using_map.station_levels))
+
+/datum/evacuation_controller/starship/finish_evacuation()
+	..()
+	if(!emergency_evacuation) //bluespace jump
+		SetUniversalState(/datum/universal_state) //clear jump state
+
+/datum/evacuation_controller/starship/available_evac_options()
 	if (is_on_cooldown())
 		return list()
 	if (is_idle())
@@ -114,6 +123,14 @@
 /datum/evacuation_option/cancel_bluespace_jump/execute(mob/user)
 	if (ticker && evacuation_controller && evacuation_controller.cancel_evacuation())
 		log_and_message_admins("[key_name(user)] has cancelled the bluespace jump.")
+
+/obj/screen/fullscreen/bluespace_overlay
+	icon = 'icons/effects/effects.dmi'
+	icon_state = "mfoam"
+	screen_loc = "WEST,SOUTH to EAST,NORTH"
+	color = "#FF9900"
+	blend_mode = BLEND_SUBTRACT
+	layer = FULLSCREEN_LAYER
 
 #undef EVAC_OPT_ABANDON_SHIP
 #undef EVAC_OPT_BLUESPACE_JUMP

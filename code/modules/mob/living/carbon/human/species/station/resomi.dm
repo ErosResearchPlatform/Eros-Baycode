@@ -5,7 +5,7 @@
 	outside of the Goldilocks zone. Extremely fragile, they developed hunting skills \
 	that emphasized taking out their prey without themselves getting hit. They are an \
 	advanced culture on good terms with Skrellian and Human interests.\
-	Resomi are not permitted to be CMO, HoS, or Captain."
+	Resomi are not permitted to be HoS or Captain."
 
 	num_alternate_languages = 2
 	secondary_langs = list(LANGUAGE_RESOMI)
@@ -35,12 +35,12 @@
 	metabolism_mod = 2.0
 	mob_size = MOB_SMALL
 	holder_type = /obj/item/weapon/holder/human
-	short_sighted = 5
+	light_sensitive = 6
 	gluttonous = GLUT_TINY
 	blood_volume = 280
 	hunger_factor = 0.2
 
-	spawn_flags = SPECIES_CAN_JOIN
+	spawn_flags = SPECIES_CAN_JOIN | SPECIES_NO_FBP_CONSTRUCTION | SPECIES_NO_FBP_CHARGEN
 	appearance_flags = HAS_HAIR_COLOR | HAS_SKIN_COLOR | HAS_EYE_COLOR | HAS_BIOMODS
 	bump_flag = MONKEY
 	swap_flags = MONKEY|SLIME|SIMPLE_ANIMAL
