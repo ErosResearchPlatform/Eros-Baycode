@@ -56,6 +56,18 @@
 	vision_flags = SEE_TURFS
 	see_invisible = SEE_INVISIBLE_NOLIGHTING
 
+/obj/item/clothing/glasses/admin
+	name = "Goggles of Perfect Sight"
+	desc = "Used to give you the sight of a god"
+	icon_state = "meson"
+	item_state = "glasses"
+	action_button_name = "Toggle Goggles"
+	toggleable = 1
+	vision_flags = SEE_TURFS | SEE_OBJS | SEE_MOBS
+	see_invisible = SEE_INVISIBLE_NOLIGHTING
+	flash_protection = FLASH_PROTECTION_MAJOR
+	w_class = ITEM_SIZE_TINY
+
 /obj/item/clothing/glasses/meson/New()
 	..()
 	overlay = global_hud.meson
@@ -88,6 +100,7 @@
 	toggleable = 1
 	see_invisible = SEE_INVISIBLE_NOLIGHTING
 	off_state = "denight"
+
 
 /obj/item/clothing/glasses/night/New()
 	..()
