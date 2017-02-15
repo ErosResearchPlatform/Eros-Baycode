@@ -218,3 +218,12 @@
 /turf/simulated/floor/beach/water/New()
 	..()
 	overlays += image("icon"='icons/misc/beach.dmi',"icon_state"="water5","layer"=MOB_LAYER+0.1)
+
+/turf/simulated/floor/sand
+    name = "gravel"
+    icon = 'icons/turf/flooring/asteroid.dmi'
+    icon_state = "asteroid"
+    base_name = "sand"
+    base_desc = "Gritty and unpleasant."
+    base_icon = 'icons/turf/flooring/asteroid.dmi'
+    base_icon_state = "asteroid"
