@@ -124,6 +124,9 @@ datum/preferences
 	var/client/client = null
 	var/client_ckey = null
 
+	// Communicator identity data
+	var/communicator_visibility = 0
+
 	var/savefile/loaded_preferences
 	var/savefile/loaded_character
 	var/datum/category_collection/player_setup_collection/player_setup
