@@ -195,12 +195,16 @@ var/global/list/robot_modules = list(
 /obj/item/weapon/robot_module/medical/surgeon
 	name = "surgeon robot module"
 	sprites = list(
+					"Standard" = "robotMedi",
 					"Basic" = "Medbot",
 					"Standard" = "surgeon",
 					"Advanced Droid" = "droid-medical",
 					"Needles" = "medicalrobot",
 					"Drone" = "drone-surgery",
-					"Eyebot" = "eyebot-medical"
+					"Eyebot" = "eyebot-medical",
+					"Sleek" = "sleekmedic",
+					"Marina" = "marinaMD",
+					"Kodiak" = "kodiak-med"
 					)
 
 /obj/item/weapon/robot_module/medical/surgeon/New()
@@ -247,13 +251,17 @@ var/global/list/robot_modules = list(
 /obj/item/weapon/robot_module/medical/crisis
 	name = "crisis robot module"
 	sprites = list(
+					"Standard" = "robotMedi",
 					"Basic" = "Medbot",
 					"Standard" = "surgeon",
 					"Advanced Droid" = "droid-medical",
 					"Needles" = "medicalrobot",
 					"Drone - Medical" = "drone-medical",
 					"Drone - Chemistry" = "drone-chemistry",
-					"Eyebot" = "eyebot-medical"
+					"Eyebot" = "eyebot-medical",
+					"Sleek" = "sleekmedic",
+					"Marina" = "marinaMD",
+					"Kodiak" = "kodiak-med"
 					)
 
 /obj/item/weapon/robot_module/medical/crisis/New()
@@ -316,12 +324,17 @@ var/global/list/robot_modules = list(
 	subsystems = list(/datum/nano_module/power_monitor)
 	supported_upgrades = list(/obj/item/borg/upgrade/rcd)
 	sprites = list(
+					"Standard" = "robotEngi",
 					"Basic" = "Engineering",
 					"Antique" = "engineerrobot",
 					"Landmate" = "landmate",
 					"Landmate - Treaded" = "engiborg+tread",
 					"Drone" = "drone-engineer",
-					"Eyebot" = "eyebot-engineering"
+					"Eyebot" = "eyebot-engineering",
+					"Eyebot" = "eyebot-security",
+					"Sleek" = "sleekengineer",
+					"Marina" = "marinaENG",
+					"Kodiak" = "kodiak-eng"
 					)
 
 /obj/item/weapon/robot_module/engineering/general/New()
@@ -399,13 +412,17 @@ var/global/list/robot_modules = list(
 
 /obj/item/weapon/robot_module/security/general
 	sprites = list(
+					"Standard" = "robotSecy",
 					"Basic" = "secborg",
 					"Red Knight" = "Security",
 					"Black Knight" = "securityrobot",
 					"Bloodhound" = "bloodhound",
 					"Bloodhound - Treaded" = "secborg+tread",
 					"Drone" = "drone-sec",
-					"Eyebot" = "eyebot-security"
+					"Eyebot" = "eyebot-security",
+					"Sleek" = "sleeksecurity",
+					"Marina" = "marinaSC",
+					"Kodiak" = "kodiak-sec"
 				)
 
 /obj/item/weapon/robot_module/security/general/New()
@@ -434,11 +451,14 @@ var/global/list/robot_modules = list(
 	name = "janitorial robot module"
 	channels = list("Service" = 1)
 	sprites = list(
+					"Standard" = "robotJani",
 					"Basic" = "JanBot2",
 					"Mopbot"  = "janitorrobot",
 					"Mop Gear Rex" = "mopgearrex",
 					"Drone" = "drone-janitor",
-					"Eyebot" = "eyebot-janitor"
+					"Eyebot" = "eyebot-janitor",
+					"Sleek" = "sleekjanitor",
+					"Marina" = "marinaJN"
 					)
 
 /obj/item/weapon/robot_module/janitor/New()
@@ -475,14 +495,19 @@ var/global/list/robot_modules = list(
 					)
 
 /obj/item/weapon/robot_module/clerical/butler
-	sprites = list(	"Waitress" = "Service",
+	sprites = list(
+					"Standard" = "robotServ",
+					"Waitress" = "Service",
 					"Kent" = "toiletbot",
 					"Bro" = "Brobot",
 					"Rich" = "maximillion",
 					"Default" = "Service2",
 					"Drone - Service" = "drone-service",
 					"Drone - Hydro" = "drone-hydro",
-					"Eyebot" = "eyebot-standard"
+					"Eyebot" = "eyebot-standard",
+					"Sleek" = "sleekservice",
+					"Marina" = "marinaSV",
+					"Kodiak" = "kodiak-service"
 				  	)
 
 /obj/item/weapon/robot_module/clerical/butler/New()
@@ -519,6 +544,7 @@ var/global/list/robot_modules = list(
 /obj/item/weapon/robot_module/clerical/general
 	name = "clerical robot module"
 	sprites = list(
+					"Standard" = "robotServ",
 					"Waitress" = "Service",
 					"Kent" = "toiletbot",
 					"Bro" = "Brobot",
@@ -550,11 +576,15 @@ var/global/list/robot_modules = list(
 	channels = list("Supply" = 1)
 	networks = list(NETWORK_MINE)
 	sprites = list(
+					"Standard" = "robotMine",
 					"Basic" = "Miner_old",
 					"Advanced Droid" = "droid-miner",
 					"Treadhead" = "Miner",
 					"Drone" = "drone-miner",
-					"Eyebot" = "eyebot-miner"
+					"Eyebot" = "eyebot-miner",
+					"Sleek" = "sleekminer",
+					"Marina" = "marinaMN",
+					"Kodiak" = "kodiak-miner"
 				)
 	supported_upgrades = list(/obj/item/borg/upgrade/jetpack)
 
