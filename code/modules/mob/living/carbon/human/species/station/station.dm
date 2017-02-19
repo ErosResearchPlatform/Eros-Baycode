@@ -399,7 +399,7 @@
 		BP_R_ARM =  list("path" = /obj/item/organ/external/arm/right),
 		BP_L_HAND = list("path" = /obj/item/organ/external/hand),
 		BP_R_HAND = list("path" = /obj/item/organ/external/hand/right),
-		BP_TAUR = list("path" = /obj/item/organ/external/taur/spider)
+		BP_TAUR = list("path" = /obj/item/organ/external/taur/veirei)
 		)
 
 	taur_override = "Veirei Abdomen"
