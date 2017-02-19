@@ -359,7 +359,7 @@
 /datum/species/lamia/get_bodytype()
 	return "Lamia"
 
-/datum/species/drider
+/datum/species/veirei
 	name = "Veirei"
 	name_plural = "Veiren"
 	icobase = 'icons/mob/human_races/r_drider.dmi'
@@ -402,10 +402,10 @@
 		BP_TAUR = list("path" = /obj/item/organ/external/taur/spider)
 		)
 
-	taur_override = "Spider Abdomen"
+	taur_override = "Veirei Abdomen"
 
 /datum/species/drider/get_bodytype()
-	return "Drider"
+	return "Veirei"
 
 /datum/species/akula
 	name = "Akula"

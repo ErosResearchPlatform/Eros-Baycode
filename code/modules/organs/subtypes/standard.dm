@@ -181,8 +181,8 @@
 	name = "lamia tail"
 	icon_name = "s_tail"
 
-/obj/item/organ/external/taur/spider
-	name = "spider abdomen"
+/obj/item/organ/external/taur/veirei
+	name = "Veirei Abdomen"
 	icon_name = "spider"
 
 /obj/item/organ/external/hand
