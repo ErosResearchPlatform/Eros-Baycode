@@ -78,7 +78,7 @@
 	name = "spider abdomen"
 	desc = "A skeletal limb wrapped in pseudomuscles, with a low-conductivity case."
 	icon_state = "spider"
-	force_path = /obj/item/organ/external/taur/spider
+	force_path = /obj/item/organ/external/taur/veirei
 
 
 /obj/item/robot_parts/chest

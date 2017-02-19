@@ -131,6 +131,7 @@
 	no_blend = 1
 	offset_x = -16
 	var/list/t_col
+	var/extra = 0
 
 /obj/item/organ/external/taur/robotize(var/company, var/skip_prosthetics, var/keep_organs)
 	. = ..()
@@ -171,6 +172,10 @@
 		mob_icon.Blend(rgb(t_col[1], t_col[2], t_col[3]), ICON_MULTIPLY)
 		icon_cache_key += "_color_[t_col[1]]_[t_col[2]]_[t_col[3]]"
 
+	if(extra)
+		var/icon/claws = new/icon("icon" = 'icons/mob/human_races/taur.dmi', "icon_state" = "[icon_name]_e")
+		mob_icon.Blend(claws, ICON_OVERLAY)
+
 	if(model)
 		icon_cache_key += "_model_[model]"
 
@@ -184,6 +189,7 @@
 /obj/item/organ/external/taur/veirei
 	name = "Veirei Abdomen"
 	icon_name = "spider"
+	extra = 1
 
 /obj/item/organ/external/hand
 	organ_tag = BP_L_HAND
