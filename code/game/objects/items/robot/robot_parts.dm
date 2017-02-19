@@ -74,8 +74,8 @@
 	icon_state = "s_tail"
 	force_path = /obj/item/organ/external/taur/snake
 
-/obj/item/robot_parts/taur/spider
-	name = "spider abdomen"
+/obj/item/robot_parts/taur/veirei
+	name = "veirei abdomen"
 	desc = "A skeletal limb wrapped in pseudomuscles, with a low-conductivity case."
 	icon_state = "spider"
 	force_path = /obj/item/organ/external/taur/veirei

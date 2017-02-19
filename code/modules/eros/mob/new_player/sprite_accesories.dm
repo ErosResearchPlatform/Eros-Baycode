@@ -686,13 +686,13 @@
 
 /datum/sprite_accessory/tails
 	icon = 'icons/eros/mob/extras/tails.dmi'
-	species_allowed = list("Human","Unathi","Tajara","Skrell","Akula","Lamia", "Veirei", "Machine")
+	species_allowed = list("Human","Unathi","Tajara","Skrell","Akula","Lamia","Veirei","Machine")
 
 	tal_none
 		name = "None"
 		icon = null
 		icon_state = null
-		species_allowed = list("Human","Unathi","Tajara","Skrell", "Machine","Akula", "Resomi", "Machine", "Vox")
+		species_allowed = list("Human","Unathi","Tajara","Skrell","Machine","Akula","Resomi","Machine","Vox")
 
 	tal_bunny
 		name = "Bunny Tail"

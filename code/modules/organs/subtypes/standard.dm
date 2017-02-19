@@ -182,14 +182,19 @@
 	dir = EAST
 	icon = mob_icon
 
+/obj/item/organ/external/taur
+    name = "taur taill"
+    icon_name = null
+    var/extra = 0
+
 /obj/item/organ/external/taur/snake
-	name = "lamia tail"
-	icon_name = "s_tail"
+    name = "lamia tail"
+    icon_name = "s_tail"
 
 /obj/item/organ/external/taur/veirei
-	name = "Veirei Abdomen"
-	icon_name = "spider"
-	extra = 1
+    name = "Veirei Abdomen"
+    icon_name = "spider"
+    extra = 1
 
 /obj/item/organ/external/hand
 	organ_tag = BP_L_HAND
