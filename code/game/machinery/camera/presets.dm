@@ -34,6 +34,9 @@
 /obj/machinery/camera/network/exodus
 	network = list(NETWORK_EXODUS)
 
+/obj/machinery/camera/network/communicators
+	network = list(NETWORK_COMMUNICATORS)
+
 /obj/machinery/camera/network/expedition
 	network = list(NETWORK_EXPEDITION)
 
