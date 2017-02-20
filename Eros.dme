@@ -1719,7 +1719,6 @@
 #include "code\modules\mob\observer\virtual\helpers.dm"
 #include "code\modules\mob\observer\virtual\mob.dm"
 #include "code\modules\mob\observer\virtual\~defines.dm"
-#include "code\modules\mob\observer\voice\voice.dm"
 #include "code\modules\modular_computers\laptop_vendor.dm"
 #include "code\modules\modular_computers\computers\item\modular_computer.dm"
 #include "code\modules\modular_computers\computers\item\processor.dm"

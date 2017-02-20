@@ -33,7 +33,7 @@
 			var/datum/preferences/p = speaker.client.prefs
 			name = p.real_name
 			real_name = name
-			gender = p.identifying_gender
+			gender = p.gender
 
 			for(var/language in p.alternate_languages)
 				add_language(language)
