@@ -797,7 +797,7 @@ var/global/list/obj/item/device/communicator/all_communicators = list()
 // Description: Self explanatory
 /obj/item/device/communicator/update_icon()
 	if(video_source)
-		icon_state = "communicator-video"
+		icon_state = "communicator-active"
 		return
 
 	if(voice_mobs.len || communicating.len)
