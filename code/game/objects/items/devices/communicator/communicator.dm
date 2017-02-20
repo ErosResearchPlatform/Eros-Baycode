@@ -818,11 +818,10 @@ var/global/list/obj/item/device/communicator/all_communicators = list()
 	for(var/obj/item/device/communicator/comm in communicating)
 		var/turf/T = get_turf(comm)
 		if(!T) return
-		var/list/mobs = list()
-		var/list/objs = list()
-		var/list/in_range = get_mobs_and_objs_in_view_fast(T,world.view,mobs,objs)
+		var/list/in_range = polaris_get_mobs_and_objs_in_view_fast(T,world.view,0) //Range of 3 since it's a tiny video display
+		var/list/mobs_to_relay = in_range["mobs"]
 
-		for(var/mob/mob in in_range) //We can't use visible_message(), or else we will get an infinite loop if two communicators hear each other.
+		for(var/mob/mob in mobs_to_relay) //We can't use visible_message(), or else we will get an infinite loop if two communicators hear each other.
 			var/dst = get_dist(get_turf(mob),get_turf(comm))
 			if(dst <= video_range)
 				mob.show_message(rendered)
@@ -840,11 +839,10 @@ var/global/list/obj/item/device/communicator/all_communicators = list()
 
 		var/turf/T = get_turf(comm)
 		if(!T) return
-		var/list/mobs = list()
-		var/list/objs = list()
-		var/list/in_range = get_mobs_and_objs_in_view_fast(T,world.view,mobs,objs)
+		var/list/in_range = polaris_get_mobs_and_objs_in_view_fast(T,world.view,0)
+		var/list/mobs_to_relay = in_range["mobs"]
 
-		for(var/mob/mob in in_range)
+		for(var/mob/mob in mobs_to_relay)
 			//Can whoever is hearing us understand?
 			if(!mob.say_understands(M, speaking))
 				if(speaking)
@@ -867,8 +865,8 @@ var/global/list/obj/item/device/communicator/all_communicators = list()
 	for(var/obj/item/device/communicator/comm in communicating)
 		var/turf/T = get_turf(comm)
 		if(!T) return
-		var/list/in_range = get_mobs_and_objs_in_view_fast(T,world.view,0)
-		var/list/mobs_to_relay = in_range
+		var/list/in_range = polaris_get_mobs_and_objs_in_view_fast(T,world.view,0)
+		var/list/mobs_to_relay = in_range["mobs"]
 
 		for(var/mob/mob in mobs_to_relay)
 			mob.show_message(rendered)
