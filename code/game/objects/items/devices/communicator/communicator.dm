@@ -425,7 +425,7 @@ var/global/list/obj/item/device/communicator/all_communicators = list()
 		for(var/obj/item/device/communicator/comm in communicating)
 			if(name_to_disconnect == comm.name)
 				close_connection(usr, comm, "[usr] hung up")
-
+/*
 	if(href_list["startvideo"])
 		var/ref_to_video = href_list["startvideo"]
 		var/obj/item/device/communicator/comm = locate(ref_to_video)
@@ -439,7 +439,7 @@ var/global/list/obj/item/device/communicator/all_communicators = list()
 	if(href_list["watchvideo"])
 		if(video_source)
 			watch_video(usr,video_source.loc)
-
+*/
 	if(href_list["copy"])
 		target_address = href_list["copy"]
 
