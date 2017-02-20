@@ -36,6 +36,8 @@
 
 	var/affected_by_emp_until = 0
 
+	var/client_huds = list()
+
 /obj/machinery/camera/apply_visual(mob/living/carbon/human/M)
 	if(!M.client)
 		return
@@ -58,6 +60,7 @@
 	wires = new(src)
 	assembly = new(src)
 	assembly.state = 4
+	client_huds |= global_hud.whitense
 
 	/* // Use this to look for cameras that have the same c_tag.
 	for(var/obj/machinery/camera/C in cameranet.cameras)
