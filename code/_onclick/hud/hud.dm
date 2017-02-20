@@ -7,7 +7,9 @@ var/list/global_huds = list(
 		global_hud.nvg,
 		global_hud.thermal,
 		global_hud.meson,
-		global_hud.science)
+		global_hud.science,
+		global_hud.whitense,
+		global_hud.darkMask)
 
 /datum/hud/var/obj/screen/grab_intent
 /datum/hud/var/obj/screen/hurt_intent
@@ -18,6 +20,8 @@ var/list/global_huds = list(
 	var/obj/screen/nvg
 	var/obj/screen/thermal
 	var/obj/screen/meson
+	var/obj/screen/whitense
+	var/list/darkMask
 	var/obj/screen/science
 
 /datum/global_hud/proc/setup_overlay(var/icon_state)

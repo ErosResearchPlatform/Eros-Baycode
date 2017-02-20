@@ -1,11 +1,11 @@
 // BEGIN_INTERNALS
 /*
-LAST_COMPILE_TIME: 1486378856
-DIR: code code\datums code\datums\outfits\jobs code\game\jobs code\game\jobs\job maps maps\torch maps\torch\job 
+LAST_COMPILE_TIME: 1487287864
+DIR: code code\game code\game\objects code\game\objects\items code\game\objects\items\devices code\game\objects\items\devices\communicator icons icons\obj maps maps\exodus 
 AUTO_FILE_DIR: OFF
 MAP_ICON_TYPE: 0
 LAST_COMPILE_VERSION: 510.1347
-WINDOW: code\modules\hydroponics\seed_controller.dm;code\modules\hydroponics\trays\tray.dm;code\modules\projectiles\guns\energy\special.dm;code\modules\item_worth\worths_list.dm;code\modules\mob\living\simple_animal\hostile\voxslug.dm;icons\obj\pda.dmi;code\game\jobs\job\medical.dm;code\datums\outfits\outfit.dm;code\datums\outfits\jobs\medical.dm;code\datums\outfits\jobs\civilian.dm
-FILE: code\datums\outfits\jobs\civilian.dm
+WINDOW: code\game\objects\items\devices\communicator\communicator.dm
+FILE: code\game\objects\items\devices\communicator\communicator.dm
 */
 // END_INTERNALS

@@ -44,3 +44,8 @@
 /datum/gear/utility/customtablet/New()
 	..()
 	gear_tweaks += new /datum/gear_tweak/tablet()
+
+/datum/gear/utility/communicator
+	display_name = "communicator"
+	path = /obj/item/device/communicator
+	cost = 1
