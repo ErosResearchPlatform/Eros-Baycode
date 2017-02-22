@@ -1190,7 +1190,7 @@
 "awT" = (/obj/machinery/gibber,/turf/unsimulated/floor{icon_state = "freezerfloor"; dir = 2},/area/centcom/living)
 "awU" = (/obj/machinery/conveyor{dir = 4; id = "QMLoad2"},/turf/simulated/floor/shuttle/blue,/area/supply/dock)
 "awV" = (/obj/machinery/conveyor{dir = 4; id = "QMLoad2"},/obj/machinery/door/airlock/external{frequency = 1380; icon_state = "door_locked"; id_tag = "supply_shuttle_hatch"; locked = 1; name = "Shuttle Hatch"; req_access = list(13)},/turf/simulated/floor/plating,/area/supply/dock)
-"awW" = (/obj/structure/window/reinforced/crescent{dir = 1},/obj/structure/table/standard,/obj/item/weapon/bonesetter,/obj/item/weapon/bonegel,/turf/simulated/floor/shuttle/white,/area/syndicate_station/start)
+"awW" = (/obj/structure/window/reinforced/crescent{dir = 1},/obj/structure/table/standard,/obj/item/weapon/bonesetter,/obj/item/weapon/bonegel,/obj/item/weapon/defibrillator/compact/combat/loaded,/turf/simulated/floor/shuttle/white,/area/syndicate_station/start)
 "awX" = (/obj/machinery/door/window{dir = 1; name = "Surgery"; req_access = list(150)},/turf/simulated/floor/shuttle/white,/area/syndicate_station/start)
 "awY" = (/obj/structure/window/reinforced/crescent{dir = 1},/obj/machinery/iv_drip,/turf/simulated/floor/shuttle/white,/area/syndicate_station/start)
 "awZ" = (/obj/structure/table/standard,/obj/structure/window/reinforced/crescent{dir = 8},/obj/item/weapon/storage/firstaid/toxin{pixel_x = 3; pixel_y = 3},/obj/item/weapon/storage/firstaid/adv{pixel_x = 1},/turf/simulated/floor/shuttle/white,/area/syndicate_station/start)
