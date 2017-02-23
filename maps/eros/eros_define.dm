@@ -1,7 +1,7 @@
 
 /datum/map/eros
 	name = "Eros"
-	full_name = "Eros Test Station"
+	full_name = "Eros Colony"
 	path = "eros"
 
 	lobby_icon = 'maps/example/example_lobby.dmi'
