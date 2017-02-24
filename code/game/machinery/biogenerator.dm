@@ -225,7 +225,7 @@
 		if("cloth")
 			new/obj/item/stack/material/cloth/fifty (loc)
 		if("leather")
-			new/obj/item/stack/material/cloth/leather (loc)
+			new/obj/item/stack/material/leather/fifty (loc)
 		if("monkey")
 			new/mob/living/carbon/human/monkey(loc)
 	processing = 0
