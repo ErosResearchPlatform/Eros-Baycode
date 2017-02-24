@@ -264,6 +264,9 @@
 	icon_state = "sheet-leather"
 	default_type = "leather"
 
+/obj/item/stack/material/leather/fifty
+	amount = 50
+
 /obj/item/stack/material/glass
 	name = "glass"
 	icon_state = "sheet-glass"
