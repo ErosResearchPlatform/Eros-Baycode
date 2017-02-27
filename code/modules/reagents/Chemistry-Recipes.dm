@@ -2151,6 +2151,13 @@
 	required_reagents = list("space_up" = 1, "bluecuracao" = 1, "melonliquor" = 1)
 	result_amount = 3
 
+/datum/chemical_reaction/ships_surgeon
+	name = "Ship's Surgeon"
+	id = "shipssurgeon"
+	result = "shipssurgeon"
+	required_reagents = list("rum" = 1, "dr_gibb" = 2, "ice" = 1)
+	result_amount = 4
+
 /datum/chemical_reaction/luminol
 	name = "Luminol"
 	id = "luminol"

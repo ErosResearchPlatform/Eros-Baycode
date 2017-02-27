@@ -835,6 +835,12 @@
 	desc = "A farwa plush doll. It's soft and comforting!"
 	icon_state = "farwaplushie"
 
+/obj/item/toy/plushie/drone
+	name = "maintenance drone plush"
+	desc = "A doll of a maintenance drone."
+	icon = 'icons/mob/robots.dmi'
+	icon_state = "repairbot"
+
 /obj/item/toy/plushie/therapy_red
 	name = "red therapy doll"
 	desc = "A toy for therapeutic and recreational purposes. This one is red."
