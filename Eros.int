@@ -5,7 +5,5 @@ DIR: code code\game code\game\machinery code\game\machinery\camera code\game\obj
 AUTO_FILE_DIR: OFF
 MAP_ICON_TYPE: 0
 LAST_COMPILE_VERSION: 510.1347
-WINDOW: maps\exodus\exodus-2.dmm;code\game\objects\items\toys.dm;icons\mob\robots.dmi
-FILE: maps\exodus\exodus-2.dmm
 */
 // END_INTERNALS

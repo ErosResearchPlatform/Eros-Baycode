@@ -3125,7 +3125,7 @@
 "bie" = (/obj/structure/disposalpipe/segment,/turf/simulated/floor/tiled,/area/hydroponics/garden)
 "bif" = (/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/tiled,/area/hydroponics/garden)
 "big" = (/obj/machinery/atmospherics/unary/vent_scrubber/on{dir = 1},/turf/simulated/floor/tiled,/area/hydroponics/garden)
-"bih" = (/obj/effect/floor_decal/corner/lime{dir = 6},/obj/machinery/seed_storage/garden,/turf/simulated/floor/tiled,/area/hydroponics)
+"bih" = (/obj/effect/floor_decal/corner/lime{dir = 6},/obj/machinery/seed_storage/garden,/turf/simulated/floor/tiled,/area/hydroponics/garden)
 "bii" = (/obj/machinery/vending/hydronutrients,/turf/simulated/floor/grass,/area/hydroponics/garden)
 "bij" = (/obj/structure/flora/grass/brown,/turf/simulated/floor/grass,/area/hydroponics/garden)
 "bik" = (/obj/structure/disposalpipe/segment,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/tiled,/area/hallway/primary/starboard)
