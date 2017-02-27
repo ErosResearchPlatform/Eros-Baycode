@@ -53,10 +53,9 @@
 		/area/crew_quarters/cafe = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/security/nuke_storage = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/engineering/engine_waste = NO_APC,
-		/area/maintenance/incinerator = NO_APC|NO_VENT,
+		/area/maintenance/incinerator = NO_APC|NO_VENT|NO_SCRUBBER,
 		/area/medical/patient_c = NO_SCRUBBER|NO_VENT|NO_APC,
 		/area/security/vacantoffice = NO_SCRUBBER|NO_VENT|NO_APC,
-		/area/hydroponics = NO_APC,
 		/area/security/checkpoint2 = NO_SCRUBBER|NO_VENT|NO_APC
 	)
 
