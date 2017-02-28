@@ -1,11 +1,9 @@
 // BEGIN_INTERNALS
 /*
-LAST_COMPILE_TIME: 1487287864
-DIR: code code\game code\game\objects code\game\objects\items code\game\objects\items\devices code\game\objects\items\devices\communicator icons icons\obj maps maps\exodus 
+LAST_COMPILE_TIME: 1488186541
+DIR: code code\game code\game\machinery code\game\machinery\camera code\game\objects code\game\objects\items icons icons\mob maps maps\exodus 
 AUTO_FILE_DIR: OFF
 MAP_ICON_TYPE: 0
 LAST_COMPILE_VERSION: 510.1347
-WINDOW: code\game\objects\items\devices\communicator\communicator.dm
-FILE: code\game\objects\items\devices\communicator\communicator.dm
 */
 // END_INTERNALS
