@@ -9,12 +9,11 @@
 
 	temperature = T20C
 	thermal_conductivity = OPEN_HEAT_TRANSFER_COEFFICIENT
+	var/keep_sprite = 0
 //	heat_capacity = 700000 No.
 
 /turf/space/New()
-	if(icon_state == "0")
-		icon_state = "[((x + y) ^ ~(x * y)) % 25]"
-	if(!istype(src, /turf/space/transit))
+	if((icon_state == "0") && (!keep_sprite))
 		icon_state = "[((x + y) ^ ~(x * y)) % 25]"
 	update_starlight()
 	..()
@@ -31,7 +30,12 @@
 		return
 	if(!below.density && istype(below.loc, /area/space))
 		return
-	ChangeTurf(/turf/simulated/floor/airless)
+
+	// We alter area type before the turf to ensure the turf-change-event-propagation is handled as expected.
+	if(using_map.base_floor_area)
+		var/area/new_area = locate(using_map.base_floor_area) || new using_map.base_floor_area
+		new_area.contents.Add(src)
+	ChangeTurf(using_map.base_floor_type)
 
 // override for space turfs, since they should never hide anything
 /turf/space/levelupdate()
@@ -212,3 +216,4 @@
 /turf/space/bluespace
 	name = "bluespace"
 	icon_state = "bluespace"
+	keep_sprite = 1

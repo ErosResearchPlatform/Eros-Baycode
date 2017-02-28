@@ -7,7 +7,9 @@ var/list/global_huds = list(
 		global_hud.nvg,
 		global_hud.thermal,
 		global_hud.meson,
-		global_hud.science)
+		global_hud.science,
+		global_hud.whitense,
+		global_hud.darkMask)
 
 /datum/hud/var/obj/screen/grab_intent
 /datum/hud/var/obj/screen/hurt_intent
@@ -18,6 +20,8 @@ var/list/global_huds = list(
 	var/obj/screen/nvg
 	var/obj/screen/thermal
 	var/obj/screen/meson
+	var/obj/screen/whitense
+	var/list/darkMask
 	var/obj/screen/science
 
 /datum/global_hud/proc/setup_overlay(var/icon_state)
@@ -50,8 +54,6 @@ var/list/global_huds = list(
 	var/hotkey_ui_hidden = 0	//This is to hide the buttons that can be used via hotkeys. (hotkeybuttons list of buttons)
 
 	var/obj/screen/lingchemdisplay
-	var/obj/screen/blobpwrdisplay
-	var/obj/screen/blobhealthdisplay
 	var/obj/screen/r_hand_hud_object
 	var/obj/screen/l_hand_hud_object
 	var/obj/screen/action_intent
@@ -76,8 +78,6 @@ datum/hud/New(mob/owner)
 	disarm_intent = null
 	help_intent = null
 	lingchemdisplay = null
-	blobpwrdisplay = null
-	blobhealthdisplay = null
 	r_hand_hud_object = null
 	l_hand_hud_object = null
 	action_intent = null

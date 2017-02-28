@@ -122,6 +122,9 @@
 					dat += "<A href='?src=\ref[src];action=create;item=tbelt;cost=300'>Utility belt</A> <FONT COLOR=blue>([round(300/build_eff)])</FONT><BR>"
 					dat += "<A href='?src=\ref[src];action=create;item=satchel;cost=400'>Leather Satchel</A> <FONT COLOR=blue>([round(400/build_eff)])</FONT><BR>"
 					dat += "<A href='?src=\ref[src];action=create;item=cashbag;cost=400'>Cash Bag</A> <FONT COLOR=blue>([round(400/build_eff)])</FONT><BR>"
+					dat += "Material<BR>"
+					dat += "<A href='?src=\ref[src];action=create;item=cloth;cost=500'>Cloth</A> <FONT COLOR=blue>([round(500/build_eff)])</FONT><BR>"
+					dat += "<A href='?src=\ref[src];action=create;item=leather;cost=500'>Leather</A> <FONT COLOR=blue>([round(500/build_eff)])</FONT><BR>"
 					//dat += "Other<BR>"
 					//dat += "<A href='?src=\ref[src];action=create;item=monkey;cost=500'>Monkey</A> <FONT COLOR=blue>(500)</FONT><BR>"
 				else
@@ -219,6 +222,10 @@
 			new/obj/item/weapon/storage/backpack/satchel(loc)
 		if("cashbag")
 			new/obj/item/weapon/storage/bag/cash(loc)
+		if("cloth")
+			new/obj/item/stack/material/cloth/fifty (loc)
+		if("leather")
+			new/obj/item/stack/material/leather/fifty (loc)
 		if("monkey")
 			new/mob/living/carbon/human/monkey(loc)
 	processing = 0

@@ -71,7 +71,6 @@
 
 		//Organs and blood
 		handle_organs()
-		handle_blood()
 		stabilize_body_temperature() //Body temperature adjusts itself (self-regulation)
 
 		handle_shock()
@@ -1171,7 +1170,7 @@
 
 /mob/living/carbon/human/handle_vision()
 	if(client)
-		client.screen.Remove(global_hud.nvg, global_hud.thermal, global_hud.meson, global_hud.science)
+		client.screen.Remove(global_hud.nvg, global_hud.whitense, global_hud.darkMask, global_hud.thermal, global_hud.meson, global_hud.science)
 	if(machine)
 		var/viewflags = machine.check_eye(src)
 		if(viewflags < 0)
