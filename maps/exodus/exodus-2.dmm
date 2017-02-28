@@ -3760,7 +3760,7 @@
 "bup" = (/obj/effect/floor_decal/industrial/warning,/turf/simulated/floor/tiled/white,/area/rnd/lab)
 "buq" = (/obj/machinery/atmospherics/unary/vent_scrubber/on{dir = 4},/obj/effect/floor_decal/industrial/warning,/turf/simulated/floor/tiled/white,/area/rnd/lab)
 "bur" = (/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 10},/obj/effect/floor_decal/industrial/warning/corner{dir = 8},/turf/simulated/floor/tiled/white,/area/rnd/lab)
-"bus" = (/obj/structure/extinguisher_cabinet{pixel_x = 25; pixel_y = 0},/turf/simulated/floor/tiled/white,/area/rnd/lab)
+"bus" = (/obj/structure/extinguisher_cabinet{pixel_x = 25; pixel_y = 0},/obj/machinery/integrated_circuit_printer,/turf/simulated/floor/tiled/white,/area/rnd/lab)
 "but" = (/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/machinery/atmospherics/pipe/simple/hidden/universal,/obj/random/obstruction,/turf/simulated/floor/plating,/area/storage/emergency)
 "buu" = (/obj/machinery/atmospherics/pipe/simple/hidden,/turf/simulated/floor/plating,/area/storage/emergency)
 "buv" = (/obj/structure/reagent_dispensers/watertank,/turf/simulated/floor/plating,/area/storage/emergency)
