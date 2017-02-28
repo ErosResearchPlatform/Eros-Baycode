@@ -10,3 +10,4 @@
 	shuttle_delay = 2
 	antag_tags = list(MODE_REVOLUTIONARY, MODE_LOYALIST, MODE_MERCENARY)
 	require_all_templates = 1
+	votable = 0

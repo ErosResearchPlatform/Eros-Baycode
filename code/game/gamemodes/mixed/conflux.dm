@@ -8,3 +8,4 @@
 	end_on_antag_death = 0
 	antag_tags = list(MODE_WIZARD, MODE_CULTIST)
 	require_all_templates = 1
+	votable = 0
