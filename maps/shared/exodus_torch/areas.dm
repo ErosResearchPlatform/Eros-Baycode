@@ -18,6 +18,7 @@
 	icon_state = "substation"
 	sound_env = SMALL_ENCLOSED
 
+
 // CentCom
 
 /area/centcom/control
@@ -56,7 +57,7 @@
 	flags = AREA_EXTERNAL
 	requires_power = 1
 	always_unpowered = 1
-	lighting_use_dynamic = 0
+	has_gravity = FALSE
 	base_turf = /turf/space
 
 /area/solar/auxstarboard
