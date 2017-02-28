@@ -2,7 +2,7 @@
 	var/clutter_probability = 2
 	var/oil_probability = 2
 	var/vermin_probability = 0
-	var/web_probability = 25
+	var/web_probability = 5
 
 /decl/turf_initializer/maintenance/heavy
 	clutter_probability = 5
