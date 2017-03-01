@@ -456,3 +456,11 @@
 	name = "workman outfit"
 	desc = "The very image of a working man. Not that you're probably doing work."
 	icon_state = "mechanic"
+
+/obj/item/clothing/under/sleevelessturtle
+	name = "sleeveless turtleneck"
+	desc = "Like a sweater vest, but much more stylish."
+	icon_state = "mia_turtle"
+	item_state = "bl_suit"
+	worn_state = "mia_turtle"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS

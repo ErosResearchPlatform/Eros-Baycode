@@ -127,7 +127,7 @@
 		BP_EYES =     /obj/item/organ/internal/eyes
 		)
 
-	spawn_flags 	 = SPECIES_CAN_SPAWN | SPECIES_NO_FBP_CONSTRUCTION | SPECIES_NO_FBP_CHARGEN
+	spawn_flags 	 = SPECIES_CAN_JOIN | SPECIES_NO_FBP_CONSTRUCTION | SPECIES_NO_FBP_CHARGEN
 	flags = NO_SCAN
 	appearance_flags = HAS_EYE_COLOR | HAS_HAIR_COLOR
 
