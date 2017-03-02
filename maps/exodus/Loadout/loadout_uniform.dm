@@ -382,6 +382,10 @@
 	display_name= "keyhole sweater"
 	path = /obj/item/clothing/under/keyholesweater
 
+/datum/gear/uniform/miaturtle
+	display_name = "sleeveless turtleneck"
+	path = /obj/item/clothing/under/sleevelessturtle
+
 /datum/gear/uniform/pinstripe
 	display_name= "pinstriped suit"
 	path =/obj/item/clothing/under/pinstripe
