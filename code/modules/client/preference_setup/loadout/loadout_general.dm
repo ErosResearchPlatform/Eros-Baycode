@@ -38,6 +38,14 @@
 	..()
 	gear_tweaks += new/datum/gear_tweak/reagents(lunchables_ethanol_reagents())
 
+/datum/gear/flask/lithium
+	display_name = "lithium flask"
+	path = /obj/item/weapon/reagent_containers/food/drinks/flask/lithium
+
+/datum/gear/flask/slav
+	display_name = "red star flask"
+	path = /obj/item/weapon/reagent_containers/food/drinks/flask/slav
+
 /datum/gear/vacflask
 	display_name = "vacuum-flask"
 	path = /obj/item/weapon/reagent_containers/food/drinks/flask/vacuumflask

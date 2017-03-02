@@ -512,43 +512,43 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	item_state = "zippo"
 
 /obj/item/weapon/flame/lighter/zippo/black
-	name = "Black Zippo"
+	name = "\improper Black Zippo"
 	desc = "A zippo lighter. This one is black, with a white cross on it."
 	icon_state = "blackzippo"
 	item_state =  "zippo"
 
 /obj/item/weapon/flame/lighter/zippo/blue
-	name = "Blue Zippo"
+	name = "\improper Blue Zippo"
 	desc = "A zippo lighter. This one has a pretty blue frame."
 	icon_state = "bluezippo"
 	item_state = "zippo"
 
 /obj/item/weapon/flame/lighter/zippo/engraved
-	name = "Engraved Zippo"
+	name = "\improper Engraved Zippo"
 	desc = "A zippo lighter. This one has patters etched into the casing."
 	icon_state = "engravedzippo"
 	item_state = "zippo"
 
 /obj/item/weapon/flame/lighter/zippo/gold
-	name = "Gold Zippo"
+	name = "\improper Gold Zippo"
 	desc = "A zippo lighter. This one has a dazzling gold frame."
 	icon_state = "goldzippo"
 	item_state = "zippo"
 
 /obj/item/weapon/flame/lighter/zippo/moff
-	name = "Moth Zippo"
+	name = "\improper Moth Zippo"
 	desc = "A zippo lighter. This one is blue with a cute image of a moth."
 	icon_state = "moffzippo"
 	item_state = "zippo"
 
 /obj/item/weapon/flame/lighter/zippo/red
-	name = "Red Zippo"
+	name = "\improper Red Zippo"
 	desc = "A zippo lighter. This one has a red and white striped frame."
 	icon_state = "redzippo"
 	item_state = "zippo"
 
 /obj/item/weapon/flame/lighter/zippo/silver
-	name = "Silver Zippo"
+	name = "\improper Silver Zippo"
 	desc = "A zippo lighter. This one has a silver frame, with the number 41 engraved in it."
 	icon_state = "silverzippo"
 	item_state = "zippo"
