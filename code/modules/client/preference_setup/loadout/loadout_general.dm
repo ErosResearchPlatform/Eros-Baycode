@@ -131,11 +131,11 @@
 	path = /obj/item/weapon/cane/brown
 	description = "A lovely mahogany cane used by a true gentleman. Or a clown."
 
-/datum/gear/pen/fountain
+/datum/gear/fountainpen
 	display_name = "pen, fountain"
 	path = /obj/item/weapon/pen/fountain
 
-/datum/gear/pen/gold
+/datum/gear/goldpen
 	display_name = "pen, gold"
 	path = /obj/item/weapon/pen/gold
 	cost = 2
