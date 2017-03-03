@@ -80,7 +80,26 @@
 	new /obj/item/weapon/wirecutters(src)
 	new /obj/item/device/t_scanner(src)
 
+/obj/item/weapon/storage/belt/utility/atmos
+	name = "atmospherics belt"
+	desc = "Can hold various tools. Designed for use by an atmospheric technician."
+	icon_state = "atmosbelt"
+	item_state = "atmos"
 
+/obj/item/weapon/storage/belt/utility/atmos/full/New()
+	..()
+	new /obj/item/weapon/screwdriver(src)
+	new /obj/item/weapon/wrench(src)
+	new /obj/item/weapon/weldingtool(src)
+	new /obj/item/weapon/crowbar(src)
+	new /obj/item/weapon/wirecutters(src)
+	new /obj/item/device/t_scanner(src)
+
+/obj/item/weapon/storage/belt/utility/rainbow
+	name = "rainbow belt"
+	desc = "Can hold various tools. It's extremely colorful."
+	icon_state = "gaybelt"
+	item_state = "gay"
 
 /obj/item/weapon/storage/belt/medical
 	name = "medical belt"

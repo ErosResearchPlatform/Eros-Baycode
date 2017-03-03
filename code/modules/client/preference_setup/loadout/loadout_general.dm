@@ -38,6 +38,14 @@
 	..()
 	gear_tweaks += new/datum/gear_tweak/reagents(lunchables_ethanol_reagents())
 
+/datum/gear/flask/lithium
+	display_name = "lithium flask"
+	path = /obj/item/weapon/reagent_containers/food/drinks/flask/lithium
+
+/datum/gear/flask/slav
+	display_name = "red star flask"
+	path = /obj/item/weapon/reagent_containers/food/drinks/flask/slav
+
 /datum/gear/vacflask
 	display_name = "vacuum-flask"
 	path = /obj/item/weapon/reagent_containers/food/drinks/flask/vacuumflask
@@ -106,10 +114,6 @@
 	display_name = "cigarette selection"
 	path = /obj/item/weapon/storage/fancy/cigarettes
 
-/datum/gear/soma
-	display_name = "soma pills"
-	path = /obj/item/weapon/storage/pill_bottle/soma
-
 /datum/gear/cigarettes/New()
 	..()
 	var/list/cigarettes = list()
@@ -117,3 +121,21 @@
 		var/obj/item/weapon/storage/fancy/cigarettes/cigarette_brand = cigarette
 		cigarettes[initial(cigarette_brand.name)] = cigarette_brand
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(cigarettes))
+
+/datum/gear/soma
+	display_name = "soma pills"
+	path = /obj/item/weapon/storage/pill_bottle/soma
+
+/datum/gear/cane/brown
+	display_name = "brown cane"
+	path = /obj/item/weapon/cane/brown
+	description = "A lovely mahogany cane used by a true gentleman. Or a clown."
+
+/datum/gear/fountainpen
+	display_name = "pen, fountain"
+	path = /obj/item/weapon/pen/fountain
+
+/datum/gear/goldpen
+	display_name = "pen, gold"
+	path = /obj/item/weapon/pen/gold
+	cost = 2

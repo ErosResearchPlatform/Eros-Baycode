@@ -242,6 +242,12 @@
 	desc = "A flask with a Lithium Atom symbol on it."
 	icon_state = "lithiumflask"
 
+//cheeki breeki iv damke
+/obj/item/weapon/reagent_containers/food/drinks/flask/slav
+	name = "red star flask"
+	desc = "A flask with gold plating and a large red star on the front."
+	icon_state = "russianflask"
+
 /obj/item/weapon/reagent_containers/food/drinks/flask/detflask
 	name = "\improper Detective's flask"
 	desc = "A metal flask with a leather band and golden badge belonging to the detective."

@@ -185,6 +185,18 @@
 	darkness_view = -1
 	flash_protection = FLASH_PROTECTION_MODERATE
 
+/obj/item/clothing/glasses/sunglasses/greenshades
+	desc = "A pair of stylish green sunglasses with circular frames. They seem not to block light so much as they just make things green."
+	name = "green sunglasses"
+	icon_state = "green"
+	item_state = "green"
+	flash_protection = 0
+	prescription = 7
+
+/obj/item/clothing/glasses/sunglasses/greenshades/New()
+	..()
+	overlay = global_hud.nvg
+
 /obj/item/clothing/glasses/welding
 	name = "welding goggles"
 	desc = "Protects the eyes from welders, approved by the mad scientist association."

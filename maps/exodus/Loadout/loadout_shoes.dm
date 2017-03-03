@@ -30,6 +30,14 @@
 	display_name = "boot selection"
 	path = /obj/item/clothing/shoes/jackboots
 
+/datum/gear/shoes/boots/New()
+	..()
+	var/boots = list()
+	boots["jackboots"] = /obj/item/clothing/shoes/jackboots
+	boots["white jackboots"] = /obj/item/clothing/shoes/jackboots/white
+	boots["heelspring boots"] = /obj/item/clothing/shoes/jackboots/spring
+	gear_tweaks += new/datum/gear_tweak/path(boots)
+
 //EROS START
 
 /datum/gear/shoes/flats

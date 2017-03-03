@@ -222,3 +222,11 @@
 	display_name = "singlet, colorable"
 	path = /obj/item/clothing/accessory/shirt/singlet
 	flags = GEAR_HAS_COLOR_SELECTION
+
+/datum/gear/accessory/clover
+	display_name = "clover pendant"
+	path = /obj/item/clothing/accessory/clover
+
+/datum/gear/accessory/rosary
+	display_name = "rosary"
+	path = /obj/item/clothing/accessory/rosary
