@@ -34,10 +34,20 @@
 	icon_state = "pen_red"
 	colour = "red"
 
+/obj/item/weapon/pen/fountain
+	desc = "It's a handsome fountain pen. Fancy!"
+	icon_state = "fountainpen"
+
+/obj/item/weapon/pen/gold
+	desc = "It's a pen with a sparkling gold casing. Truly a symbol of high status."
+	icon_state = "gold_pen"
+	//colour = "yellow" //the memes are too strong with this one
+
 /obj/item/weapon/pen/multi
 	desc = "It's a pen with multiple colors of ink!"
 	var/selectedColor = 1
 	var/colors = list("black","blue","red")
+
 
 /obj/item/weapon/pen/multi/attack_self(mob/user)
 	if(++selectedColor > 3)

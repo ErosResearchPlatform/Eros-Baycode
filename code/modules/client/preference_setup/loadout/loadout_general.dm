@@ -114,6 +114,14 @@
 	display_name = "cigarette selection"
 	path = /obj/item/weapon/storage/fancy/cigarettes
 
+/datum/gear/cigarettes/New()
+	..()
+	var/list/cigarettes = list()
+	for(var/cigarette in (typesof(/obj/item/weapon/storage/fancy/cigarettes) - typesof(/obj/item/weapon/storage/fancy/cigarettes/killthroat)))
+		var/obj/item/weapon/storage/fancy/cigarettes/cigarette_brand = cigarette
+		cigarettes[initial(cigarette_brand.name)] = cigarette_brand
+	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(cigarettes))
+
 /datum/gear/soma
 	display_name = "soma pills"
 	path = /obj/item/weapon/storage/pill_bottle/soma
@@ -123,10 +131,11 @@
 	path = /obj/item/weapon/cane/brown
 	description = "A lovely mahogany cane used by a true gentleman. Or a clown."
 
-/datum/gear/cigarettes/New()
-	..()
-	var/list/cigarettes = list()
-	for(var/cigarette in (typesof(/obj/item/weapon/storage/fancy/cigarettes) - typesof(/obj/item/weapon/storage/fancy/cigarettes/killthroat)))
-		var/obj/item/weapon/storage/fancy/cigarettes/cigarette_brand = cigarette
-		cigarettes[initial(cigarette_brand.name)] = cigarette_brand
-	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(cigarettes))
+/datum/gear/pen/fountain
+	display_name = "pen, fountain"
+	path = /obj/item/weapon/pen/fountain
+
+/datum/gear/pen/gold
+	display_name = "pen, gold"
+	path = /obj/item/weapon/pen/gold
+	cost = 2
