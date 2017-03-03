@@ -73,3 +73,7 @@
 /datum/gear/eyes/stylish/welding
 	display_name = "welding goggles, stylish"
 	path = /obj/item/clothing/glasses/welding/stylish
+
+/datum/gear/eyes/shades/green
+	display_name = "sunglasses, green"
+	path = /obj/item/clothing/glasses/sunglasses/greenshades

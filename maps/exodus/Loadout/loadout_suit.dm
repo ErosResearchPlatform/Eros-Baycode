@@ -29,6 +29,10 @@
 	display_name = "blue-edged labcoat"
 	path = /obj/item/clothing/suit/storage/toggle/labcoat/blue
 
+/datum/gear/suit/roboticslabcoat
+	display_name = "labcoat, robotics"
+	path = /obj/item/clothing/suit/storage/toggle/labcoat/robotics
+
 /* coveralls redefined in Eros
 /datum/gear/suit/overalls
 	display_name = "overalls"

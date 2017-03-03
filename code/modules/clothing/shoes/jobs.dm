@@ -34,6 +34,12 @@
 	icon_state = "digiboots"
 	species_restricted = null
 
+/obj/item/clothing/shoes/jackboots/spring
+	name = "heelspring boots"
+	desc = "Tall synthleather boots with an artificial shine. The orange springs in the heel are more for fashion rather than functionality."
+	item_state = "springjacks"
+	icon_state = "springjacks"
+
 /obj/item/clothing/shoes/workboots
 	name = "workboots"
 	desc = "A pair of steel-toed work boots designed for use in industrial settings. Safety first."
