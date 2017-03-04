@@ -14,17 +14,6 @@
 /datum/gear/suit/hazard/New()
 	..()
 	gear_tweaks += new/datum/gear_tweak/path(/obj/item/clothing/suit/storage/hazardvest)
-
-/datum/gear/suit/hoodie
-	display_name = "hoodie"
-	path = /obj/item/clothing/suit/storage/toggle/hoodie
-	flags = GEAR_HAS_COLOR_SELECTION
-
-/datum/gear/suit/labcoat
-	display_name = "labcoat"
-	path = /obj/item/clothing/suit/storage/toggle/labcoat
-	flags = GEAR_HAS_COLOR_SELECTION
-
 /datum/gear/suit/blue_labcoat
 	display_name = "blue-edged labcoat"
 	path = /obj/item/clothing/suit/storage/toggle/labcoat/blue
@@ -83,10 +72,6 @@
 	display_name = "roughspun robe"
 	path = /obj/item/clothing/suit/unathi/robe
 	cost = 1
-
-/datum/gear/suit/suit_jacket
-	display_name = "suit jackets"
-	path = /obj/item/clothing/suit/storage/toggle/lawyer/bluejacket
 
 /datum/gear/suit/suit_jacket/New()
 	..()

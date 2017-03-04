@@ -35,11 +35,23 @@
 	caps["white cap"] = /obj/item/clothing/head/soft/mime
 	caps["yellow cap"] = /obj/item/clothing/head/soft/yellow
 	caps["major bill's shipping cap"] = /obj/item/clothing/head/soft/mbill
+	caps["Expeditionary Corps cap"] = /obj/item/clothing/head/soft/sol/expedition
+	caps["fleet cap"] = /obj/item/clothing/head/soft/sol/fleet
 	gear_tweaks += new/datum/gear_tweak/path(caps)
 
 /datum/gear/head/hairflower
 	display_name = "hair flower pin"
 	path = /obj/item/clothing/head/hairflower
+
+/datum/gear/head/hairflower/New()
+	..()
+	var/pins = list()
+	pins["blue pin"] = /obj/item/clothing/head/hairflower/blue
+	pins["pink pin"] = /obj/item/clothing/head/hairflower/pink
+	pins["red pin"] = /obj/item/clothing/head/hairflower
+	pins["yellow pin"] = /obj/item/clothing/head/hairflower/yellow
+	pins["violet pin"] = /obj/item/clothing/head/hairflower/violet
+	gear_tweaks += new/datum/gear_tweak/path(pins)
 
 /datum/gear/head/hardhat
 	display_name = "hardhat selection"
@@ -72,16 +84,19 @@
 	formalhats["fedora, grey"] = /obj/item/clothing/head/det/grey
 	gear_tweaks += new/datum/gear_tweak/path(formalhats)
 
-/datum/gear/head/informalhat
-	display_name = "informal hat selection"
-	path = /obj/item/clothing/head/cowboy_hat
+/datum/gear/head/hat/New()
 
-/datum/gear/head/informalhat/New()
 	..()
-	var/informalhats = list()
-	informalhats["cowboy hat"] = /obj/item/clothing/head/cowboy_hat
-	informalhats["ushanka"] = /obj/item/clothing/head/ushanka
-	gear_tweaks += new/datum/gear_tweak/path(informalhats)
+	var/hats = list()
+	hats["boatsman hat"] = /obj/item/clothing/head/boaterhat
+	hats["bowler hat"] = /obj/item/clothing/head/bowler
+	hats["cowboy hat"] = /obj/item/clothing/head/cowboy_hat
+	hats["fedora"] = /obj/item/clothing/head/fedora //m'lady
+	hats["feather thrilby"] = /obj/item/clothing/head/feathertrilby
+	hats["fez"] = /obj/item/clothing/head/fez
+	hats["top hat"] = /obj/item/clothing/head/that
+	hats["ushanka"] = /obj/item/clothing/head/ushanka
+	gear_tweaks += new/datum/gear_tweak/path(hats)
 
 /datum/gear/head/hairflower/New()
 	..()

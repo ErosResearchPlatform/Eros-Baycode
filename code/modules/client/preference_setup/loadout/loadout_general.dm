@@ -122,10 +122,6 @@
 		cigarettes[initial(cigarette_brand.name)] = cigarette_brand
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(cigarettes))
 
-/datum/gear/soma
-	display_name = "soma pills"
-	path = /obj/item/weapon/storage/pill_bottle/soma
-
 /datum/gear/cane/brown
 	display_name = "brown cane"
 	path = /obj/item/weapon/cane/brown

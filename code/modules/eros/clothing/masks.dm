@@ -23,12 +23,6 @@
 			icon_state = initial(icon_state)
 			usr << "You tie the bandana so that it can be worn on the face."
 
-/obj/item/clothing/mask/bandana/black
-	name = "black bandana"
-	desc = "A fine black bandana with nanotech lining."
-	icon_state = "bandblack"
-	item_state_slots = list(slot_r_hand_str = "bandblack", slot_l_hand_str = "bandblack")
-
 /obj/item/clothing/mask/bandana/red
 	name = "red bandana"
 	desc = "A fine red bandana with nanotech lining."
