@@ -89,7 +89,7 @@
 	desc = "You appear to live nearby."
 	incompatible = list("Housemate")
 
-/datum/relation/neighbour/get_desc_string()
+/datum/relation/neighbor/get_desc_string()
 	return "[holder] and [other.holder] appears to be neighbors."
 
 /datum/relation/housemate
