@@ -2,7 +2,6 @@
 	endWhen = 36000
 	var/last_spam_time = 0
 	var/obj/machinery/message_server/useMS
-	var/obj/machinery/exonet_node/node
 
 /datum/event/pda_spam/setup()
 	last_spam_time = world.time
@@ -19,11 +18,6 @@
 	if(world.time > last_spam_time + 3000)
 		//if there's no spam managed to get to receiver for five minutes, give up
 		kill()
-		return
-	if(!node)
-		node = get_exonet_node()
-
-	if(!node || !node.on || !node.allow_external_PDAs)
 		return
 
 	if(!useMS || !useMS.active)
@@ -61,11 +55,11 @@
 					"You have (1) new message!",\
 					"You have (2) new profile views!")
 				if(3)
-					sender = pick("Galactic Payments Association","Better Business Bureau","[using_map.system_name] E-Payments","NAnoTransen Finance Deparmtent","Luxury Replicas")
+					sender = pick("Galactic Payments Association","Better Business Bureau","Nyx E-Payments","NAnoTransen Finance Deparmtent","Luxury Replicas")
 					message = pick("Luxury watches for Blowout sale prices!",\
 					"Watches, Jewelry & Accessories, Bags & Wallets !",\
-					"Deposit 100$ and get 300$ totally free!",\
-					" 100K NT.|WOWGOLD ?nly $89            <HOT>",\
+					"Deposit 100þ and get 300þ totally free!",\
+					" 100K NT.|WOWGOLD õnly þ89            <HOT>",\
 					"We have been filed with a complaint from one of your customers in respect of their business relations with you.",\
 					"We kindly ask you to open the COMPLAINT REPORT (attached) to reply on this complaint..")
 				if(4)
@@ -123,4 +117,4 @@
 				L = get(P, /mob/living/silicon)
 
 			if(L)
-				L << "\icon[P] <b>Message from [sender] (Unknown / spam?), </b>\"[message]\" (Unable to Reply)"
+				to_chat(L, "\icon[P] <b>Message from [sender] (Unknown / spam?), </b>\"[message]\" (Unable to Reply)")
