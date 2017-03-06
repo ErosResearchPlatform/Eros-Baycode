@@ -86,6 +86,7 @@
 			if(!(O.robotic >= ORGAN_ROBOT))
 				var/eggs = new /obj/effect/spider/eggcluster(O, src)
 				O.implants += eggs
+				to_chat(H, "<span class='warning'>The [src] injects something into your [O.name]!</span>")
 
 /mob/living/simple_animal/hostile/giant_spider/Life()
 	..()
