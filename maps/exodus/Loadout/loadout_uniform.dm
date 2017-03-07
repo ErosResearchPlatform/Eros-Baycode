@@ -5,10 +5,6 @@
 	slot = slot_w_uniform
 	sort_category = "Uniforms and Casual Dress"
 
-/datum/gear/uniform/cheongsam
-	display_name = "cheongsam, white"
-	path = /obj/item/clothing/under/cheongsam
-
 /datum/gear/uniform/kilt
 	display_name = "kilt"
 	path = /obj/item/clothing/under/kilt
@@ -166,25 +162,22 @@
 
 //EROS START
 
-/datum/gear/uniform/eros/harness
-	display_name = "gear harness"
-	path = /obj/item/clothing/under/harness
-
 /datum/gear/uniform/eros/loose_dress
 	display_name = "Loose Dress"
 	path = /obj/item/clothing/under/loose_dress
 
 /datum/gear/uniform/cheongsam
-	display_name = "cheongsam, red"
-	path = /obj/item/clothing/under/cheongsam/red
+	display_name = "cheongsam selection"
+	path = /obj/item/clothing/under/cheongsam
 
-/datum/gear/uniform/cheongsam
-	display_name = "cheongsam, blue"
-	path = /obj/item/clothing/under/cheongsam/blue
-
-/datum/gear/uniform/cheongsam
-	display_name = "cheongsam, black"
-	path = /obj/item/clothing/under/cheongsam/black
+/datum/gear/uniform/cheongsam/New()
+	..()
+	var/cheongsams = list()
+	cheongsams["cheongsam, white"] = /obj/item/clothing/under/cheongsam
+	cheongsams["cheongsam, red"] = /obj/item/clothing/under/cheongsam/red
+	cheongsams["cheongsam, blue"] = /obj/item/clothing/under/cheongsam/blue
+	cheongsams["cheongsam, black"] = /obj/item/clothing/under/cheongsam/black
+	gear_tweaks += new/datum/gear_tweak/path(cheongsams)
 
 /datum/gear/uniform/croptop
 	display_name = "croptop, NT"

@@ -84,6 +84,10 @@
 	formalhats["fedora, grey"] = /obj/item/clothing/head/det/grey
 	gear_tweaks += new/datum/gear_tweak/path(formalhats)
 
+/datum/gear/head/hat
+	display_name = "hat selection"
+	path = /obj/item/clothing/head/hasturhood
+
 /datum/gear/head/hat/New()
 
 	..()
