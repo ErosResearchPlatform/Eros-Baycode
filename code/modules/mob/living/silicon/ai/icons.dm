@@ -7,7 +7,7 @@ var/list/datum/ai_icon/ai_icons
 	var/alive_light = "#FFFFFF"
 	var/nopower_icon = "4"
 	var/nopower_light = "#FFFFFF"
-	var/dead_icon = "ai-crash"
+	var/dead_icon = "ai_dead"
 	var/dead_light = "#000099"
 
 /datum/ai_icon/New(var/name, var/alive_icon, var/nopower_icon, var/dead_icon, var/alive_light, var/nopower_light, var/dead_light)
@@ -28,11 +28,13 @@ var/list/datum/ai_icon/ai_icons
 	name = "Red"
 	alive_icon = "ai-red"
 	alive_light = "#F04848"
+	dead_icon = "ai-red_dead"
 
 /datum/ai_icon/green
 	name = "Green"
 	alive_icon = "ai-wierd"
 	alive_light = "#00FF99"
+	dead_icon = "ai-weird_dead"
 
 /datum/ai_icon/blue
 	name = "Blue"
@@ -57,6 +59,7 @@ var/list/datum/ai_icon/ai_icons
 /datum/ai_icon/database
 	name = "Database"
 	alive_icon = "ai-database"
+	dead_icon = "ai-database_dead"
 
 /datum/ai_icon/dorf
 	name = "Dorf"
@@ -75,11 +78,13 @@ var/list/datum/ai_icon/ai_icons
 /datum/ai_icon/glitchman
 	name = "Glitchman"
 	alive_icon = "ai-glitchman"
+	dead_icon = "ai-glitchman_dead"
 
 /datum/ai_icon/goon
 	name = "Goon"
 	alive_icon = "ai-goon"
 	alive_light = "#3E5C80"
+	dead_icon = "ai-goon_dead"
 
 /datum/ai_icon/heartline
 	name = "Heartline"
@@ -95,11 +100,13 @@ var/list/datum/ai_icon/ai_icons
 	name = "Inverted"
 	alive_icon = "ai-u"
 	alive_light = "#81DDFF"
+	dead_icon = "ai-u_dead"
 
 /datum/ai_icon/lonestar
 	name = "Lonestar"
 	alive_icon = "ai-lonestar"
 	alive_light = "#58751C"
+	dead_icon = "ai-lonestar_dead"
 
 /datum/ai_icon/matrix
 	name = "Matrix"
@@ -110,16 +117,23 @@ var/list/datum/ai_icon/ai_icons
 	name = "Monochrome"
 	alive_icon = "ai-mono"
 	alive_light = "#585858"
+	dead_icon = "ai-mono_dead"
 
 /datum/ai_icon/nanotrasen
 	name = "Nanotrasen"
 	alive_icon = "ai-nanotrasen"
 	alive_light = "#000029"
 
+/datum/ai_icon/nanotrasen2
+	name = "Nanotrasen - Dynamic"
+	alive_icon = "ai-nt"
+	alive_light = "#000029"
+
 /datum/ai_icon/rainbow
 	name = "Rainbow"
 	alive_icon = "ai-clown"
 	alive_light = "#E50213"
+	dead_icon = "ai-clown_dead"
 
 /datum/ai_icon/smiley
 	name = "Smiley"
@@ -130,11 +144,13 @@ var/list/datum/ai_icon/ai_icons
 	name = "Soviet"
 	alive_icon = "ai-redoctober"
 	alive_light = "#FF4307"
+	dead_icon = "ai-soviet_dead"
 
 /datum/ai_icon/Static
 	name = "Static"
 	alive_icon = "ai-static"
 	alive_light = "#4784C1"
+	dead_icon = "ai-static_dead"
 
 /datum/ai_icon/text
 	name = "Text"
@@ -153,3 +169,73 @@ var/list/datum/ai_icon/ai_icons
 	name = "Triumvirate Static"
 	alive_icon = "ai-static"
 	alive_light = "#020B2B"
+
+/datum/ai_icon/boxfort
+	name = "Boxfort"
+	alive_icon = "ai-boxfort"
+	dead_icon = "ai-boxfort_dead"
+
+/datum/ai_icon/searif
+	name = "Searif"
+	alive_icon = "ai-searif"
+
+/datum/ai_icon/ravensdale
+	name = "Ravensdale"
+	alive_icon = "ai-ravensdale"
+	dead_icon = "ai-ravensdale_dead"
+
+/datum/ai_icon/gentoo
+	name = "Gentoo"
+	alive_icon = "ai-gentoo"
+	dead_icon = "ai-gentoo_dead"
+
+/datum/ai_icon/heart
+	name = "Heart"
+	alive_icon = "ai-sparkles"
+
+/datum/ai_icon/syndicatmeow
+	name = "Cat"
+	alive_icon = "ai-syndicatmeow"
+
+/datum/ai_icon/pirate
+	name = "Pirate"
+	alive_icon = "ai-pirate"
+
+/datum/ai_icon/yesman
+	name = "Yes-man"
+	alive_icon = "ai-yes-man"
+
+/datum/ai_icon/royal
+	name = "Royal"
+	alive_icon = "ai-royal"
+
+/datum/ai_icon/wasp
+	name = "Wasp"
+	alive_icon = "ai-wasp"
+
+/datum/ai_icon/hourglass
+	name = "Hourglass"
+	alive_icon = "ai-hourglass"
+
+/datum/ai_icon/fabulous
+	name = "Fabulous"
+	alive_icon = "ai-fabulous"
+
+/datum/ai_icon/house
+	name = "Mr. House"
+	alive_icon = "ai-house"
+
+/datum/ai_icon/angel
+	name = "Angel"
+	alive_icon = "ai-angel"
+	dead_icon = "ai-angel_dead"
+
+/datum/ai_icon/alien
+	name = "Alien"
+	alive_icon = "ai-alien"
+	dead_icon = "ai-alien_dead"
+
+/datum/ai_icon/serithi
+	name = "Serithi"
+	alive_icon = "ai-serithi"
+	dead_icon = "ai-serithi_dead"
