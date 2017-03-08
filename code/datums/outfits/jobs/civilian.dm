@@ -11,30 +11,30 @@
 
 /decl/hierarchy/outfit/job/assistant/colonist
 	name = OUTFIT_JOB_NAME("Colonist")
-	uniform = /obj/item/clothing/under/colonist
+	uniform = /obj/item/clothing/under/eros/colonist
 	shoes = /obj/item/clothing/shoes/brown
 
 /decl/hierarchy/outfit/job/assistant/sci
 	name = OUTFIT_JOB_NAME("Research Assistant")
-	uniform = /obj/item/clothing/under/sciassist
+	uniform = /obj/item/clothing/under/eros/sciassist
 	shoes = /obj/item/clothing/shoes/white
 	head = /obj/item/clothing/head/soft/mime
 
 /decl/hierarchy/outfit/job/assistant/med
 	name = OUTFIT_JOB_NAME("Medical Intern")
-	uniform = /obj/item/clothing/under/medintern
+	uniform = /obj/item/clothing/under/eros/medintern
 	shoes = /obj/item/clothing/shoes/white
 	head = /obj/item/clothing/head/soft/mime
 
 /decl/hierarchy/outfit/job/assistant/sec
 	name = OUTFIT_JOB_NAME("Security Cadet")
-	uniform = /obj/item/clothing/under/seccadet
+	uniform = /obj/item/clothing/under/eros/seccadet
 	shoes = /obj/item/clothing/shoes/jackboots
 	head = /obj/item/clothing/head/soft/red
 
 /decl/hierarchy/outfit/job/assistant/eng
 	name = OUTFIT_JOB_NAME("Technical Assistant")
-	uniform = /obj/item/clothing/under/techassist
+	uniform = /obj/item/clothing/under/eros/techassist
 	shoes = /obj/item/clothing/shoes/workboots
 	head = /obj/item/clothing/head/techassist
 

@@ -1,9 +1,11 @@
 // BEGIN_INTERNALS
 /*
-LAST_COMPILE_TIME: 1488186541
-DIR: code code\game code\game\machinery code\game\machinery\camera code\game\objects code\game\objects\items icons icons\mob maps maps\exodus 
+LAST_COMPILE_TIME: 1488983599
+DIR: code code\game\objects\items code\modules code\modules\clothing\under code\modules\eros code\modules\eros\clothing icons icons\mob maps maps\exodus maps\exodus\Loadout 
 AUTO_FILE_DIR: OFF
 MAP_ICON_TYPE: 0
 LAST_COMPILE_VERSION: 510.1347
+WINDOW: code\modules\eros\clothing\under.dm;code\modules\clothing\clothing.dm;icons\mob\uniform_eros.dmi;icons\mob\uniform.dmi
+FILE: icons\mob\uniform_eros.dmi
 */
 // END_INTERNALS
