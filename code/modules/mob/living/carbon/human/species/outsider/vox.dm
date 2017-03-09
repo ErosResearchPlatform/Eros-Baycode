@@ -37,7 +37,7 @@
 	siemens_coefficient = 0.2
 
 	flags = NO_SCAN
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_NO_FBP_CONSTRUCTION | SPECIES_NO_FBP_CHARGEN
+	spawn_flags 	 = SPECIES_IS_RESTRICTED | SPECIES_NO_FBP_CONSTRUCTION | SPECIES_NO_FBP_CHARGEN
 	appearance_flags = HAS_EYE_COLOR | HAS_HAIR_COLOR
 
 	blood_color = "#2299FC"
@@ -98,11 +98,13 @@
 	blurb = "Sickly biproducts of Vox society, these creatures are vilified by their own kind \
 	and taken advantage of by enterprising companies for cheap, disposable labor. \
 	They aren't very smart, smell worse than a vox, and vomit constantly, \
-	earning them the true title of 'shitbird'."
+	earning them the true title of 'shitbird'. \
+	Vox are not permitted to hold any Head roles."
 	rarity_value = 0.1
 	speech_chance = 60        // No volume control.
 	siemens_coefficient = 0.5 // Ragged scaleless patches.
 	can_run_shoeless = 1
+
 
 	oxy_mod = 1.4
 	brute_mod = 1.3
@@ -124,7 +126,8 @@
 		BP_BRAIN =    /obj/item/organ/internal/pariah_brain,
 		BP_EYES =     /obj/item/organ/internal/eyes
 		)
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_NO_FBP_CONSTRUCTION | SPECIES_NO_FBP_CHARGEN
+
+	spawn_flags 	 = SPECIES_CAN_JOIN | SPECIES_NO_FBP_CONSTRUCTION | SPECIES_NO_FBP_CHARGEN
 	flags = NO_SCAN
 	appearance_flags = HAS_EYE_COLOR | HAS_HAIR_COLOR
 

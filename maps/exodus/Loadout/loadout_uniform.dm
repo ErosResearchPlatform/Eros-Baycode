@@ -5,10 +5,6 @@
 	slot = slot_w_uniform
 	sort_category = "Uniforms and Casual Dress"
 
-/datum/gear/uniform/cheongsam
-	display_name = "cheongsam, white"
-	path = /obj/item/clothing/under/cheongsam
-
 /datum/gear/uniform/kilt
 	display_name = "kilt"
 	path = /obj/item/clothing/under/kilt
@@ -166,136 +162,133 @@
 
 //EROS START
 
-/datum/gear/uniform/eros/harness
-	display_name = "gear harness"
-	path = /obj/item/clothing/under/harness
-
 /datum/gear/uniform/eros/loose_dress
 	display_name = "Loose Dress"
-	path = /obj/item/clothing/under/loose_dress
+	path = /obj/item/clothing/under/eros/loose_dress
 
 /datum/gear/uniform/cheongsam
-	display_name = "cheongsam, red"
-	path = /obj/item/clothing/under/cheongsam/red
+	display_name = "cheongsam selection"
+	path = /obj/item/clothing/under/cheongsam
 
-/datum/gear/uniform/cheongsam
-	display_name = "cheongsam, blue"
-	path = /obj/item/clothing/under/cheongsam/blue
-
-/datum/gear/uniform/cheongsam
-	display_name = "cheongsam, black"
-	path = /obj/item/clothing/under/cheongsam/black
+/datum/gear/uniform/cheongsam/New()
+	..()
+	var/cheongsams = list()
+	cheongsams["cheongsam, white"] = /obj/item/clothing/under/cheongsam
+	cheongsams["cheongsam, red"] = /obj/item/clothing/under/eros/cheongsam/red
+	cheongsams["cheongsam, blue"] = /obj/item/clothing/under/eros/cheongsam/blue
+	cheongsams["cheongsam, black"] = /obj/item/clothing/under/eros/cheongsam/black
+	gear_tweaks += new/datum/gear_tweak/path(cheongsams)
 
 /datum/gear/uniform/croptop
 	display_name = "croptop, NT"
-	path = /obj/item/clothing/under/croptop
+	path = /obj/item/clothing/under/eros/croptop
 
 /datum/gear/uniform/croptop/grey
 	display_name = "croptop, grey"
-	path = /obj/item/clothing/under/croptop/grey
+	path = /obj/item/clothing/under/eros/croptop/grey
 
 /datum/gear/uniform/croptop/red
 	display_name = "croptop, red"
-	path = /obj/item/clothing/under/croptop/red
+	path = /obj/item/clothing/under/eros/croptop/red
 
 /datum/gear/uniform/cuttop
 	display_name = "cut top, grey"
-	path = /obj/item/clothing/under/cuttop
+	path = /obj/item/clothing/under/eros/cuttop
 
 /datum/gear/uniform/cuttop/red
 	display_name = "cut top, red"
-	path = /obj/item/clothing/under/cuttop/red
+	path = /obj/item/clothing/under/eros/cuttop/red
 
 /datum/gear/uniform/colonist1
 	display_name= "colonist clothes"
-	path = /obj/item/clothing/under/colonist
+	path = /obj/item/clothing/under/eros/colonist
 
 /datum/gear/uniform/colonist2
 	display_name= "colonist clothes, alt"
-	path = /obj/item/clothing/under/colonist/colonist2
+	path = /obj/item/clothing/under/eros/colonist/colonist2
 
 /datum/gear/uniform/colonist3
 	display_name= "colonist clothes, alt 2"
-	path = /obj/item/clothing/under/colonist/colonist3
+	path = /obj/item/clothing/under/eros/colonist/colonist3
 
 /datum/gear/uniform/tenpenny
 	display_name= "red fancy suit"
-	path = /obj/item/clothing/under/tenpenny
+	path = /obj/item/clothing/under/eros/tenpenny
 
 /datum/gear/uniform/springm
 	display_name= "springwear clothes"
-	path = /obj/item/clothing/under/springm
+	path = /obj/item/clothing/under/eros/springm
 
 /datum/gear/uniform/relaxedwearm
 	display_name= "relaxedwear"
-	path = /obj/item/clothing/under/relaxedwearm
+	path = /obj/item/clothing/under/eros/relaxedwearm
 
 /datum/gear/uniform/springf
 	display_name= "springwear dress"
-	path = /obj/item/clothing/under/springf
+	path = /obj/item/clothing/under/eros/springf
 
 /datum/gear/uniform/wasteland
 	display_name= "wasteland fatigues"
-	path = /obj/item/clothing/under/wasteland
+	path = /obj/item/clothing/under/eros/wasteland
 
 /datum/gear/uniform/cowboy_dark
 	display_name= "black cowboy outfit"
-	path = /obj/item/clothing/under/cowboy_dark
+	path = /obj/item/clothing/under/eros/cowboy_dark
 
 /datum/gear/uniform/cowboy
 	display_name= "brown cowboy outfit"
-	path = /obj/item/clothing/under/cowboy
+	path = /obj/item/clothing/under/eros/cowboy
 
 /datum/gear/uniform/seifuku
 	display_name= "delinquent schoolgirl uniform"
-	path = /obj/item/clothing/under/seifuku
+	path = /obj/item/clothing/under/eros/seifuku
 
 /datum/gear/uniform/polkaskirt
 	display_name= "polkadot skirt"
-	path = /obj/item/clothing/under/polkaskirt
+	path = /obj/item/clothing/under/eros/polkaskirt
 
 /datum/gear/uniform/victoria
 	display_name= "victorian suit"
-	path = /obj/item/clothing/under/victoria
+	path = /obj/item/clothing/under/eros/victoria
 
 /datum/gear/uniform/girlwinter
 	display_name= "winter girls clothes"
-	path = /obj/item/clothing/under/girlwinter
+	path = /obj/item/clothing/under/eros/girlwinter
 
 /datum/gear/uniform/shortplaindress
 	display_name = "plain dress"
-	path = /obj/item/clothing/under/dress/white3
+	path = /obj/item/clothing/under/eros/dress/white3
 	flags = GEAR_HAS_COLOR_SELECTION
 
 /datum/gear/uniform/longdress
 	display_name = "long dress"
-	path = /obj/item/clothing/under/dress/white2
+	path = /obj/item/clothing/under/eros/dress/white2
 	flags = GEAR_HAS_COLOR_SELECTION
 
 /datum/gear/uniform/longwidedress
 	display_name = "long wide dress"
-	path = /obj/item/clothing/under/dress/white4
+	path = /obj/item/clothing/under/eros/dress/white4
 	flags = GEAR_HAS_COLOR_SELECTION
 
 /datum/gear/uniform/maid
-	path = /obj/item/clothing/under/dress/maid
+	path = /obj/item/clothing/under/eros/dress/maid
 	display_name = "maid uniform"
 
 /datum/gear/uniform/janimaid
-	path = /obj/item/clothing/under/dress/janimaid
+	path = /obj/item/clothing/under/eros/dress/janimaid
 	display_name = "maid uniform, alt"
 
 /datum/gear/uniform/whitewedding
 	display_name= "white wedding dress"
-	path = /obj/item/clothing/under/dress/white
+	path = /obj/item/clothing/under/eros/dress/white
 
 /datum/gear/uniform/hoodiejeans
 	display_name= "casual hoodie and jeans"
-	path = /obj/item/clothing/under/hoodiejeans
+	path = /obj/item/clothing/under/eros/hoodiejeans
 
 /datum/gear/uniform/hoodieskirt
 	display_name= "casual hoodie and skirt"
-	path = /obj/item/clothing/under/hoodieskirt
+	path = /obj/item/clothing/under/eros/hoodieskirt
 
 /datum/gear/uniform/job_skirt/ce
 	display_name = "skirt, ce"
@@ -370,34 +363,38 @@
 
 /datum/gear/uniform/jeans_qm
 	display_name = "jeans, QM"
-	path = /obj/item/clothing/under/rank/cargo/jean
+	path = /obj/item/clothing/under/eros/rank/cargo/jean
 	allowed_roles = list("Quartermaster")
 
 /datum/gear/uniform/jeans_cargo
 	display_name = "jeans, cargo"
-	path = /obj/item/clothing/under/rank/cargotech/jean
+	path = /obj/item/clothing/under/eros/rank/cargotech/jean
 	allowed_roles = list("Quartermaster","Cargo Technician")
 
 /datum/gear/uniform/keyholesweater
 	display_name= "keyhole sweater"
-	path = /obj/item/clothing/under/keyholesweater
+	path = /obj/item/clothing/under/eros/keyholesweater
+
+/datum/gear/uniform/miaturtle
+	display_name = "sleeveless turtleneck"
+	path = /obj/item/clothing/under/eros/sleevelessturtle
 
 /datum/gear/uniform/pinstripe
 	display_name= "pinstriped suit"
-	path =/obj/item/clothing/under/pinstripe
+	path =/obj/item/clothing/under/eros/pinstripe
 
 /datum/gear/uniform/reddress
 	display_name = "red dress with belt"
-	path = /obj/item/clothing/under/dress/darkred
+	path = /obj/item/clothing/under/eros/dress/darkred
 
 /datum/gear/uniform/worn_hazard
 	display_name = "worn hazard suit"
-	path = /obj/item/clothing/under/worn_hazard
+	path = /obj/item/clothing/under/eros/worn_hazard
 	allowed_roles = list("Chief Engineer","Station Engineer")
 
 /datum/gear/uniform/skatercolor
 	display_name = "skater skirt, colorable"
-	path = /obj/item/clothing/under/skateskirt
+	path = /obj/item/clothing/under/eros/skateskirt
 	flags = GEAR_HAS_COLOR_SELECTION
 
 /datum/gear/uniform/workman

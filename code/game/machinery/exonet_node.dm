@@ -6,6 +6,7 @@
 	icon_state = "exonet_node"
 	idle_power_usage = 2500
 	density = 1
+	anchored = 1
 	var/on = 1
 	var/toggle = 1
 

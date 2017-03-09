@@ -615,10 +615,24 @@
 	name = "scarf"
 	desc = "A stylish scarf. The perfect winter accessory for those with a keen fashion sense, and those who just can't handle a cold breeze on their necks."
 	icon_state = "whitescarf"
-	
+
 // ---------- EROS BEGIN - ACCESSORIES
 /obj/item/clothing/accessory/locket
 	name = "locket"
 	desc = "A simple silver locket."
 	icon_state = "locket"
 	slot_flags = SLOT_MASK | SLOT_TIE
+
+/obj/item/clothing/accessory/clover
+	name = "clover pendant"
+	desc = "A glittering silver necklace with a green clover pendant."
+	icon_state = "clovernecklace"
+
+/obj/item/clothing/accessory/rosary //Notice me, McJacko-senpai
+	name = "rosary"
+	desc = "A lovely rosary with wooden beads and a silver cross pendant."
+	icon_state = "rosary"
+	item_state = "rosary"
+
+/obj/item/clothing/accessory/rosary/attack_self(mob/user) //Ave, father.
+	user.visible_message("<span class='notice'>[user] takes a moment to pray the rosary, saying a prayer for each bead on the chain. Hail mary, full of grace, Our Lord is with thee...</span>")

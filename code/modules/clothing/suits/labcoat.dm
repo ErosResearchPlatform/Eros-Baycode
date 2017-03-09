@@ -62,6 +62,13 @@
 	icon_open = "labcoat_tox_open"
 	icon_closed = "labcoat_tox"
 
+/obj/item/clothing/suit/storage/toggle/labcoat/robotics
+	name = "Robotics labcoat"
+	desc = "A suit that protects against minor chemical spills. It's black with red markings, and very long."
+	icon_state = "roboticslabcoat_open"
+	icon_open = "roboticslabcoat_open"
+	icon_closed = "roboticslabcoat"
+
 /obj/item/clothing/suit/storage/toggle/labcoat/blue
 	name = "blue-edged labcoat"
 	desc = "A suit that protects against minor chemical spills. This one has blue trim."

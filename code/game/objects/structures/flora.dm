@@ -81,6 +81,16 @@
 	plane = ABOVE_HUMAN_PLANE
 	layer = ABOVE_HUMAN_LAYER
 
+/obj/structure/flora/vines
+	name = "vines"
+	icon = 'icons/obj/plants.dmi'
+	icon_state = "plant-27"
+	desc = "Looks like a jungle in here."
+	color = "#009000"
+	plane = ABOVE_HUMAN_PLANE
+	layer = ABOVE_HUMAN_LAYER
+	anchored = 1
+
 //newbushes
 
 /obj/structure/flora/ausbushes

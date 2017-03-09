@@ -747,6 +747,7 @@ var/global/list/default_medbay_channels = list(
 /obj/item/device/radio/announcer
 	invisibility = 101
 	listening = 0
+	icon_state = "intercom"
 	canhear_range = 0
 	channels=list("Engineering")
 

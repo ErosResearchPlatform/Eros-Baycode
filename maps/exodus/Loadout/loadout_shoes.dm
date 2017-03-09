@@ -32,23 +32,6 @@
 
 //EROS START
 
-/datum/gear/shoes/flats
-	display_name = "flats selection"
-	path = /obj/item/clothing/shoes/flats
-
-/datum/gear/shoes/flats/New()
-	..()
-	var/flats = list()
-	flats["flats, black"] = /obj/item/clothing/shoes/flats
-	flats["flats, white"] = /obj/item/clothing/shoes/flats/white
-	flats["flats, red"] = /obj/item/clothing/shoes/flats/red
-	flats["flats, purple"] = /obj/item/clothing/shoes/flats/purple
-	flats["flats, blue"] = /obj/item/clothing/shoes/flats/blue
-	flats["flats, brown"] = /obj/item/clothing/shoes/flats/brown
-	flats["flats, orange"] = /obj/item/clothing/shoes/flats/orange
-
-	gear_tweaks += new/datum/gear_tweak/path(flats)
-
 /datum/gear/shoes/flipflops
 	display_name = "flip flops"
 	flags = GEAR_HAS_COLOR_SELECTION

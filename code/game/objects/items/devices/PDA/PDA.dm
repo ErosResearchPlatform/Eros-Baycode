@@ -231,7 +231,6 @@ var/global/list/obj/item/device/pda/PDAs = list()
 	newstone = "news"
 	detonate = 0
 
-
 /obj/item/device/pda/ai/proc/set_name_and_job(newname as text, newjob as text, newrank as null|text)
 	owner = newname
 	ownjob = newjob
@@ -240,7 +239,6 @@ var/global/list/obj/item/device/pda/PDAs = list()
 	else
 		ownrank = ownjob
 	name = newname + " (" + ownjob + ")"
-
 
 //AI verb and proc for sending PDA messages.
 /obj/item/device/pda/ai/verb/cmd_send_pdamesg()
@@ -258,7 +256,6 @@ var/global/list/obj/item/device/pda/PDAs = list()
 		var/selected = plist[c]
 		create_message(usr, selected, 0)
 
-
 /obj/item/device/pda/ai/verb/cmd_toggle_pda_receiver()
 	set category = "AI IM"
 	set name = "Toggle Sender/Receiver"
@@ -269,7 +266,6 @@ var/global/list/obj/item/device/pda/PDAs = list()
 	toff = !toff
 	to_chat(usr, "<span class='notice'>PDA sender/receiver toggled [(toff ? "Off" : "On")]!</span>")
 
-
 /obj/item/device/pda/ai/verb/cmd_toggle_pda_silent()
 	set category = "AI IM"
 	set name = "Toggle Ringer"
@@ -279,7 +275,6 @@ var/global/list/obj/item/device/pda/PDAs = list()
 		return
 	message_silent=!message_silent
 	to_chat(usr, "<span class='notice'>PDA ringer toggled [(message_silent ? "Off" : "On")]!</span>")
-
 
 /obj/item/device/pda/ai/verb/cmd_show_message_log()
 	set category = "AI IM"
@@ -301,17 +296,107 @@ var/global/list/obj/item/device/pda/PDAs = list()
 /obj/item/device/pda/ai/can_use()
 	return 1
 
-
 /obj/item/device/pda/ai/attack_self(mob/user as mob)
 	if ((honkamt > 0) && (prob(60)))//For clown virus.
 		honkamt--
 		playsound(loc, 'sound/items/bikehorn.ogg', 30, 1)
 	return
 
-
 /obj/item/device/pda/ai/pai
 	ttone = "assist"
 
+// Used for the PDA multicaster, which mirrors messages sent to it to a specific department,
+/obj/item/device/pda/multicaster
+	ownjob = "Relay"
+	icon_state = "NONE"
+	ttone = "data"
+	detonate = 0
+	news_silent = 1
+	var/list/cartridges_to_send_to = list()
+
+// This is what actually mirrors the message,
+/obj/item/device/pda/multicaster/new_message(var/sending_unit, var/sender, var/sender_job, var/message)
+	if(sender)
+		var/list/targets = list()
+		for(var/obj/item/device/pda/pda in PDAs)
+			if(pda.cartridge && pda.owner && is_type_in_list(pda.cartridge, cartridges_to_send_to))
+				targets |= pda
+		if(targets.len)
+			for(var/obj/item/device/pda/target in targets)
+				create_message(target, sender, sender_job, message)
+
+// This has so much copypasta,
+/obj/item/device/pda/multicaster/create_message(var/obj/item/device/pda/P, var/original_sender, var/original_job, var/t)
+	t = sanitize(t, MAX_MESSAGE_LEN, 0)
+	t = replace_characters(t, list("&#34;" = "\""))
+	if (!t || !istype(P))
+		return
+
+	if (isnull(P)||P.toff || toff)
+		return
+
+	last_text = world.time
+	var/datum/reception/reception = get_reception(src, P, t)
+	t = reception.message
+
+	if(reception.message_server && (reception.telecomms_reception & TELECOMMS_RECEPTION_SENDER)) // only send the message if it's stable,
+		if(reception.telecomms_reception & TELECOMMS_RECEPTION_RECEIVER == 0) // Does our recipient have a broadcaster on their level?,
+			return
+		var/send_result = reception.message_server.send_pda_message("[P.owner]","[owner]","[t]")
+		if (send_result)
+			return
+
+		P.tnote.Add(list(list("sent" = 0, "owner" = "[owner]", "job" = "[ownjob]", "message" = "[t]", "target" = "\ref[src]")))
+
+		if(!P.conversations.Find("\ref[src]"))
+			P.conversations.Add("\ref[src]")
+
+		P.new_message(src, "[original_sender] \[Relayed\]", original_job, t, 0)
+
+	else
+		return
+
+/obj/item/device/pda/multicaster/command/New()
+	..()
+	owner = "Command Department"
+	name = "Command Department (Relay)"
+	cartridges_to_send_to = command_cartridges
+
+/obj/item/device/pda/multicaster/security/New()
+	..()
+	owner = "Security Department"
+	name = "Security Department (Relay)"
+	cartridges_to_send_to = security_cartridges
+
+/obj/item/device/pda/multicaster/engineering/New()
+	..()
+	owner = "Engineering Department"
+	name = "Engineering Department (Relay)"
+	cartridges_to_send_to = engineering_cartridges
+
+/obj/item/device/pda/multicaster/medical/New()
+	..()
+	owner = "Medical Department"
+	name = "Medical Department (Relay)"
+	cartridges_to_send_to = medical_cartridges
+
+/obj/item/device/pda/multicaster/research/New()
+	..()
+	owner = "Research Department"
+	name = "Research Department (Relay)"
+	cartridges_to_send_to = research_cartridges
+
+/obj/item/device/pda/multicaster/cargo/New()
+	..()
+	owner = "Cargo Department"
+	name = "Cargo Department (Relay)"
+	cartridges_to_send_to = cargo_cartridges
+
+/obj/item/device/pda/multicaster/civilian/New()
+	..()
+	owner = "Civilian Services Department"
+	name = "Civilian Services Department (Relay)"
+	cartridges_to_send_to = civilian_cartridges
 
 /*
  *	The Actual PDA

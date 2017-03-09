@@ -148,10 +148,6 @@
 	display_name = "chaps, black"
 	path = /obj/item/clothing/accessory/chaps/black
 
-/datum/gear/accessory/suitjacket/checkered
-	display_name = "suit jacket, checkered"
-	path = /obj/item/clothing/accessory/toggleable/checkered_jacket
-
 /datum/gear/accessory/warmer/armwarmers
 	display_name = "arm warmers"
 	path = /obj/item/clothing/accessory/warmers/armwarmers
@@ -222,3 +218,11 @@
 	display_name = "singlet, colorable"
 	path = /obj/item/clothing/accessory/shirt/singlet
 	flags = GEAR_HAS_COLOR_SELECTION
+
+/datum/gear/accessory/clover
+	display_name = "clover pendant"
+	path = /obj/item/clothing/accessory/clover
+
+/datum/gear/accessory/rosary
+	display_name = "rosary"
+	path = /obj/item/clothing/accessory/rosary

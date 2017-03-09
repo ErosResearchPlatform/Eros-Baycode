@@ -35,11 +35,23 @@
 	caps["white cap"] = /obj/item/clothing/head/soft/mime
 	caps["yellow cap"] = /obj/item/clothing/head/soft/yellow
 	caps["major bill's shipping cap"] = /obj/item/clothing/head/soft/mbill
+	caps["Expeditionary Corps cap"] = /obj/item/clothing/head/soft/sol/expedition
+	caps["fleet cap"] = /obj/item/clothing/head/soft/sol/fleet
 	gear_tweaks += new/datum/gear_tweak/path(caps)
 
 /datum/gear/head/hairflower
 	display_name = "hair flower pin"
 	path = /obj/item/clothing/head/hairflower
+
+/datum/gear/head/hairflower/New()
+	..()
+	var/pins = list()
+	pins["blue pin"] = /obj/item/clothing/head/hairflower/blue
+	pins["pink pin"] = /obj/item/clothing/head/hairflower/pink
+	pins["red pin"] = /obj/item/clothing/head/hairflower
+	pins["yellow pin"] = /obj/item/clothing/head/hairflower/yellow
+	pins["violet pin"] = /obj/item/clothing/head/hairflower/violet
+	gear_tweaks += new/datum/gear_tweak/path(pins)
 
 /datum/gear/head/hardhat
 	display_name = "hardhat selection"
@@ -55,11 +67,11 @@
 	hardhats["yellow hardhat"] = /obj/item/clothing/head/hardhat
 	gear_tweaks += new/datum/gear_tweak/path(hardhats)
 
-/datum/gear/head/formalhat
-	display_name = "formal hat selection"
-	path = /obj/item/clothing/head/hasturhood
+/datum/gear/head/hat
+	display_name = "hat selection"
+	path = /obj/item/clothing/head/boaterhat
 
-/datum/gear/head/formalhat/New()
+/datum/gear/head/hat/New()
 	..()
 	var/formalhats = list()
 	formalhats["boatsman hat"] = /obj/item/clothing/head/boaterhat
@@ -70,18 +82,22 @@
 	formalhats["top hat"] = /obj/item/clothing/head/that
 	formalhats["fedora, brown"] = /obj/item/clothing/head/det
 	formalhats["fedora, grey"] = /obj/item/clothing/head/det/grey
+	formalhats["ushanka"] = /obj/item/clothing/head/ushanka
 	gear_tweaks += new/datum/gear_tweak/path(formalhats)
 
-/datum/gear/head/informalhat
-	display_name = "informal hat selection"
+/datum/gear/head/cowboyhat
+	display_name = "cowboy hat selection"
 	path = /obj/item/clothing/head/cowboy_hat
 
-/datum/gear/head/informalhat/New()
+/datum/gear/head/cowboyhat/New()
+
 	..()
-	var/informalhats = list()
-	informalhats["cowboy hat"] = /obj/item/clothing/head/cowboy_hat
-	informalhats["ushanka"] = /obj/item/clothing/head/ushanka
-	gear_tweaks += new/datum/gear_tweak/path(informalhats)
+	var/hats = list()
+	hats["cowboy hat"] = /obj/item/clothing/head/cowboy_hat
+	hats["cowboy hat, alt"] = /obj/item/clothing/head/cowboy_hat/cowboy2
+	hats["cowboy hat, wide-brimmed"] = /obj/item/clothing/head/cowboy_hat/cowboywide
+	hats["cowboy hat, black"] = /obj/item/clothing/head/cowboy_hat/black
+	gear_tweaks += new/datum/gear_tweak/path(hats)
 
 /datum/gear/head/hairflower/New()
 	..()

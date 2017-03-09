@@ -13,6 +13,7 @@
 	var/boots = list()
 	boots["jackboots"] = /obj/item/clothing/shoes/jackboots
 	boots["jackboots, white"] = /obj/item/clothing/shoes/jackboots/white
+	boots["heelspring boots"] = /obj/item/clothing/shoes/jackboots/spring
 	boots["workboots"] = /obj/item/clothing/shoes/workboots
 	boots["workboots, alt"] = /obj/item/clothing/shoes/workbootsalt
 	boots["cowboy boots"] = /obj/item/clothing/shoes/cowboy

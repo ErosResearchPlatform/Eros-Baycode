@@ -17,8 +17,8 @@
 	accessible_z_levels = list("1" = 5, "2" = 5, "4" = 10, "5" = 15, "7" = 60)
 	base_turf_by_z = list("6" = /turf/simulated/floor/asteroid) // Moonbase
 
-	station_name  = "NSS Exodus"
-	station_short = "Exodus"
+	station_name  = "NSS Eros-1"
+	station_short = "Eros"
 	dock_name     = "NAS Crescent"
 	boss_name     = "Central Command"
 	boss_short    = "Centcomm"
