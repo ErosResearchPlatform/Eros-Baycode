@@ -112,6 +112,8 @@ var/const/BLOOD_VOLUME_SURVIVE = 40
 						owner.vessel.remove_reagent("blood", bleed_amount)
 
 		switch(pulse)
+			if(PULSE_2SLOW)
+				blood_max *= 0.5
 			if(PULSE_SLOW)
 				blood_max *= 0.8
 			if(PULSE_FAST)

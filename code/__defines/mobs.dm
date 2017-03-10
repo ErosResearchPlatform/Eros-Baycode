@@ -39,11 +39,12 @@
 
 // Pulse levels, very simplified.
 #define PULSE_NONE    0 // So !M.pulse checks would be possible.
-#define PULSE_SLOW    1 // <60     bpm
-#define PULSE_NORM    2 //  60-90  bpm
-#define PULSE_FAST    3 //  90-120 bpm
-#define PULSE_2FAST   4 // >120    bpm
-#define PULSE_THREADY 5 // Occurs during hypovolemic shock
+#define PULSE_2SLOW	  1 //  <20	   bpm
+#define PULSE_SLOW    2 //  60-20  bpm
+#define PULSE_NORM    3 //  60-90  bpm
+#define PULSE_FAST    4 //  90-120 bpm
+#define PULSE_2FAST   5 //  >120   bpm
+#define PULSE_THREADY 6 // Occurs during hypovolemic shock
 #define GETPULSE_HAND 0 // Less accurate. (hand)
 #define GETPULSE_TOOL 1 // More accurate. (med scanner, sleeper, etc.)
 

@@ -527,33 +527,119 @@
 	icon_state = "tcomsatwest"
 
 
-/*******
-* Moon *
-*******/
 
-// Mining main outpost
+//Outposts
+/area/outpost/engineering/hanger
+	name = "\improper Outpost Hanger"
+	icon_state = "construction"
 
-/area/outpost/mining_main
-	icon_state = "outpost_mine_main"
+/area/outpost/engineering/lobby
+	name = "\improper Outpost Lobby"
+	icon_state = "blue"
 
-// Mining outpost
-/area/outpost/mining_main/maintenance
-	name = "Mining Outpost Maintenance"
+/area/outpost/engineering/equipment_storage
+	name = "\improper Outpost Equipment Storage"
+	icon_state = "engineering_supply"
 
-// Small outposts
-/area/outpost/mining_north
-	name = "North Mining Outpost"
-	icon_state = "outpost_mine_north"
+/area/outpost/engineering/solar_control
+	name = "\improper Solar Control Room"
+	icon_state = "engine"
 
-/area/outpost/mining_west
-	name = "West Mining Outpost"
-	icon_state = "outpost_mine_west"
+/area/outpost/engineering/atmospherics
+	name = "\improper Outpost Atmospherics"
+	icon_state = "engineering"
 
-// Engineering outpost
+/area/outpost/engineering/bedroom1
+	name = "\improper Dormitory One"
+	icon_state = "crew_quarters"
 
-/area/outpost/engineering
-	icon_state = "outpost_engine"
+/area/outpost/engineering/bedroom2
+	name = "\improper Dormitory Two"
+	icon_state = "crew_quarters"
 
-// Research Outpost
+
+/area/outpost/engineering/hall
+	name = "\improper Atmospherics Hallway"
+	icon_state = "blue-red"
+
+/area/outpost/engineering/turbolift
+	name = "\improper Outpost Elevator"
+	icon_state = "purple"
+
+/area/outpost/research/turbolift
+	name = "\improper Outpost Elevator"
+	icon_state = "purple"
+
+/area/outpost/research/access
+	name = "\improper Research Airlock"
+	icon_state = "purple"
+
+/area/outpost/research/toxins
+	name = "\improper Atmospherics Storage"
+	icon_state = "primarystorage"
+
+/area/outpost/mining/storage
+	name = "\improper Mining Storage"
+	icon_state = "quartstorage"
+
+/area/outpost/mining/breakroom
+	name = "\improper Breakroom"
+	icon_state = "kitchen"
+
+/area/outpost/research/lobby
+	name = "\improper Underground Foyer"
+	icon_state = "red"
+
 /area/outpost/research
 	icon_state = "outpost_research"
+
+/area/outpost/research/hallway
+	name = "Research Outpost Hallway"
+
+/area/outpost/research/dock
+	name = "Research Outpost Shuttle Dock"
+
+/area/outpost/research/eva
+	name = "Research Outpost EVA"
+
+/area/outpost/research/analysis
+	name = "Research Outpost Sample Analysis"
+
+/area/outpost/research/chemistry
+	name = "Research Outpost Chemistry"
+
+/area/outpost/research/medical
+	name = "Research Outpost Medical"
+
+/area/outpost/research/power
+	name = "Research Outpost Maintenance"
+
+/area/outpost/research/isolation_a
+	name = "Research Outpost Isolation A"
+
+/area/outpost/research/isolation_b
+	name = "Research Outpost Isolation B"
+
+/area/outpost/research/isolation_c
+	name = "Research Outpost Isolation C"
+
+/area/outpost/research/isolation_monitoring
+	name = "Research Outpost Isolation Monitoring"
+
+/area/outpost/research/lab
+	name = "Research Outpost Laboratory"
+
+/area/outpost/research/emergency_storage
+	name = "Research Outpost Emergency Storage"
+
+/area/outpost/research/anomaly_storage
+	name = "Research Outpost Anomalous Storage"
+
+/area/outpost/research/anomaly_analysis
+	name = "Research Outpost Anomaly Analysis"
+
+/area/outpost/research/kitchen
+	name = "Research Outpost Kitchen"
+
+/area/outpost/research/disposal
+	name = "Research Outpost Waste Disposal"
