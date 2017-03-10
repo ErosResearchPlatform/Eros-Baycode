@@ -18,7 +18,7 @@
 					/obj/item/weapon/storage/belt/eros/strap_h = 4,
 					/obj/item/weapon/eros/sex/butt/plug = 6,
 					/obj/item/weapon/eros/sex/butt/beads = 6,
-					/obj/item/clothing/under/bunny_suit = 10,
+					/obj/item/clothing/under/eros/bunny_suit = 10,
 					/obj/item/clothing/head/collectable/rabbitears = 10,)
 
 	prices = list(/obj/item/weapon/eros/sex/dildos/bigblackdick = 150,
@@ -36,7 +36,7 @@
 					/obj/item/weapon/storage/belt/eros/strap_h = 300,
 					/obj/item/weapon/eros/sex/butt/plug = 100,
 					/obj/item/weapon/eros/sex/butt/beads = 80,
-					/obj/item/clothing/under/bunny_suit = 350,
+					/obj/item/clothing/under/eros/bunny_suit = 350,
 					/obj/item/clothing/head/collectable/rabbitears = 200,)
 
 	contraband = list(/obj/item/weapon/eros/sex/dildos/uglyhorse = 2,
@@ -61,7 +61,7 @@
 					/obj/item/weapon/storage/belt/eros/strap_h = 0,
 					/obj/item/weapon/eros/sex/butt/plug = 0,
 					/obj/item/weapon/eros/sex/butt/beads = 0,
-					/obj/item/clothing/under/bunny_suit = 0,
+					/obj/item/clothing/under/eros/bunny_suit = 0,
 					/obj/item/clothing/head/collectable/rabbitears = 0,)
 
 	contraband = list(/obj/item/weapon/eros/sex/dildos/uglyhorse = 2,

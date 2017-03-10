@@ -148,10 +148,6 @@
 	display_name = "chaps, black"
 	path = /obj/item/clothing/accessory/chaps/black
 
-/datum/gear/accessory/suitjacket/checkered
-	display_name = "suit jacket, checkered"
-	path = /obj/item/clothing/accessory/toggleable/checkered_jacket
-
 /datum/gear/accessory/warmer/armwarmers
 	display_name = "arm warmers"
 	path = /obj/item/clothing/accessory/warmers/armwarmers
