@@ -343,7 +343,7 @@ var/global/list/robot_modules = list(
 					"Landmate - Treaded" = "engiborg+tread",
 					"Drone" = "drone-engineer",
 					"Eyebot" = "eyebot-engineering",
-					"HAN-D" = "wide-eng",
+					"HAN-D" = "wide-engi",
 					"Kodiak" = "kodiak-eng",
 					"Marina" = "marinaENG",
 					"Sleek" = "sleekengineer",
@@ -533,7 +533,7 @@ var/global/list/robot_modules = list(
 					"Marina" = "marinaSV",
 					"Sleek" = "sleekservice",
 					"Noble" = "Noble-SRV",
-					"Astro" = "astro-serv",
+					"Astro" = "astro-clr",
 					"Standard" = "robotServ"
 				  	)
 
