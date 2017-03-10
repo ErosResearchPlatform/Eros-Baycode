@@ -678,11 +678,12 @@
 		canmove = !incapacitated(INCAPACITATION_DISABLED)
 
 	if(lying)
-		set_density(0)
+		density = 0
 		if(l_hand) unEquip(l_hand)
 		if(r_hand) unEquip(r_hand)
+		update_water() // Submerges the mob.
 	else
-		set_density(initial(density))
+		density = initial(density)
 	reset_layer()
 
 	for(var/obj/item/weapon/grab/G in grabbed_by)
@@ -700,6 +701,9 @@
 		update_icons()
 
 	return canmove
+
+/mob/proc/update_water() // Involves overlays for humans.  Maybe we'll get submerged sprites for borgs in the future?
+	return
 
 /mob/proc/reset_layer()
 	if(lying)

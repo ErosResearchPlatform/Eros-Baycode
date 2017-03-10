@@ -360,7 +360,7 @@
 	return air_contents
 
 //This proc literally only exists for cryo cells.
-/atom/proc/return_air_for_internal_lifeform()
+/atom/proc/return_air_for_internal_lifeform(var/mob/living/lifeform)
 	return return_air()
 
 /obj/machinery/atmospherics/unary/cryo_cell/return_air_for_internal_lifeform()

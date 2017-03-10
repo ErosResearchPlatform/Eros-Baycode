@@ -206,7 +206,7 @@
 		)
 
 /datum/weather/sif/rain/process_effects()
-	for(var/mob/living/L in living_mob_list)
+	for(var/mob/living/L in living_mob_list_)
 		if(L.z in holder.our_planet.expected_z_levels)
 			var/turf/T = get_turf(L)
 			if(!T.outdoors)
@@ -229,7 +229,7 @@
 		)
 
 /datum/weather/sif/rain/process_effects()
-	for(var/mob/living/L in living_mob_list)
+	for(var/mob/living/L in living_mob_list_)
 		if(L.z in holder.our_planet.expected_z_levels)
 			var/turf/T = get_turf(L)
 			if(!T.outdoors)
@@ -252,17 +252,17 @@
 		)
 
 /datum/weather/sif/hail/process_effects()
-	for(var/mob/living/L in living_mob_list)
+	for(var/mob/living/L in living_mob_list_)
 		if(L.z in holder.our_planet.expected_z_levels)
 			var/turf/T = get_turf(L)
 			if(!T.outdoors)
 				return // They're indoors, so no need to pelt them with ice.
 
-			var/target_zone = pick(BP_ALL)
+			var/target_zone = pick(BP_ALL_LIMBS)
 			var/amount_blocked = L.run_armor_check(target_zone, "melee")
 
 			if(amount_blocked >= 100)
 				return // No need to apply damage.
 
 			L.apply_damage(rand(5, 10), BRUTE, target_zone, amount_blocked, used_weapon = "hail")
-			to_chat(L, "<span class='warning'>The hail raining down on you [L.can_feel_pain() ? "hurts" : "damages you"]!</span>")
+			to_chat(L, "<span class='warning'>The hail raining down on you damages you!</span>")
