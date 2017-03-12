@@ -387,7 +387,3 @@
 
 /datum/species/proc/get_blood_name()
 	return "blood"
-
-// Called when lying down on a water tile.
-/datum/species/proc/can_breathe_water()
-	return FALSE
