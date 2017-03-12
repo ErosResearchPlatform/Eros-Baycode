@@ -21,7 +21,7 @@
 				"insult_good"       = "Please stop that, sir.",
 				"insult_bad"        = "Sir, just because I'm contractually obligated to keep you on the line for a minute doesn't mean I have to take this.",
 
-				"bribe_refusal"     = "Uh... thanks for the cash, sir. As long as you're in the area, we'll be here...",
+				"bribe_refusal"     = "Uh... thanks for the cash, sir. We'll be here, promise...",
 				)
 
 /datum/trader/pizzaria/trade(var/list/offers, var/num, var/turf/location)

@@ -44,20 +44,96 @@
 /decl/ai_holo/singularity
 	icon_state = "Singularity"
 
+/decl/ai_holo/male
+	icon_state = "Male"
+
+/decl/ai_holo/bear
+	icon_state = "Bear"
+
+/decl/ai_holo/corgi
+	icon_state = "Corgi"
+
+/decl/ai_holo/cat
+	icon_state = "Cat"
+
+/decl/ai_holo/slime
+	icon_state = "Slime"
+
+/decl/ai_holo/fox
+	icon_state = "Fox"
+
+/decl/ai_holo/spider
+	icon_state = "Spider"
+
+/decl/ai_holo/butterfly
+	icon_state = "Butterfly"
+
+/decl/ai_holo/drone
+	icon_state = "Drone"
+
 /decl/ai_holo/clippy
-	requires_malf = TRUE
 	icon_state = "malf-clippy"
+	requires_malf = TRUE
 
 /decl/ai_holo/malfcursor
-	requires_malf = TRUE
 	icon_state = "malf-cursor"
+	requires_malf = TRUE
 
 /decl/ai_holo/missingno
+	icon_state = "malf-missingno"
 	requires_malf = TRUE
 	icon_colorize = TRUE
-	icon_state = "malf-missingno"
 
 /decl/ai_holo/malfsingularity
 	icon_state = "malf-singularity"
+	requires_malf = TRUE
+	icon_colorize = TRUE
+
+/decl/ai_holo/malfxeno
+	icon_state = "malf-Xeno"
+	requires_malf = TRUE
+	icon_colorize = TRUE
+
+/decl/ai_holo/malfshodan
+	icon_state = "malf-SHODAN"
+	requires_malf = TRUE
+	icon_colorize = TRUE
+
+/decl/ai_holo/malfspider
+	icon_state = "malf-Spider"
+	requires_malf = TRUE
+	icon_colorize = TRUE
+
+/decl/ai_holo/malfshade
+	icon_state = "malf-Shade"
+	requires_malf = TRUE
+	icon_colorize = TRUE
+
+/decl/ai_holo/malfmagic
+	icon_state = "malf-Magic"
+	requires_malf = TRUE
+	icon_colorize = TRUE
+
+/decl/ai_holo/malfcarp
+	icon_state = "malf-Carp"
+	requires_malf = TRUE
+	icon_colorize = TRUE
+
+/decl/ai_holo/malfbats
+	icon_state = "malf-Bats"
+	requires_malf = TRUE
+
+/decl/ai_holo/malfviscerator
+	icon_state = "malf-Viscerator"
+	requires_malf = TRUE
+	icon_colorize = TRUE
+
+/decl/ai_holo/malfbear
+	icon_state = "malf-Bear"
+	requires_malf = TRUE
+	icon_colorize = TRUE
+
+/decl/ai_holo/malfcat
+	icon_state = "malf-Cat"
 	requires_malf = TRUE
 	icon_colorize = TRUE

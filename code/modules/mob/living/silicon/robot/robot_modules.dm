@@ -172,7 +172,12 @@ var/global/list/robot_modules = list(
 					"Android" = "droid",
 					"Default" = "robot",
 					"Drone" = "drone-standard",
-					"Eyebot" = "eyebot-standard"
+					"Eyebot" = "eyebot-standard",
+					"Kodiak" = "kodiak-standard",
+					"Marina" = "marinaSD",
+					"Sleek" = "sleekstandard",
+					"Astro" = "astro-std",
+					"Noble" = "Noble-STD"
 				  )
 
 /obj/item/weapon/robot_module/standard/New()
@@ -200,7 +205,15 @@ var/global/list/robot_modules = list(
 					"Advanced Droid" = "droid-medical",
 					"Needles" = "medicalrobot",
 					"Drone" = "drone-surgery",
-					"Eyebot" = "eyebot-medical"
+					"Eyebot" = "eyebot-medical",
+					"Kodiak" = "kodiak-med",
+					"Marina" = "marinaMD",
+					"Sleek" = "sleekmedic",
+					"Sleek Alt" = "sleekcmo",
+					"Noble" = "Noble-MED",
+					"Arachne" = "arachne",
+					"Astro" = "astro-med",
+					"Standard" = "robotMedi"
 					)
 
 /obj/item/weapon/robot_module/medical/surgeon/New()
@@ -253,7 +266,15 @@ var/global/list/robot_modules = list(
 					"Needles" = "medicalrobot",
 					"Drone - Medical" = "drone-medical",
 					"Drone - Chemistry" = "drone-chemistry",
-					"Eyebot" = "eyebot-medical"
+					"Eyebot" = "eyebot-medical",
+					"Kodiak" = "kodiak-med",
+					"Marina" = "marinaMD",
+					"Sleek" = "sleekmedic",
+					"Sleek Alt" = "sleekcmo",
+					"Noble" = "Noble-MED",
+					"Arachne" = "arachne",
+					"Astro" = "astro-med",
+					"Standard" = "robotMedi"
 					)
 
 /obj/item/weapon/robot_module/medical/crisis/New()
@@ -321,7 +342,16 @@ var/global/list/robot_modules = list(
 					"Landmate" = "landmate",
 					"Landmate - Treaded" = "engiborg+tread",
 					"Drone" = "drone-engineer",
-					"Eyebot" = "eyebot-engineering"
+					"Eyebot" = "eyebot-engineering",
+					"HAN-D" = "wide-engi",
+					"Kodiak" = "kodiak-eng",
+					"Marina" = "marinaENG",
+					"Sleek" = "sleekengineer",
+					"Sleek Alt" = "sleekce",
+					"Noble" = "Noble-ENG",
+					"Spider" = "spidereng",
+					"Astro" = "astro-eng",
+					"Standard" = "robotEngi"
 					)
 
 /obj/item/weapon/robot_module/engineering/general/New()
@@ -405,7 +435,16 @@ var/global/list/robot_modules = list(
 					"Bloodhound" = "bloodhound",
 					"Bloodhound - Treaded" = "secborg+tread",
 					"Drone" = "drone-sec",
-					"Eyebot" = "eyebot-security"
+					"Eyebot" = "eyebot-security",
+					"Kodiak" = "kodiak-sec",
+					"Marina" = "marinaSC",
+					"Sleek" = "sleeksecurity",
+					"Sleek Alt" = "sleekhos",
+					"Noble" = "Noble-SEC",
+					"Spider" = "spidersec",
+					"Peaceborg" = "peaceborg",
+					"Astro" = "astro-sec",
+					"Standard" = "robotSecy"
 				)
 
 /obj/item/weapon/robot_module/security/general/New()
@@ -438,7 +477,14 @@ var/global/list/robot_modules = list(
 					"Mopbot"  = "janitorrobot",
 					"Mop Gear Rex" = "mopgearrex",
 					"Drone" = "drone-janitor",
-					"Eyebot" = "eyebot-janitor"
+					"Eyebot" = "eyebot-janitor",
+					"Eyebot" = "eyebot-security",
+					"HAN-D" = "wide-jani",
+					"Marina" = "marinaJN",
+					"Sleek" = "sleekjanitor",
+					"Noble" = "Noble-CLN",
+					"Astro" = "astro-jani",
+					"Standard" = "robotJani"
 					)
 
 /obj/item/weapon/robot_module/janitor/New()
@@ -482,7 +528,13 @@ var/global/list/robot_modules = list(
 					"Default" = "Service2",
 					"Drone - Service" = "drone-service",
 					"Drone - Hydro" = "drone-hydro",
-					"Eyebot" = "eyebot-standard"
+					"Eyebot" = "eyebot-standard",
+					"Kodiak" = "kodiak-service",
+					"Marina" = "marinaSV",
+					"Sleek" = "sleekservice",
+					"Noble" = "Noble-SRV",
+					"Astro" = "astro-clr",
+					"Standard" = "robotServ"
 				  	)
 
 /obj/item/weapon/robot_module/clerical/butler/New()
@@ -525,7 +577,12 @@ var/global/list/robot_modules = list(
 					"Rich" = "maximillion",
 					"Default" = "Service2",
 					"Drone" = "drone-service",
-					"Eyebot" = "eyebot-standard"
+					"Eyebot" = "eyebot-standard",
+					"Marina" = "marinaSD",
+					"Sleek" = "sleekclerical",
+					"Spider" = "spider",
+					"Astro" = "astro-serv",
+					"Noble" = "Noble-STD"
 					)
 
 /obj/item/weapon/robot_module/clerical/general/New()
@@ -554,7 +611,14 @@ var/global/list/robot_modules = list(
 					"Advanced Droid" = "droid-miner",
 					"Treadhead" = "Miner",
 					"Drone" = "drone-miner",
-					"Eyebot" = "eyebot-miner"
+					"Eyebot" = "eyebot-miner",
+					"Kodiak" = "kodiak-miner",
+					"Marina" = "marinaMN",
+					"Sleek" = "sleekminer",
+					"Noble" = "Noble-DIG",
+					"Spider" = "spidermining",
+					"Astro" = "astro-mine",
+					"Standard" = "robotMine"
 				)
 	supported_upgrades = list(/obj/item/borg/upgrade/jetpack)
 
@@ -579,7 +643,12 @@ var/global/list/robot_modules = list(
 	sprites = list(
 					"Droid" = "droid-science",
 					"Drone" = "drone-science",
-					"Eyebot" = "eyebot-science"
+					"Eyebot" = "eyebot-science",
+					"Kodiak" = "kodiak-res",
+					"Marina" = "marinaSCI",
+					"Omoikane" = "omoikane",
+					"Astro" = "astro-sci",
+					"Sleek" = "sleekscience"
 					)
 
 /obj/item/weapon/robot_module/research/New()
@@ -648,7 +717,9 @@ var/global/list/robot_modules = list(
 /obj/item/weapon/robot_module/security/combat
 	name = "combat robot module"
 	hide_on_manifest = 1
-	sprites = list("Combat Android" = "droid-combat")
+	sprites = list(
+					"Combat Android" = "droid-combat"
+	)
 
 /obj/item/weapon/robot_module/security/combat/New()
 	src.modules += new /obj/item/device/flash(src)

@@ -120,6 +120,10 @@
 	name = "\improper DANGER: FIRE"
 	icon_state = "fire"
 
+/obj/structure/sign/warning/cold
+	name = "\improper CAUTION: VERY COLD"
+	icon_state = "cold"
+
 /obj/structure/sign/warning/high_voltage
 	name = "\improper HIGH VOLTAGE"
 	icon_state = "shock"
