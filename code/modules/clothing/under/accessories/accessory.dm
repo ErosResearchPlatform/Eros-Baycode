@@ -626,11 +626,13 @@
 /obj/item/clothing/accessory/clover
 	name = "clover pendant"
 	desc = "A glittering silver necklace with a green clover pendant."
+	slot_flags = SLOT_TIE | SLOT_OCLOTHING
 	icon_state = "clovernecklace"
 
 /obj/item/clothing/accessory/rosary //Notice me, McJacko-senpai
 	name = "rosary"
 	desc = "A lovely rosary with wooden beads and a silver cross pendant."
+	slot_flags = SLOT_TIE | SLOT_OCLOTHING
 	icon_state = "rosary"
 	item_state = "rosary"
 
