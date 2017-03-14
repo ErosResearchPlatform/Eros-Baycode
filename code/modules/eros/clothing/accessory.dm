@@ -71,7 +71,7 @@
 
 /obj/item/clothing/accessory/collar/collar_greychurch
 	name = "lying cross necklace"
-	desc = "Your not sure why, but this necklace fills with dread and sorrow. Perhaps if you wear it the pain will go away..."
+	desc = "Your not sure why, but this necklace fills you with dread and sorrow. Perhaps if you wear it will make the pain will go away..."
 	slot_flags = SLOT_TIE | SLOT_OCLOTHING
 	icon_state = "eros_greycollar"
 	item_state = "eros_greycollar"
