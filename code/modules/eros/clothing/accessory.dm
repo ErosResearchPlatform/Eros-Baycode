@@ -22,21 +22,21 @@
 /obj/item/clothing/accessory/collar/collar_blk
 	name = "silver tag collar"
 	desc = "A collar for your little pets... or the big ones."
-	slot_flags = SLOT_TIE | SLOT_OCLOTHING
+	slot_flags = SLOT_TIE | SLOT_MASK
 	icon_state = "eros_collar_blk"
 	item_state = "eros_collar_blk"
 
 /obj/item/clothing/accessory/collar/collar_gld
 	name = "golden tag collar"
 	desc = "A collar for your little pets... or the big ones."
-	slot_flags = SLOT_TIE | SLOT_OCLOTHING
+	slot_flags = SLOT_TIE | SLOT_MASK
 	icon_state = "eros_collar_gld"
 	item_state = "eros_collar_gld"
 
 /obj/item/clothing/accessory/collar/collar_bell
 	name = "bell collar"
 	desc = "A collar with a tiny bell hanging from it, purrfect furr kitties."
-	slot_flags = SLOT_TIE | SLOT_OCLOTHING
+	slot_flags = SLOT_TIE | SLOT_MASK
 	icon_state = "eros_collar_bell"
 	item_state = "eros_collar_bell"
 
@@ -44,49 +44,49 @@
 /obj/item/clothing/accessory/collar/collar_spike
 	name = "spiked collar"
 	desc = "A collar with spikes that look as sharp as your teeth."
-	slot_flags = SLOT_TIE | SLOT_OCLOTHING
+	slot_flags = SLOT_TIE | SLOT_MASK
 	icon_state = "eros_collar_spik"
 	item_state = "eros_collar_spik"
 
 /obj/item/clothing/accessory/collar/collar_pink
 	name = "pink collar"
 	desc = "This collar will make your pets look FA-BU-LOUS."
-	slot_flags = SLOT_TIE | SLOT_OCLOTHING
+	slot_flags = SLOT_TIE | SLOT_MASK
 	icon_state = "eros_collar_pnk"
 	item_state = "eros_collar_pnk"
 
 /obj/item/clothing/accessory/collar/collar_steel
 	name = "steel collar"
 	desc = "A durable industrial collar, show your pet how much they mean to YOU!"
-	slot_flags = SLOT_TIE | SLOT_OCLOTHING
+	slot_flags = SLOT_TIE | SLOT_MASK
 	icon_state = "eros_collar_steel"
 	item_state = "eros_collar_steel"
 
 /obj/item/clothing/accessory/collar/horde
 	name = "locust necklace"
 	desc = "A heavy peice of jewely, it's medalion constructed of dense gold and onyx, the immense chain connected to it appears to be made of a crude iron. This doesn't seem made for the average human...or any human for that matter."
-	slot_flags = SLOT_TIE | SLOT_OCLOTHING
+	slot_flags = SLOT_TIE | SLOT_MASK
 	icon_state = "eros_horde"
 	item_state = "eros_horde"
 
 /obj/item/clothing/accessory/collar/collar_greychurch
 	name = "lying cross necklace"
-	desc = "Your not sure why, but this necklace fills with dread and sorrow. Perhaps if you wear it the pain will go away..."
-	slot_flags = SLOT_TIE | SLOT_OCLOTHING
+	desc = "Your not sure why, but this necklace fills you with dread and sorrow. Perhaps if you wear it will make the pain will go away..."
+	slot_flags = SLOT_TIE | SLOT_MASK
 	icon_state = "eros_greycollar"
 	item_state = "eros_greycollar"
 
 /obj/item/clothing/accessory/collar/collar_iron
 	name = "iron collar"
 	desc = "A chunky iron restrait, looks like something from a medievil dungeon, a lengthy chain leads down a ways from it's clasp...why would anyone willingly wear this?"
-	slot_flags = SLOT_TIE | SLOT_OCLOTHING
+	slot_flags = SLOT_TIE | SLOT_MASK
 	icon_state = "eros_collar_iron"
 	item_state = "eros_collar_iron"
 
 /obj/item/clothing/accessory/collar/collar_holo
 	name = "holo-collar"
 	desc = "An expensive holo-collar for the modern day pet."
-	slot_flags = SLOT_TIE | SLOT_OCLOTHING
+	slot_flags = SLOT_TIE | SLOT_MASK
 	icon_state = "eros_collar_holo"
 	item_state = "eros_collar_holo"
 
@@ -207,21 +207,21 @@
 /obj/item/clothing/accessory/collar/fakebling
 	name = "bling"
 	desc = "Whoa, that .. is actually just shiny plastic, on closer inspection"
-	slot_flags = SLOT_TIE | SLOT_OCLOTHING
+	slot_flags = SLOT_TIE | SLOT_MASK
 	icon_state = "bling"
 	item_state = "bling"
 
 /obj/item/clothing/accessory/bling
 	name = "legit bling"
 	desc = "Whoa. That's solid gold."
-	slot_flags = SLOT_TIE | SLOT_OCLOTHING
+	slot_flags = SLOT_TIE | SLOT_MASK
 	icon_state = "bling"
 	item_state = "bling"
 
 /obj/item/clothing/accessory/collar/talisman
 	name = "primitive talisman"
 	desc = "A leather band, with claws of some creature dangling off it."
-	slot_flags = SLOT_TIE | SLOT_OCLOTHING
+	slot_flags = SLOT_TIE | SLOT_MASK
 	icon_state = "talisman"
 	item_state = "talisman"
 
@@ -237,7 +237,7 @@
 
 /obj/item/clothing/accessory/shirt
 	desc = "A shirt."
-	slot_flags = SLOT_TIE | SLOT_OCLOTHING
+	slot_flags = SLOT_TIE | SLOT_MASK
 	body_parts_covered = UPPER_TORSO|ARMS
 	show_genitals = 1
 
