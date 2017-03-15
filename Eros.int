@@ -5,5 +5,7 @@ DIR: code code\game\objects\items code\modules code\modules\clothing code\module
 AUTO_FILE_DIR: OFF
 MAP_ICON_TYPE: 0
 LAST_COMPILE_VERSION: 511.1366
+WINDOW: icons\mob\suit.dmi
+FILE: icons\mob\suit.dmi
 */
 // END_INTERNALS
