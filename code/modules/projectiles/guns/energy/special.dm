@@ -34,6 +34,15 @@
 	max_shots = 10
 	projectile_type = /obj/item/projectile/energy/declone
 
+/obj/item/weapon/gun/energy/radgun
+	name = "RadRay"
+	desc = "A slow-burner, the RadRay irradiates its targets so as to cause painful, hard to treat, debilitating secondary effects. Its stopping power is lacking, although not missing entirely."
+	icon_state ="oldlaser"
+	projectile_type = /obj/item/projectile/beam/radbeam
+	w_class = ITEM_SIZE_NORMAL
+	self_recharge = 1
+	fire_sound = "emitter2.ogg"
+
 /obj/item/weapon/gun/energy/floragun
 	name = "floral somatoray"
 	desc = "A tool that discharges controlled radiation which induces mutation in plant cells."

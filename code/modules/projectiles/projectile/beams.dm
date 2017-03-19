@@ -28,6 +28,17 @@
 /obj/item/projectile/beam/smalllaser
 	damage = 25
 
+/obj/item/projectile/beam/radbeam
+	name = "radiation"
+	icon_state = "omnilaser"
+	check_armour = "rad"
+	fire_sound = "emitter2.ogg"
+	damage = 25
+	damage_type = TOX
+	irradiate = 50
+	agony = 25
+	embed = 1
+
 /obj/item/projectile/beam/midlaser
 	damage = 40
 	armor_penetration = 10

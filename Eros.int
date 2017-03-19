@@ -1,0 +1,9 @@
+// BEGIN_INTERNALS
+/*
+DIR: code code\modules code\modules\projectiles code\modules\projectiles\guns code\modules\projectiles\guns\projectile code\modules\projectiles\projectile 
+AUTO_FILE_DIR: OFF
+MAP_ICON_TYPE: 0
+WINDOW: code\modules\projectiles\projectile\beams.dm
+FILE: code\modules\projectiles\projectile\beams.dm
+*/
+// END_INTERNALS
