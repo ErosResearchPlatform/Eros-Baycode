@@ -5,14 +5,6 @@
 		"Human" = 'icons/mob/uniform_eros.dmi'
 		)
 
-/obj/item/clothing/under/eros/harness
-	name = "gear harness"
-	desc = "How... minimalist."
-	icon_state = "eros_gear_harness"
-	body_parts_covered = 0
-	show_boobs = 1
-	show_genitals = 1 //we add the show flags becouse the harness doesnt hide either genitals or boobs
-
 /obj/item/clothing/under/eros/bunny_suit
 	name = "Bunny suit"
 	desc = "Makes the wearer more attractive, even men."
@@ -142,13 +134,13 @@
 	icon_state = "eros_cia"
 	item_state_slots = list(slot_r_hand_str = "eros_cia", slot_l_hand_str = "eros_cia")
 
-/obj/item/clothing/under/eros/shizuewinter
+/obj/item/clothing/under/eros/shizunewinter
 	name = "winter outfit"
 	desc = "Perfect for winter!"
 	icon_state = "eros_shizuewinter"
 	item_state_slots = list(slot_r_hand_str = "eros_shizuewinter", slot_l_hand_str = "eros_shizuewinter")
 
-/obj/item/clothing/under/eros/shizuenormal
+/obj/item/clothing/under/eros/shizunenormal
 	name = "spring outfit"
 	desc = "Perfect for spring!"
 	icon_state = "eros_shizuenormal"
@@ -304,22 +296,6 @@
 	icon_state = "janimaid"
 	item_state = "janimaid"
 	worn_state = "janimaid"
-
-/obj/item/clothing/under/eros/hoodiejeans
-	name = "casual hoodie and jeans"
-	desc = "Perfect for lounging about in."
-	icon_state = "eros_hoodiejeans"
-	item_state = "eros_hoodiejeans"
-	worn_state = "eros_hoodiejeans"
-	item_state_slots = list(slot_r_hand_str = "eros_hoodiejeans", slot_l_hand_str = "eros_hoodiejeans")
-
-/obj/item/clothing/under/eros/hoodieskirt
-	name = "casual hoodie and skirt"
-	desc = "Perfect for lounging about in."
-	icon_state = "eros_hoodieskirt"
-	item_state = "eros_hoodieskirt"
-	worn_state = "eros_hoodieskirt"
-	item_state_slots = list(slot_r_hand_str = "eros_hoodieskirt", slot_l_hand_str = "eros_hoodieskirt")
 
 /obj/item/clothing/under/eros/dress/white
 	name = "white wedding dress"

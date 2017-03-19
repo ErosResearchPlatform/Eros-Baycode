@@ -568,6 +568,8 @@
 	icon_state = "gear_harness"
 	worn_state = "gear_harness"
 	body_parts_covered = 0
+	show_boobs = 1
+	show_genitals = 1 //we add the show flags becouse the harness doesnt hide either genitals or boobs
 
 /obj/item/clothing/under/pcrc
 	name = "\improper PCRC uniform"
