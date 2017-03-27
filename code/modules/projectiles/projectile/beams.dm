@@ -29,15 +29,14 @@
 	damage = 25
 
 /obj/item/projectile/beam/radbeam
-	name = "radiation"
+	name = "radioactive blast"
 	icon_state = "omnilaser"
 	check_armour = "rad"
-	fire_sound = "emitter2.ogg"
-	damage = 25
-	damage_type = TOX
-	irradiate = 50
-	agony = 25
-	embed = 1
+	damage = 20
+	damage_type = BURN
+	irradiate = 30
+	agony = 50
+	//Is there a knockdown type thing?
 
 /obj/item/projectile/beam/midlaser
 	damage = 40
