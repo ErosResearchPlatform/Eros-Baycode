@@ -444,10 +444,16 @@
 	worn_state = "mia_turtle"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS
 
+/obj/item/clothing/under/eros/bodyglovef
 	name = "Bodyglove"
 	desc = "An almost skin-tight suit that shows off it's wearer's form without giving too much away. This one seems to be for those with a more feminine bodytype."
+	icon_state = "bodyglovef"
+	worn_state = "bodyglovef"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS|LEGS
 
+/obj/item/clothing/under/eros/bodyglovem
 	name = "Bodyglove"
 	desc = "An almost skin-tight suit that shows off it's wearer's form without giving too much away. This one seems to be for those with a more nasculine bodytype."
+	icon_state = "bodyglovem"
+	worn_state = "bodyglovem"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS|LEGS
