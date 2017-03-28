@@ -443,3 +443,11 @@
 	item_state = "bl_suit"
 	worn_state = "mia_turtle"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS
+
+	name = "Bodyglove"
+	desc = "An almost skin-tight suit that shows off it's wearer's form without giving too much away. This one seems to be for those with a more feminine bodytype."
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS|LEGS
+
+	name = "Bodyglove"
+	desc = "An almost skin-tight suit that shows off it's wearer's form without giving too much away. This one seems to be for those with a more nasculine bodytype."
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS|LEGS

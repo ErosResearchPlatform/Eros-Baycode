@@ -401,4 +401,14 @@
 	display_name = "workman outfit"
 	path = /obj/item/clothing/under/serviceoveralls
 
+/datum/gear/uniform/bodyglovef
+	display_name = "Female Undersuit"
+	path = /obj/item/clothing/under/eros/bodyglovef
+	flags = GEAR_HAS_COLOR_SELECTION
+
+/datum/gear/uniform/bodyglovem
+	display_name = "Male Undersuit"
+	path = /obj/item/clothing/under/eros/bodyglovem
+	flags = GEAR_HAS_COLOR_SELECTION
+
 //EROS FINISH
