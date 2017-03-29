@@ -79,6 +79,20 @@
 	irradiate = 40
 
 
+/obj/item/projectile/energy/radblast
+	name = "radioactive blast"
+	pass_flags = PASSTABLE | PASSGLASS | PASSGRILLE //Was supposed to be a beam, but had to be moved here due to how beams are rendered - ITR.
+	icon_state = "omnilaser"
+	check_armour = "rad"
+	damage = 15
+	damage_type = BURN
+	irradiate = 50
+	agony = 25
+	weaken = 10
+	fire_sound = "sound/weapons/emitter2.ogg"
+	//Is there a knockdown type thing?
+
+
 /obj/item/projectile/energy/dart
 	name = "dart"
 	icon_state = "toxin"

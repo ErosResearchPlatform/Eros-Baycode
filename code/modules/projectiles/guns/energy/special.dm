@@ -38,7 +38,7 @@
 	name = "RadRay"
 	desc = "A slow-burner, the RadRay irradiates its targets so as to cause painful, hard to treat, debilitating secondary effects. Its stopping power is lacking, although not missing entirely. The on-board reactor recharges the weapon over time."
 	icon_state ="oldlaser"
-	projectile_type = /obj/item/projectile/beam/radbeam
+	projectile_type = /obj/item/projectile/energy/radblast
 	w_class = ITEM_SIZE_LARGE
 	self_recharge = 1
 	recharge_time = 8
@@ -46,6 +46,7 @@
 	accuracy = 2
 	fire_sound = "sound/weapons/emitter2.ogg"
 	fire_delay = 10
+	requires_two_hands = 4
 	slot_flags = SLOT_BELT|SLOT_BACK //Need to add suit, too. Ask Silvery
 	icon_state = "radray"
 

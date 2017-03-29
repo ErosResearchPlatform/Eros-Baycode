@@ -28,16 +28,6 @@
 /obj/item/projectile/beam/smalllaser
 	damage = 25
 
-/obj/item/projectile/beam/radbeam
-	name = "radioactive blast"
-	icon_state = "omnilaser"
-	check_armour = "rad"
-	damage = 20
-	damage_type = BURN
-	irradiate = 30
-	agony = 50
-	//Is there a knockdown type thing?
-
 /obj/item/projectile/beam/midlaser
 	damage = 40
 	armor_penetration = 10
