@@ -298,7 +298,7 @@
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/c762ppsh41
 	allowed_magazines = /obj/item/ammo_magazine/c762ppsh41
-	requires_two_hands = 1
+	one_hand_penalty = 1
 
 	//Cribbed numbers off the assault rifle with tweaks to reflect it's a kick-yourself-in-the-ass-for-using-it gun.
 	firemodes = list(
