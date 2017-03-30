@@ -132,6 +132,7 @@
 	alt_titles = list("Corporate Liason","Workplace Inspector")
 	minimal_player_age = 3
 	outfit_type = /decl/hierarchy/outfit/job/internal_affairs_agent
+	announced = 1
 
 /datum/job/lawyer/equip(var/mob/living/carbon/human/H)
 	. = ..()
