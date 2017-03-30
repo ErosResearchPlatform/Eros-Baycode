@@ -1,0 +1,11 @@
+// BEGIN_INTERNALS
+/*
+LAST_COMPILE_TIME: 1490746302
+DIR: code code\datums code\datums\uplink code\game code\game\mecha\equipment code\game\mecha\equipment\tools code\modules code\modules\projectiles code\modules\projectiles\guns code\modules\projectiles\guns\energy code\modules\xenoarcheaology code\modules\xenoarcheaology\finds icons\obj 
+AUTO_FILE_DIR: OFF
+MAP_ICON_TYPE: 0
+LAST_COMPILE_VERSION: 510.1347
+WINDOW: code\modules\projectiles\guns\energy\special.dm;code\datums\uplink\highly_visible_and_dangerous_weapons.dm;code\modules\xenoarcheaology\finds\eguns.dm
+FILE: code\datums\uplink\highly_visible_and_dangerous_weapons.dm
+*/
+// END_INTERNALS
