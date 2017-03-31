@@ -7,7 +7,7 @@
 	taste_mult = 4
 	reagent_state = SOLID
 	metabolism = REM * 4
-	var/nutriment_factor = 30 // Per unit
+	var/nutriment_factor = 10 // Per unit
 	var/injectable = 0
 	color = "#664330"
 
@@ -126,6 +126,10 @@
 /datum/reagent/nutriment/flour/touch_turf(var/turf/simulated/T)
 	if(!istype(T, /turf/space))
 		new /obj/effect/decal/cleanable/flour(T)
+		if(T.wet > 1)
+			T.wet = min(T.wet, 1)
+		else
+			T.wet = 0
 
 /datum/reagent/nutriment/coco
 	name = "Coco Powder"
@@ -1644,7 +1648,7 @@
 	strength = 10
 
 	glass_name = "Pan-Galactic Gargle Blaster"
-	glass_desc = "Does... does this mean that Arthur and Ford are on the station? Oh joy."
+	glass_desc = "Does... does this mean that Arthur and Ford are here? Oh joy."
 
 /datum/reagent/ethanol/gintonic
 	name = "Gin and Tonic"
@@ -1766,14 +1770,14 @@
 /datum/reagent/ethanol/manhattan_proj
 	name = "Manhattan Project"
 	id = "manhattan_proj"
-	description = "A scientist's drink of choice, for pondering ways to blow up the station."
+	description = "A scientist's drink of choice, for pondering ways to blow stuff up."
 	taste_description = "death, the destroyer of worlds"
 	color = "#C15D00"
 	strength = 10
 	druggy = 30
 
 	glass_name = "Manhattan Project"
-	glass_desc = "A scienitst drink of choice, for thinking how to blow up the station."
+	glass_desc = "A scientist's drink of choice, for pondering ways to blow stuff up."
 
 /datum/reagent/ethanol/manly_dorf
 	name = "The Manly Dorf"

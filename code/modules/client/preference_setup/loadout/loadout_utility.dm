@@ -77,4 +77,4 @@ modular computers
 /datum/gear/utility/communicator
 	display_name = "communicator"
 	path = /obj/item/device/communicator
-	cost = 1
+	cost = 0

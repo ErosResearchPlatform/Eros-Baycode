@@ -190,6 +190,11 @@
 	ponytail5
 		name = "Ponytail 5"
 		icon_state = "hair_ponytail5"
+	ponytail6
+		name = "Ponytail 6"
+		icon_state = "hair_ponytail6"
+		gender = FEMALE
+
 	sideponytail
 		name = "Side Ponytail"
 		icon_state = "hair_stail"
