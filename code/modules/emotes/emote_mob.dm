@@ -78,6 +78,7 @@
 
 	if (message)
 		log_emote("[name]/[key] : [message]")
+		message = say_emphasis(message)
 
 	if(m_type == VISIBLE_MESSAGE)
 		visible_message(message, checkghosts = /datum/client_preference/ghost_sight)
