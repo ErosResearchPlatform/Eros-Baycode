@@ -120,6 +120,12 @@ var/list/_client_preferences_by_type
 	enabled_description = "Show"
 	disabled_description = "Hide"
 
+/datum/client_preference/show_aooc
+	description ="AOOC chat"
+	key = "CHAT_AOOC"
+	enabled_description = "Show"
+	disabled_description = "Hide"
+
 /datum/client_preference/show_looc
 	description ="LOOC chat"
 	key = "CHAT_LOOC"
@@ -131,6 +137,12 @@ var/list/_client_preferences_by_type
 	key = "CHAT_DEAD"
 	enabled_description = "Show"
 	disabled_description = "Hide"
+
+/datum/client_preference/check_mention
+	description ="Emphasize Name Mention"
+	key = "CHAT_MENTION"
+	enabled_description = "Emphasize"
+	disabled_description = "Normal"
 
 /datum/client_preference/show_progress_bar
 	description ="Progress Bar"

@@ -46,27 +46,6 @@
 	path = /obj/item/clothing/head/soft/sec/corp
 	allowed_roles = list("Security Officer","Head of Security","Warden", "Detective")
 
-/datum/gear/head/hat
-	display_name = "hat selection"
-	path = /obj/item/clothing/head/hasturhood
-
-/datum/gear/head/hat/New()
-
-	..()
-	var/hats = list()
-	hats["boatsman hat"] = /obj/item/clothing/head/boaterhat
-	hats["bowler hat"] = /obj/item/clothing/head/bowler
-	hats["cowboy hat"] = /obj/item/clothing/head/cowboy_hat
-	hats["cowboy hat, alt"] = /obj/item/clothing/head/cowboy_hat/cowboy2
-	hats["cowboy hat, wide-brimmed"] = /obj/item/clothing/head/cowboy_hat/cowboywide
-	hats["cowboy hat, black"] = /obj/item/clothing/head/cowboy_hat/black
-	hats["fedora"] = /obj/item/clothing/head/fedora //m'lady
-	hats["feather thrilby"] = /obj/item/clothing/head/feathertrilby
-	hats["fez"] = /obj/item/clothing/head/fez
-	hats["top hat"] = /obj/item/clothing/head/that
-	hats["ushanka"] = /obj/item/clothing/head/ushanka
-	gear_tweaks += new/datum/gear_tweak/path(hats)
-
 /datum/gear/head/zhan_scarf
 	display_name = "Zhan headscarf"
 	path = /obj/item/clothing/head/tajaran/scarf

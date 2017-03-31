@@ -346,6 +346,11 @@
 	path = /obj/item/device/assembly/prox_sensor
 	category = "Devices and Components"
 
+/datum/autolathe/recipe/tube/large
+	name = "spotlight tube"
+	path = /obj/item/weapon/light/tube/large
+	category = "General"
+
 /datum/autolathe/recipe/tube
 	name = "light tube"
 	path = /obj/item/weapon/light/tube

@@ -7,13 +7,6 @@
 	sort_category = "Suits and Overwear"
 	cost = 1
 
-/datum/gear/suit/hazard
-	display_name = "hazard vests"
-	path = /obj/item/clothing/suit/storage/hazardvest
-
-/datum/gear/suit/hazard/New()
-	..()
-	gear_tweaks += new/datum/gear_tweak/path(/obj/item/clothing/suit/storage/hazardvest)
 /datum/gear/suit/blue_labcoat
 	display_name = "blue-edged labcoat"
 	path = /obj/item/clothing/suit/storage/toggle/labcoat/blue
@@ -28,39 +21,6 @@
 	path = /obj/item/clothing/suit/apron/overalls
 	cost = 1
 */
-
-/datum/gear/suit/poncho
-	display_name = "poncho selection"
-	path = /obj/item/clothing/suit/poncho/colored
-	cost = 1
-
-/datum/gear/suit/poncho/New()
-	..()
-	gear_tweaks += new/datum/gear_tweak/path(/obj/item/clothing/suit/poncho/colored)
-
-/datum/gear/suit/roles/poncho/security
-	display_name = "poncho, security"
-	path = /obj/item/clothing/suit/poncho/roles/security
-	allowed_roles = list("Head of Security", "Warden", "Detective", "Security Officer")
-
-/datum/gear/suit/roles/poncho/medical
-	display_name = "poncho, medical"
-	path = /obj/item/clothing/suit/poncho/roles/medical
-	allowed_roles = list("Medical Doctor","Chief Medical Officer","Chemist","Paramedic","Geneticist")
-
-/datum/gear/suit/roles/poncho/engineering
-	display_name = "poncho, engineering"
-	path = /obj/item/clothing/suit/poncho/roles/engineering
-	allowed_roles = list("Chief Engineer","Atmospheric Technician", "Station Engineer")
-
-/datum/gear/suit/roles/poncho/science
-	display_name = "poncho, science"
-	path = /obj/item/clothing/suit/poncho/roles/science
-	allowed_roles = list("Research Director","Scientist", "Roboticist", "Xenobiologist")
-
-/datum/gear/suit/roles/poncho/cargo
-	display_name = "poncho, cargo"
-	path = /obj/item/clothing/suit/poncho/roles/cargo
 	allowed_roles = list("Quartermaster","Cargo Technician")
 
 /datum/gear/suit/roles/surgical_apron
@@ -147,18 +107,6 @@
 	display_name = "winter coat, mining"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/miner
 	allowed_roles = list("Shaft Miner")
-
-/datum/gear/suit/track
-	display_name = "track jacket selection"
-	path = /obj/item/clothing/suit/storage/toggle/track
-
-/datum/gear/suit/track/New()
-	..()
-	var/list/tracks = list()
-	for(var/track_style in typesof(/obj/item/clothing/suit/storage/toggle/track))
-		var/obj/item/clothing/suit/storage/toggle/track/track = track_style
-		tracks[initial(track.name)] = track
-	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(tracks))
 
 /datum/gear/suit/leather_jacket_alt
 	display_name = "leather jacket 2, black"
