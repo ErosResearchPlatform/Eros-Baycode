@@ -21,7 +21,6 @@
 	alt_titles = list("Commander","Chief Constable")
 	minimal_player_age = 14
 	outfit_type = /decl/hierarchy/outfit/job/security/hos
-	announced = 1
 
 /datum/job/hos/equip(var/mob/living/carbon/human/H)
 	. = ..()
@@ -42,7 +41,6 @@
 	minimal_access = list(access_security, access_eva, access_sec_doors, access_brig, access_armory, access_maint_tunnels, access_external_airlocks)
 	minimal_player_age = 5
 	outfit_type = /decl/hierarchy/outfit/job/security/warden
-	announced = 1
 
 /datum/job/detective
 	title = "Detective"
@@ -59,7 +57,6 @@
 	minimal_access = list(access_security, access_sec_doors, access_forensics_lockers, access_morgue, access_maint_tunnels)
 	minimal_player_age = 3
 	outfit_type = /decl/hierarchy/outfit/job/security/detective
-	announced = 1
 
 /datum/job/officer
 	title = "Security Officer"
@@ -76,4 +73,3 @@
 	minimal_access = list(access_security, access_eva, access_sec_doors, access_brig, access_maint_tunnels, access_external_airlocks)
 	minimal_player_age = 3
 	outfit_type = /decl/hierarchy/outfit/job/security/officer
-	announced = 1

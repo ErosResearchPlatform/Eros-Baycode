@@ -21,7 +21,6 @@
 	ideal_character_age = 50
 	species_restricted = list("Tajara", "Vox", "Diona", "Vox Pariah")
 	outfit_type = /decl/hierarchy/outfit/job/medical/cmo
-	announced = 1
 
 /datum/job/doctor
 	title = "Medical Doctor"
