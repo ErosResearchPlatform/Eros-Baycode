@@ -180,7 +180,9 @@ var/global/list/robot_modules = list(
 					"Marina" = "marinaSD",
 					"Sleek" = "sleekstandard",
 					"Astro" = "astro-std",
-					"Noble" = "Noble-STD"
+					"Noble" = "Noble-STD",
+					"Cyberflower" = "cyberflower-standard",
+					"Spider" = "spider-standard"
 				  )
 
 /obj/item/weapon/robot_module/standard/New()
@@ -216,6 +218,8 @@ var/global/list/robot_modules = list(
 					"Noble" = "Noble-MED",
 					"Arachne" = "arachne",
 					"Astro" = "astro-med",
+					"Cyberflower" = "cyberflower-surgeon",
+					"Spider" = "spider-surgeon",
 					"Standard" = "robotMedi"
 					)
 
@@ -277,6 +281,8 @@ var/global/list/robot_modules = list(
 					"Noble" = "Noble-MED",
 					"Arachne" = "arachne",
 					"Astro" = "astro-med",
+					"Cyberflower" = "cyberflower-crisis",
+					"Spider" = "spider-crisis",
 					"Standard" = "robotMedi"
 					)
 
@@ -353,8 +359,11 @@ var/global/list/robot_modules = list(
 					"Sleek" = "sleekengineer",
 					"Sleek Alt" = "sleekce",
 					"Noble" = "Noble-ENG",
-					"Spider" = "spidereng",
+					"Industrial Spider" = "spidereng",
 					"Astro" = "astro-eng",
+					"Cyberflower" = "cyberflower-engineering",
+					"Spider" = "spider-engineering",
+					"Artificer" = "artificer",
 					"Standard" = "robotEngi"
 					)
 
@@ -445,9 +454,12 @@ var/global/list/robot_modules = list(
 					"Sleek" = "sleeksecurity",
 					"Sleek Alt" = "sleekhos",
 					"Noble" = "Noble-SEC",
-					"Spider" = "spidersec",
+					"Industrial Spider" = "spidersec",
 					"Peaceborg" = "peaceborg",
 					"Astro" = "astro-sec",
+					"Cyberflower" = "cyberflower-security",
+					"Spider" = "spider-security",
+					"Motile" = "motile-security",
 					"Standard" = "robotSecy"
 				)
 
@@ -490,6 +502,8 @@ var/global/list/robot_modules = list(
 					"Sleek" = "sleekjanitor",
 					"Noble" = "Noble-CLN",
 					"Astro" = "astro-jani",
+					"Cyberflower" = "cyberflower-janitor",
+					"Spider" = "spider-janitor",
 					"Standard" = "robotJani"
 					)
 
@@ -540,6 +554,8 @@ var/global/list/robot_modules = list(
 					"Sleek" = "sleekservice",
 					"Noble" = "Noble-SRV",
 					"Astro" = "astro-clr",
+					"Cyberflower" = "cyberflower-service",
+					"Spider" = "spider-service",
 					"Standard" = "robotServ"
 				  	)
 
@@ -586,9 +602,11 @@ var/global/list/robot_modules = list(
 					"Eyebot" = "eyebot-standard",
 					"Marina" = "marinaSD",
 					"Sleek" = "sleekclerical",
-					"Spider" = "spider",
+					"Industrial Spider" = "spider",
 					"Astro" = "astro-serv",
-					"Noble" = "Noble-STD"
+					"Cyberflower" = "cyberflower-clerical",
+					"Noble" = "Noble-STD",
+					"Spider" = "spider-standard"
 					)
 
 /obj/item/weapon/robot_module/clerical/general/New()
@@ -622,8 +640,10 @@ var/global/list/robot_modules = list(
 					"Marina" = "marinaMN",
 					"Sleek" = "sleekminer",
 					"Noble" = "Noble-DIG",
-					"Spider" = "spidermining",
+					"Industrial Spider" = "spidermining",
 					"Astro" = "astro-mine",
+					"Cyberflower" = "cyberflower-miner",
+					"Spider" = "spider-miner",
 					"Standard" = "robotMine"
 				)
 	supported_upgrades = list(/obj/item/borg/upgrade/jetpack)
@@ -654,7 +674,10 @@ var/global/list/robot_modules = list(
 					"Marina" = "marinaSCI",
 					"Omoikane" = "omoikane",
 					"Astro" = "astro-sci",
-					"Sleek" = "sleekscience"
+					"Cyberflower" = "cyberflower-janitor",
+					"Sleek" = "sleekscience",
+					"Motile" = "motile",
+					"Spider" = "spider-research"
 					)
 
 /obj/item/weapon/robot_module/research/New()
