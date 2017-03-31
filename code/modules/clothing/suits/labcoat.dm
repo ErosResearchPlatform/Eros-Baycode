@@ -58,11 +58,11 @@
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 60, rad = 0)
 
 /obj/item/clothing/suit/storage/toggle/labcoat/science
-	name = "\improper NanoTrasen labcoat"
-	desc = "A suit that protects against minor chemical spills. Has a red stripe on the shoulder and red trim on the sleeves, denoting it as a NanoTrasen labcoat."
+	name = "\improper Scientist labcoat"
+	desc = "A suit that protects against minor chemical spills."
 	icon_state = "labcoat_nt_open"
 	icon_open = "labcoat_nt_open"
-	icon_closed = "labcoat_nt"
+	icon_closed = "labcoat_tox"
 
 /obj/item/clothing/suit/storage/toggle/labcoat/rd
 	name = "research director's labcoat"
