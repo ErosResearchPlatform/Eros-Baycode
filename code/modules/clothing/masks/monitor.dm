@@ -29,7 +29,12 @@
 		"purple" =   "ipc_purple",
 		"shower" =   "ipc_shower",
 		"static" =   "ipc_static",
-		"yellow" =   "ipc_yellow"
+		"yellow" =   "ipc_yellow",
+		"kitty" =    "ipc_kitty",
+		"rainbow" =  "ipc_rainbow",
+		"console" =  "ipc_console",
+		"scroll" =   "ipc_scroll",
+		"rgb" =      "ipc_rgb"
 		)
 
 /obj/item/clothing/mask/monitor/set_dir()

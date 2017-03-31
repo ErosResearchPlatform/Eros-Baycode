@@ -8,14 +8,13 @@ var/global/list/ashtray_cache = list()
 	thrown_force_divisor = 0.1
 	randpixel = 5
 	var/image/base_image
-	var/max_butts = 10
+	var/max_butts = 6
 
 /obj/item/weapon/material/ashtray/New(var/newloc, var/material_name)
 	..(newloc, material_name)
 	if(!material)
 		qdel(src)
 		return
-	max_butts = round(material.hardness/10) //This is arbitrary but whatever.
 	update_icon()
 	return
 

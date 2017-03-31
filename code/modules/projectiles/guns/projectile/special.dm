@@ -67,7 +67,7 @@
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/a762svt
 	allowed_magazines = /obj/item/ammo_magazine/a762svt
-	requires_two_hands = 2
+	one_hand_penalty = 2
 	accuracy = 0
 
 /obj/item/weapon/gun/projectile/svt40/update_icon()
