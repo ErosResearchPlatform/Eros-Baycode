@@ -289,7 +289,7 @@ var/list/name_to_material
 	stack_type = /obj/item/stack/material/phoron
 	ignition_point = PHORON_MINIMUM_BURN_TEMPERATURE
 	icon_base = "stone"
-	icon_colour = "#FC2BC5"
+	icon_colour = "#E37108"
 	shard_type = SHARD_SHARD
 	hardness = 30
 	stack_origin_tech = list(TECH_MATERIAL = 2, TECH_PHORON = 2)

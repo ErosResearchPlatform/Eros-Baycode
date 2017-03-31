@@ -144,7 +144,7 @@ var/list/datum/ai_icon/ai_icons
 	name = "Soviet"
 	alive_icon = "ai-redoctober"
 	alive_light = "#FF4307"
-	dead_icon = "ai-soviet_dead"
+	dead_icon = "ai-redoctober_dead"
 
 /datum/ai_icon/Static
 	name = "Static"
@@ -225,6 +225,14 @@ var/list/datum/ai_icon/ai_icons
 	name = "Mr. House"
 	alive_icon = "ai-house"
 
+/datum/ai_icon/xerxes
+	name = "Xerxes"
+	alive_icon = "ai-xerxes"
+
+/datum/ai_icon/godfrey
+	name = "Godfrey"
+	alive_icon = "ai-godfrey"
+
 /datum/ai_icon/angel
 	name = "Angel"
 	alive_icon = "ai-angel"
@@ -239,3 +247,8 @@ var/list/datum/ai_icon/ai_icons
 	name = "Serithi"
 	alive_icon = "ai-serithi"
 	dead_icon = "ai-serithi_dead"
+
+/datum/ai_icon/zone
+	name = "Zone"
+	alive_icon = "ai-zone"
+	dead_icon = "ai-zone_dead"

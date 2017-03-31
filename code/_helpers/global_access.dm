@@ -615,6 +615,8 @@
 			return global.ghost_traps;
 		if("global_announcer")
 			return global.global_announcer;
+		if("global_headset")
+			return global.global_headset;
 		if("global_hud")
 			return global.global_hud;
 		if("global_huds")
@@ -859,6 +861,8 @@
 			return global.mining_walls;
 		if("minor_air_alarms")
 			return global.minor_air_alarms;
+		if("minor_announcement")
+			return global.minor_announcement;
 		if("mob_equipped_event")
 			return global.mob_equipped_event;
 		if("mob_hat_cache")
@@ -1053,6 +1057,8 @@
 			return global.recentmessages;
 		if("reg_dna")
 			return global.reg_dna;
+		if("registered_macros_by_ckey_")
+			return global.registered_macros_by_ckey_;
 		if("religion_choices")
 			return global.religion_choices;
 		if("religion_name")
@@ -1393,8 +1399,6 @@
 			return global.verbs;
 		if("view_variables_dont_expand")
 			return global.view_variables_dont_expand;
-		if("view_variables_hide_vars")
-			return global.view_variables_hide_vars;
 		if("view_variables_no_assoc")
 			return global.view_variables_no_assoc;
 		if("virusDB")
@@ -2066,6 +2070,8 @@
 			global.ghost_traps=newval;
 		if("global_announcer")
 			global.global_announcer=newval;
+		if("global_headset")
+			global.global_headset=newval;
 		if("global_hud")
 			global.global_hud=newval;
 		if("global_huds")
@@ -2310,6 +2316,8 @@
 			global.mining_walls=newval;
 		if("minor_air_alarms")
 			global.minor_air_alarms=newval;
+		if("minor_announcement")
+			global.minor_announcement=newval;
 		if("mob_equipped_event")
 			global.mob_equipped_event=newval;
 		if("mob_hat_cache")
@@ -2504,6 +2512,8 @@
 			global.recentmessages=newval;
 		if("reg_dna")
 			global.reg_dna=newval;
+		if("registered_macros_by_ckey_")
+			global.registered_macros_by_ckey_=newval;
 		if("religion_choices")
 			global.religion_choices=newval;
 		if("religion_name")
@@ -2844,8 +2854,6 @@
 			global.verbs=newval;
 		if("view_variables_dont_expand")
 			global.view_variables_dont_expand=newval;
-		if("view_variables_hide_vars")
-			global.view_variables_hide_vars=newval;
 		if("view_variables_no_assoc")
 			global.view_variables_no_assoc=newval;
 		if("virusDB")
@@ -3209,6 +3217,7 @@
 	"ghost_sightless_images",
 	"ghost_traps",
 	"global_announcer",
+	"global_headset",
 	"global_hud",
 	"global_huds",
 	"global_listen_count",
@@ -3331,6 +3340,7 @@
 	"mining_floors",
 	"mining_walls",
 	"minor_air_alarms",
+	"minor_announcement",
 	"mob_equipped_event",
 	"mob_hat_cache",
 	"mob_list",
@@ -3428,6 +3438,7 @@
 	"random_useful_",
 	"recentmessages",
 	"reg_dna",
+	"registered_macros_by_ckey_",
 	"religion_choices",
 	"religion_name",
 	"renegades",
@@ -3598,7 +3609,6 @@
 	"ventcrawl_machinery",
 	"verbs",
 	"view_variables_dont_expand",
-	"view_variables_hide_vars",
 	"view_variables_no_assoc",
 	"virusDB",
 	"visual_nets",

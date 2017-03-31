@@ -7,6 +7,7 @@
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "crystal"
 
+
 /obj/machinery/crystal/New()
 	..()
 	icon_state = pick("crystal", "crystal2", "crystal3")
@@ -25,6 +26,7 @@
 /obj/machinery/crystal_static/orange
 	name = "Crystal"
 	icon_state = "crystal3"
+
 
 //large finds
 				/*

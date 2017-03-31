@@ -23,6 +23,7 @@
 	ideal_character_age = 50
 	species_restricted = list("Tajara", "Vox", "Unathi", "Vox Pariah")
 	outfit_type = /decl/hierarchy/outfit/job/science/rd
+	announced = 1
 
 /datum/job/scientist
 	title = "Scientist"

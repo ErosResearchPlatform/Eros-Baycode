@@ -178,7 +178,7 @@ var/datum/antagonist/raider/raiders
 		if(win_group == "Raider")
 			if(win_type == "Minor")
 				win_type = "Major"
-			win_msg += "<B>The Raiders escaped the station!</B>"
+			win_msg += "<B>The Raiders escaped!</B>"
 		else
 			win_msg += "<B>The Raiders were repelled!</B>"
 
@@ -229,7 +229,7 @@ var/datum/antagonist/raider/raiders
 	W.handle_item_insertion(id)
 	player.equip_to_slot_or_del(W, slot_wear_id)
 	spawn_money(rand(50,150)*10,W)
-	create_radio(SYND_FREQ, player)
+	create_radio(RAID_FREQ, player)
 
 	return 1
 
