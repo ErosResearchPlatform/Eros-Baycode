@@ -108,5 +108,7 @@ BIG IMG.icon 			{width: 32px; height: 32px;}
 
 /* Eros */
 .love					{color: #ff69bf; font-style: italic;}
+.translator				{font-weight: bold; font-style: italic;}
+.trans-says				{font-style: italic;}
 
 </style>"}
