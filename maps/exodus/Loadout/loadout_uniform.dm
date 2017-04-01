@@ -268,73 +268,73 @@
 
 /datum/gear/uniform/job_skirt/ce
 	display_name = "skirt, ce"
-	path = /obj/item/clothing/under/rank/engineer/chief_engineer/skirt
+	path = /obj/item/clothing/under/eros/rank/engineer/chief_engineer/skirt
 	allowed_roles = list("Chief Engineer")
 
 /datum/gear/uniform/job_skirt/atmos
 	display_name = "skirt, atmos"
-	path = /obj/item/clothing/under/rank/engineer/atmospheric_technician/skirt
+	path = /obj/item/clothing/under/eros/rank/engineer/atmospheric_technician/skirt
 	allowed_roles = list("Chief Engineer","Atmospheric Technician")
 
 /datum/gear/uniform/job_skirt/eng
 	display_name = "skirt, engineer"
-	path = /obj/item/clothing/under/rank/engineer/skirt
+	path = /obj/item/clothing/under/eros/rank/engineer/skirt
 	allowed_roles = list("Chief Engineer","Station Engineer")
 
 /datum/gear/uniform/job_skirt/roboticist
 	display_name = "skirt, roboticist"
-	path = /obj/item/clothing/under/rank/roboticist/skirt
+	path = /obj/item/clothing/under/eros/rank/roboticist/skirt
 	allowed_roles = list("Research Director","Roboticist")
 
 /datum/gear/uniform/job_skirt/cmo
 	display_name = "skirt, cmo"
-	path = /obj/item/clothing/under/rank/medical/chief_medical_officer/skirt
+	path = /obj/item/clothing/under/eros/rank/medical/chief_medical_officer/skirt
 	allowed_roles = list("Chief Medical Officer")
 
 /datum/gear/uniform/job_skirt/chem
 	display_name = "skirt, chemist"
-	path = /obj/item/clothing/under/rank/medical/chemist/skirt
+	path = /obj/item/clothing/under/eros/rank/medical/chemist/skirt
 	allowed_roles = list("Chief Medical Officer","Chemist")
 
 /datum/gear/uniform/job_skirt/viro
 	display_name = "skirt, virologist"
-	path = /obj/item/clothing/under/rank/medical/virologist/skirt
+	path = /obj/item/clothing/under/eros/rank/medical/virologist/skirt
 	allowed_roles = list("Chief Medical Officer","Medical Doctor")
 
 /datum/gear/uniform/job_skirt/med
 	display_name = "skirt, medical"
-	path = /obj/item/clothing/under/rank/medical/skirt
+	path = /obj/item/clothing/under/eros/rank/medical/skirt
 	allowed_roles = list("Chief Medical Officer","Medical Doctor","Chemist","Psychiatrist","Paramedic")
 
 /datum/gear/uniform/job_skirt/sci
 	display_name = "skirt, scientist"
-	path = /obj/item/clothing/under/rank/scientist/skirt
+	path = /obj/item/clothing/under/eros/rank/scientist/skirt
 	allowed_roles = list("Research Director","Scientist", "Xenobiologist")
 
 /datum/gear/uniform/job_skirt/cargo
 	display_name = "skirt, cargo"
-	path = /obj/item/clothing/under/rank/cargotech/skirt
+	path = /obj/item/clothing/under/eros/rank/cargotech/skirt
 	allowed_roles = list("Quartermaster","Cargo Technician")
 
 /datum/gear/uniform/job_skirt/qm
 	display_name = "skirt, QM"
-	path = /obj/item/clothing/under/rank/cargo/skirt
+	path = /obj/item/clothing/under/eros/rank/cargo/skirt
 	allowed_roles = list("Quartermaster")
 
 	allowed_roles = list("Head of Security", "Warden")
 
 /datum/gear/uniform/job_skirt/security
 	display_name = "skirt, security"
-	path = /obj/item/clothing/under/rank/security/skirt
+	path = /obj/item/clothing/under/eros/rank/security/skirt
 	allowed_roles = list("Head of Security", "Warden", "Detective", "Security Officer")
 
 /datum/gear/uniform/job_skirt/security/warden
 	display_name = "skirt, warden"
-	path = /obj/item/clothing/under/rank/security/warden/skirt
+	path = /obj/item/clothing/under/eros/rank/security/warden/skirt
 
 /datum/gear/uniform/job_skirt/security/head_of_security
 	display_name = "skirt, hos"
-	path = /obj/item/clothing/under/rank/security/head_of_security/skirt
+	path = /obj/item/clothing/under/eros/rank/security/head_of_security/skirt
 	allowed_roles = list("Head of Security")
 
 /datum/gear/uniform/jeans_qm
