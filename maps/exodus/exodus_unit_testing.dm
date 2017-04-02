@@ -25,6 +25,7 @@
 		/area/maintenance/research_port = 0,
 		/area/maintenance/research_starboard = NO_SCRUBBER,
 		/area/maintenance/starboardsolar = NO_SCRUBBER,
+		/area/maintenance/sub/aft = 0,
 		/area/maintenance/sub/fore = NO_SCRUBBER,
 		/area/maintenance/sub/port = NO_SCRUBBER,
 		/area/maintenance/sub/starboard = NO_SCRUBBER,
