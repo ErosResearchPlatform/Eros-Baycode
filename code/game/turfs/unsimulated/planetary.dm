@@ -41,7 +41,7 @@ var/list/planetary_walls = list()
 	carbon_dioxide = 0.15848
 
 // Wiki says it's 92.6 kPa, composition 18.1% O2 80.8% N2 1.1% trace.  We're gonna pretend trace is actually nitrogen.
-/turf/unsimulated/wall/planetary/sif
+/turf/unsimulated/wall/planetary/eros
 	oxygen		= 114.50978 * 0.181
 	nitrogen	= 114.50978 * 0.819
 	temperature	= 243.15 // Roughly -30C / -22F

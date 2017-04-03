@@ -13,9 +13,9 @@ var/list/grass_types = list(
 		)
 	var/grass_chance = 20
 
-/turf/simulated/floor/outdoors/grass/sif
+/turf/simulated/floor/outdoors/grass/eros
 	name = "growth"
-	icon_state = "grass_sif"
+	icon_state = "grass_eros"
 	edge_blending_priority = 3
 	grass_chance = 0
 
@@ -36,7 +36,7 @@ var/list/grass_types = list(
 	//tree_prob = 20
 	edge_blending_priority = 4
 
-/turf/simulated/floor/outdoors/grass/sif/forest
+/turf/simulated/floor/outdoors/grass/eros/forest
 	name = "thick growth"
-	icon_state = "grass_sif_dark"
+	icon_state = "grass_eros_dark"
 	edge_blending_priority = 4

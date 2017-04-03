@@ -4,8 +4,8 @@
 /datum/controller/process/planet/setup()
 	name = "planet"
 	schedule_interval = 600 // every minute
-	planet_sif = new()
-	planets.Add(planet_sif)
+	planet_eros = new()
+	planets.Add(planet_eros)
 
 /datum/controller/process/planet/doWork()
 	for(var/datum/planet/P in planets)

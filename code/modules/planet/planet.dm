@@ -1,4 +1,4 @@
-// This holds information about a specific 'planetside' area, such as its time, weather, etc.  This will most likely be used to model Sif,
+// This holds information about a specific 'planetside' area, such as its time, weather, etc.  This will most likely be used to model eros,
 // but away missions may also have use for this.
 
 /datum/planet
@@ -36,7 +36,7 @@
 	if(weather_holder)
 		weather_holder.process()
 
-// Returns the time datum of Sif.
-/proc/get_sif_time()
-	if(planet_sif)
-		return planet_sif.current_time
+// Returns the time datum of eros.
+/proc/get_eros_time()
+	if(planet_eros)
+		return planet_eros.current_time
