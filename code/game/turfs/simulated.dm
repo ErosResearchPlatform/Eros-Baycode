@@ -47,6 +47,8 @@
 
 /turf/simulated/proc/unwet_floor(var/check_very_wet)
 	if(check_very_wet && wet >= 2)
+		wet--
+		task_triggered_event.register(unwet_task, src, /turf/simulated/proc/task_unwet_floor)
 		return
 
 	wet = 0
@@ -125,7 +127,7 @@
 
 		if(src.wet)
 
-			if(M.buckled || (src.wet == 1 && M.m_intent == "walk"))
+			if(M.buckled || (M.m_intent == "walk" && prob(min(100, 100/(wet/10))) ) )
 				M.slipping = 0 //They're stable again
 				return
 

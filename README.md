@@ -17,6 +17,8 @@ If you wish to develop and host this codebase in a closed source manner you may 
 
 See [here](https://www.gnu.org/licenses/why-affero-gpl.html) for more information.
 
+---
+
 ### GETTING THE CODE
 The simplest way to obtain the code is using the github .zip feature.
 
@@ -29,13 +31,6 @@ The more complicated and easier to update method is using git.  You'll need to d
 (hint: hold down ctrl and press insert to paste into git bash)
 
 This will take a while to download, but it provides an easier method for updating.
-
-Once the repository is in place, run this command:
-```bash
-cd Eros
-git update-index --assume-unchanged Eros.int
-```
-Now git will ignore changes to the file Eros.int.
 
 ---
 

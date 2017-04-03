@@ -62,7 +62,11 @@
 
 /obj/structure/sign/double/map
 	name = "station map"
-	desc = "A framed map of the station."
+	desc = "A framed map."
+
+/obj/structure/sign/double/map/New()
+	..()
+	desc = "A framed map of the [station_name()]."
 
 /obj/structure/sign/double/map/left
 	icon_state = "map-left"
@@ -119,6 +123,10 @@
 /obj/structure/sign/warning/fire
 	name = "\improper DANGER: FIRE"
 	icon_state = "fire"
+
+/obj/structure/sign/warning/cold
+	name = "\improper CAUTION: VERY COLD"
+	icon_state = "cold"
 
 /obj/structure/sign/warning/high_voltage
 	name = "\improper HIGH VOLTAGE"

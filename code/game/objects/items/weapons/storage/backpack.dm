@@ -115,7 +115,7 @@
 	item_state_slots = null
 
 /obj/item/weapon/storage/backpack/toxins
-	name = "laboratory backpack"
+	name = "\improper laboratory backpack"
 	desc = "It's a light backpack modeled for use in laboratories and other scientific institutions."
 	icon_state = "toxpack"
 
@@ -199,8 +199,8 @@
  */
 
 /obj/item/weapon/storage/backpack/satchel
-	name = "leather satchel"
-	desc = "It's a very fancy satchel made with fine leather."
+	name = "brown leather satchel"
+	desc = "It's a very fancy satchel made with fine brown leather."
 	icon_state = "satchel"
 
 /obj/item/weapon/storage/backpack/satchel/withwallet
@@ -247,7 +247,7 @@
 	icon_state = "satchel-gen"
 
 /obj/item/weapon/storage/backpack/satchel_tox
-	name = "scientist satchel"
+	name = "\improper scientist satchel"
 	desc = "Useful for holding research materials."
 	icon_state = "satchel-tox"
 
@@ -273,6 +273,11 @@
 		slot_l_hand_str = "satchel-cap",
 		slot_r_hand_str = "satchel-cap",
 		)
+
+/obj/item/weapon/storage/backpack/satchel_black
+	name = "black leather satchel"
+	desc = "It's a very fancy satchel made with fine black leather."
+	icon_state = "satchel_black"
 
 //ERT backpacks.
 /obj/item/weapon/storage/backpack/ert
@@ -332,7 +337,7 @@
 	icon_state = "courierbagviro"
 
 /obj/item/weapon/storage/backpack/messenger/tox
-	name = "research messenger bag"
+	name = "\improper research messenger bag"
 	desc = "A backpack worn over one shoulder.  Useful for holding science materials."
 	icon_state = "courierbagtox"
 

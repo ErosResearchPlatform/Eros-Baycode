@@ -9,7 +9,7 @@
 /mob/verb/say_verb(message as text)
 	set name = "Say"
 	set category = "IC"
-	
+
 	if(typing_indicator)
 		qdel(typing_indicator)
 	usr.say(message)
@@ -29,6 +29,7 @@
 
 /mob/proc/say_dead(var/message)
 	communicate(/decl/communication_channel/dsay, client, message)
+	message = say_emphasis(message)
 
 /mob/proc/say_understands(var/mob/other,var/datum/language/speaking = null)
 

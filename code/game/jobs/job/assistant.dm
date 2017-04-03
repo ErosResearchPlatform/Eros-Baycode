@@ -19,6 +19,7 @@
 	"Colonist" = /decl/hierarchy/outfit/job/assistant/colonist)
 	outfit_type = /decl/hierarchy/outfit/job/assistant
 
+
 /datum/job/assistant/get_access()
 	if(config.assistant_maint)
 		return list(access_maint_tunnels)
