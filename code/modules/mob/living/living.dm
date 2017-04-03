@@ -741,3 +741,8 @@ default behaviour is:
 		layer = HIDING_MOB_LAYER
 	else
 		..()
+
+/mob/living/proc/can_feel_pain(var/check_organ)
+	if(isSynthetic())
+		return FALSE
+	return TRUE

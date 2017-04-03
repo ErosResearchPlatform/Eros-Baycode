@@ -302,3 +302,9 @@
 
 /obj/item/stack/material/glass/phoronrglass/fifty
 	amount = 50
+
+/obj/item/stack/material/snow
+	name = "snow"
+	desc = "The temptation to build a snowfort rises."
+	icon_state = "sheet-snow"
+	default_type = "snow"
