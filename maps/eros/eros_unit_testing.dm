@@ -2,7 +2,7 @@
 
 	area_coherency_test_exempt_areas = list(
 		/area/space,
-		/area/outdoors,
+		/area/outside,
 		/area/mine/explored,
 		/area/mine/unexplored
 		)
