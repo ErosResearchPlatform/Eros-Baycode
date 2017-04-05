@@ -256,7 +256,7 @@
 		M << browse("<TT><I>Penned by [author].</I></TT> <BR>" + "[dat]", "window=book")
 		user.setClickCooldown(DEFAULT_QUICK_COOLDOWN) //to prevent spam
 
-/*/obj/item/weapon/book/bundle
+/obj/item/weapon/book/bundle
 	var/page = 1 //current page
 	var/list/pages = list() //the contents of each page
 
@@ -315,7 +315,7 @@
 		src.attack_self(usr)
 		updateUsrDialog()
 	else
-		to_chat(usr, "<span class='notice'>You need to hold it in hands!</span>")*/
+		to_chat(usr, "<span class='notice'>You need to hold it in hands!</span>")
 
 
 

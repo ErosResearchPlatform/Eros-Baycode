@@ -458,7 +458,7 @@ datum/borrowbook // Datum used to keep track of who has borrowed what when and f
 	density = 1
 
 /obj/machinery/bookbinder/attackby(var/obj/O as obj, var/mob/user as mob)
-	if(istype(O, /obj/item/weapon/paper) /*|| istype(O, /obj/item/weapon/paper_bundle)*/)
+	if(istype(O, /obj/item/weapon/paper) || istype(O, /obj/item/weapon/paper_bundle))
 		if(istype(O, /obj/item/weapon/paper))
 			user.drop_item()
 			O.loc = src
@@ -471,7 +471,7 @@ datum/borrowbook // Datum used to keep track of who has borrowed what when and f
 			b.name = "Print Job #" + "[rand(100, 999)]"
 			b.icon_state = "book[rand(1,7)]"
 			qdel(O)
-		/*else
+		else
 			user.drop_item()
 			O.loc = src
 			user.visible_message("[user] loads some paper into [src].", "You load some paper into [src].")
@@ -486,6 +486,6 @@ datum/borrowbook // Datum used to keep track of who has borrowed what when and f
 				P.forceMove(b)
 			b.name = "Print Job #" + "[rand(100, 999)]"
 			b.icon_state = "book[rand(1,7)]"
-			qdel(O)*/
+			qdel(O)
 	else
 		..()
