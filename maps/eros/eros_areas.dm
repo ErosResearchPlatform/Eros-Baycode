@@ -470,6 +470,78 @@
 	name = "\improper Security - Firing Range"
 	icon_state = "firingrange"
 
+/area/security/main
+	name = "\improper Security Office"
+	icon_state = "security"
+
+/area/security/meeting
+	name = "\improper Security Meeting Room"
+	icon_state = "security"
+
+/area/security/lobby
+	name = "\improper Security Lobby"
+	icon_state = "security"
+
+/area/security/brig/processing
+	name = "\improper Security - Processing"
+	icon_state = "brig"
+
+/area/security/brig/interrogation
+	name = "\improper Security - Interrogation"
+	icon_state = "brig"
+
+/area/security/brig/solitaryA
+	name = "\improper Security - Solitary 1"
+	icon_state = "sec_prison"
+
+/area/security/brig/solitaryB
+	name = "\improper Security - Solitary 2"
+	icon_state = "sec_prison"
+
+/area/security/brig/prison_break()
+	for(var/obj/structure/closet/secure_closet/brig/temp_closet in src)
+		temp_closet.locked = 0
+		temp_closet.icon_state = temp_closet.icon_closed
+	for(var/obj/machinery/door_timer/temp_timer in src)
+		temp_timer.releasetime = 1
+	..()
+
+/area/security/prison/restroom
+	name = "\improper Security - Prison Wing Restroom"
+	icon_state = "sec_prison"
+
+/area/security/prison/dorm
+	name = "\improper Security - Prison Wing Dormitory"
+	icon_state = "sec_prison"
+
+/area/security/prison/prison_break()
+	for(var/obj/structure/closet/secure_closet/brig/temp_closet in src)
+		temp_closet.locked = 0
+		temp_closet.icon_state = temp_closet.icon_closed
+	for(var/obj/machinery/door_timer/temp_timer in src)
+		temp_timer.releasetime = 1
+	..()
+
+/area/security/warden
+	name = "\improper Security - Warden's Office"
+	icon_state = "Warden"
+
+/area/security/tactical
+	name = "\improper Security - Tactical Equipment"
+	icon_state = "Tactical"
+
+/area/security/evidence
+	name = "\improper Security - Evidence Room"
+	icon_state = "brig"
+
+/area/security/restroom
+	name = "\improper Security - Washroom"
+	icon_state = "security"
+
+/area/security/lockers
+	name = "\improper Security - Locker Room"
+	icon_state = "security"
+
 //Engineering
 
 /area/engineering/
@@ -610,6 +682,10 @@
 /area/maintenance/incinerator
 	name = "\improper Incinerator"
 	icon_state = "disposal"
+
+/area/maintenance/medsci
+	name = "\improper Med/Sci Maintenance"
+	icon_state = "green"
 
 // Dank Maintenance
 /area/maintenance/sub
@@ -794,11 +870,11 @@
 	name = "\improper Research"
 	icon_state = "research_dock"
 
-/area/assembly/chargebay
+/area/rnd/chargebay
 	name = "\improper Mech Bay"
 	icon_state = "mechbay"
 
-/area/assembly/robotics
+/area/rnd/robotics
 	name = "\improper Robotics Lab"
 	icon_state = "robotics"
 
@@ -814,15 +890,55 @@
 	name = "\improper Research and Development"
 	icon_state = "research"
 
+/area/rnd/breakroom
+	name = "\improper Research Break Room"
+	icon_state = "research"
+
+/area/rnd/docking
+	name = "\improper Research Dock"
+	icon_state = "research_dock"
+
+/area/rnd/mixing
+	name = "\improper Toxins Mixing Room"
+	icon_state = "toxmix"
+
+/area/rnd/storage
+	name = "\improper Toxins Storage"
+	icon_state = "toxstorage"
+
+area/rnd/test_area
+	name = "\improper Toxins Test Area"
+	icon_state = "toxtest"
+
+/area/server
+	name = "\improper Research Server Room"
+	icon_state = "server"
+
 // Cargo
-/area/quartermaster/office
-	name = "\improper Supply Office"
+/area/cargo/office
+	name = "\improper Cargo Office"
 	icon_state = "quartoffice"
 
-/area/quartermaster/storage
+/area/cargo/storage
 	name = "\improper Warehouse"
 	icon_state = "quartstorage"
 	sound_env = LARGE_ENCLOSED
+
+/area/cargo/lobby
+	name = "\improper Cargo Lobby"
+	icon_state = "quartoffice"
+
+/area/cargo/mailingroom
+	name = "\improper Cargo Mailroom"
+	icon_state = "quartoffice"
+
+/area/cargo/qm
+	name = "\improper Cargo - Quartermaster's Office"
+	icon_state = "quart"
+
+/area/cargo/miningdock
+	name = "\improper Cargo Mining Dock"
+	icon_state = "mining"
 
 // Crew
 
@@ -896,6 +1012,10 @@
 	icon_state = "bar"
 	sound_env = LARGE_SOFTFLOOR
 
+/area/crew_quarters/cafe
+	name = "\improper Cafe"
+	icon_state = "kitchen"
+
 /area/library
  	name = "\improper Library"
  	icon_state = "library"
@@ -961,7 +1081,7 @@
 	icon_state = "storage"
 
 /area/storage/emergency
-	name = "Starboard Emergency Storage"
+	name = "Bridge Emergency Storage"
 	icon_state = "emergencystorage"
 
 /area/storage/emergency2
