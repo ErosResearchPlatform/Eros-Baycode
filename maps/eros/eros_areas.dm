@@ -1126,6 +1126,9 @@ area/rnd/test_area
 	name = "\improper Outpost Elevator"
 	icon_state = "purple"
 
+/area/outside/solar/outpost
+	name = "\improper Outpost Solar Array"
+
 /area/outpost/research/turbolift
 	name = "\improper Outpost Elevator"
 	icon_state = "purple"
@@ -1138,6 +1141,9 @@ area/rnd/test_area
 	name = "\improper Atmospherics Storage"
 	icon_state = "primarystorage"
 
+/area/outpost/mining
+	icon_state = "outpost_mine_main"
+
 /area/outpost/mining/storage
 	name = "\improper Mining Storage"
 	icon_state = "quartstorage"
@@ -1145,6 +1151,15 @@ area/rnd/test_area
 /area/outpost/mining/breakroom
 	name = "\improper Breakroom"
 	icon_state = "kitchen"
+
+/area/outpost/mining/refinery
+	name = "\improper Mining Outpost Refinery"
+
+/area/outpost/mining/eva
+	name = "\improper Mining Outpost EVA storage"
+
+/area/outpost/mining/airlock
+	name = "\improper Mining Outpost Airlock"
 
 /area/outpost/research/lobby
 	name = "\improper Underground Foyer"
