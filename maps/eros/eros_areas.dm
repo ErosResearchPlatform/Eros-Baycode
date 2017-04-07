@@ -390,10 +390,6 @@
 /area/ai_monitored
 	name = "AI Monitored Area"
 
-/area/ai_monitored/storage/eva
-	name = "\improper EVA Storage"
-	icon_state = "eva"
-
 /area/turret_protected/ai
 	name = "\improper AI Chamber"
 	icon_state = "ai_chamber"
@@ -505,10 +501,6 @@
 	name = "\improper Engine Room Airlock"
 	icon_state = "engine"
 
-/area/engineering/engine_waste
-	name = "\improper Engine Waste Handling"
-	icon_state = "engine_waste"
-
 /area/engineering/break_room
 	name = "\improper Engineering Break Room"
 	icon_state = "engineering_break"
@@ -549,14 +541,6 @@
 /area/engineering/engineering_monitoring
 	name = "\improper Engineering Monitoring Room"
 	icon_state = "engine_monitoring"
-
-/area/engineering/foyer
-	name = "\improper Engineering Foyer"
-	icon_state = "engineering_foyer"
-
-/area/engineering/locker_room
-	name = "\improper Engineering Locker Room"
-	icon_state = "engineering_locker"
 
 /area/engineering/storage
 	name = "\improper Engineering Storage"
@@ -873,10 +857,6 @@ area/rnd/test_area
 	name = "\improper Hydroponics"
 	icon_state = "hydro"
 
-/area/janitor
-	name = "\improper Custodial Closet"
-	icon_state = "janitor"
-
 /area/chapel/main
 	name = "\improper Chapel"
 	icon_state = "chapel"
@@ -999,16 +979,8 @@ area/rnd/test_area
 	name = "Auxiliary Tool Storage"
 	icon_state = "auxstorage"
 
-/area/storage/art
-	name = "Art Supply Storage"
-	icon_state = "storage"
-
 /area/storage/emergency
 	name = "Bridge Emergency Storage"
-	icon_state = "emergencystorage"
-
-/area/storage/emergency2
-	name = "Port Emergency Storage"
 	icon_state = "emergencystorage"
 
 //Outposts
@@ -1060,10 +1032,6 @@ area/rnd/test_area
 	name = "\improper Research Airlock"
 	icon_state = "purple"
 
-/area/outpost/research/toxins
-	name = "\improper Atmospherics Storage"
-	icon_state = "primarystorage"
-
 /area/outpost/mining
 	icon_state = "outpost_mine_main"
 
@@ -1093,39 +1061,6 @@ area/rnd/test_area
 
 /area/outpost/research/hallway
 	name = "Research Outpost Hallway"
-
-/area/outpost/research/dock
-	name = "Research Outpost Shuttle Dock"
-
-/area/outpost/research/eva
-	name = "Research Outpost EVA"
-
-/area/outpost/research/analysis
-	name = "Research Outpost Sample Analysis"
-
-/area/outpost/research/chemistry
-	name = "Research Outpost Chemistry"
-
-/area/outpost/research/medical
-	name = "Research Outpost Medical"
-
-/area/outpost/research/power
-	name = "Research Outpost Maintenance"
-
-/area/outpost/research/isolation_a
-	name = "Research Outpost Isolation A"
-
-/area/outpost/research/isolation_b
-	name = "Research Outpost Isolation B"
-
-/area/outpost/research/isolation_c
-	name = "Research Outpost Isolation C"
-
-/area/outpost/research/isolation_monitoring
-	name = "Research Outpost Isolation Monitoring"
-
-/area/outpost/research/lab
-	name = "Research Outpost Laboratory"
 
 /area/outpost/research/emergency_storage
 	name = "Research Outpost Emergency Storage"
