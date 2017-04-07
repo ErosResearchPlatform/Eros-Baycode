@@ -41,7 +41,7 @@
 /turf/simulated/wall/sandstone/New(var/newloc)
 	..(newloc,"sandstone")
 /turf/simulated/wall/wood/New(var/newloc)
-	..(newloc,"wood")
+	icon_state = "logs"
 /turf/simulated/wall/ironphoron/New(var/newloc)
 	..(newloc,"iron","phoron")
 /turf/simulated/wall/golddiamond/New(var/newloc)
