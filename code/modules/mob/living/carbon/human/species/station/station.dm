@@ -160,7 +160,7 @@
 	the secrets of their empire to their allies."
 	num_alternate_languages = 2
 	secondary_langs = list(LANGUAGE_SKRELLIAN)
-	name_language = null
+	name_language = LANGUAGE_SKRELLIAN
 	health_hud_intensity = 1.75
 
 	min_age = 19
@@ -198,6 +198,8 @@
 		BP_L_FOOT = list("path" = /obj/item/organ/external/foot),
 		BP_R_FOOT = list("path" = /obj/item/organ/external/foot/right)
 		)
+/datum/species/skrell/can_breathe_water()
+	return TRUE
 
 /datum/species/diona
 	name = "Diona"

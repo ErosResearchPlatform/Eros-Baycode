@@ -1,6 +1,16 @@
 #if !defined(USING_MAP_DATUM)
 
 	#include "eros_areas.dm"
+	#include "eros_effects.dm"
+	//#include "eros_elevator.dm"
+	#include "eros_holodecks.dm"
+	#include "eros_presets.dm"
+	//#include "eros_shuttles.dm"
+
+	#include "eros_unit_testing.dm"
+	//#include "eros_zas_tests.dm"
+
+	#include "../shared/exodus_torch/_include.dm"
 
 	#include "eros-1.dmm"
 	#include "eros-2.dmm"
