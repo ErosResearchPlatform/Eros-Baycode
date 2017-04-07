@@ -74,10 +74,6 @@
 	icon_state = "shuttle"
 	name = "\improper Transport Shuttle"
 
-/area/shuttle/alien/mine
-	icon_state = "shuttle"
-	name = "\improper Alien Shuttle Mine"
-	requires_power = 1
 
 /area/shuttle/arrival
 	name = "\improper Arrival Shuttle"
@@ -89,10 +85,6 @@
 	name = "\improper Emergency Shuttle"
 	flags = AREA_RAD_SHIELDED
 
-/area/shuttle/escape/station
-	name = "\improper Emergency Shuttle Station"
-	icon_state = "shuttle2"
-
 /area/shuttle/escape/transit // the area to pass through for 3 minute transit
 	name = "\improper Emergency Shuttle Transit"
 	icon_state = "shuttle"
@@ -102,9 +94,6 @@
 	name = "\improper Escape Pod One"
 	flags = AREA_RAD_SHIELDED
 
-/area/shuttle/escape_pod1/station
-	icon_state = "shuttle2"
-
 /area/shuttle/escape_pod1/transit
 	icon_state = "shuttle"
 	base_turf = /turf/space/transit/north
@@ -112,9 +101,6 @@
 /area/shuttle/escape_pod2
 	name = "\improper Escape Pod Two"
 	flags = AREA_RAD_SHIELDED
-
-/area/shuttle/escape_pod2/station
-	icon_state = "shuttle2"
 
 /area/shuttle/escape_pod2/transit
 	icon_state = "shuttle"
@@ -124,9 +110,6 @@
 	name = "\improper Escape Pod Three"
 	flags = AREA_RAD_SHIELDED
 
-/area/shuttle/escape_pod3/station
-	icon_state = "shuttle2"
-
 /area/shuttle/escape_pod3/transit
 	icon_state = "shuttle"
 	base_turf = /turf/space/transit/east
@@ -134,9 +117,6 @@
 /area/shuttle/escape_pod5 //Pod 4 was lost to meteors
 	name = "\improper Escape Pod Five"
 	flags = AREA_RAD_SHIELDED
-
-/area/shuttle/escape_pod5/station
-	icon_state = "shuttle2"
 
 /area/shuttle/escape_pod5/transit
 	icon_state = "shuttle"
@@ -462,17 +442,9 @@
 	icon_state = "detective"
 	sound_env = MEDIUM_SOFTFLOOR
 
-/area/security/nuke_storage
-	name = "\improper Vault"
-	icon_state = "nuke_storage"
-
 /area/security/range
 	name = "\improper Security - Firing Range"
 	icon_state = "firingrange"
-
-/area/security/main
-	name = "\improper Security Office"
-	icon_state = "security"
 
 /area/security/meeting
 	name = "\improper Security Meeting Room"
@@ -482,21 +454,9 @@
 	name = "\improper Security Lobby"
 	icon_state = "security"
 
-/area/security/brig/processing
-	name = "\improper Security - Processing"
-	icon_state = "brig"
-
 /area/security/brig/interrogation
 	name = "\improper Security - Interrogation"
 	icon_state = "brig"
-
-/area/security/brig/solitaryA
-	name = "\improper Security - Solitary 1"
-	icon_state = "sec_prison"
-
-/area/security/brig/solitaryB
-	name = "\improper Security - Solitary 2"
-	icon_state = "sec_prison"
 
 /area/security/brig/prison_break()
 	for(var/obj/structure/closet/secure_closet/brig/temp_closet in src)
@@ -675,14 +635,6 @@
     name = "\improper Southwestern Maintenance"
     icon_state = "green"
 
-/area/maintenance/disposal
-	name = "Waste Disposal"
-	icon_state = "disposal"
-
-/area/maintenance/incinerator
-	name = "\improper Incinerator"
-	icon_state = "disposal"
-
 /area/maintenance/medsci
 	name = "\improper Med/Sci Maintenance"
 	icon_state = "green"
@@ -759,10 +711,6 @@
 	name = "\improper Genetics Lab"
 	icon_state = "genetics"
 
-/area/medical/genetics_cloning
-	name = "\improper Cloning Lab"
-	icon_state = "cloning"
-
 /area/medical/emergencyprep
     name = "\improper Medbay Emergency Prep"
     icon_state = "medbay"
@@ -819,10 +767,6 @@
 	name = "\improper Isolation C"
 	icon_state = "patients"
 
-/area/medical/patient_wing
-	name = "\improper Patient Wing"
-	icon_state = "patients"
-
 /area/medical/surgery2
 	name = "\improper Surgery Storage"
 	icon_state = "surgery"
@@ -839,18 +783,9 @@
 	name = "\improper Cryogenics"
 	icon_state = "cryo"
 
-/area/medical/biostorage
-	name = "\improper Secondary Storage"
-	icon_state = "medbay4"
-	ambience = list('sound/ambience/signal.ogg')
-
 /area/medical/chemistry
 	name = "\improper Chemistry"
 	icon_state = "chem"
-
-/area/medical/exam_room
-	name = "\improper Exam Room"
-	icon_state = "exam_room"
 
 /area/medical/morgue
 	name = "\improper Morgue"
@@ -893,10 +828,6 @@
 /area/rnd/breakroom
 	name = "\improper Research Break Room"
 	icon_state = "research"
-
-/area/rnd/docking
-	name = "\improper Research Dock"
-	icon_state = "research_dock"
 
 /area/rnd/mixing
 	name = "\improper Toxins Mixing Room"
