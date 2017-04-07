@@ -38,13 +38,6 @@
 	icon_state = "shuttle3"
 	requires_power = 0
 
-/area/shuttle/constructionsite
-	name = "\improper Construction Site Shuttle"
-	icon_state = "yellow"
-
-/area/shuttle/constructionsite/station
-	name = "\improper Construction Site Shuttle"
-
 /area/shuttle/mining
 	name = "\improper Mining Shuttle"
 
@@ -73,7 +66,6 @@
 /area/shuttle/transport1/station
 	icon_state = "shuttle"
 	name = "\improper Transport Shuttle"
-
 
 /area/shuttle/arrival
 	name = "\improper Arrival Shuttle"

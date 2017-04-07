@@ -1,4 +1,4 @@
-#include "areas.dm"
+//#include "areas.dm"
 #include "presets.dm"
 #include "zas_tests.dm"
 #include "./loadout/loadout_gloves.dm"

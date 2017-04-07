@@ -13,7 +13,10 @@ var/const/NETWORK_TELECOM             = "Tcomsat"
 			return access_research
 		if(NETWORK_TELECOM)
 			return access_heads
-	return get_shared_network_access(network) || ..()
+		if(NETWORK_COMMAND)
+			return access_heads
+ 		if(NETWORK_ENGINE || NETWORK_ENGINEERING_OUTPOST)
+ 			return access_engine
 
 /datum/map/exodus
 	station_networks = list(
@@ -73,9 +76,21 @@ var/const/NETWORK_TELECOM             = "Tcomsat"
 /obj/machinery/camera/network/telecom
 	network = list(NETWORK_TELECOM)
 
+/obj/machinery/camera/network/crescent
+	network = list(NETWORK_CRESCENT)
+
+/obj/machinery/camera/network/engine
+	network = list(NETWORK_ENGINE)
+
+/obj/machinery/camera/network/engineering_outpost
+	network = list(NETWORK_ENGINEERING_OUTPOST)
+
 // Motion
 /obj/machinery/camera/motion/command
 	network = list(NETWORK_COMMAND)
+
+/obj/machinery/camera/motion/engineering_outpost
+	network = list(NETWORK_ENGINEERING_OUTPOST)
 
 // X-ray
 /obj/machinery/camera/xray/medbay
@@ -86,3 +101,7 @@ var/const/NETWORK_TELECOM             = "Tcomsat"
 
 /obj/machinery/camera/xray/security
 	network = list(NETWORK_SECURITY)
+
+// All Upgrades
+/obj/machinery/camera/all/command
+	network = list(NETWORK_COMMAND)
