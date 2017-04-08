@@ -1,43 +1,45 @@
 "a" = (/turf/snow,/area/outside)
 "b" = (/obj/structure/flora/tree/pine,/turf/snow,/area/outside)
-"c" = (/obj/random/obstruction,/turf/snow,/area/cabin)
+"c" = (/obj/structure/barricade{color = "#744621"; material = "wood"},/turf/snow,/area/cabin)
 "d" = (/turf/simulated/wall/wood,/area/cabin)
 "e" = (/turf/snow,/area/cabin)
 "f" = (/obj/item/stack/material/phoron/fifty,/turf/snow,/area/cabin)
 "g" = (/obj/machinery/power/apc{dir = 8; name = "west bump"; pixel_x = -24},/obj/structure/cable{d2 = 2; icon_state = "0-2"},/turf/simulated/floor/wood,/area/cabin)
 "h" = (/turf/simulated/floor/wood,/area/cabin)
 "i" = (/obj/structure/closet/crate,/obj/item/weapon/eros/sex/dildos/floppydick,/obj/item/weapon/eros/sex/dildos/metal_dildo,/obj/item/weapon/eros/sex/dildos/knotted,/obj/item/weapon/eros/sex/bulletvibe,/obj/item/weapon/handcuffs,/turf/simulated/floor/wood,/area/cabin)
-"j" = (/obj/structure/bed/double/padded,/obj/item/weapon/bedsheet/hosdouble,/turf/simulated/floor/wood,/area/cabin)
+"j" = (/obj/item/weapon/bedsheet/hosdouble,/obj/structure/bed/double/padded,/turf/simulated/floor/wood,/area/cabin)
 "k" = (/obj/random/plushie,/turf/simulated/floor/wood,/area/cabin)
 "l" = (/obj/structure/closet/cabinet,/obj/random/accessory,/obj/random/clothing,/obj/random/accessory,/obj/random/clothing,/obj/random/glasses,/obj/random/gloves,/obj/random/glasses,/obj/random/gloves,/obj/random/hat,/obj/random/shoes,/obj/random/hat,/obj/random/shoes,/obj/item/clothing/under/redpyjamas,/obj/item/clothing/under/bluepyjamas,/turf/simulated/floor/wood,/area/cabin)
-"m" = (/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/wood,/area/cabin)
-"n" = (/turf/simulated/floor/carpet,/area/cabin)
-"o" = (/obj/machinery/power/port_gen/pacman/mrs,/obj/structure/cable{d2 = 4; dir = 2; icon_state = "0-4"; pixel_y = 0},/turf/snow,/area/cabin)
-"p" = (/obj/item/stack/material/phoron/fifty,/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_y = 0},/turf/snow,/area/cabin)
-"q" = (/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_y = 0},/turf/simulated/wall/wood,/area/cabin)
-"r" = (/obj/structure/cable{d1 = 1; d2 = 8; icon_state = "1-8"; tag = ""},/turf/simulated/floor/wood,/area/cabin)
-"s" = (/obj/structure/bed/chair/comfy/red,/turf/simulated/floor/carpet,/area/cabin)
-"t" = (/obj/structure/bed/chair/wood,/turf/simulated/floor/carpet,/area/cabin)
-"u" = (/obj/structure/table/glass,/obj/item/weapon/storage/box/checkers/chess,/obj/item/weapon/storage/box/checkers/chess/red,/turf/simulated/floor/carpet,/area/cabin)
-"v" = (/obj/structure/bed/chair/comfy/red{dir = 8},/turf/simulated/floor/carpet,/area/cabin)
-"w" = (/obj/structure/bed/chair/wood{dir = 4},/turf/simulated/floor/carpet,/area/cabin)
-"x" = (/obj/structure/table/woodentable_swanky,/obj/random/drinkbottle,/turf/simulated/floor/carpet,/area/cabin)
-"y" = (/obj/structure/table/woodentable_swanky,/obj/item/weapon/deck/cards,/obj/item/weapon/deck/cah,/obj/item/weapon/deck/cah/black,/turf/simulated/floor/carpet,/area/cabin)
-"z" = (/obj/structure/bed/chair/wood{dir = 8},/turf/simulated/floor/carpet,/area/cabin)
-"A" = (/obj/structure/table/glass,/obj/item/weapon/storage/box/checkers,/turf/simulated/floor/carpet,/area/cabin)
-"B" = (/obj/structure/table/woodentable_swanky,/obj/item/weapon/storage/box/glasses,/turf/simulated/floor/carpet,/area/cabin)
-"C" = (/obj/machinery/door/unpowered/simple/wood,/turf/simulated/floor/wood,/area/cabin)
-"D" = (/obj/structure/bed/chair/comfy/red{dir = 1},/turf/simulated/floor/carpet,/area/cabin)
-"E" = (/obj/structure/bed/chair/wood{dir = 1},/turf/simulated/floor/carpet,/area/cabin)
-"F" = (/obj/machinery/cooker/oven,/turf/simulated/floor/wood,/area/cabin)
-"G" = (/obj/structure/table/marble,/obj/machinery/microwave,/turf/simulated/floor/wood,/area/cabin)
-"H" = (/obj/structure/table/marble,/obj/item/weapon/reagent_containers/food/condiment/peppermill,/obj/item/weapon/reagent_containers/food/condiment/saltshaker,/turf/simulated/floor/wood,/area/cabin)
-"I" = (/obj/structure/closet/secure_closet/freezer/meat{desc = "A tall metal storage cabinet for keeping your food cool and fresh.."; locked = 0; name = "fridge"},/obj/item/weapon/reagent_containers/food/snacks/chips,/obj/item/weapon/reagent_containers/food/snacks/chips,/obj/item/weapon/reagent_containers/food/snacks/chocolatebar,/obj/item/weapon/reagent_containers/food/snacks/chocolatebar,/obj/item/weapon/reagent_containers/food/snacks/baguette,/obj/item/weapon/reagent_containers/food/snacks/bigbiteburger,/obj/item/weapon/storage/fancy/egg_box,/obj/item/weapon/storage/fancy/egg_box,/obj/item/weapon/storage/fancy/egg_box,/obj/item/weapon/reagent_containers/food/condiment/flour,/obj/item/weapon/reagent_containers/food/condiment/flour,/obj/item/weapon/reagent_containers/food/condiment/flour,/turf/simulated/floor/wood,/area/cabin)
-"J" = (/obj/structure/sink{pixel_x = 0; pixel_y = -13},/turf/simulated/floor/wood,/area/cabin)
-"K" = (/obj/structure/table/marble,/obj/random/drinkbottle,/obj/random/drinkbottle,/obj/random/drinkbottle,/turf/simulated/floor/wood,/area/cabin)
-"L" = (/obj/structure/table/marble,/obj/random/smokes,/obj/random/smokes,/turf/simulated/floor/wood,/area/cabin)
-"M" = (/obj/structure/table/marble,/obj/random/action_figure,/turf/simulated/floor/wood,/area/cabin)
-"N" = (/obj/structure/table/marble,/obj/random/coin,/obj/random/coin,/obj/random/coin,/obj/random/coin,/obj/random/coin,/obj/random/coin,/turf/simulated/floor/wood,/area/cabin)
+"m" = (/obj/effect/wingrille_spawn/reinforced,/turf/simulated/floor,/area/cabin)
+"n" = (/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/wood,/area/cabin)
+"o" = (/turf/simulated/floor/carpet,/area/cabin)
+"p" = (/obj/structure/barricade{color = "#744621"; material = "wood"},/turf/snow,/area/outside)
+"q" = (/obj/machinery/power/port_gen/pacman/mrs,/obj/structure/cable{d2 = 4; dir = 2; icon_state = "0-4"; pixel_y = 0},/turf/snow,/area/cabin)
+"r" = (/obj/item/stack/material/phoron/fifty,/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_y = 0},/turf/snow,/area/cabin)
+"s" = (/obj/structure/cable{d1 = 4; d2 = 8; icon_state = "4-8"; pixel_y = 0},/turf/simulated/wall/wood,/area/cabin)
+"t" = (/obj/structure/cable{d1 = 1; d2 = 8; icon_state = "1-8"; tag = ""},/turf/simulated/floor/wood,/area/cabin)
+"u" = (/obj/structure/bed/chair/comfy/red,/turf/simulated/floor/carpet,/area/cabin)
+"v" = (/obj/structure/bed/chair/wood,/turf/simulated/floor/carpet,/area/cabin)
+"w" = (/obj/structure/table/glass,/obj/item/weapon/storage/box/checkers/chess,/obj/item/weapon/storage/box/checkers/chess/red,/turf/simulated/floor/carpet,/area/cabin)
+"x" = (/obj/structure/bed/chair/comfy/red{dir = 8},/turf/simulated/floor/carpet,/area/cabin)
+"y" = (/obj/structure/bed/chair/wood{dir = 4},/turf/simulated/floor/carpet,/area/cabin)
+"z" = (/obj/structure/table/woodentable_swanky,/obj/random/drinkbottle,/turf/simulated/floor/carpet,/area/cabin)
+"A" = (/obj/structure/table/woodentable_swanky,/obj/item/weapon/deck/cards,/obj/item/weapon/deck/cah,/obj/item/weapon/deck/cah/black,/turf/simulated/floor/carpet,/area/cabin)
+"B" = (/obj/structure/bed/chair/wood{dir = 8},/turf/simulated/floor/carpet,/area/cabin)
+"C" = (/obj/structure/table/glass,/obj/item/weapon/storage/box/checkers,/turf/simulated/floor/carpet,/area/cabin)
+"D" = (/obj/structure/table/woodentable_swanky,/obj/item/weapon/storage/box/glasses,/turf/simulated/floor/carpet,/area/cabin)
+"E" = (/obj/machinery/door/unpowered/simple/wood,/turf/simulated/floor/wood,/area/cabin)
+"F" = (/obj/structure/bed/chair/comfy/red{dir = 1},/turf/simulated/floor/carpet,/area/cabin)
+"G" = (/obj/structure/bed/chair/wood{dir = 1},/turf/simulated/floor/carpet,/area/cabin)
+"H" = (/obj/machinery/cooker/oven,/turf/simulated/floor/wood,/area/cabin)
+"I" = (/obj/structure/table/marble,/obj/machinery/microwave,/turf/simulated/floor/wood,/area/cabin)
+"J" = (/obj/structure/table/marble,/obj/item/weapon/reagent_containers/food/condiment/peppermill,/obj/item/weapon/reagent_containers/food/condiment/saltshaker,/turf/simulated/floor/wood,/area/cabin)
+"K" = (/obj/structure/closet/secure_closet/freezer/meat{desc = "A tall metal storage cabinet for keeping your food cool and fresh.."; locked = 0; name = "fridge"},/obj/item/weapon/reagent_containers/food/snacks/chips,/obj/item/weapon/reagent_containers/food/snacks/chips,/obj/item/weapon/reagent_containers/food/snacks/chocolatebar,/obj/item/weapon/reagent_containers/food/snacks/chocolatebar,/obj/item/weapon/reagent_containers/food/snacks/baguette,/obj/item/weapon/reagent_containers/food/snacks/bigbiteburger,/obj/item/weapon/storage/fancy/egg_box,/obj/item/weapon/storage/fancy/egg_box,/obj/item/weapon/storage/fancy/egg_box,/obj/item/weapon/reagent_containers/food/condiment/flour,/obj/item/weapon/reagent_containers/food/condiment/flour,/obj/item/weapon/reagent_containers/food/condiment/flour,/turf/simulated/floor/wood,/area/cabin)
+"L" = (/obj/structure/sink{pixel_x = 0; pixel_y = -13},/turf/simulated/floor/wood,/area/cabin)
+"M" = (/obj/structure/table/marble,/obj/random/drinkbottle,/obj/random/drinkbottle,/obj/random/drinkbottle,/turf/simulated/floor/wood,/area/cabin)
+"N" = (/obj/structure/table/marble,/obj/random/smokes,/obj/random/smokes,/turf/simulated/floor/wood,/area/cabin)
+"O" = (/obj/structure/table/marble,/obj/random/action_figure,/obj/random/action_figure,/obj/random/action_figure,/turf/simulated/floor/wood,/area/cabin)
+"P" = (/obj/structure/table/marble,/obj/random/coin,/obj/random/coin,/obj/random/coin,/obj/random/coin,/obj/random/coin,/obj/random/coin,/turf/simulated/floor/wood,/area/cabin)
 
 (1,1,1) = {"
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
@@ -152,14 +154,14 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbaaabaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaabaaccddddddddddaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaefdghijkhlhdaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaabaaaaaaaefdmnnnnnnhdaaaaabaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaopqrsnnttnhdaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaccdhuvwxyzhdaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaeedhAvwBxzhCaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaabaaaaaaaaaaaaaabaaaaaeedhDnnEEnhdaaaaaaaaaaabaaaaaabaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaeedhnnnnnnhdaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeedFnnnnnnhdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaeedGHIJKLMNdaabaaaaaaaaaaaaaaaaabaaaaabaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaabaaaaaaaefmnoooooohdaaaaabaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaapqrstuoovvohdaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaapccdhwxyzABhdaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaeedhCxyDzBhEaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaabaaaaaaaaaaaaaabaaaaaeedhFooGGohdaaaaaaaaaaabaaaaaabaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaeemhoooooohmaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeedHoooooohmaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaeedIJKLMNOPmaabaaaaaaaaaaaaaaaaabaaaaabaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeeddddddddddaaaaaaaaaaaaaaaabaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaabaaaaaabaaaaaaaaaaaaaaaaaaaaaaababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
