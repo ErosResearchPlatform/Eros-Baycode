@@ -528,3 +528,10 @@
 	icon_state = "radiation"
 	icon_opened = "radiationopen"
 	icon_closed = "radiation"
+
+/obj/structure/closet/crate/woodenchest
+	name = "wooden chest"
+	desc = "A handsome wooden chest with a worn finish and a metal latch."
+	icon_state = "chest"
+	icon_opened = "chestopen"
+	icon_closed = "chest"
