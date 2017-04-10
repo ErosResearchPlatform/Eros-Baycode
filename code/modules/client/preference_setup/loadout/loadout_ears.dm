@@ -9,3 +9,8 @@
 	display_name = "headphones"
 	path = /obj/item/clothing/ears/earmuffs/headphones
 	sort_category = "Earwear"
+
+/datum/gear/ears/translator
+	display_name = "universal translator, ear"
+	path = /obj/item/device/universal_translator/ear
+	cost = 5

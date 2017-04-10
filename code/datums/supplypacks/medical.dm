@@ -259,3 +259,12 @@
 	cost = 15
 	containertype = /obj/structure/closet/crate
 	containername = "\improper Sterile equipment crate"
+
+/decl/hierarchy/supply_pack/medical/defibrillator
+	name = "Defibrillator crate"
+	contains = list(/obj/item/weapon/defibrillator = 2)
+	cost = 20
+	containertype
+	containertype = /obj/structure/closet/crate/secure
+	containername = "\improper Defibrillator crate"
+	access = access_medical
