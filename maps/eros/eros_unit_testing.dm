@@ -8,9 +8,12 @@
 		/area/space,
 		/area/outside,
 		/area/mine/explored,
-		/area/mine/unexplored
+		/area/mine/unexplored,
+		/area/centcom/control
 		)
 
 	area_coherency_test_subarea_count = list(
+		/area/maintenance/arrivals = 2,
 		/area/engineering/atmos = 7,
+		/area/maintenance/northeast = 2
 		)

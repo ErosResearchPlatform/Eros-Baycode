@@ -683,6 +683,11 @@
 
 //MedBay
 
+/area/medical/biostorage
+	name = "\improper Secondary Storage"
+	icon_state = "medbay4"
+	ambience = list('sound/ambience/signal.ogg')
+
 /area/medical/genetics
 	name = "\improper Genetics Lab"
 	icon_state = "genetics"
@@ -1076,6 +1081,15 @@ area/rnd/test_area
 
 /area/outpost/research/disposal
 	name = "Research Outpost Waste Disposal"
+
+/area/outpost/research/isolation_monitoring
+	name = "Research Outpost Isolation Monitoring"
+
+/area/outpost/research/isolation_a
+	name = "Research Outpost Isolation A"
+
+/area/outpost/research/isolation_b
+	name = "Research Outpost Isolation B"
 
 // GENERIC MINING AREAS
 
