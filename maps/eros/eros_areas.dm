@@ -558,6 +558,10 @@
  	icon_state = "atmos"
  	sound_env = LARGE_ENCLOSED
 
+/area/engineering/sublevel_access
+	name = "\improper Sublevel Access"
+	sound_env = SMALL_ENCLOSED
+
 // SUBSTATIONS (Subtype of maint, that should let them serve as shielded area during radstorm)
 
 /area/maintenance/substation/command // AI and central cluster. This one will be between HoP office and meeting room (probably).
