@@ -297,7 +297,7 @@
 "fK" = (/turf/simulated/floor/tiled/dark,/area/outpost/research/lobby)
 "fL" = (/obj/machinery/light{dir = 1},/turf/simulated/floor/tiled/dark,/area/outpost/research/lobby)
 "fM" = (/obj/effect/wingrille_spawn/reinforced,/obj/machinery/door/firedoor,/turf/simulated/floor/plating,/area/outpost/research/lobby)
-"fN" = (/turf/unsimulated/mask,/area/turbolift/outpost/lower)
+"fN" = (/turf/unsimulated/mask,/area/outpost/research/lobby)
 "fO" = (/obj/machinery/papershredder,/turf/simulated/floor/tiled/dark,/area/outpost/research/lobby)
 "fP" = (/obj/structure/table/glass,/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{dir = 8},/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 8},/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"; pixel_y = 0},/turf/simulated/floor/tiled,/area/outpost/research/lobby)
 "fQ" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/turf/simulated/floor/tiled,/area/outpost/research/lobby)

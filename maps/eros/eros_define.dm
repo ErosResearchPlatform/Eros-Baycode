@@ -10,12 +10,12 @@
 
 	station_levels = list(1, 2)
 	admin_levels = list(3)
-	contact_levels = list(1,2,4,6)
+	contact_levels = list(1,2,5,6)
 	player_levels = list(1,2,4,5,6,7)
 	sealed_levels = list(5)
 	empty_levels = list(5)
-	accessible_z_levels = list("1" = 5, "2" = 5, "4" = 10, "5" = 15, "7" = 60)
-	base_turf_by_z = list("6" = /turf/simulated/floor/asteroid) // Moonbase
+	accessible_z_levels = list("1" = 5, "2" = 5, "4" = 10, "6" = 15, "7" = 60)
+	base_turf_by_z = list("5" = /turf/simulated/floor/asteroid) // Moonbase
 
 	station_name  = "Eros-2 Planetary Colony"
 	station_short = "Eros"
