@@ -128,18 +128,6 @@
 /area/shuttle/merchant/away
 	name = "\improper Merchant Van - Station Side"
 
-// === Trying to remove these areas:
-
-/area/shuttle/research
-	name = "\improper Research Shuttle"
-
-/area/shuttle/research/station
-	icon_state = "shuttle2"
-
-/area/shuttle/research/outpost
-	icon_state = "shuttle"
-	base_turf = /turf/simulated/floor/asteroid
-
 // CentCom/Admin Z-level
 
 /area/centcom/control
@@ -386,9 +374,6 @@
 
 /area/turret_protected/tcomsat/starboard
 	name = "\improper Telecoms Satellite - Starboard"
-
-/area/ai_monitored
-	name = "AI Monitored Area"
 
 /area/turret_protected/ai
 	name = "\improper AI Chamber"
