@@ -2,7 +2,7 @@
 
 	#include "eros_areas.dm"
 	#include "eros_effects.dm"
-	//#include "eros_elevator.dm"
+	#include "eros_elevators.dm"
 	#include "eros_holodecks.dm"
 	#include "eros_presets.dm"
 	//#include "eros_shuttles.dm"

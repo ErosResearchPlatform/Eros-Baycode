@@ -128,6 +128,28 @@
 /area/shuttle/merchant/away
 	name = "\improper Merchant Van - Station Side"
 
+/////////////
+//ELEVATORS//
+/////////////
+
+/area/turbolift/engineering_station
+	name = "Station - By Engineering"
+	lift_announce_str = "Arriving at the station level, by the Engineering department."
+
+/area/turbolift/engineering_maintenance
+	name = "Maintenance - Below Engineering"
+	lift_announce_str = "Arriving at the maintenance level, below the Engineering department."
+	base_turf = /turf/simulated/floor/plating
+
+/area/turbolift/outpost/upper
+	name = "Outpos Elevator - Upper Floor"
+	lift_announce_str = "Arriving at the outpost upper floor."
+
+/area/turbolift/outpost/lower
+	name = "Outpost Elevator - Lower Floor"
+	lift_announce_str = "Arriving at the outpost lower floor."
+	base_turf = /turf/simulated/floor/plating
+
 // CentCom/Admin Z-level
 
 /area/centcom/control
