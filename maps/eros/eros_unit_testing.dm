@@ -15,5 +15,6 @@
 	area_coherency_test_subarea_count = list(
 		/area/maintenance/arrivals = 2,
 		/area/engineering/atmos = 7,
-		/area/maintenance/northeast = 2
+		/area/maintenance/northeast = 2,
+		/area/outpost/engineering/atmospherics = 2
 		)
