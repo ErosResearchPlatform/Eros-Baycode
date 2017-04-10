@@ -77,6 +77,10 @@
 	name = "\improper Emergency Shuttle"
 	flags = AREA_RAD_SHIELDED
 
+/area/shuttle/escape/station
+	name = "\improper Emergency Shuttle Station"
+	icon_state = "shuttle2"
+
 /area/shuttle/escape/transit // the area to pass through for 3 minute transit
 	name = "\improper Emergency Shuttle Transit"
 	icon_state = "shuttle"
@@ -320,6 +324,10 @@
 	name = "\improper Mercenary Forward Operating Base"
 	icon_state = "yellow"
 
+/area/syndicate_station/arrivals_dock
+	name = "docked with station"
+	icon_state = "shuttle"
+
 /area/syndicate_station/transit
 	name = "\proper bluespace"
 	icon_state = "shuttle"
@@ -339,6 +347,37 @@
 	name = "\improper Alien base"
 	icon_state = "yellow"
 	requires_power = 0
+
+// Telecommunications Satellite
+/area/tcommsat/
+	ambience = list('sound/ambience/ambisin2.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/ambigen10.ogg')
+
+/area/tcommsat/chamber
+	name = "\improper Telecoms Central Compartment"
+	icon_state = "tcomsatcham"
+
+/area/tcommsat/computer
+	name = "\improper Telecoms Control Room"
+	icon_state = "tcomsatcomp"
+
+/area/tcommsat/entrance
+	name = "\improper Telecoms Teleporter"
+	icon_state = "tcomsatentrance"
+
+/area/turret_protected/tcomsat
+	name = "\improper Telecoms Satellite"
+	icon_state = "tcomsatlob"
+	ambience = list('sound/ambience/ambisin2.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/ambigen10.ogg')
+
+/area/turret_protected/tcomfoyer
+	name = "\improper Telecoms Foyer"
+	icon_state = "tcomsatentrance"
+	ambience = list('sound/ambience/ambisin2.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/ambigen10.ogg')
+
+/area/tcommsat/powercontrol
+	name = "\improper Telecommunications Power Control"
+	icon_state = "tcomsatwest"
+
 
 // Command
 
