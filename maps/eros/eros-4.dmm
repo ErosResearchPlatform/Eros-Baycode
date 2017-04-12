@@ -360,7 +360,7 @@
 "gV" = (/obj/effect/wingrille_spawn/reinforced,/obj/machinery/door/firedoor,/turf/simulated/wall/r_wall,/area/turret_protected/tcomsat/starboard)
 "gW" = (/turf/space/transit/north,/area/space)
 "gX" = (/turf/space,/area/shuttle/escape/station)
-"gY" = (/turf/space,/area/shuttle/transport1/centcom)
+"gY" = (/turf/space,/area/shuttle/transport1/station)
 "gZ" = (/obj/machinery/door/airlock/external/bolted/cycling,/turf/simulated/floor/airless,/area/turret_protected/tcomsat/starboard)
 "ha" = (/obj/machinery/atmospherics/pipe/vent/high_volume{tag = "icon-intact (EAST)"; icon_state = "intact"; dir = 4},/turf/simulated/floor/airless,/area/turret_protected/tcomsat/starboard)
 "hb" = (/obj/machinery/door/airlock/external/bolted/cycling,/obj/machinery/atmospherics/pipe/simple/hidden{dir = 4},/turf/simulated/floor/airless,/area/turret_protected/tcomsat/starboard)
@@ -393,8 +393,8 @@
 "hC" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 9},/turf/simulated/floor/airless,/area/turret_protected/tcomsat/starboard)
 "hD" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 5; icon_state = "intact"},/turf/simulated/floor/airless,/area/turret_protected/tcomsat/starboard)
 "hE" = (/turf/space,/area/shuttle/administration/station)
-"hF" = (/turf/space/transit/north,/area/skipjack_station/transit)
-"hG" = (/turf/space,/area/skipjack_station/transit)
+"hF" = (/turf/space/transit/north,/area/skipjack_station/arrivals_dock)
+"hG" = (/turf/space,/area/skipjack_station/arrivals_dock)
 
 (1,1,1) = {"
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa

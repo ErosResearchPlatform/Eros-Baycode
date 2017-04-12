@@ -1067,21 +1067,12 @@ area/rnd/test_area
 	name = "\improper Dormitory Two"
 	icon_state = "crew_quarters"
 
-
 /area/outpost/engineering/hall
 	name = "\improper Atmospherics Hallway"
 	icon_state = "blue-red"
 
-/area/outpost/engineering/turbolift
-	name = "\improper Outpost Elevator"
-	icon_state = "purple"
-
 /area/outside/solar/outpost
 	name = "\improper Outpost Solar Array"
-
-/area/outpost/research/turbolift
-	name = "\improper Outpost Elevator"
-	icon_state = "purple"
 
 /area/outpost/research/access
 	name = "\improper Research Airlock"
