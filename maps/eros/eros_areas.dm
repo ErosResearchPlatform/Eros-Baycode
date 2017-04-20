@@ -132,6 +132,45 @@
 /area/shuttle/merchant/away
 	name = "\improper Merchant Van - Station Side"
 
+/area/shuttle/space_elevator
+	icon_state = "shuttle3"
+
+/area/shuttle/space_elevator/pod1/port
+	name = "\improper Space Elevator - Pod 1 - Port"
+
+/area/shuttle/space_elevator/pod2/port
+	name = "\improper Space Elevator - Pod 2 - Port"
+
+/area/shuttle/space_elevator/pod3/port
+	name = "\improper Space Elevator - Pod 3 - Port"
+
+/area/shuttle/space_elevator/pod4/port
+	name = "\improper Space Elevator - Pod 4 - Port"
+
+/area/shuttle/space_elevator/pod5/port
+	name = "\improper Space Elevator - Pod 5 - Port"
+
+/area/shuttle/space_elevator/pod6/port
+	name = "\improper Space Elevator - Pod 6 - Port"
+
+/area/shuttle/space_elevator/pod1/station
+	name = "\improper Space Elevator - Pod 1 - Station"
+
+/area/shuttle/space_elevator/pod2/station
+	name = "\improper Space Elevator - Pod 2 - Station"
+
+/area/shuttle/space_elevator/pod3/station
+	name = "\improper Space Elevator - Pod 3 - Station"
+
+/area/shuttle/space_elevator/pod4/station
+	name = "\improper Space Elevator - Pod 4 - Station"
+
+/area/shuttle/space_elevator/pod5/station
+	name = "\improper Space Elevator - Pod 5 - Station"
+
+/area/shuttle/space_elevator/pod6/station
+	name = "\improper Space Elevator - Pod 6 - Station"
+
 /////////////
 //ELEVATORS//
 /////////////
@@ -348,7 +387,7 @@
 	icon_state = "yellow"
 	requires_power = 0
 
-// Telecommunications Satellite
+// Telecommunications/Docking Satellite
 /area/tcommsat/
 	ambience = list('sound/ambience/ambisin2.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/signal.ogg', 'sound/ambience/ambigen10.ogg')
 
@@ -378,6 +417,33 @@
 	name = "\improper Telecommunications Power Control"
 	icon_state = "tcomsatwest"
 
+/area/spaceport/dock1
+	name = "\improper Spaceport - Dock 1"
+	icon_state = "yellow"
+
+/area/spaceport/dock2
+	name = "\improper Spaceport - Dock 2"
+	icon_state = "purple"
+
+/area/spaceport/dock3
+	name = "\improper Spaceport - Dock 3"
+	icon_state = "blue-red"
+
+/area/spaceport/dock4
+	name = "\improper Spaceport - Dock 4"
+	icon_state = "green"
+
+/area/spaceport/space_elevator
+	name = "\improper Space Elevator - Spaceport"
+	icon_state = "yellow"
+
+/area/spaceport/waiting_room
+	name = "\improper Spaceport Waiting Room"
+	icon_state = "purple"
+
+/area/spaceport/main_hall
+	name = "\improper Spaceport Main Hall"
+	icon_state = "red"
 
 // Command
 
