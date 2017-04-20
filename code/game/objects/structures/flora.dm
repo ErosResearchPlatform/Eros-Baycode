@@ -16,6 +16,11 @@
 	..()
 	icon_state = "pine_[rand(1, 3)]"
 
+/obj/structure/flora/tree/live
+	name = "tree"
+	icon = 'icons/obj/flora/tree.dmi'
+	icon_state = "tree"
+
 /obj/structure/flora/tree/pine/xmas
 	name = "xmas tree"
 	icon = 'icons/obj/flora/pinetrees.dmi'
@@ -280,7 +285,7 @@
 	icon_state = "plant-12"
 
 /obj/structure/flora/pottedplant/sticky
-	name = "styicky potted plant"
+	name = "sticky potted plant"
 	desc = "This is an odd plant. Its sticky leaves trap insects."
 	icon_state = "plant-13"
 
@@ -350,3 +355,38 @@
 	desc = "This is a decorative shrub. It's been trimmed into the shape of an apple."
 	icon_state = "applebush"
 
+/obj/structure/flora/pottedplant/smallfern
+	name = "small potted fern"
+	desc = "This is an ordinary looking fern. It's a little on the small side."
+	icon_state = "plant-28"
+
+/obj/structure/flora/pottedplant/bigfern
+	name = "lush potted fern"
+	desc = "This is an ordinary looking fern. It could use a bigger pot."
+	icon_state = "plant-29"
+
+/obj/structure/flora/pottedplant/lush
+	name = "lush potted plant"
+	desc = "This is a familiar looking plant. It has lush, dense leaves."
+	icon_state = "plant-30"
+
+/obj/structure/flora/pottedplant/layered
+	name = "layered potted plant"
+	desc = "This is a familiar looking plant. Its thick leaves are spread out in layers."
+	icon_state = "plant-31"
+
+/obj/structure/flora/pottedplant/little
+	name = "little potted plant"
+	desc = "This is a familiar looking, small plant. You don't think it'll get much bigger than it is."
+	icon_state = "plant-32"
+
+/obj/structure/flora/pottedplant/dripping
+	name = "dripping potted plant"
+	desc = "This is a strange-looking plant. The single, alien flower's wide opening is dripping a heavy amount of a sweet smelling substance."
+	icon_state = "plant-33"
+
+/obj/structure/flora/pottedplant/shimmer
+	name = "shimmering potted plant"
+	desc = "This is an aquatic plant. It shimmers pleasantly as it floats on the surface of its pot of water."
+	icon_state = "plant-34"
+	set_light(l_range = 1, l_power = 0.5, l_color = "#FFFFFF")
