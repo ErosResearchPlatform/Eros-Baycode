@@ -5,7 +5,7 @@
 	#include "eros_elevators.dm"
 	#include "eros_holodecks.dm"
 	#include "eros_presets.dm"
-	//#include "eros_shuttles.dm"
+	#include "eros_shuttles.dm"
 
 	#include "eros_unit_testing.dm"
 	//#include "eros_zas_tests.dm"

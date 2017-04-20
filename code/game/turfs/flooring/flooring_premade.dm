@@ -64,6 +64,11 @@
 	icon_state = "pcarpet"
 	initial_flooring = /decl/flooring/carpet/purple
 
+/turf/simulated/floor/carpet/red
+	name = "red carpet"
+	icon_state = "rcarpet"
+	initial_flooring = /decl/flooring/carpet/red
+
 /turf/simulated/floor/carpet/brown
 	name = "brown carpet"
 	icon_state = "brcarpet"

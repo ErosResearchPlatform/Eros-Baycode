@@ -80,6 +80,12 @@ var/list/flooring_types
 	build_type = null
 	flags = TURF_HAS_EDGES | TURF_HAS_CORNERS | TURF_REMOVE_CROWBAR
 
+/decl/flooring/carpet/red
+	name = "carpet"
+	icon_base = "rcarpet"
+	build_type = null
+	flags = TURF_HAS_EDGES | TURF_HAS_CORNERS | TURF_REMOVE_CROWBAR
+
 /decl/flooring/carpet/brown
 	name = "carpet"
 	icon_base = "brcarpet"
