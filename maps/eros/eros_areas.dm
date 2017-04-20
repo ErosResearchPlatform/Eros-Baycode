@@ -516,6 +516,14 @@
 		temp_timer.releasetime = 1
 	..()
 
+/area/security/brig/solitaryA
+	name = "\improper Security - Solitary 1"
+	icon_state = "sec_prison"
+
+/area/security/brig/solitaryB
+	name = "\improper Security - Solitary 2"
+	icon_state = "sec_prison"
+
 /area/security/warden
 	name = "\improper Security - Warden's Office"
 	icon_state = "Warden"
