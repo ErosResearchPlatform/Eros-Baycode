@@ -74,6 +74,19 @@ var/list/flooring_types
 	build_type = null
 	flags = TURF_HAS_EDGES | TURF_HAS_CORNERS | TURF_REMOVE_CROWBAR | TURF_CAN_BURN
 
+/decl/flooring/carpet/purple
+	name = "carpet"
+	icon_base = "pcarpet"
+	build_type = null
+	flags = TURF_HAS_EDGES | TURF_HAS_CORNERS | TURF_REMOVE_CROWBAR
+
+/decl/flooring/carpet/brown
+	name = "carpet"
+	icon_base = "brcarpet"
+	build_type = null
+	flags = TURF_HAS_EDGES | TURF_HAS_CORNERS | TURF_REMOVE_CROWBAR
+
+
 /decl/flooring/tiling
 	name = "floor"
 	desc = "Scuffed from the passage of countless greyshirts."

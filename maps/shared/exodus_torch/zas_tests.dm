@@ -4,7 +4,7 @@
 
 /datum/unit_test/zas_area_test/cargo_bay
 	name = "ZAS: Cargo Bay"
-	area_path = /area/quartermaster/storage
+	area_path = /area/cargo/storage
 
 datum/unit_test/zas_area_test/supply_centcomm
 	name = "ZAS: Supply Shuttle (CentComm)"

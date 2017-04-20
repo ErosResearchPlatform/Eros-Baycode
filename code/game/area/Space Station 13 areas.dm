@@ -165,6 +165,9 @@ area/space/atmosalert()
 	name = "\improper Skipjack"
 	icon_state = "yellow"
 
+/area/skipjack_station/arrivals_dock
+	name = "\improper Docked with Station"
+
 /area/supply/station
 	name = "Supply Shuttle"
 	icon_state = "shuttle3"

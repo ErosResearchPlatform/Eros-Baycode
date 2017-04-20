@@ -432,17 +432,22 @@
 		fire_alert = max(fire_alert, 1)
 		if(status_flags & GODMODE)	return 1	//godmode
 
+		var/obj/item/organ/internal/heart/H = locate() in internal_organs
 		if(!istype(loc, /obj/machinery/atmospherics/unary/cryo_cell))
-			var/burn_dam = 0
 			if(bodytemperature > getSpeciesOrSynthTemp(COLD_LEVEL_1))
-				burn_dam = COLD_DAMAGE_LEVEL_1
+				//Pulse drops down to a little bit slower, add a little bit of slowdown. Shivering.
+				if(jitteriness < 100)
+					make_jittery(150)
+				H.pulse = PULSE_SLOW
 			else if(bodytemperature > getSpeciesOrSynthTemp(COLD_LEVEL_3))
-				burn_dam = COLD_DAMAGE_LEVEL_2
+				//Pulse drops more, slowdown gets worse. Shivering stops, start adding oxyloss to simulate lack of O2 to brain
+				adjustOxyLoss(8)
+				H.pulse = PULSE_2SLOW
 			else
-				burn_dam = COLD_DAMAGE_LEVEL_3
-			take_overall_damage(burn=burn_dam, used_weapon = "Low Body Temperature")
+				//Unconscious. Pulse drops to negligible, oxyloss ramps up
+				adjustOxyLoss(16)
+				H.pulse = PULSE_NONE
 			fire_alert = max(fire_alert, 1)
-
 	// Account for massive pressure differences.  Done by Polymorph
 	// Made it possible to actually have something that can protect against high pressure... Done by Errorage. Polymorph now has an axe sticking from his head for his previous hardcoded nonsense!
 	if(status_flags & GODMODE)	return 1	//godmode

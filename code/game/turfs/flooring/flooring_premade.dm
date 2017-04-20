@@ -59,6 +59,16 @@
 	icon_state = "bcarpet"
 	initial_flooring = /decl/flooring/carpet/blue
 
+/turf/simulated/floor/carpet/purple
+	name = "purple carpet"
+	icon_state = "pcarpet"
+	initial_flooring = /decl/flooring/carpet/purple
+
+/turf/simulated/floor/carpet/brown
+	name = "brown carpet"
+	icon_state = "brcarpet"
+	initial_flooring = /decl/flooring/carpet/brown
+
 /turf/simulated/floor/tiled
 	name = "steel floor"
 	icon = 'icons/turf/flooring/tiles.dmi'
@@ -187,6 +197,11 @@
 /turf/simulated/floor/snow
 /turf/simulated/floor/beach/coastline
 /turf/simulated/floor/plating/snow
+	name = "plating"
+	icon = 'icons/eros/turf/snow.dmi'
+	icon_state = "snowyplating"
+
+
 /turf/simulated/floor/airless/ceiling
 
 /turf/simulated/floor/beach
@@ -218,3 +233,12 @@
 /turf/simulated/floor/beach/water/New()
 	..()
 	overlays += image("icon"='icons/misc/beach.dmi',"icon_state"="water5","layer"=MOB_LAYER+0.1)
+
+/turf/simulated/floor/sand
+    name = "gravel"
+    icon = 'icons/turf/flooring/asteroid.dmi'
+    icon_state = "asteroid"
+    base_name = "sand"
+    base_desc = "Gritty and unpleasant."
+    base_icon = 'icons/turf/flooring/asteroid.dmi'
+    base_icon_state = "asteroid"

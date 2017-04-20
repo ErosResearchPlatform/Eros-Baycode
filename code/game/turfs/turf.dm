@@ -29,6 +29,8 @@
 
 	var/list/decals
 
+	var/movement_cost = 0
+
 /turf/New()
 	..()
 	for(var/atom/movable/AM as mob|obj in src)
@@ -41,6 +43,9 @@
 		luminosity = 0
 	else
 		luminosity = 1
+
+	if(movement_cost && pathweight == 1) // This updates pathweight automatically.
+		pathweight = movement_cost
 
 /turf/proc/initialize()
 	return

@@ -31,6 +31,7 @@
 	var/old_dynamic_lighting = dynamic_lighting
 	var/list/old_affecting_lights = affecting_lights
 	var/old_lighting_overlay = lighting_overlay
+	var/old_weather_overlay = weather_overlay
 
 //	log_debug("Replacing [src.type] with [N]")
 
@@ -51,10 +52,15 @@
 	if(ispath(N, /turf/simulated))
 		if(old_fire)
 			fire = old_fire
+		if(old_weather_overlay)
+			W.weather_overlay = old_weather_overlay
 		if (istype(W,/turf/simulated/floor))
 			W.RemoveLattice()
 	else if(old_fire)
 		old_fire.RemoveFire()
+
+	if(old_weather_overlay)
+		W.weather_overlay = old_weather_overlay
 
 	if(tell_universe)
 		universe.OnTurfChange(W)

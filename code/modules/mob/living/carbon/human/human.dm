@@ -1418,6 +1418,8 @@
 	switch(pulse())
 		if(PULSE_NONE)
 			return "0"
+		if(PULSE_2SLOW)
+			temp = rand(0, 40)
 		if(PULSE_SLOW)
 			temp = rand(40, 60)
 		if(PULSE_NORM)
