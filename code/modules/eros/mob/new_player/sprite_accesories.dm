@@ -150,8 +150,20 @@
 		name = "Feline Dick"
 		icon_state = "feline"
 
+	dik_knotbs
+		name = "Knotted, Feline Small Dick"
+		icon_state = "barbknot_small"
+
+	dik_knotb
+		name = "Knotted, Feline Dick"
+		icon_state = "barbknot"
+
+	dik_knotbl
+		name = "Knotted, Feline Large Dick"
+		icon_state = "barbknot_large"
+
 	dik_hemi
-		name = "Hemipenes / Claspers"
+		name = "Hemipenes"
 		icon_state = "hemi"
 
 	dik_normal_slime
