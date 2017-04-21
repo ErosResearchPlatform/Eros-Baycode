@@ -251,3 +251,7 @@ area/space/atmosalert()
 					sound_to(H, S)
 
 	spawn(60) .()
+
+/area/cabin
+	name = "Secluded cabin"
+	icon_state = "cabin"
