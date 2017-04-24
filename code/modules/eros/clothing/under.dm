@@ -2,9 +2,17 @@
 
 /obj/item/clothing/under/eros
 	sprite_sheets = list(
-		"Human" = 'icons/mob/uniform_eros.dmi'
+		"Human" = 'icons/mob/uniform_eros.dmi',
+		"Machine" = 'icons/mob/uniform_eros.dmi',
+		"Drider" = 'icons/mob/uniform_eros.dmi',
+		"Lamia" = 'icons/mob/uniform_eros.dmi',
+		"Unathi" = 'icons/mob/uniform_eros.dmi',
+		"Tajara" = 'icons/mob/uniform_eros.dmi',
+		"Skrell" = 'icons/mob/uniform_eros.dmi',
+		"Resomi" = 'icons/mob/species/resomi/uniform.dmi',
+		"Akula" = 'icons/mob/uniform_eros.dmi',
+		"Vox" = 'icons/mob/species/vox/uniform.dmi',
 		)
-
 /obj/item/clothing/under/eros/bunny_suit
 	name = "Bunny suit"
 	desc = "Makes the wearer more attractive, even men."
