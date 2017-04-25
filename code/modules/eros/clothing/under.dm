@@ -578,3 +578,33 @@
 	worn_state = "hosf"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
 	show_genitals = 1
+
+
+
+
+/obj/item/clothing/under/eros/burial
+	desc = "Traditional burial garments from the early 22nd century. Often used in human space burial ceremonies."
+	name = "burial garments"
+	icon_state = "burial"
+	item_state = "burial"
+	worn_state = "burial"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS|LEGS
+	show_genitals = 0
+
+/obj/item/clothing/under/eros/sailor
+	desc = "The cliche costume of a sailor."
+	name = "sailor's outfit"
+	icon_state = "sailor"
+	item_state = "sailor"
+	worn_state = "sailor"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS
+
+/obj/item/clothing/under/eros/clownpiece
+	desc = "A set of leggings and shirt with a pattern similar to the American flag, featuring a frilled collar."
+	name = "Clownpiece's Pierrot suit"
+	icon_state = "clownpiece"
+	item_state = "clownpiece"
+	worn_state = "clownpiece"
+	body_parts_covered = UPPER_TORSO|ARMS|LOWER_TORSO|LEGS
+
+

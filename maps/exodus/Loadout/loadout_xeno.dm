@@ -139,3 +139,25 @@
 	path = /obj/item/clothing/shoes/footwraps
 	sort_category = "Xenowear"
 	cost = 1
+
+/datum/gear/uniform/vox/vox_casual
+	display_name = "alien clothing (Vox, Vox Pariah)"
+	path = /obj/item/clothing/under/vox/vox_casual
+	sort_category = "Xenowear"
+	whitelisted = list("Vox","Vox Pariah")
+	cost = 1
+
+/datum/gear/uniform/vox/vox_robes
+	display_name = "alien robes (Vox, Vox Pariah)"
+	path = /obj/item/clothing/under/vox/vox_robes
+	sort_category = "Xenowear"
+	whitelisted = list("Vox","Vox Pariah")
+	cost = 1
+
+/datum/gear/mask/vox/mask
+	display_name = "vox breathing mask (Vox, Vox Pariah)"
+	path = /obj/item/clothing/mask/gas/vox
+	sort_category = "Xenowear"
+	whitelisted = list("Vox","Vox Pariah")
+	cost = 3
+
