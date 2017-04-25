@@ -1,6 +1,6 @@
 /mob/living/bot/medbot
 	name = "Medbot"
-	desc = "A little medical robot. He looks somewhat underwhelmed."
+	desc = "A fairly crude medical robot. Now comes with a speaker system and advanced diagnostics!"
 	icon_state = "medibot0"
 	req_one_access = list(access_medical, access_robotics)
 	botcard_access = list(access_medical, access_morgue, access_surgery, access_chemistry, access_virology, access_genetics)
@@ -14,7 +14,7 @@
 	//Healing vars
 	var/obj/item/weapon/reagent_containers/glass/reagent_glass = null //Can be set to draw from this for reagents.
 	var/injection_amount = 15 //How much reagent do we inject at a time?
-	var/heal_threshold = 10 //Start healing when they have this much damage in a category
+	var/heal_threshold = 5 //Start healing when they have this much damage in a category
 	var/use_beaker = 0 //Use reagents in beaker instead of default treatment agents.
 	var/treatment_brute = "tricordrazine"
 	var/treatment_oxy = "tricordrazine"
@@ -23,6 +23,7 @@
 	var/treatment_virus = "spaceacillin"
 	var/treatment_emag = "toxin"
 	var/declare_treatment = 0 //When attempting to treat a patient, should it notify everyone wearing medhuds?
+
 
 /mob/living/bot/medbot/handleIdle()
 	if(vocal && prob(1))
@@ -37,8 +38,7 @@
 		if(confirmTarget(H))
 			target = H
 			if(last_newpatient_speak + 300 < world.time)
-				var/message = pick("Hey, [H.name]! Hold on, I'm coming.", "Wait [H.name]! I want to help!", "[H.name], you appear to be injured!")
-				say(message)
+				playsound(src.loc, 'sound/medbot/Administering_medical.ogg', 35)
 				custom_emote(1, "points at [H.name].")
 				last_newpatient_speak = world.time
 			break
@@ -57,20 +57,20 @@
 		return
 
 	if(H.stat == DEAD)
-		var/death_message = pick("No! NO!", "Live, damnit! LIVE!", "I... I've never lost a patient before. Not today, I mean.")
-		say(death_message)
+		playsound(src.loc, 'sound/medbot/Flatline_custom.ogg', 35)
+		custom_emote(1, "points at [H.name].")
 		target = null
 		return
 
 	var/t = confirmTarget(H)
 	if(!t)
-		var/message = pick("All patched up!", "An apple a day keeps me away.", "Feel better soon!")
-		say(message)
+		playsound(src.loc, 'sound/medbot/Medical_repaired.ogg', 35)
+		custom_emote(1, "points at [H.name].")
 		target = null
 		return
 
 	icon_state = "medibots"
-	visible_message("<span class='warning'>[src] is trying to inject [H]!</span>")
+	visible_message("<span class='warning'>[src] is attempting to diagnose and treat [H]!</span>")
 	if(declare_treatment)
 		var/area/location = get_area(src)
 		broadcast_medical_hud_message("[src] is treating <b>[H]</b> in <b>[location]</b>", src)
@@ -84,6 +84,37 @@
 		visible_message("<span class='warning'>[src] injects [H] with the syringe!</span>")
 	busy = 0
 	update_icons()
+
+
+	//Voice callouts - Should be happening after the actual treatments.
+
+	var/combined_damage = H.getBruteLoss() + H.getFireLoss() + H.getToxLoss() + H.getOxyLoss()
+
+	if(combined_damage > 85)
+		playsound(src.loc, 'sound/medbot/Near_death.ogg', 35)
+		sleep(45)
+
+	if((H.getBruteLoss() <= 50) && (H.getBruteLoss() == !0))
+		playsound(src.loc, 'sound/medbot/Minor_lacerations.ogg', 35)
+		sleep(35)
+
+	if(H.getBruteLoss() > 50)
+		playsound(src.loc, 'sound/medbot/Major_lacerations.ogg', 35)
+		sleep(35)
+
+	if(H.getToxLoss() > 0)
+		playsound(src.loc, 'sound/medbot/Blood_toxins.ogg', 35)
+		sleep(45)
+		playsound(src.loc, 'sound/medbot/Antitoxin_shot.ogg', 35)
+		sleep(25)
+
+	if(H.getFireLoss() > 0)
+		playsound(src.loc, 'sound/medbot/Heat_damage.ogg', 35)
+		sleep(45)
+
+	if(H.getOxyLoss() > 25)
+		playsound(src.loc, 'sound/medbot/Blood_loss.ogg', 35)
+		sleep(25)
 
 /mob/living/bot/medbot/update_icons()
 	overlays.Cut()
@@ -113,7 +144,7 @@
 
 /mob/living/bot/medbot/GetInteractTitle()
 	. = "<head><title>Medibot v1.0 controls</title></head>"
-	. += "<b>Automatic Medical Unit v1.0</b>"
+	. += "<b>Automatic Medical Unit v1.5</b>"
 
 /mob/living/bot/medbot/GetInteractStatus()
 	. = ..()
@@ -192,6 +223,7 @@
 			to_chat(user, "<span class='warning'>You short out [src]'s reagent synthesis circuits.</span>")
 			ignore_list |= user
 		visible_message("<span class='warning'>[src] buzzes oddly!</span>")
+		playsound(src.loc, 'sound/medbot/Chemical_detected.ogg', 35)
 		flick("medibot_spark", src)
 		target = null
 		busy = 0
@@ -204,7 +236,7 @@
 	on = 0
 	visible_message("<span class='danger'>[src] blows apart!</span>")
 	var/turf/Tsec = get_turf(src)
-
+	playsound(src.loc, 'sound/medbot/Flatline_custom.ogg', 35)
 	new /obj/item/weapon/storage/firstaid(Tsec)
 	new /obj/item/device/assembly/prox_sensor(Tsec)
 	new /obj/item/device/healthanalyzer(Tsec)
@@ -238,8 +270,8 @@
 				return 1
 			continue
 
-	if((H.getBruteLoss() >= heal_threshold) && (!H.reagents.has_reagent(treatment_brute)))
-		return treatment_brute //If they're already medicated don't bother!
+	if((H.getBruteLoss() >= heal_threshold) && (!H.reagents.has_reagent(treatment_brute)))	//If they're already medicated don't bother!
+		return treatment_brute
 
 	if((H.getOxyLoss() >= (15 + heal_threshold)) && (!H.reagents.has_reagent(treatment_oxy)))
 		return treatment_oxy
@@ -308,6 +340,7 @@
 					qdel(W)
 					build_step++
 					to_chat(user, "<span class='notice'>You add the health sensor to [src].</span>")
+					playsound(src.loc, 'sound/medbot/Vitalsigns_on.ogg', 35)
 					name = "First aid/robot arm/health analyzer assembly"
 					overlays += image('icons/obj/aibots.dmi', "na_scanner")
 
@@ -316,6 +349,7 @@
 					user.drop_item()
 					qdel(W)
 					to_chat(user, "<span class='notice'>You complete the Medibot! Beep boop.</span>")
+					playsound(src.loc, 'sound/medbot/Automedic_on.ogg', 35)
 					var/turf/T = get_turf(src)
 					var/mob/living/bot/medbot/S = new /mob/living/bot/medbot(T)
 					S.skin = skin
