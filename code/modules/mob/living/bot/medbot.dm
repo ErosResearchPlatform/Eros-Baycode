@@ -85,8 +85,7 @@
 	busy = 0
 	update_icons()
 
-
-	//Voice callouts - Should be happening after the actual treatments.
+	//Voice callouts - Should be happening after the actual treatments. Still part of the "UnarmedAttack" proc to ensure it only plays once.
 
 	var/combined_damage = H.getBruteLoss() + H.getFireLoss() + H.getToxLoss() + H.getOxyLoss()
 
@@ -94,7 +93,7 @@
 		playsound(src.loc, 'sound/medbot/Near_death.ogg', 35)
 		sleep(45)
 
-	if((H.getBruteLoss() <= 50) && (H.getBruteLoss() == !0))
+	if((H.getBruteLoss() <= 50) && (H.getBruteLoss() > 0))
 		playsound(src.loc, 'sound/medbot/Minor_lacerations.ogg', 35)
 		sleep(35)
 
@@ -112,7 +111,7 @@
 		playsound(src.loc, 'sound/medbot/Heat_damage.ogg', 35)
 		sleep(45)
 
-	if(H.getOxyLoss() > 25)
+	if(H.getOxyLoss() > 10)
 		playsound(src.loc, 'sound/medbot/Blood_loss.ogg', 35)
 		sleep(25)
 
