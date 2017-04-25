@@ -53,6 +53,11 @@
 	antag_costs = list(MODE_MERCENARY = 6)
 	path = /obj/item/weapon/gun/projectile/automatic/c20r
 
+/datum/uplink_item/item/visible_weapons/radray
+	name = "RadRay"
+	item_cost = 32
+	path = /obj/item/weapon/gun/energy/radgun
+
 /datum/uplink_item/item/visible_weapons/assaultrifle
 	name = "Assault Rifle"
 	item_cost = 60
