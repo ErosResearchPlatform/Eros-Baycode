@@ -173,7 +173,7 @@
 	id_type = /obj/item/weapon/card/id/syndicate
 	id_pda_assignment = "Legitimate Merchant"
 
-/decl/hierarchy/outfit/eros_hap_sniper
+/decl/hierarchy/outfit/eros_vox_pressure
 	name = "Vox Gear - Pressure (VOX ONLY)"
 	uniform =/obj/item/clothing/under/vox/vox_casual
 	l_ear = /obj/item/device/radio/headset/raider
@@ -196,7 +196,7 @@
 	id_pda_assignment = "Legitimate Merchant"
 
 
-/decl/hierarchy/outfit/eros_hap_sniper
+/decl/hierarchy/outfit/eros_vox_stealth
 	name = "Vox Gear - Stealth (VOX ONLY)"
 	uniform =/obj/item/clothing/under/vox/vox_casual
 	l_ear = /obj/item/device/radio/headset/raider
@@ -216,7 +216,7 @@
 	id_type = /obj/item/weapon/card/id/syndicate
 	id_pda_assignment = "Legitimate Merchant"
 
-/decl/hierarchy/outfit/eros_hap_sniper
+/decl/hierarchy/outfit/eros_vox_medic
 	name = "Vox Gear - Medic (VOX ONLY)"
 	uniform =/obj/item/clothing/under/vox/vox_robes
 	l_ear = /obj/item/device/radio/headset/raider
