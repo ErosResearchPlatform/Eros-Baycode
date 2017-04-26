@@ -25,11 +25,6 @@
 	var/declare_treatment = 0 //When attempting to treat a patient, should it notify everyone wearing medhuds?
 
 
-///mob/living/bot/medbot/handleIdle()
-	//if(vocal && prob(1))
-		//var/message = pick("Radar, put a mask on!", "There's always a catch, and it's the best there is.", "I knew it, I should've been a plastic surgeon.", "What kind of medbay is this? Everyone's dropping like dead flies.", "Delicious!")
-		//say(message)
-
 /mob/living/bot/medbot/handleAdjacentTarget()
 	UnarmedAttack(target)
 
@@ -40,6 +35,7 @@
 			if(last_newpatient_speak + 300 < world.time)
 				if(vocal)
 					playsound(src.loc, 'sound/medbot/Administering_medical.ogg', 35)
+
 				custom_emote(1, "points at [H.name].")
 				last_newpatient_speak = world.time
 			break
@@ -82,7 +78,11 @@
 			reagent_glass.reagents.trans_to_mob(H, injection_amount, CHEM_BLOOD)
 		else
 			H.reagents.add_reagent(t, injection_amount)
-		visible_message("<span class='warning'>[src] injects [H] with the syringe!</span>")
+			if(vocal == 1)
+				visible_message("<span class='warning'>[src] injects [H] and gives a diagnosis!</span>")
+			else
+				visible_message("<span class='warning'>[src] injects [H] with it's syringe! </span>")
+
 	busy = 0
 	update_icons()
 
@@ -90,27 +90,34 @@
 
 	var/combined_damage = H.getBruteLoss() + H.getFireLoss() + H.getToxLoss() + H.getOxyLoss()
 
-	world << "Vocal is [vocal]"
 	if(vocal == 1)
 		if(combined_damage > 85)
 			playsound(src.loc, 'sound/medbot/Near_death.ogg', 35)
+			custom_emote(1, "points at [H.name].")
+			say("EMERGENCY! USER DEATH IMMINENT!")
 			sleep(45)
 		if((H.getBruteLoss() <= 50) && (H.getBruteLoss() > 0))
 			playsound(src.loc, 'sound/medbot/Minor_lacerations.ogg', 35)
+			say("Minor lacerations detected!")
 			sleep(35)
 		if(H.getBruteLoss() > 50)
 			playsound(src.loc, 'sound/medbot/Major_lacerations.ogg', 35)
+			say("Major lacerations detected!")
 			sleep(35)
 		if(H.getToxLoss() > 0)
 			playsound(src.loc, 'sound/medbot/Blood_toxins.ogg', 35)
+			say("Warning! Blood toxin levels detected!")
 			sleep(45)
 			playsound(src.loc, 'sound/medbot/Antitoxin_shot.ogg', 35)
+			say("Antitoxin administed!")
 			sleep(25)
 		if(H.getFireLoss() > 0)
 			playsound(src.loc, 'sound/medbot/Heat_damage.ogg', 35)
+			say("Warning! Extreme heat damage detected!")
 			sleep(45)
 		if(H.getOxyLoss() > 10)
 			playsound(src.loc, 'sound/medbot/Blood_loss.ogg', 35)
+			say("Blood loss detected!")
 			sleep(25)
 		return
 
@@ -222,6 +229,7 @@
 			ignore_list |= user
 		visible_message("<span class='warning'>[src] buzzes oddly!</span>")
 		playsound(src.loc, 'sound/medbot/Chemical_detected.ogg', 35)
+		say("Warning! Hazardous chemical detected!")
 		flick("medibot_spark", src)
 		target = null
 		busy = 0
