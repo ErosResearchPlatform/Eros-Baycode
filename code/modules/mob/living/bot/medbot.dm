@@ -25,10 +25,10 @@
 	var/declare_treatment = 0 //When attempting to treat a patient, should it notify everyone wearing medhuds?
 
 
-/mob/living/bot/medbot/handleIdle()
-	if(vocal && prob(1))
-		var/message = pick("Radar, put a mask on!", "There's always a catch, and it's the best there is.", "I knew it, I should've been a plastic surgeon.", "What kind of medbay is this? Everyone's dropping like dead flies.", "Delicious!")
-		say(message)
+///mob/living/bot/medbot/handleIdle()
+	//if(vocal && prob(1))
+		//var/message = pick("Radar, put a mask on!", "There's always a catch, and it's the best there is.", "I knew it, I should've been a plastic surgeon.", "What kind of medbay is this? Everyone's dropping like dead flies.", "Delicious!")
+		//say(message)
 
 /mob/living/bot/medbot/handleAdjacentTarget()
 	UnarmedAttack(target)
@@ -38,7 +38,8 @@
 		if(confirmTarget(H))
 			target = H
 			if(last_newpatient_speak + 300 < world.time)
-				playsound(src.loc, 'sound/medbot/Administering_medical.ogg', 35)
+				if(vocal)
+					playsound(src.loc, 'sound/medbot/Administering_medical.ogg', 35)
 				custom_emote(1, "points at [H.name].")
 				last_newpatient_speak = world.time
 			break
@@ -89,31 +90,29 @@
 
 	var/combined_damage = H.getBruteLoss() + H.getFireLoss() + H.getToxLoss() + H.getOxyLoss()
 
-	if(combined_damage > 85)
-		playsound(src.loc, 'sound/medbot/Near_death.ogg', 35)
-		sleep(45)
-
-	if((H.getBruteLoss() <= 50) && (H.getBruteLoss() > 0))
-		playsound(src.loc, 'sound/medbot/Minor_lacerations.ogg', 35)
-		sleep(35)
-
-	if(H.getBruteLoss() > 50)
-		playsound(src.loc, 'sound/medbot/Major_lacerations.ogg', 35)
-		sleep(35)
-
-	if(H.getToxLoss() > 0)
-		playsound(src.loc, 'sound/medbot/Blood_toxins.ogg', 35)
-		sleep(45)
-		playsound(src.loc, 'sound/medbot/Antitoxin_shot.ogg', 35)
-		sleep(25)
-
-	if(H.getFireLoss() > 0)
-		playsound(src.loc, 'sound/medbot/Heat_damage.ogg', 35)
-		sleep(45)
-
-	if(H.getOxyLoss() > 10)
-		playsound(src.loc, 'sound/medbot/Blood_loss.ogg', 35)
-		sleep(25)
+	world << "Vocal is [vocal]"
+	if(vocal == 1)
+		if(combined_damage > 85)
+			playsound(src.loc, 'sound/medbot/Near_death.ogg', 35)
+			sleep(45)
+		if((H.getBruteLoss() <= 50) && (H.getBruteLoss() > 0))
+			playsound(src.loc, 'sound/medbot/Minor_lacerations.ogg', 35)
+			sleep(35)
+		if(H.getBruteLoss() > 50)
+			playsound(src.loc, 'sound/medbot/Major_lacerations.ogg', 35)
+			sleep(35)
+		if(H.getToxLoss() > 0)
+			playsound(src.loc, 'sound/medbot/Blood_toxins.ogg', 35)
+			sleep(45)
+			playsound(src.loc, 'sound/medbot/Antitoxin_shot.ogg', 35)
+			sleep(25)
+		if(H.getFireLoss() > 0)
+			playsound(src.loc, 'sound/medbot/Heat_damage.ogg', 35)
+			sleep(45)
+		if(H.getOxyLoss() > 10)
+			playsound(src.loc, 'sound/medbot/Blood_loss.ogg', 35)
+			sleep(25)
+		return
 
 /mob/living/bot/medbot/update_icons()
 	overlays.Cut()
