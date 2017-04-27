@@ -21,7 +21,7 @@
 	var/treatment_fire = "tricordrazine"
 	var/treatment_tox = "tricordrazine"
 	var/treatment_virus = "spaceacillin"
-	var/treatment_emag = "toxin"
+	var/treatment_emag = "amatoxin"
 	var/declare_treatment = 0 //When attempting to treat a patient, should it notify everyone wearing medhuds?
 
 
@@ -231,9 +231,11 @@
 		playsound(src.loc, 'sound/medbot/Chemical_detected.ogg', 35)
 		say("Warning! Hazardous chemical detected!")
 		flick("medibot_spark", src)
+		vocal = 0
 		target = null
 		busy = 0
 		emagged = 1
+		injection_amount = 10 //Since it injects something actually dangerous now, it seems wise to tone the dosage down a hair. A jab will fuck you up but won't outright kill you.
 		on = 1
 		update_icons()
 		. = 1
@@ -266,8 +268,10 @@
 	if(H.stat == DEAD) // He's dead, Jim
 		return 0
 
-	if(emagged)
+	if((emagged) && (!H.reagents.has_reagent(treatment_emag)))
 		return treatment_emag
+	if(emagged)
+		return
 
 	// If they're injured, we're using a beaker, and they don't have on of the chems in the beaker
 	if(reagent_glass && use_beaker && ((H.getBruteLoss() >= heal_threshold) || (H.getToxLoss() >= heal_threshold) || (H.getToxLoss() >= heal_threshold) || (H.getOxyLoss() >= (heal_threshold + 15))))
