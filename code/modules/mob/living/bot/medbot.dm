@@ -35,6 +35,8 @@
 			if(last_newpatient_speak + 300 < world.time)
 				if(vocal)
 					playsound(src.loc, 'sound/medbot/Administering_medical.ogg', 35)
+					say("Administering medical attention!")
+
 
 				custom_emote(1, "points at [H.name].")
 				last_newpatient_speak = world.time
@@ -101,6 +103,9 @@
 			say("Minor lacerations detected!")
 			sleep(35)
 		if(H.getBruteLoss() > 50)
+			playsound(src.loc, 'sound/medbot/Danger.ogg', 35)
+			say("Danger!")
+			sleep(10)
 			playsound(src.loc, 'sound/medbot/Major_lacerations.ogg', 35)
 			say("Major lacerations detected!")
 			sleep(35)
@@ -109,7 +114,7 @@
 			say("Warning! Blood toxin levels detected!")
 			sleep(45)
 			playsound(src.loc, 'sound/medbot/Antitoxin_shot.ogg', 35)
-			say("Antitoxin administed!")
+			say("Antitoxin administered!")
 			sleep(25)
 		if(H.getFireLoss() > 0)
 			playsound(src.loc, 'sound/medbot/Heat_damage.ogg', 35)
