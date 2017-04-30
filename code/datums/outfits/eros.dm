@@ -158,12 +158,10 @@
 	name = "Vox Gear - Carapace (VOX ONLY)"
 	uniform =/obj/item/clothing/under/vox/vox_casual
 	l_ear = /obj/item/device/radio/headset/raider
-	glasses = /obj/item/clothing/glasses/thermal/plain/monocle
-	mask = /obj/item/clothing/mask/gas/swat/vox
 	suit = /obj/item/clothing/suit/space/vox/carapace
 	head = /obj/item/clothing/head/helmet/space/vox/carapace
 	back = /obj/item/weapon/storage/backpack/satchel_black
-	backpack_contents = list(/obj/item/weapon/storage/box/vox = 1)
+	backpack_contents = list(/obj/item/clothing/mask/gas/swat/vox = 1)
 	shoes = /obj/item/clothing/shoes/magboots/vox
 	gloves = /obj/item/clothing/gloves/vox
 	suit_store = /obj/item/weapon/tank/nitrogen
@@ -173,39 +171,35 @@
 	id_type = /obj/item/weapon/card/id/syndicate
 	id_pda_assignment = "Legitimate Merchant"
 
+	flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL
+
 /decl/hierarchy/outfit/eros_vox_pressure
 	name = "Vox Gear - Pressure (VOX ONLY)"
 	uniform =/obj/item/clothing/under/vox/vox_casual
-	l_ear = /obj/item/device/radio/headset/raider
-	glasses = /obj/item/clothing/glasses/thermal/plain/monocle
-	mask = /obj/item/clothing/mask/gas/swat/vox
 	suit = /obj/item/clothing/suit/space/vox/pressure
+	l_ear = /obj/item/device/radio/headset/raider
 	head = /obj/item/clothing/head/helmet/space/vox/pressure
 	back = /obj/item/weapon/storage/backpack/satchel
-	backpack_contents = list(/obj/item/weapon/storage/box/vox = 1, /obj/item/weapon/spike = 5)
+	backpack_contents = list(/obj/item/weapon/storage/box/vox = 1)
 	shoes = /obj/item/clothing/shoes/magboots/vox
 	gloves = /obj/item/clothing/gloves/vox
 	suit_store = /obj/item/weapon/tank/nitrogen
 	r_hand = /obj/item/weapon/gun/launcher/alien/spikethrower
 
-	l_pocket = /obj/item/weapon/spike
-	r_pocket = /obj/item/weapon/spike
-
 	id_slot = slot_wear_id
 	id_type = /obj/item/weapon/card/id/syndicate
 	id_pda_assignment = "Legitimate Merchant"
 
+	flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL
 
 /decl/hierarchy/outfit/eros_vox_stealth
 	name = "Vox Gear - Stealth (VOX ONLY)"
 	uniform =/obj/item/clothing/under/vox/vox_casual
 	l_ear = /obj/item/device/radio/headset/raider
-	glasses = /obj/item/clothing/glasses/thermal/plain/monocle
-	mask = /obj/item/clothing/mask/gas/swat/vox
 	suit = /obj/item/clothing/suit/space/vox/stealth
 	head = /obj/item/clothing/head/helmet/space/vox/stealth
 	back = /obj/item/weapon/storage/backpack/satchel_black
-	backpack_contents = list(/obj/item/weapon/storage/box/vox = 1, /obj/item/weapon/gun/projectile/dartgun/vox/raider  = 1)
+	backpack_contents = list(/obj/item/clothing/mask/gas/swat/vox = 1, /obj/item/weapon/gun/projectile/dartgun/vox/raider  = 1)
 	shoes = /obj/item/clothing/shoes/magboots/vox
 	gloves = /obj/item/clothing/gloves/vox
 	suit_store = /obj/item/weapon/tank/nitrogen
@@ -216,16 +210,16 @@
 	id_type = /obj/item/weapon/card/id/syndicate
 	id_pda_assignment = "Legitimate Merchant"
 
+	flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL
+
 /decl/hierarchy/outfit/eros_vox_medic
 	name = "Vox Gear - Medic (VOX ONLY)"
 	uniform =/obj/item/clothing/under/vox/vox_robes
 	l_ear = /obj/item/device/radio/headset/raider
-	glasses = /obj/item/clothing/glasses/thermal/plain/monocle
-	mask = /obj/item/clothing/mask/gas/swat/vox
 	suit = /obj/item/clothing/suit/space/vox/medic
 	head = /obj/item/clothing/head/helmet/space/vox/medic
 	back = /obj/item/weapon/storage/backpack/messenger
-	backpack_contents = list(/obj/item/weapon/storage/box/vox = 1, /obj/item/weapon/gun/projectile/dartgun/vox/medical = 1, /obj/item/weapon/storage/firstaid/adv = 1)
+	backpack_contents = list(/obj/item/weapon/gun/projectile/dartgun/vox/medical = 1, /obj/item/weapon/storage/firstaid/adv = 1)
 	shoes = /obj/item/clothing/shoes/magboots/vox
 	gloves = /obj/item/clothing/gloves/vox
 	suit_store = /obj/item/weapon/tank/nitrogen
@@ -237,3 +231,4 @@
 	id_type = /obj/item/weapon/card/id/syndicate
 	id_pda_assignment = "Legitimate Merchant"
 
+	flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL
