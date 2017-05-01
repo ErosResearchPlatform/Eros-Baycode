@@ -219,6 +219,6 @@
 
 /obj/item/weapon/storage/pill_bottle/soma
 	name = "bottle of Soma pills"
-	desc = "Aphrodisiacs, with some nasty side effects if taken in high enough doses. Is this stuff even legal?"
+	desc = "An illegal psychoactive, known to lower inhibitions."
 
 	startswith = list(/obj/item/weapon/reagent_containers/pill/soma = 7)
