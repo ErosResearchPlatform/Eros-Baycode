@@ -18,7 +18,7 @@ var/const/NETWORK_TELECOM             = "Tcomsat"
  		if(NETWORK_ENGINE || NETWORK_ENGINEERING_OUTPOST)
  			return access_engine
 
-/datum/map/exodus
+/datum/map/eros
 	station_networks = list(
 		NETWORK_CIVILIAN_EAST,
 		NETWORK_CIVILIAN_WEST,
