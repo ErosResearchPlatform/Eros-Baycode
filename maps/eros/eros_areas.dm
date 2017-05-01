@@ -382,6 +382,9 @@
 	icon_state = "shuttle"
 	base_turf = /turf/space/transit/north
 
+/area/skipjack_station/arrivals_dock
+	name = "\improper Docked with Station"
+
 /area/alien
 	name = "\improper Alien base"
 	icon_state = "yellow"
@@ -1220,3 +1223,7 @@ area/rnd/test_area
 /area/mine/unexplored
 	name = "Mine"
 	icon_state = "unexplored"
+
+/area/cabin
+	name = "Secluded cabin"
+	icon_state = "cabin"
