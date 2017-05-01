@@ -4,10 +4,11 @@ var/const/NETWORK_MAINTENANCE         = "Maintenance Deck"
 var/const/NETWORK_PRISON              = "Prison"
 var/const/NETWORK_RESEARCH_OUTPOST    = "Research Outpost"
 var/const/NETWORK_TELECOM             = "Tcomsat"
+var/const/NETWORK_SUPPLY			  = "Supply"
 
 /datum/map/eros/get_network_access(var/network)
 	switch(network)
-		if(NETWORK_CIVILIAN_WEST)
+		if(NETWORK_SUPPLY)
 			return access_mailsorting
 		if(NETWORK_RESEARCH_OUTPOST)
 			return access_research
@@ -26,7 +27,7 @@ var/const/NETWORK_TELECOM             = "Tcomsat"
 		NETWORK_ENGINE,
 		NETWORK_ENGINEERING,
 		NETWORK_ENGINEERING_OUTPOST,
-		NETWORK_EXODUS,
+		NETWORK_EROS,
 		NETWORK_MAINTENANCE,
 		NETWORK_MEDICAL,
 		NETWORK_MINE,
@@ -41,7 +42,8 @@ var/const/NETWORK_TELECOM             = "Tcomsat"
 		NETWORK_ALARM_MOTION,
 		NETWORK_ALARM_POWER,
 		NETWORK_THUNDER,
-		NETWORK_TELECOM
+		NETWORK_TELECOM,
+		NETWORK_SUPPLY
 	)
 
 //
@@ -55,11 +57,14 @@ var/const/NETWORK_TELECOM             = "Tcomsat"
 /obj/machinery/camera/network/civilian_west
 	network = list(NETWORK_CIVILIAN_WEST)
 
+/obj/machinery/camera/network/cargo
+	network = list(NETWORK_SUPPLY)
+
 /obj/machinery/camera/network/command
 	network = list(NETWORK_COMMAND)
 
-/obj/machinery/camera/network/exodus
-	network = list(NETWORK_EXODUS)
+/obj/machinery/camera/network/eros
+	network = list(NETWORK_EROS)
 
 /obj/machinery/camera/network/maintenance
 	network = list(NETWORK_MAINTENANCE)
