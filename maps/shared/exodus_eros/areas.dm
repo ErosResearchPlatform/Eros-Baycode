@@ -130,13 +130,6 @@
 	icon_state = "shuttle"
 	base_turf = /turf/space/transit/east
 
-/area/shuttle/escape_pod4/station
-	icon_state = "shuttle2"
-
-/area/shuttle/escape_pod4/transit
-	icon_state = "shuttle"
-	base_turf = /turf/space/transit/east
-
 /area/shuttle/mining
 	name = "\improper Mining Shuttle"
 
