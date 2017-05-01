@@ -130,10 +130,6 @@
 	icon_state = "shuttle"
 	base_turf = /turf/space/transit/east
 
-/area/shuttle/escape_pod4 //Pod 4 was lost to meteors
-	name = "\improper Escape Pod Five"
-	flags = AREA_RAD_SHIELDED
-
 /area/shuttle/escape_pod4/station
 	icon_state = "shuttle2"
 
@@ -473,12 +469,6 @@
 /area/maintenance/substation/research // Research
 	name = "Research Substation"
 
-/area/maintenance/substation/civilian_east // Bar, kitchen, dorms, ...
-	name = "Civilian East Substation"
-
-/area/maintenance/substation/civilian_west // Cargo, PTS, locker room, probably arrivals, ...)
-	name = "Civilian West Substation"
-
 /area/maintenance/substation/security // Security, Brig, Permabrig, etc.
 	name = "Security Substation"
 
@@ -621,18 +611,6 @@
 	name = "\improper Security - Tactical Equipment"
 	icon_state = "Tactical"
 
-/area/security/evidence
-	name = "\improper Security - Evidence Room"
-	icon_state = "brig"
-
-/area/security/restroom
-	name = "\improper Security - Washroom"
-	icon_state = "security"
-
-/area/security/lockers
-	name = "\improper Security - Locker Room"
-	icon_state = "security"
-
 //Engineering
 
 /area/engineering/
@@ -757,14 +735,6 @@
 	name = "\improper Warehouse"
 	icon_state = "quartstorage"
 	sound_env = LARGE_ENCLOSED
-
-/area/cargo/lobby
-	name = "\improper Cargo Lobby"
-	icon_state = "quartoffice"
-
-/area/cargo/mailingroom
-	name = "\improper Cargo Mailroom"
-	icon_state = "quartoffice"
 
 /area/cargo/qm
 	name = "\improper Cargo - Quartermaster's Office"

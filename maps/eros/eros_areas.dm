@@ -566,3 +566,23 @@ area/rnd/test_area
 /area/cabin
 	name = "Secluded cabin"
 	icon_state = "cabin"
+
+/area/cargo/lobby
+	name = "\improper Cargo Lobby"
+	icon_state = "quartoffice"
+
+/area/cargo/mailingroom
+	name = "\improper Cargo Mailroom"
+	icon_state = "quartoffice"
+
+/area/security/evidence
+	name = "\improper Security - Evidence Room"
+	icon_state = "brig"
+
+/area/security/restroom
+	name = "\improper Security - Washroom"
+	icon_state = "security"
+
+/area/security/lockers
+	name = "\improper Security - Locker Room"
+	icon_state = "security"
