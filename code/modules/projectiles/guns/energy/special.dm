@@ -39,6 +39,21 @@
 	max_shots = 10
 	projectile_type = /obj/item/projectile/energy/declone
 
+/obj/item/weapon/gun/energy/radgun
+	name = "RadRay"
+	desc = "A slow-burner, the RadRay irradiates its targets so as to cause painful, hard to treat, debilitating secondary effects. Its stopping power is lacking, although not missing entirely. The on-board reactor recharges the weapon over time."
+	projectile_type = /obj/item/projectile/energy/radblast
+	w_class = ITEM_SIZE_LARGE
+	self_recharge = 1
+	recharge_time = 8
+	max_shots = 6
+	accuracy = 2
+	fire_sound = "sound/weapons/emitter2.ogg"
+	fire_delay = 10
+	one_hand_penalty = 4
+	slot_flags = SLOT_BELT|SLOT_BACK //Need to add suit, too. Ask Silvery
+	icon_state = "radray"
+
 /obj/item/weapon/gun/energy/floragun
 	name = "floral somatoray"
 	desc = "A tool that discharges controlled radiation which induces mutation in plant cells."
