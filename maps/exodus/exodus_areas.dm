@@ -11,38 +11,6 @@
 		/area/shuttle/specops/centcom,
 	)
 
-////////////
-//SHUTTLES//
-////////////
-//shuttle areas must contain at least two areas in a subgroup if you want to move a shuttle from one
-//place to another. Look at escape shuttle for example.
-//All shuttles should now be under shuttle since we have smooth-wall code.
-
-/area/shuttle/merchant
-	icon_state = "shuttlegrn"
-
-/area/shuttle/merchant/home
-	name = "\improper Merchant Van - Home"
-
-/area/shuttle/merchant/away
-	name = "\improper Merchant Van - Station Side"
-
-// Command
-/area/crew_quarters/heads/chief
-	name = "\improper Engineering - CE's Office"
-
-/area/crew_quarters/heads/hos
-	name = "\improper Security - HoS' Office"
-
-/area/crew_quarters/heads/hop
-	name = "\improper Command - HoP's Office"
-
-/area/crew_quarters/heads/hor
-	name = "\improper Research - RD's Office"
-
-/area/crew_quarters/heads/cmo
-	name = "\improper Command - CMO's Office"
-
 // Shuttles
 
 /area/shuttle/constructionsite
@@ -52,95 +20,12 @@
 /area/shuttle/constructionsite/station
 	name = "\improper Construction Site Shuttle"
 
-/area/shuttle/mining
-	name = "\improper Mining Shuttle"
-
-/area/shuttle/mining/outpost
-	icon_state = "shuttle"
-	base_turf = /turf/simulated/floor/asteroid
-
-/area/shuttle/mining/station
-	icon_state = "shuttle2"
-
-/area/shuttle/specops/centcom
-	name = "\improper Special Ops Shuttle"
-	flags = AREA_RAD_SHIELDED
-
-/area/shuttle/administration
-	flags = AREA_RAD_SHIELDED
-
-/area/shuttle/syndicate_elite
-	name = "\improper Merc Elite Shuttle"
-	flags = AREA_RAD_SHIELDED
-
-/area/shuttle/transport1/centcom
-	icon_state = "shuttle"
-	name = "\improper Transport Shuttle Centcom"
-
-/area/shuttle/transport1/station
-	icon_state = "shuttle"
-	name = "\improper Transport Shuttle"
-
-/area/shuttle/alien/mine
-	icon_state = "shuttle"
-	name = "\improper Alien Shuttle Mine"
-	requires_power = 1
-
-/area/shuttle/arrival
-	name = "\improper Arrival Shuttle"
-
-/area/shuttle/arrival/station
-	icon_state = "shuttle"
-
-/area/shuttle/escape
-	name = "\improper Emergency Shuttle"
-	flags = AREA_RAD_SHIELDED
-
-/area/shuttle/escape/station
-	name = "\improper Emergency Shuttle Station"
-	icon_state = "shuttle2"
-
-/area/shuttle/escape/transit // the area to pass through for 3 minute transit
-	name = "\improper Emergency Shuttle Transit"
-	icon_state = "shuttle"
-	base_turf = /turf/space/transit/north
-
-/area/shuttle/escape_pod1
-	name = "\improper Escape Pod One"
-	flags = AREA_RAD_SHIELDED
-
-/area/shuttle/escape_pod1/station
-	icon_state = "shuttle2"
-
-/area/shuttle/escape_pod1/transit
-	icon_state = "shuttle"
-	base_turf = /turf/space/transit/north
-
-/area/shuttle/escape_pod2
-	name = "\improper Escape Pod Two"
-	flags = AREA_RAD_SHIELDED
-
-/area/shuttle/escape_pod2/station
-	icon_state = "shuttle2"
-
-/area/shuttle/escape_pod2/transit
-	icon_state = "shuttle"
-	base_turf = /turf/space/transit/north
-
-/area/shuttle/escape_pod3
-	name = "\improper Escape Pod Three"
-	flags = AREA_RAD_SHIELDED
-
-/area/shuttle/escape_pod3/station
-	icon_state = "shuttle2"
-
-/area/shuttle/escape_pod3/transit
-	icon_state = "shuttle"
-	base_turf = /turf/space/transit/east
-
 /area/shuttle/escape_pod5 //Pod 4 was lost to meteors
 	name = "\improper Escape Pod Five"
 	flags = AREA_RAD_SHIELDED
+
+/area/shuttle/escape_pod5/centcom
+	icon_state = "shuttle"
 
 /area/shuttle/escape_pod5/station
 	icon_state = "shuttle2"
@@ -148,30 +33,6 @@
 /area/shuttle/escape_pod5/transit
 	icon_state = "shuttle"
 	base_turf = /turf/space/transit/east
-
-// === Trying to remove these areas:
-
-/area/shuttle/research
-	name = "\improper Research Shuttle"
-
-/area/shuttle/research/station
-	icon_state = "shuttle2"
-
-/area/shuttle/research/outpost
-	icon_state = "shuttle"
-	base_turf = /turf/simulated/floor/asteroid
-
-
-//SYNDICATES
-
-/area/syndicate_mothership
-	name = "\improper Mercenary Base"
-	icon_state = "syndie-ship"
-	requires_power = 0
-	lighting_use_dynamic = 0
-
-/area/syndicate_mothership/ninja
-	name = "\improper Ninja Base"
 
 //RESCUE
 
@@ -238,15 +99,6 @@
 //ENEMY
 
 //names are used
-/area/syndicate_station
-	name = "\improper Independant Station"
-	icon_state = "yellow"
-	requires_power = 0
-	flags = AREA_RAD_SHIELDED
-
-/area/syndicate_station/start
-	name = "\improper Mercenary Forward Operating Base"
-	icon_state = "yellow"
 
 /area/syndicate_station/southwest
 	name = "south-west of SS13"
@@ -290,16 +142,6 @@
 	icon_state = "shuttle"
 	base_turf = /turf/space/transit/north
 
-/area/skipjack_station
-	name = "\improper Skipjack"
-	icon_state = "yellow"
-	requires_power = 0
-
-/area/skipjack_station/transit
-	name = "\proper bluespace"
-	icon_state = "shuttle"
-	base_turf = /turf/space/transit/north
-
 /area/skipjack_station/southwest_solars
 	name = "aft port solars"
 	icon_state = "southwest"
@@ -323,35 +165,13 @@
 
 // SUBSTATIONS (Subtype of maint, that should let them serve as shielded area during radstorm)
 
-/area/maintenance/substation/command // AI and central cluster. This one will be between HoP office and meeting room (probably).
-	name = "Command Substation"
-
-/area/maintenance/substation/engineering // Probably will be connected to engineering SMES room, as wires cannot be crossed properly without them sharing powernets.
-	name = "Engineering Substation"
-
-/area/maintenance/substation/medical // Medbay
-	name = "Medical Substation"
-
-/area/maintenance/substation/research // Research
-	name = "Research Substation"
-
 /area/maintenance/substation/civilian_east // Bar, kitchen, dorms, ...
 	name = "Civilian East Substation"
 
 /area/maintenance/substation/civilian_west // Cargo, PTS, locker room, probably arrivals, ...)
 	name = "Civilian West Substation"
 
-/area/maintenance/substation/security // Security, Brig, Permabrig, etc.
-	name = "Security Substation"
-
-/area/maintenance/substation/atmospherics
-	name = "Atmospherics Substation"
-
 // Maintenance
-
-/area/maintenance/atmos_control
-	name = "\improper Atmospherics Maintenance"
-	icon_state = "fpmaint"
 
 /area/maintenance/arrivals
 	name = "\improper Arrivals Maintenance"
@@ -670,6 +490,10 @@
 /area/engineering/sublevel_access
 	name = "\improper Demolition Scaffold Access"
 
+/area/maintenance/incinerator
+	name = "\improper Incinerator"
+	icon_state = "disposal"
+
 // Medbay
 
 /area/medical/genetics
@@ -862,22 +686,9 @@
 	name = "\improper Vacant Office"
 	icon_state = "security"
 
-/area/quartermaster
-	name = "\improper Quartermasters"
-	icon_state = "quart"
-
-/area/quartermaster/storage
-	name = "\improper Warehouse"
-	icon_state = "quartstorage"
-	sound_env = LARGE_ENCLOSED
-
-/area/quartermaster/qm
-	name = "\improper Cargo - Quartermaster's Office"
-	icon_state = "quart"
-
-/area/quartermaster/miningdock
-	name = "\improper Cargo Mining Dock"
-	icon_state = "mining"
+/area/security/nuke_storage
+	name = "\improper Vault"
+	icon_state = "nuke_storage"
 
 /area/hydroponics/garden
 	name = "\improper Garden"
@@ -905,6 +716,12 @@ area/rnd/test_area
 	name = "\improper Research Server Room"
 	icon_state = "server"
 
+// Derelict
+
+/area/derelict/ship
+	name = "\improper Abandoned Ship"
+	icon_state = "yellow"
+
 //Storage
 
 /area/storage/art
@@ -925,20 +742,71 @@ area/rnd/test_area
 	name = "\improper Construction Site Shuttle"
 	base_turf = /turf/simulated/floor/asteroid
 
-//AI
+// Construction Site
 
-/area/turret_protected/ai_server_room
-	name = "Messaging Server Room"
-	icon_state = "ai_server"
-	sound_env = SMALL_ENCLOSED
+/area/constructionsite
+	name = "\improper Construction Site"
+	icon_state = "storage"
+	ambience = list('sound/ambience/spookyspace1.ogg', 'sound/ambience/spookyspace2.ogg')
 
-/area/turret_protected/tcomsat/port
-	name = "\improper Telecoms Satellite - Port"
+/area/constructionsite/storage
+	name = "\improper Construction Site Storage Area"
 
-/area/turret_protected/tcomsat/starboard
-	name = "\improper Telecoms Satellite - Starboard"
+/area/constructionsite/bridge
+	name = "\improper Construction Site Bridge"
+	icon_state = "bridge"
+
+/area/constructionsite/hallway/aft
+	name = "\improper Construction Site Aft Hallway"
+	icon_state = "hallP"
+
+/area/constructionsite/hallway/fore
+	name = "\improper Construction Site Fore Hallway"
+	icon_state = "hallS"
+
+/area/constructionsite/atmospherics
+	name = "\improper Construction Site Atmospherics"
+	icon_state = "green"
+
+/area/constructionsite/medical
+	name = "\improper Construction Site Medbay"
+	icon_state = "medbay"
+
+/area/constructionsite/ai
+	name = "\improper Construction Computer Core"
+	icon_state = "ai"
+
+/area/constructionsite/engineering
+	name = "\improper Construction Site Engine Bay"
+	icon_state = "engine"
+
+/area/constructionsite/teleporter
+	name = "Construction Site Teleporter"
+	icon_state = "yellow"
+
+/area/solar/constructionsite
+	name = "\improper Construction Site Solars"
+	icon_state = "aft"
+
+/area/constructionsite/maintenance
+	name = "\improper Construction Site Maintenance"
+	icon_state = "yellow"
+
+// AI
+
+/area/ai_monitored
+	name = "AI Monitored Area"
+
+/area/ai_monitored/storage/eva
+	name = "\improper EVA Storage"
+	icon_state = "eva"
 
 //Misc
+
+/area/AIsattele
+	name = "\improper AI Satellite Teleporter Room"
+	icon_state = "teleporter"
+	ambience = list('sound/ambience/ambimalf.ogg')
 
 // Telecommunications Satellite
 
@@ -1160,3 +1028,66 @@ area/rnd/test_area
 	name = "\improper Dormitory 6"
 	icon_state = "Sleep"
 	sound_env = SMALL_SOFTFLOOR
+
+// OUTPOSTS
+
+/area/outpost/abandoned
+	name = "Abandoned Outpost"
+	icon_state = "dark"
+
+// Solars
+/area/maintenance/auxsolarport
+	name = "Solar Maintenance - Port"
+	icon_state = "SolarcontrolP"
+	sound_env = SMALL_ENCLOSED
+
+/area/maintenance/auxsolarstarboard
+	name = "Solar Maintenance - Starboard"
+	icon_state = "SolarcontrolS"
+	sound_env = SMALL_ENCLOSED
+
+/area/construction
+	name = "\improper Engineering Construction Area"
+	icon_state = "yellow"
+
+/area/maintenance/auxsolarstarboard
+	name = "Solar Maintenance - Starboard"
+	icon_state = "SolarcontrolS"
+	sound_env = SMALL_ENCLOSED
+
+/area/crew_quarters/sleep/cryo
+	name = "\improper Cryogenic Storage"
+	icon_state = "Sleep"
+
+/area/storage/primary
+	name = "Primary Tool Storage"
+	icon_state = "primarystorage"
+
+/area/solar/auxstarboard
+	name = "\improper Fore Starboard Solar Array"
+	icon_state = "panelsA"
+
+// Maintenance
+
+/area/maintenance/disposal
+	name = "Waste Disposal"
+	icon_state = "disposal"
+
+/area/medical/exam_room
+	name = "\improper Exam Room"
+	icon_state = "exam_room"
+
+/area/engineering/foyer
+	name = "\improper Engineering Foyer"
+	icon_state = "engineering_foyer"
+
+/area/engineering/locker_room
+	name = "\improper Engineering Locker Room"
+	icon_state = "engineering_locker"
+
+/area/solar/port
+	name = "\improper Port Auxiliary Solar Array"
+	icon_state = "panelsP"
+
+/area/centcom/creed
+	name = "Creed's Office"

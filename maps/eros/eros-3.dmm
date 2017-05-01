@@ -31,7 +31,7 @@
 "aE" = (/obj/machinery/atmospherics/unary/cryo_cell,/turf/unsimulated/floor{dir = 2; icon_state = "white"},/area/space)
 "aF" = (/obj/machinery/atmospherics/portables_connector,/obj/machinery/portable_atmospherics/canister/oxygen/prechilled,/turf/unsimulated/floor{dir = 2; icon_state = "white"},/area/space)
 "aG" = (/obj/item/weapon/reagent_containers/glass/beaker/cryoxadone{pixel_x = 0; pixel_y = 0},/obj/structure/table/glass,/turf/unsimulated/floor{dir = 2; icon_state = "white"},/area/space)
-"aH" = (/turf/space/transit/east,/area/shuttle/escape_pod5/transit)
+"aH" = (/turf/space/transit/east,/area/shuttle/escape_pod4/transit)
 "aI" = (/obj/effect/step_trigger/thrower{direction = 1; name = "thrower_throwup"; nostop = 0; tiles = 0},/turf/space/transit/east,/area/space)
 "aJ" = (/obj/effect/step_trigger/thrower{affect_ghosts = 1; direction = 2; name = "thrower_throwdown"; tiles = 0},/turf/space/transit/north,/area/space)
 "aK" = (/obj/structure/table/woodentable,/obj/effect/landmark{name = "Teleport-Scroll"},/obj/item/toy/figure/ninja,/turf/simulated/floor/carpet,/area/wizard_station)

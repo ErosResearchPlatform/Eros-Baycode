@@ -18,7 +18,7 @@
 	#include "loadout/loadout_uniform.dm"
 	#include "loadout/loadout_xeno.dm"
 
-	#include "../shared/exodus_torch/_include.dm"
+	#include "../shared/exodus_eros/_include.dm"
 
 	#include "exodus-1.dmm"
 	#include "exodus-2.dmm"

@@ -10,7 +10,7 @@
 	#include "eros_unit_testing.dm"
 	//#include "eros_zas_tests.dm"
 
-	#include "../shared/exodus_torch/_include.dm"
+	#include "../shared/exodus_eros/_include.dm"
 
 	#include "eros-1.dmm"
 	#include "eros-2.dmm"

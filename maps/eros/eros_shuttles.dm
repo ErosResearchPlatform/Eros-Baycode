@@ -51,12 +51,12 @@
 	name = "Escape Pod 4"
 	location = 0
 	warmup_time = 0
-	area_station = /area/shuttle/escape_pod5/station
-	area_offsite = /area/shuttle/escape_pod5/centcom
-	area_transition = /area/shuttle/escape_pod5/transit
-	docking_controller_tag = "escape_pod_5"
-	dock_target_station = "escape_pod_5_berth"
-	dock_target_offsite = "escape_pod_5_recovery"
+	area_station = /area/shuttle/escape_pod4/station
+	area_offsite = /area/shuttle/escape_pod4/centcom
+	area_transition = /area/shuttle/escape_pod4/transit
+	docking_controller_tag = "escape_pod_4"
+	dock_target_station = "escape_pod_4_berth"
+	dock_target_offsite = "escape_pod_4_recovery"
 	transit_direction = EAST //should this be WEST? I have no idea.
 
 /datum/shuttle/ferry/supply/cargo
@@ -67,15 +67,6 @@
 	area_station = /area/supply/station
 	docking_controller_tag = "supply_shuttle"
 	dock_target_station = "cargo_bay"
-
-/datum/shuttle/ferry/engineering
-	name = "Engineering"
-	warmup_time = 10
-	area_offsite = /area/shuttle/constructionsite/site
-	area_station = /area/shuttle/constructionsite/station
-	docking_controller_tag = "engineering_shuttle"
-	dock_target_station = "engineering_dock_airlock"
-	dock_target_offsite = "edock_airlock"
 
 /datum/shuttle/ferry/mining
 	name = "Mining"
@@ -137,14 +128,6 @@
 	interim = /area/syndicate_station/transit
 	start_location = "Mercenary Base"
 	destinations = list(
-		"Northwest of the station" = /area/syndicate_station/northwest,
-		"North of the station" = /area/syndicate_station/north,
-		"Northeast of the station" = /area/syndicate_station/northeast,
-		"Southwest of the station" = /area/syndicate_station/southwest,
-		"South of the station" = /area/syndicate_station/south,
-		"Southeast of the station" = /area/syndicate_station/southeast,
-		"Telecomms Satellite" = /area/syndicate_station/commssat,
-		"Mining Station" = /area/syndicate_station/mining,
 		"Arrivals dock" = /area/syndicate_station/arrivals_dock,
 		)
 	docking_controller_tag = "merc_shuttle"
@@ -165,11 +148,7 @@
 	origin = /area/skipjack_station/start
 	interim = /area/skipjack_station/transit
 	destinations = list(
-		"Fore Starboard Solars" = /area/skipjack_station/northeast_solars,
-		"Fore Port Solars" = /area/skipjack_station/northwest_solars,
-		"Aft Starboard Solars" = /area/skipjack_station/southeast_solars,
-		"Aft Port Solars" = /area/skipjack_station/southwest_solars,
-		"Mining Station" = /area/skipjack_station/mining
+		"Dock with Station" = /area/skipjack_station/arrivals_dock
 		)
 	announcer = "NDV Icarus"
 
@@ -177,44 +156,3 @@
 	arrival_message = "Attention, [using_map.station_short], we just tracked a small target bypassing our defensive perimeter. Can't fire on it without hitting the station - you've got incoming visitors, like it or not."
 	departure_message = "Your guests are pulling away, [using_map.station_short] - moving too fast for us to draw a bead on them. Looks like they're heading out of the system at a rapid clip."
 	..()
-
-/datum/shuttle/multi_shuttle/rescue
-	name = "Rescue"
-	warmup_time = 0
-	origin = /area/rescue_base/start
-	interim = /area/rescue_base/transit
-	start_location = "Response Team Base"
-	destinations = list(
-		"Northwest of the station" = /area/rescue_base/northwest,
-		"North of the station" = /area/rescue_base/north,
-		"Northeast of the station" = /area/rescue_base/northeast,
-		"Southwest of the station" = /area/rescue_base/southwest,
-		"South of the station" = /area/rescue_base/south,
-		"Southeast of the station" = /area/rescue_base/southeast,
-		"Telecomms Satellite" = /area/rescue_base/commssat,
-		"Engineering Station" = /area/rescue_base/mining,
-		"Arrivals dock" = /area/rescue_base/arrivals_dock,
-		)
-	docking_controller_tag = "rescue_shuttle"
-	destination_dock_targets = list(
-		"Response Team Base" = "rescue_base",
-		"Arrivals dock" = "rescue_shuttle_dock_airlock",
-		)
-	announcer = "NDV Icarus"
-
-/datum/shuttle/multi_shuttle/rescue/New()
-	arrival_message = "Attention, [using_map.station_short], there's a small patrol craft headed your way, it flashed us Asset Protection codes and we let it pass. You've got guests on the way."
-	departure_message = "[using_map.station_short], That Asset Protection vessel is headed back the way it came. Hope they were helpful."
-	..()
-
-/datum/shuttle/ferry/multidock/specops/ert
-	name = "Special Operations"
-	location = 0
-	warmup_time = 10
-	area_offsite = /area/shuttle/specops/station	//centcom is the home station, the Exodus is offsite
-	area_station = /area/shuttle/specops/centcom
-	docking_controller_tag = "specops_shuttle_port"
-	docking_controller_tag_station = "specops_shuttle_port"
-	docking_controller_tag_offsite = "specops_shuttle_fore"
-	dock_target_station = "specops_centcom_dock"
-	dock_target_offsite = "specops_dock_airlock"
