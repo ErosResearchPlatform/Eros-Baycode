@@ -23,7 +23,7 @@
 	flags = AREA_RAD_SHIELDED
 
 /area/shuttle/escape_pod4/centcom
-	icon_state = "shuttle"/
+	icon_state = "shuttle"
 
 /area/shuttle/escape_pod4/station
 	icon_state = "shuttle2"
