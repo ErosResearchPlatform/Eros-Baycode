@@ -171,7 +171,7 @@
 	id_type = /obj/item/weapon/card/id/syndicate
 	id_pda_assignment = "Legitimate Merchant"
 
-	flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL
+	flags = OUTFIT_EXTENDED_SURVIVAL
 
 /decl/hierarchy/outfit/eros_vox_pressure
 	name = "Vox Gear - Pressure (VOX ONLY)"
@@ -190,7 +190,7 @@
 	id_type = /obj/item/weapon/card/id/syndicate
 	id_pda_assignment = "Legitimate Merchant"
 
-	flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL
+	flags = OUTFIT_EXTENDED_SURVIVAL
 
 /decl/hierarchy/outfit/eros_vox_stealth
 	name = "Vox Gear - Stealth (VOX ONLY)"
@@ -210,7 +210,7 @@
 	id_type = /obj/item/weapon/card/id/syndicate
 	id_pda_assignment = "Legitimate Merchant"
 
-	flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL
+	flags = OUTFIT_EXTENDED_SURVIVAL
 
 /decl/hierarchy/outfit/eros_vox_medic
 	name = "Vox Gear - Medic (VOX ONLY)"
@@ -231,4 +231,4 @@
 	id_type = /obj/item/weapon/card/id/syndicate
 	id_pda_assignment = "Legitimate Merchant"
 
-	flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL
+	flags = OUTFIT_EXTENDED_SURVIVAL
