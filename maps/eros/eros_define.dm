@@ -2,7 +2,7 @@
 /datum/map/eros
 	name = "Eros"
 	full_name = "Eros Research Platform"
-	path = "exodus"
+	path = "eros"
 
 	lobby_icon = 'maps/eros/eros_lobby.dmi'
 
