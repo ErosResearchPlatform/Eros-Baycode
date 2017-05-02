@@ -299,20 +299,11 @@
 /area/centcom/control
 	name = "\improper Centcom Control"
 
-/area/centcom/evac
-	name = "\improper Centcom Emergency Shuttle"
-
 /area/centcom/ferry
 	name = "\improper Centcom Transport Shuttle"
 
 /area/centcom/living
 	name = "\improper Centcom Living Quarters"
-
-/area/centcom/suppy
-	name = "\improper Centcom Supply Shuttle"
-
-/area/centcom/test
-	name = "\improper Centcom Testing Facility"
 
 /area/tdome
 	name = "\improper Thunderdome"
