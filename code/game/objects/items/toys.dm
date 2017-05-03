@@ -497,6 +497,16 @@
 	desc = "Mini-Mecha action figure! Collect them all! 11/11."
 	icon_state = "phazonprize"
 
+
+// Eros
+
+/obj/item/toy/prize/ed209
+	name = "toy ED-209"
+	desc = "A tiny, toy version of the ED-209 security robot. He still looks less than thrilled."
+	icon_state = "209"
+
+// End Eros
+
 /*
  * Action figures
  */
@@ -876,6 +886,16 @@
 	desc = "A toy for therapeutic and recreational purposes. This one is green."
 	icon_state = "therapygreen"
 	item_state = "egg3" // It's the green egg in items_left/righthand
+
+// Eros plush
+
+/obj/item/toy/plushie/corg
+	name = "small corgi plush"
+	desc = "A corgi plush doll. It bears a strong likeness to the HoP's faithful companion, Ian!"
+	icon_state = "smallcorgi"
+
+// End Eros
+
 //Toy cult sword
 /obj/item/toy/cultsword
 	name = "foam sword"
