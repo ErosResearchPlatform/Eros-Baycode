@@ -4,7 +4,7 @@
 	sprite_sheets = list(
 		"Human" = 'icons/mob/uniform_eros.dmi',
 		"Machine" = 'icons/mob/uniform_eros.dmi',
-		"Drider" = 'icons/mob/uniform_eros.dmi',
+		"Veirei" = 'icons/mob/species/taur/uniform_eros.dmi',
 		"Lamia" = 'icons/mob/uniform_eros.dmi',
 		"Unathi" = 'icons/mob/uniform_eros.dmi',
 		"Tajara" = 'icons/mob/uniform_eros.dmi',
