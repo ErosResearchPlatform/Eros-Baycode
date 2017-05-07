@@ -131,12 +131,15 @@
 	organ_tag = BP_TAUR
 	body_part = TAUR
 	parent_organ = BP_GROIN
-	joint = "groin"
-	amputation_point = "groin"
+	w_class = ITEM_SIZE_LARGE
+	joint = "hip"
+	amputation_point = "lumbar"
+	artery_name = "iliac artery"
 	max_damage = 120
 	min_broken_damage = 60
 	can_stand = 1
 	dislocated = -1
+	vital = 1
 	no_blend = 1
 	offset_x = -16
 	var/list/t_col
@@ -198,6 +201,8 @@
 /obj/item/organ/external/taur/snake
     name = "lamia tail"
     icon_name = "s_tail"
+	gendered_icon = 1
+	artery_name = "caudal artery"
 
 /obj/item/organ/external/taur/veirei
     name = "Veirei abdomen"
