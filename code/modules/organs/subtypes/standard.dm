@@ -201,8 +201,7 @@
 /obj/item/organ/external/taur/snake
     name = "lamia tail"
     icon_name = "s_tail"
-	gendered_icon = 1
-	artery_name = "caudal artery"
+    artery_name = "caudal artery"
 
 /obj/item/organ/external/taur/veirei
     name = "Veirei abdomen"
