@@ -658,7 +658,7 @@
 	var/dpdir = 0		// bitmask of pipe directions
 	dir = 0				// dir will contain dominant direction for junction pipes
 	var/health = 10 	// health points 0-10
-	plane = ABOVE_PLATING_PLANE
+	plane = ABOVE_TURF_PLANE //Mapping purposes, the plane gets reset to ABOVE_PLATING_PLANE in New()
 	layer = DISPOSALS_PIPE_LAYER
 	var/base_icon_state	// initial icon state on map
 	var/sortType = ""
@@ -666,6 +666,7 @@
 	// new pipe, set the icon_state as on map
 	New()
 		..()
+		plane = ABOVE_PLATING_PLANE
 		base_icon_state = icon_state
 		return
 
@@ -1127,6 +1128,9 @@
 				return setbit
 			else
 				return mask & (~setbit)
+
+/obj/structure/disposalpipe/junction/flipped
+		icon_state = "pipe-j2"
 
 
 /obj/structure/disposalpipe/tagger

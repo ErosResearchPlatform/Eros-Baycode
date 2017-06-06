@@ -153,6 +153,7 @@
 
 /obj/structure/sign/warning/moving_parts
 	name = "\improper MOVING PARTS"
+	icon_state = "movingparts"
 
 /obj/structure/sign/warning/nosmoking_1
 	name = "\improper NO SMOKING"
@@ -393,11 +394,6 @@
 	icon_state = "deck-4"
 // ----- EROS BEGIN - SIGNS
 
-/obj/structure/sign/decommissioning_notice
-	name = "\improper Decommissioning Notice"
-	desc = "The sign reads: \"NOTICE: The Exodus-class space station EROS-1 is slated to be decommissioned to cover costs related to the construction of the planetside colony EROS-2. Reading this notice constitutes consent to take part in the deconstruction effort as per Nanotrasen corporate regulation. DATE POSTED: 2560-12-08\""
-	icon_state = "demonotice"
-
 /obj/structure/sign/christmas/lights
 	name = "Christmas lights"
 	desc = "Flashy and pretty."
@@ -409,11 +405,6 @@
 	desc = "Prickly and festive."
 	icon = 'icons/obj/christmas.dmi'
 	icon_state = "doorwreath"
-
-/obj/structure/sign/hard_hat_area
-	name = "\improper Hard Hat Area"
-	desc = "The sign reads <i>\"HARD HAT AREA\"</i> in big letters. To the left of it is a pictograph of a human head with a white hard hat on. This probably designates that the area should be entered with a hard hat and other safety equipment on. Much like the rest of the station."
-	icon_state = "hardhat"
 
 /obj/structure/sign/airlock_deconstruction
 	name = "Airlock Deconstruction Guide"
@@ -430,12 +421,30 @@
 	desc = "This metal-backed poster details the danger of off-brand and \"budget\" insulated gloves that fail to protect against the massive voltages that superconductive wire can generate. It details vividly the story of the Sheschremi, a Resomi who exploded into gore after using budget gloves."
 	icon_state="poster_gloves"
 
-/obj/structure/sign/decomm_moto
-	name = "Motivational Poster"
-	desc = "This metal-backed poster extols the feeling of accomplishment you get deconstructing your workplace for the profit of your employer. Who approved this, again?"
-	icon_state="poster_moto"
+/obj/structure/sign/warning/cold
+	name = "\improper CAUTION: VERY COLD"
+	icon_state = "cold"
 
-/obj/structure/sign/keepcalm
-	name = "Keep Calm And Work"
-	desc = "The metal-backed poster reads <i>\"KEEP CALM AND WORK\"</i> in block capitals. On the corner, it is stamped \"Authorized for station-wide display on vessels and stations under decommissioning.\" with a Centcom seal."
-	icon_state="poster_kcaw"
+/obj/structure/sign/warning/detailed
+	name = "\improper WARNING 2"
+	icon_state = "securearea2"
+
+/obj/structure/sign/anatomy
+	name = "Human Anatomy Poster"
+	desc = "It's an anatomy poster depicting the internal workings of your average human."
+	icon_state="anatomy"
+
+/obj/structure/sign/carp
+	name = "Taxidermied Space Carp"
+	desc = "Too bad it isn't one of the singing ones."
+	icon_state="carp"
+
+/obj/structure/sign/intrigue
+	name = "web of intrigue"
+	desc = "Looks like a complicated case one of the detectives must be working on."
+	icon_state="intrigue"
+
+/obj/structure/sign/ian
+	name = "Ian Poster"
+	desc = "It's a lovely painting of Ian!"
+	icon_state="ian"
