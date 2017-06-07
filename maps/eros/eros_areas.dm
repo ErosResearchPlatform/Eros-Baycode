@@ -32,6 +32,23 @@
 	icon_state = "shuttle"
 	base_turf = /turf/space/transit/east
 
+
+/area/shuttle/escape_pod5
+	name = "\improper Escape Pod Five"
+	flags = AREA_RAD_SHIELDED
+
+/area/shuttle/escape_pod5/centcom
+	icon_state = "shuttle"
+
+/area/shuttle/escape_pod5/station
+	icon_state = "shuttle2"
+
+/area/shuttle/escape_pod5/transit
+	icon_state = "shuttle"
+	base_turf = /turf/space/transit/east
+
+
+
 /area/shuttle/space_elevator
 	icon_state = "shuttle3"
 
@@ -73,6 +90,19 @@
 
 /area/skipjack_station/arrivals_dock
 	name = "\improper Docked with Station"
+
+
+/area/shuttle/lifeboat/centcom
+	name = "\improper Emergency Lifeboat Centcom"
+	icon_state = "shuttle"
+
+/area/shuttle/lifeboat/transit
+	name = "\improper Emergency Lifeboat Transit"
+	icon_state = "shuttle2"
+
+/area/shuttle/lifeboat/station
+	name = "\improper Emergency Lifeboat Station"
+	icon_state = "shuttle"
 
 /////////////
 //ELEVATORS//
