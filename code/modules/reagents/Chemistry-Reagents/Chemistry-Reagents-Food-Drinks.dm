@@ -721,6 +721,8 @@
 		M.apply_effect(3, STUTTER)
 	M.make_jittery(5)
 	M.add_chemical_effect(CE_PULSE, 2)
+	if(alien == IS_VEIREN)
+		M.add_chemical_effect(CE_ALCOHOL, 1)
 
 /datum/reagent/drink/coffee/icecoffee
 	name = "Iced Coffee"
