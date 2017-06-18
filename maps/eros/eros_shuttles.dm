@@ -11,6 +11,16 @@
 	dock_target_offsite = "centcom_dock"
 	transit_direction = NORTH
 
+/datum/shuttle/ferry/emergency/lifeboat
+	name = "Lifeboat"
+	location = 1
+	warmup_time = 10
+	area_offsite = /area/shuttle/lifeboat/centcom
+	area_station = /area/shuttle/lifeboat/station
+	area_transition = /area/shuttle/lifeboat/transit
+	dock_target_offsite = "lifeboat_berth"
+	transit_direction = NORTH
+
 /datum/shuttle/ferry/escape_pod/escape_pod_one
 	name = "Escape Pod 1"
 	location = 0
@@ -57,6 +67,19 @@
 	docking_controller_tag = "escape_pod_4"
 	dock_target_station = "escape_pod_4_berth"
 	dock_target_offsite = "escape_pod_4_recovery"
+	transit_direction = EAST //should this be WEST? I have no idea.
+
+
+/datum/shuttle/ferry/escape_pod/escape_pod_five
+	name = "Escape Pod 5"
+	location = 0
+	warmup_time = 0
+	area_station = /area/shuttle/escape_pod5/station
+	area_offsite = /area/shuttle/escape_pod5/centcom
+	area_transition = /area/shuttle/escape_pod5/transit
+	docking_controller_tag = "escape_pod_5"
+	dock_target_station = "escape_pod_5_berth"
+	dock_target_offsite = "escape_pod_5_recovery"
 	transit_direction = EAST //should this be WEST? I have no idea.
 
 /datum/shuttle/ferry/supply/cargo
