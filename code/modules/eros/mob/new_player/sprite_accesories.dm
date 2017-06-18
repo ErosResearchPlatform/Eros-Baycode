@@ -122,18 +122,6 @@
 		name = "Knotted Large Dick"
 		icon_state = "knotted_large"
 
-	dik_knotbs
-		name = "Knotted, Barbed Small Dick"
-		icon_state = "barbknot_small"
-
-	dik_knotb
-		name = "Knotted, Barbed Dick"
-		icon_state = "barbknot"
-
-	dik_knotbl
-		name = "Knotted, Barbed Large Dick"
-		icon_state = "barbknot_large"
-
 	dik_tapereds
 		name = "Tapered Small Dick"
 		icon_state = "tapered_small"
@@ -162,38 +150,36 @@
 		name = "Feline Dick"
 		icon_state = "feline"
 
-	dik_tentacle
-		name = "Tentacle Dicks"
-		icon_state = "tentacle"
+	dik_knotbs
+		name = "Knotted, Feline Small Dick"
+		icon_state = "barbknot_small"
 
-	dik_tentacle2
-		name = "Tentacle Big Dicks"
-		icon_state = "tentacle_big"
+	dik_knotb
+		name = "Knotted, Feline Dick"
+		icon_state = "barbknot"
+
+	dik_knotbl
+		name = "Knotted, Feline Large Dick"
+		icon_state = "barbknot_large"
 
 	dik_hemi
-		name = "Hemipenes / Claspers"
+		name = "Hemipenes"
 		icon_state = "hemi"
 
 	dik_normal_slime
-		name = "Slime Normal Dick"
+		name = "Promethean Normal Dick"
 		icon_state = "normal_slime"
 		species_allowed = list ("Promethean")
 
 	dik_small_slime
-		name = "Slime Small Dick"
+		name = "Promethean Small Dick"
 		icon_state = "small_slime"
 		species_allowed = list ("Promethean")
 
 	dik_big2_slime
-		name = "Slime Bigger Dick"
+		name = "Promethean Bigger Dick"
 		icon_state = "big2_slime"
 		species_allowed = list ("Promethean")
-
-	dik_amputed
-		name = "Amputed Dick"
-		icon_state = "amputed"
-		do_colouration = 0
-		species_allowed = list("Human","Unathi","Tajara","Skrell","Akula","Lamia", "Drider", "Machine")
 
 	dik_bishop
 		name = "Bishop Synthpenis"
@@ -284,32 +270,14 @@
 		name = "Gaping Vagina"
 		icon_state = "gaping"
 
-	vag_dripping
-		name = "Dripping Vagina"
-		icon_state = "dripping"
-
-	vag_tentacle
-		name = "Tentacle Vagina"
-		icon_state = "tentacles"
-
-	vag_dentata
-		name = "Vagina Dentata"
-		icon_state = "dentata"
-		do_colouration = 0
-
 	vag_normal_slime
-		name = "Slime Normal Vagina"
+		name = "Promethean Normal Vagina"
 		icon_state = "normal_slime"
 		species_allowed = list ("Promethean")
 
 	vag_gaping_slime
-		name = "Slime Gaping Vagina"
+		name = "Promethean Gaping Vagina"
 		icon_state = "gaping_slime"
-		species_allowed = list ("Promethean")
-
-	vag_dripping_slime
-		name = "Slime Dripping Vagina"
-		icon_state = "dripping_slime"
 		species_allowed = list ("Promethean")
 
 	vag_bishop
@@ -405,27 +373,27 @@
 		icon_state = "normal_e"
 
 	brt_slimea
-		name = "Slime Tiny Breasts"
+		name = "Promethean Tiny Breasts"
 		icon_state = "slime_a"
 		species_allowed = list ("Promethean")
 
 	brt_slimeb
-		name = "Slime Small Breasts"
+		name = "Promethean Small Breasts"
 		icon_state = "slime_b"
 		species_allowed = list ("Promethean")
 
 	brt_slimec
-		name = "Slime Normal Breasts"
+		name = "Promethean Normal Breasts"
 		icon_state = "slime_c"
 		species_allowed = list ("Promethean")
 
 	brt_slimed
-		name = "Slime Big Breasts"
+		name = "Promethean Big Breasts"
 		icon_state = "slime_d"
 		species_allowed = list ("Promethean")
 
 	brt_slimee
-		name = "Slime Very Big Breasts"
+		name = "Promethean Very Big Breasts"
 		icon_state = "slime_e"
 		species_allowed = list ("Promethean")
 
